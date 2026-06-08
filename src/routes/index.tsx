@@ -1,493 +1,582 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { useMemo, useState } from "react";
-import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
-import { Check, Minus, Plus, Truck, ShieldCheck, Clock, Droplets } from "lucide-react";
+import { Textarea } from "@/components/ui/textarea";
+import { ArrowUpRight, ArrowRight } from "lucide-react";
+
+import heroInterior from "@/assets/hero-interior.jpg";
+import woodGrain from "@/assets/wood-grain.jpg";
+import diyHands from "@/assets/diy-hands.jpg";
+import exteriorDoor from "@/assets/exterior-door.jpg";
+import beforeAfter from "@/assets/before-after.jpg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Lotus Wood Paint - Sơn Gỗ Hệ Nước An Toàn Tự Thi Công Tại Nhà" },
-      { name: "description", content: "Sơn gỗ Lotus hệ nước Acrylic Polymer. Không mùi, khô nhanh 2h, tự sơn dễ dàng. Giao hàng toàn quốc." },
-      { property: "og:title", content: "Lotus Wood Paint - Sơn Gỗ Hệ Nước Tự Thi Công" },
-      { property: "og:description", content: "Sơn nội thất màu bệt & sơn ngoại thất giữ vân gỗ. An toàn, dễ dùng, đặt hàng online." },
+      { title: "Lotus — Sơn gỗ hệ nước cho không gian sống tinh tế" },
+      {
+        name: "description",
+        content:
+          "Lotus Wood Paint & Woodstain Finish — sơn gỗ hệ nước cao cấp. Làm mới đồ gỗ tại nhà theo cách sạch hơn, đẹp hơn.",
+      },
+      { property: "og:title", content: "Lotus — Sơn gỗ hệ nước cho không gian sống tinh tế" },
+      {
+        property: "og:description",
+        content: "Hoàn thiện gỗ hệ nước cho gia đình hiện đại. Nhẹ mùi, khô nhanh, dễ tự thi công.",
+      },
     ],
   }),
   component: Index,
 });
 
-type ColorSwatch = { name: string; hex: string; border?: boolean };
+type Palette = { name: string; hex: string; tone: string };
 
-const interiorColors: ColorSwatch[] = [
-  { name: "Trắng Sứ", hex: "#F8F8F4", border: true },
-  { name: "Kem Sữa", hex: "#EFE5D2" },
-  { name: "Xám Khói", hex: "#8A8E92" },
-  { name: "Xám Đá", hex: "#4B5563" },
-  { name: "Đen Mờ", hex: "#1A1A1A" },
-  { name: "Xanh Navy", hex: "#1E3A5F" },
-  { name: "Xanh Ngọc", hex: "#3F6F6A" },
-  { name: "Xanh Rêu", hex: "#5B6E4A" },
-  { name: "Hồng Pastel", hex: "#E8C8C0" },
-  { name: "Vàng Mơ", hex: "#E8C977" },
-  { name: "Đỏ Đô", hex: "#7A2E2A" },
-  { name: "Nâu Cafe", hex: "#5B3A29" },
+const interiorPalette: Palette[] = [
+  { name: "Sứ", hex: "#F4EFE6", tone: "Trắng ấm" },
+  { name: "Mộc", hex: "#E8DCC6", tone: "Be sữa" },
+  { name: "Khói", hex: "#B7AFA3", tone: "Xám ấm" },
+  { name: "Mây", hex: "#D9D3C7", tone: "Xám sáng" },
+  { name: "Rêu", hex: "#7C8A6E", tone: "Xanh trầm" },
+  { name: "Olive", hex: "#5A6147", tone: "Xanh sâu" },
+  { name: "Sét", hex: "#B25C3B", tone: "Đất nung" },
+  { name: "Than", hex: "#2A2724", tone: "Đen mờ" },
 ];
 
-const exteriorColors: ColorSwatch[] = [
-  { name: "Sồi Tự Nhiên", hex: "#C9A26B" },
-  { name: "Sồi Oak", hex: "#B07A45" },
-  { name: "Căm Xe", hex: "#8B4A2B" },
-  { name: "Gõ Đỏ", hex: "#6B2E22" },
-  { name: "Hương Đỏ", hex: "#9B3A22" },
-  { name: "Óc Chó Walnut", hex: "#3E2418" },
-  { name: "Teak Vàng", hex: "#A6713C" },
-  { name: "Mahogany", hex: "#5C2A20" },
+const exteriorPalette: Palette[] = [
+  { name: "Sồi", hex: "#C9A26B", tone: "Vàng tự nhiên" },
+  { name: "Teak", hex: "#A6713C", tone: "Vàng ấm" },
+  { name: "Căm xe", hex: "#8B4A2B", tone: "Nâu đỏ" },
+  { name: "Hương", hex: "#6B2E22", tone: "Nâu thẫm" },
+  { name: "Walnut", hex: "#3E2418", tone: "Óc chó" },
+  { name: "Mun", hex: "#1F1611", tone: "Đen tự nhiên" },
 ];
 
-const products = {
-  interior: {
-    id: "interior",
-    name: "Lotus Wood Paint - Nội Thất",
-    short: "Sơn Màu Bệt",
-    colors: interiorColors,
-    description:
-      "Sơn phủ màu bệt che lấp 100% vân gỗ. Màng sơn nhẵn mịn, bám dính hoàn hảo trên mọi bề mặt gỗ cũ/mới, MDF. Chuyên dùng cho tủ áo, bàn ghế nội thất.",
-  },
-  exterior: {
-    id: "exterior",
-    name: "Lotus Woodstain Finish - Ngoại Thất & Sàn",
-    short: "Sơn Giữ Vân",
-    colors: exteriorColors,
-    description:
-      "Sơn 2-trong-1 (Tạo màu & Phủ bảo vệ). Thấm sâu vào thớ gỗ, giữ trọn nét đẹp vân gỗ tự nhiên. Công thức chống tia UV, kháng nước, chịu ma sát cao chuyên dụng cho sàn gỗ và đồ ngoại thất.",
-  },
-} as const;
-
-const UNIT_PRICE = 199000;
-
-function formatVnd(n: number) {
-  return new Intl.NumberFormat("vi-VN").format(n) + " VNĐ";
-}
+const surfaces = [
+  { label: "Bàn ghế", desc: "Bàn ăn, bàn cafe, ghế gỗ." },
+  { label: "Tủ kệ", desc: "Tủ áo, kệ sách, tủ bếp." },
+  { label: "Cửa gỗ", desc: "Cửa chính, cửa phòng, cửa thông gió." },
+  { label: "Sàn gỗ", desc: "Sàn tự nhiên, sàn engineered." },
+  { label: "Ngoại thất", desc: "Lam gỗ, hàng rào, đồ sân vườn." },
+  { label: "Đồ gỗ cũ", desc: "Refurbish, làm mới đồ thanh lý." },
+];
 
 function Index() {
-  const [activeTab, setActiveTab] = useState<"interior" | "exterior">("interior");
-  const [selectedInterior, setSelectedInterior] = useState(interiorColors[0]);
-  const [selectedExterior, setSelectedExterior] = useState(exteriorColors[0]);
-  const [qty, setQty] = useState(2);
-
-  const selectedProduct = products[activeTab];
-  const selectedColor = activeTab === "interior" ? selectedInterior : selectedExterior;
-  const total = useMemo(() => qty * UNIT_PRICE, [qty]);
-  const freeShip = qty >= 2;
+  const [tab, setTab] = useState<"indoor" | "outdoor">("indoor");
+  const palette = tab === "indoor" ? interiorPalette : exteriorPalette;
 
   return (
-    <div className="min-h-screen bg-white text-slate-800">
-      {/* Top bar */}
-      <header className="border-b border-gray-200 bg-white">
-        <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4">
-          <div className="flex items-center gap-2">
-            <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-green-600 text-white font-bold">L</div>
-            <span className="text-lg font-bold tracking-tight text-slate-900">LOTUS Paint</span>
-          </div>
-          <nav className="hidden gap-8 text-sm font-medium text-slate-600 md:flex">
-            <a href="#products" className="hover:text-green-600">Sản phẩm</a>
-            <a href="#compare" className="hover:text-green-600">So sánh</a>
-            <a href="#order" className="hover:text-green-600">Đặt hàng</a>
-          </nav>
-          <a href="#order" className="hidden text-sm font-semibold text-green-700 md:inline">
-            Hotline: 1900 0000
-          </a>
-        </div>
-      </header>
+    <div className="min-h-screen bg-cream text-charcoal font-sans antialiased">
+      <Header />
 
-      {/* Hero */}
-      <section className="relative overflow-hidden border-b border-gray-200 bg-gray-50">
-        <div className="mx-auto grid max-w-7xl grid-cols-1 gap-10 px-4 py-16 md:grid-cols-2 md:py-24">
-          <div className="flex flex-col justify-center">
-            <span className="mb-4 inline-flex w-fit items-center gap-2 rounded-full border border-green-200 bg-green-50 px-3 py-1 text-xs font-semibold text-green-700">
-              <Droplets className="h-3.5 w-3.5" /> Công nghệ Acrylic Polymer gốc nước
-            </span>
-            <h1 className="text-4xl font-extrabold leading-tight tracking-tight text-slate-900 md:text-5xl">
-              Giải Pháp Tự Sơn Gỗ Tại Nhà - Hệ Nước An Toàn Lotus
-            </h1>
-            <p className="mt-5 max-w-xl text-base leading-relaxed text-slate-600 md:text-lg">
-              Công nghệ màng sơn Acrylic Polymer gốc nước. Không mùi độc hại, khô siêu tốc trong 2h, dễ dàng thi công mà không cần thợ.
-            </p>
-            <div className="mt-8 flex flex-wrap gap-3">
-              <a href="#products">
-                <Button className="h-12 bg-green-600 px-6 text-base font-semibold hover:bg-green-700">
-                  Chọn Màu & Đặt Hàng
-                </Button>
-              </a>
-              <a href="#compare">
-                <Button variant="outline" className="h-12 border-gray-300 px-6 text-base">
-                  So sánh với sơn PU
-                </Button>
-              </a>
-            </div>
-            <div className="mt-8 grid grid-cols-3 gap-4 text-sm">
-              <div className="flex items-center gap-2 text-slate-700"><Clock className="h-4 w-4 text-green-600" /> Khô 1-2h</div>
-              <div className="flex items-center gap-2 text-slate-700"><ShieldCheck className="h-4 w-4 text-green-600" /> Không mùi độc</div>
-              <div className="flex items-center gap-2 text-slate-700"><Truck className="h-4 w-4 text-green-600" /> Free ship 2 hũ</div>
-            </div>
-          </div>
+      {/* HERO */}
+      <section className="relative">
+        <div className="mx-auto max-w-[1400px] px-6 pt-10 pb-16 md:px-12 md:pt-16 md:pb-28">
+          <div className="grid grid-cols-12 gap-x-6 gap-y-10">
+            <div className="col-span-12 md:col-span-6 lg:col-span-5 flex flex-col">
+              <span className="text-[11px] uppercase tracking-[0.3em] text-walnut/70">
+                Lotus · Wood Finishing Studio
+              </span>
+              <h1 className="mt-8 font-serif text-[44px] leading-[1.05] tracking-tight text-charcoal md:text-[64px] lg:text-[76px]">
+                Làm mới đồ gỗ
+                <br />
+                <em className="not-italic text-clay">tại nhà</em>, theo cách
+                <br />
+                sạch hơn, đẹp hơn.
+              </h1>
+              <p className="mt-8 max-w-md text-[15px] leading-relaxed text-walnut/80">
+                Sơn gỗ hệ nước Lotus — hoàn thiện bề mặt gỗ trong không gian sống của bạn:
+                nhẹ mùi, an toàn cho gia đình, đủ tinh tế cho một ngôi nhà hiện đại.
+              </p>
 
-          {/* Split visual */}
-          <div className="relative">
-            <div className="grid h-80 grid-cols-2 overflow-hidden rounded-2xl border border-gray-200 shadow-sm md:h-[460px]">
-              <div className="relative bg-[#EFE5D2]">
-                <div className="absolute inset-0 bg-gradient-to-br from-white/40 to-transparent" />
-                <div className="absolute bottom-0 left-0 right-0 h-1/2 bg-[#1E3A5F]" />
-                <div className="absolute left-4 top-4 rounded-full bg-white/90 px-3 py-1 text-xs font-semibold text-slate-700">
-                  Nội Thất — Màu Bệt
-                </div>
+              <div className="mt-10 flex flex-wrap items-center gap-4">
+                <a
+                  href="#choose"
+                  className="group inline-flex items-center gap-3 bg-charcoal px-7 py-4 text-[13px] font-medium uppercase tracking-[0.18em] text-cream transition hover:bg-clay"
+                >
+                  Chọn loại sơn phù hợp
+                  <ArrowRight className="h-4 w-4 transition group-hover:translate-x-1" />
+                </a>
+                <a
+                  href="#palette"
+                  className="text-[13px] font-medium uppercase tracking-[0.18em] text-walnut underline-offset-8 hover:underline"
+                >
+                  Xem bảng màu
+                </a>
               </div>
-              <div className="relative bg-[#8B4A2B]">
-                <div
-                  className="absolute inset-0 opacity-60"
-                  style={{
-                    backgroundImage:
-                      "repeating-linear-gradient(90deg, rgba(0,0,0,0.18) 0 2px, transparent 2px 22px), repeating-linear-gradient(90deg, rgba(255,255,255,0.05) 0 1px, transparent 1px 11px)",
-                  }}
-                />
-                <div className="absolute right-4 top-4 rounded-full bg-white/90 px-3 py-1 text-xs font-semibold text-slate-700">
-                  Ngoại Thất — Giữ Vân
-                </div>
-              </div>
+
+              <dl className="mt-16 grid grid-cols-3 gap-6 border-t border-walnut/15 pt-8 text-walnut">
+                <Stat k="01" v="Hệ nước Acrylic & PU hybrid" />
+                <Stat k="02" v="Khô bề mặt sau 30 phút" />
+                <Stat k="03" v="Tự thi công không cần thợ" />
+              </dl>
             </div>
 
-            {/* Floating promo badge */}
-            <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-full bg-green-600 px-5 py-3 text-sm font-bold text-white shadow-lg">
-              🎁 Ưu đãi: Mua 2 hũ 1kg - Miễn Phí Vận Chuyển
-            </div>
+            <figure className="col-span-12 md:col-span-6 lg:col-span-7 relative">
+              <img
+                src={heroInterior}
+                alt="Tủ gỗ hoàn thiện màu kem trong không gian nội thất ấm"
+                className="aspect-[4/5] md:aspect-[5/6] w-full object-cover"
+                width={1600}
+                height={1200}
+              />
+              <figcaption className="absolute bottom-6 left-6 right-6 flex items-end justify-between text-[11px] uppercase tracking-[0.22em] text-cream mix-blend-difference">
+                <span>Lotus Wood Paint · sắc Mộc</span>
+                <span>—  001</span>
+              </figcaption>
+            </figure>
           </div>
         </div>
       </section>
 
-      {/* Products + Order */}
-      <section id="products" className="bg-white">
-        <div className="mx-auto grid max-w-7xl grid-cols-1 gap-10 px-4 py-16 lg:grid-cols-3">
-          {/* Tabs - left 2 cols */}
-          <div className="lg:col-span-2">
-            <div className="mb-6">
-              <h2 className="text-3xl font-bold tracking-tight text-slate-900">Chọn Dòng Sơn & Màu Yêu Thích</h2>
-              <p className="mt-2 text-slate-600">Hai dòng sản phẩm chuyên biệt cho nội thất và ngoại thất.</p>
+      {/* TWO FINISHES */}
+      <section id="choose" className="border-t border-walnut/10 bg-sand/40">
+        <div className="mx-auto max-w-[1400px] px-6 py-20 md:px-12 md:py-32">
+          <header className="mx-auto max-w-2xl text-center">
+            <span className="text-[11px] uppercase tracking-[0.3em] text-walnut/70">02 — Hai kiểu hoàn thiện</span>
+            <h2 className="mt-5 font-serif text-4xl leading-tight text-charcoal md:text-5xl">
+              Hai dòng sản phẩm.
+              <br />
+              Hai cảm xúc thẩm mỹ.
+            </h2>
+          </header>
+
+          <div className="mt-16 grid grid-cols-1 gap-10 lg:grid-cols-2 lg:gap-16">
+            <FinishCard
+              index="i."
+              eyebrow="Lotus Wood Paint — Indoor"
+              title="Màu bệt hiện đại"
+              body="Sơn phủ màu bệt 1 thành phần hệ nước. Màng sơn bóng nhẹ, mịn như sứ, độ cứng cao và hạn chế trầy xước — phủ trọn bề mặt gỗ nội thất, MDF, plywood, hay làm mới những món đồ gỗ cũ."
+              img={diyHands}
+              tags={["Nội thất", "MDF / Plywood", "Đồ gỗ cũ"]}
+            />
+            <FinishCard
+              index="ii."
+              eyebrow="Lotus Woodstain Finish — Ngoại thất & Sàn"
+              title="Giữ vân tự nhiên"
+              body="Sơn 2-trong-1 vừa tạo màu vừa hoàn thiện, công nghệ polyurethane hybrid hệ nước. Thấm sâu, tôn trọn vân gỗ, dẻo dai và kháng ẩm — bền đẹp cho cửa, sàn và đồ ngoại thất."
+              img={exteriorDoor}
+              tags={["Cửa & Sàn", "Ngoại thất", "Kháng UV & nước"]}
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* SURFACES — Bạn đang sơn gì */}
+      <section className="border-t border-walnut/10">
+        <div className="mx-auto max-w-[1400px] px-6 py-20 md:px-12 md:py-32">
+          <div className="grid grid-cols-12 gap-6">
+            <div className="col-span-12 lg:col-span-4">
+              <span className="text-[11px] uppercase tracking-[0.3em] text-walnut/70">03 — Bề mặt</span>
+              <h2 className="mt-5 font-serif text-4xl leading-tight text-charcoal md:text-5xl">
+                Bạn đang
+                <br />
+                sơn gì?
+              </h2>
+              <p className="mt-6 max-w-sm text-[15px] leading-relaxed text-walnut/80">
+                Chọn bề mặt — chúng tôi sẽ gợi ý dòng sơn, độ phủ và cách thi công
+                phù hợp nhất cho không gian của bạn.
+              </p>
             </div>
 
-            <Tabs value={activeTab} onValueChange={(v) => setActiveTab(v as "interior" | "exterior")}>
-              <TabsList className="grid h-auto w-full grid-cols-2 rounded-xl bg-gray-100 p-1">
-                <TabsTrigger value="interior" className="rounded-lg py-3 text-sm font-semibold data-[state=active]:bg-white data-[state=active]:text-green-700 data-[state=active]:shadow-sm">
-                  Lotus Wood Paint
-                  <span className="ml-2 hidden text-xs font-normal text-slate-500 md:inline">Nội Thất</span>
-                </TabsTrigger>
-                <TabsTrigger value="exterior" className="rounded-lg py-3 text-sm font-semibold data-[state=active]:bg-white data-[state=active]:text-green-700 data-[state=active]:shadow-sm">
-                  Lotus Woodstain Finish
-                  <span className="ml-2 hidden text-xs font-normal text-slate-500 md:inline">Ngoại Thất & Sàn</span>
-                </TabsTrigger>
-              </TabsList>
-
-              <TabsContent value="interior" className="mt-6">
-                <ProductPanel
-                  title="Lotus Wood Paint - Nội Thất (Sơn Màu Bệt)"
-                  description={products.interior.description}
-                  colors={interiorColors}
-                  selected={selectedInterior}
-                  onSelect={setSelectedInterior}
-                />
-              </TabsContent>
-              <TabsContent value="exterior" className="mt-6">
-                <ProductPanel
-                  title="Lotus Woodstain Finish - Ngoại Thất & Sàn (Sơn Giữ Vân)"
-                  description={products.exterior.description}
-                  colors={exteriorColors}
-                  selected={selectedExterior}
-                  onSelect={setSelectedExterior}
-                />
-              </TabsContent>
-            </Tabs>
-          </div>
-
-          {/* Sticky checkout - right col */}
-          <aside id="order" className="lg:col-span-1">
-            <div className="lg:sticky lg:top-6">
-              <div className="rounded-xl border-2 border-green-500 bg-white p-6 shadow-lg">
-                <h3 className="text-lg font-bold text-slate-900">Đặt Hàng Nhanh</h3>
-                <p className="mt-1 text-sm text-slate-500">Tự phục vụ - giao tận nhà toàn quốc</p>
-
-                {/* Summary */}
-                <div className="mt-5 rounded-lg border border-gray-200 bg-gray-50 p-4">
-                  <div className="flex items-start gap-3">
-                    <div
-                      className="mt-0.5 h-10 w-10 flex-shrink-0 rounded-full border border-gray-300 shadow-inner"
-                      style={{ backgroundColor: selectedColor.hex }}
-                    />
-                    <div className="min-w-0">
-                      <div className="truncate text-sm font-semibold text-slate-900">{selectedProduct.name}</div>
-                      <div className="text-xs text-slate-600">
-                        Màu: <span className="font-medium text-slate-800">{selectedColor.name}</span>
-                      </div>
-                      <div className="mt-1 text-xs text-slate-500">Quy cách: Hũ 1kg</div>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Price + qty */}
-                <div className="mt-4 flex items-center justify-between">
-                  <div>
-                    <div className="text-xs text-slate-500">Đơn giá</div>
-                    <div className="text-xl font-bold text-slate-900">{formatVnd(UNIT_PRICE)}<span className="text-sm font-normal text-slate-500"> / Hũ</span></div>
-                  </div>
-                  <div className="flex items-center rounded-lg border border-gray-300">
-                    <button
-                      type="button"
-                      onClick={() => setQty((q) => Math.max(1, q - 1))}
-                      className="flex h-10 w-10 items-center justify-center text-slate-600 hover:bg-gray-50"
-                      aria-label="Giảm số lượng"
-                    >
-                      <Minus className="h-4 w-4" />
-                    </button>
-                    <span className="w-10 text-center text-base font-semibold text-slate-900">{qty}</span>
-                    <button
-                      type="button"
-                      onClick={() => setQty((q) => q + 1)}
-                      className="flex h-10 w-10 items-center justify-center text-slate-600 hover:bg-gray-50"
-                      aria-label="Tăng số lượng"
-                    >
-                      <Plus className="h-4 w-4" />
-                    </button>
-                  </div>
-                </div>
-
-                {/* Alert */}
-                <div className={`mt-4 flex items-start gap-2 rounded-lg border p-3 text-xs ${freeShip ? "border-green-200 bg-green-50 text-green-800" : "border-amber-200 bg-amber-50 text-amber-800"}`}>
-                  <Truck className="mt-0.5 h-4 w-4 flex-shrink-0" />
-                  <span>
-                    {freeShip
-                      ? "Đơn của bạn được Miễn Phí Giao Hàng Toàn Quốc."
-                      : "Mua từ 2 hũ để được Miễn Phí Giao Hàng Toàn Quốc."}
-                  </span>
-                </div>
-
-                {/* Form */}
-                <form
-                  className="mt-5 space-y-4"
-                  onSubmit={(e) => {
-                    e.preventDefault();
-                    alert(`Đặt hàng thành công!\n${selectedProduct.name}\nMàu: ${selectedColor.name}\nSố lượng: ${qty}\nTổng: ${formatVnd(total)}`);
-                  }}
-                >
-                  <FloatingInput id="name" label="Họ và Tên" required />
-                  <FloatingInput id="phone" label="Số điện thoại di động" type="tel" required pattern="[0-9 +]{8,}" />
-                  <FloatingInput id="address" label="Địa chỉ nhận hàng chi tiết" required />
-
-                  <div className="flex items-center justify-between border-t border-gray-200 pt-4">
-                    <span className="text-sm text-slate-600">Tổng cộng</span>
-                    <span className="text-2xl font-extrabold text-slate-900">{formatVnd(total)}</span>
-                  </div>
-
-                  <Button
-                    type="submit"
-                    className="h-14 w-full bg-green-600 text-base font-bold tracking-wide hover:bg-green-700"
+            <ul className="col-span-12 lg:col-span-8 grid grid-cols-1 divide-y divide-walnut/15 border-y border-walnut/15 sm:grid-cols-2 sm:divide-y-0 sm:[&>li]:border-b sm:[&>li]:border-walnut/15">
+              {surfaces.map((s, i) => (
+                <li key={s.label}>
+                  <a
+                    href="#advise"
+                    className="group flex items-center justify-between gap-6 px-2 py-7 transition hover:bg-sand/50"
                   >
-                    Đặt Hàng & Nhận Tại Nhà
-                  </Button>
-                  <p className="text-center text-[11px] text-slate-500">
-                    Thanh toán khi nhận hàng (COD) · Đổi trả 7 ngày
-                  </p>
-                </form>
-              </div>
-            </div>
-          </aside>
-        </div>
-      </section>
-
-      {/* Compare */}
-      <section id="compare" className="border-y border-gray-200 bg-gray-50">
-        <div className="mx-auto max-w-7xl px-4 py-16">
-          <div className="mx-auto max-w-2xl text-center">
-            <h2 className="text-3xl font-bold tracking-tight text-slate-900">Vì sao chọn Lotus thay vì sơn PU truyền thống?</h2>
-            <p className="mt-3 text-slate-600">So sánh trực tiếp các tiêu chí quan trọng nhất khi bạn tự thi công tại nhà.</p>
-          </div>
-
-          <div className="mx-auto mt-10 grid max-w-4xl grid-cols-1 gap-6 md:grid-cols-2">
-            <div className="rounded-xl border-2 border-green-500 bg-white p-6 shadow-sm">
-              <div className="mb-4 inline-flex items-center gap-2 rounded-full bg-green-100 px-3 py-1 text-xs font-bold text-green-700">
-                <Check className="h-3.5 w-3.5" /> KHUYẾN NGHỊ
-              </div>
-              <h3 className="text-xl font-bold text-slate-900">Lotus Water-based</h3>
-              <ul className="mt-4 space-y-3 text-sm">
-                {[
-                  "Hệ nước an toàn cho sức khỏe gia đình",
-                  "Không mùi - thi công ngay trong nhà ở",
-                  "Dụng cụ rửa sạch bằng nước thường",
-                  "Khô nhanh chỉ 1-2 giờ giữa các lớp",
-                ].map((t) => (
-                  <li key={t} className="flex items-start gap-3 text-slate-700">
-                    <Check className="mt-0.5 h-5 w-5 flex-shrink-0 text-green-600" />
-                    <span>{t}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            <div className="rounded-xl border border-gray-200 bg-white p-6">
-              <div className="mb-4 inline-flex items-center gap-2 rounded-full bg-gray-100 px-3 py-1 text-xs font-bold text-slate-600">
-                Truyền thống
-              </div>
-              <h3 className="text-xl font-bold text-slate-900">Sơn PU hệ dung môi</h3>
-              <ul className="mt-4 space-y-3 text-sm">
-                {[
-                  "Chứa dung môi độc hại, ảnh hưởng sức khỏe",
-                  "Mùi nồng gắt, phải ở nơi thoáng khí",
-                  "Cần xăng thơm / dung môi để rửa dụng cụ",
-                  "Cần thợ chuyên nghiệp thi công đúng kỹ thuật",
-                ].map((t) => (
-                  <li key={t} className="flex items-start gap-3 text-slate-600">
-                    <span className="mt-0.5 flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full border border-gray-300 text-xs">✕</span>
-                    <span>{t}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
+                    <div>
+                      <div className="font-serif text-2xl text-charcoal">{s.label}</div>
+                      <div className="mt-1 text-sm text-walnut/70">{s.desc}</div>
+                    </div>
+                    <span className="flex h-10 w-10 flex-shrink-0 items-center justify-center border border-walnut/30 text-walnut transition group-hover:bg-charcoal group-hover:text-cream group-hover:border-charcoal">
+                      <ArrowUpRight className="h-4 w-4" />
+                    </span>
+                  </a>
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="bg-white">
-        <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 px-4 py-8 text-sm text-slate-500 md:flex-row">
-          <div>© {new Date().getFullYear()} Lotus Paint. Sơn gỗ hệ nước an toàn.</div>
-          <div className="flex gap-6">
-            <a href="#" className="hover:text-slate-700">Chính sách đổi trả</a>
-            <a href="#" className="hover:text-slate-700">Vận chuyển</a>
-            <a href="#" className="hover:text-slate-700">Liên hệ</a>
-          </div>
-        </div>
-      </footer>
-    </div>
-  );
-}
-
-function ProductPanel({
-  title,
-  description,
-  colors,
-  selected,
-  onSelect,
-}: {
-  title: string;
-  description: string;
-  colors: ColorSwatch[];
-  selected: ColorSwatch;
-  onSelect: (c: ColorSwatch) => void;
-}) {
-  return (
-    <div className="rounded-xl border border-gray-200 bg-white p-6">
-      <h3 className="text-xl font-bold text-slate-900">{title}</h3>
-      <p className="mt-2 text-sm leading-relaxed text-slate-600">{description}</p>
-
-      <div className="mt-6">
-        <div className="flex items-center justify-between">
-          <span className="text-sm font-semibold text-slate-800">Bảng màu</span>
-          <span className="text-sm text-slate-500">
-            Đã chọn: <span className="font-semibold text-slate-900">{selected.name}</span>
-          </span>
-        </div>
-
-        <div className="mt-4 grid grid-cols-6 gap-3 sm:grid-cols-8 md:grid-cols-6 lg:grid-cols-8">
-          {colors.map((c) => {
-            const active = c.name === selected.name;
-            return (
-              <button
-                key={c.name}
-                type="button"
-                onClick={() => onSelect(c)}
-                title={c.name}
-                aria-label={`Chọn màu ${c.name}`}
-                className={`group flex flex-col items-center gap-1 focus:outline-none`}
+      {/* BEFORE / AFTER */}
+      <section className="border-t border-walnut/10 bg-walnut text-cream">
+        <div className="mx-auto max-w-[1400px] px-6 py-20 md:px-12 md:py-32">
+          <div className="grid grid-cols-12 gap-x-6 gap-y-10">
+            <div className="col-span-12 md:col-span-5">
+              <span className="text-[11px] uppercase tracking-[0.3em] text-cream/60">04 — Trước & Sau</span>
+              <h2 className="mt-5 font-serif text-4xl leading-tight md:text-5xl">
+                Đồ gỗ cũ,
+                <br />
+                kể câu chuyện mới.
+              </h2>
+              <p className="mt-6 max-w-sm text-[15px] leading-relaxed text-cream/75">
+                Một lớp Lotus đủ để biến chiếc ghế đã ngả màu thành chi tiết trầm tĩnh,
+                hoà với phần còn lại của ngôi nhà — không cần thay mới.
+              </p>
+              <a
+                href="#advise"
+                className="mt-10 inline-flex items-center gap-3 border-b border-cream/60 pb-1 text-[13px] uppercase tracking-[0.2em] hover:text-clay hover:border-clay"
               >
-                <span
-                  className={`relative flex h-12 w-12 items-center justify-center rounded-full border transition ${
-                    active
-                      ? "ring-2 ring-green-600 ring-offset-2 border-transparent"
-                      : "border-gray-300 group-hover:scale-105"
-                  }`}
-                  style={{ backgroundColor: c.hex }}
-                >
-                  {active && (
-                    <Check
-                      className="h-5 w-5 drop-shadow"
-                      style={{ color: isLight(c.hex) ? "#0f172a" : "#ffffff" }}
-                    />
-                  )}
-                </span>
-                <span className="line-clamp-1 text-[11px] text-slate-600">{c.name}</span>
-              </button>
-            );
-          })}
+                Nhận tư vấn theo bề mặt gỗ
+                <ArrowRight className="h-4 w-4" />
+              </a>
+            </div>
+            <div className="col-span-12 md:col-span-7">
+              <img
+                src={beforeAfter}
+                alt="Ghế gỗ trước và sau khi sơn lại bằng Lotus Wood Paint màu rêu"
+                loading="lazy"
+                className="aspect-[16/10] w-full object-cover"
+                width={1600}
+                height={1000}
+              />
+            </div>
+          </div>
         </div>
-      </div>
+      </section>
 
-      <div className="mt-6 grid grid-cols-2 gap-4 rounded-lg bg-gray-50 p-4 text-sm md:grid-cols-4">
-        <Stat label="Quy cách" value="Hũ 1kg" />
-        <Stat label="Độ phủ" value="~8-10 m²/kg" />
-        <Stat label="Khô bề mặt" value="30 phút" />
-        <Stat label="Sơn lớp 2" value="Sau 2 giờ" />
-      </div>
+      {/* BENEFITS */}
+      <section className="border-t border-walnut/10">
+        <div className="mx-auto max-w-[1400px] px-6 py-20 md:px-12 md:py-32">
+          <header className="grid grid-cols-12 gap-6">
+            <div className="col-span-12 md:col-span-6">
+              <span className="text-[11px] uppercase tracking-[0.3em] text-walnut/70">05 — Vì sao hệ nước</span>
+              <h2 className="mt-5 font-serif text-4xl leading-tight text-charcoal md:text-5xl">
+                Sạch hơn cho ngôi nhà.
+                <br />
+                Dễ hơn cho đôi tay.
+              </h2>
+            </div>
+            <p className="col-span-12 md:col-span-6 md:pt-12 text-[15px] leading-relaxed text-walnut/80">
+              Lotus được pha chế gốc nước — không dung môi nặng, không mùi gắt,
+              không cần phòng thi công riêng. Bạn có thể sơn trong căn hộ, ở cạnh con nhỏ,
+              và quay lại sinh hoạt bình thường chỉ sau vài giờ.
+            </p>
+          </header>
+
+          <ul className="mt-16 grid grid-cols-1 gap-x-10 gap-y-12 sm:grid-cols-2 lg:grid-cols-4">
+            {[
+              { n: "01", t: "Hệ nước nhẹ mùi", d: "Không xăng thơm, không dung môi nặng. An toàn cho phòng ngủ và phòng trẻ." },
+              { n: "02", t: "Khô nhanh trong giờ", d: "Khô bề mặt 30 phút, sơn lớp tiếp theo sau 2 giờ. Một buổi chiều là xong." },
+              { n: "03", t: "Rửa bằng nước thường", d: "Cọ, khay, tay áo — sạch chỉ với vòi nước. Không cần dung môi." },
+              { n: "04", t: "Bền cho đời sống thật", d: "Kháng ẩm, kháng trầy nhẹ, chịu được lau chùi hằng ngày trong gia đình." },
+            ].map((b) => (
+              <li key={b.n} className="border-t border-walnut/20 pt-6">
+                <div className="text-[11px] uppercase tracking-[0.3em] text-clay">{b.n}</div>
+                <h3 className="mt-4 font-serif text-2xl text-charcoal">{b.t}</h3>
+                <p className="mt-3 text-sm leading-relaxed text-walnut/75">{b.d}</p>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
+
+      {/* PROCESS */}
+      <section className="border-t border-walnut/10 bg-sand/40">
+        <div className="mx-auto max-w-[1400px] px-6 py-20 md:px-12 md:py-32">
+          <div className="grid grid-cols-12 gap-6">
+            <div className="col-span-12 md:col-span-5">
+              <span className="text-[11px] uppercase tracking-[0.3em] text-walnut/70">06 — Thi công</span>
+              <h2 className="mt-5 font-serif text-4xl leading-tight text-charcoal md:text-5xl">
+                Ba bước,
+                <br />
+                một buổi chiều.
+              </h2>
+              <p className="mt-6 max-w-sm text-[15px] leading-relaxed text-walnut/80">
+                Quy trình tinh giản — không cần thợ, không cần máy chuyên dụng.
+                Chỉ cọ, lăn và một chút kiên nhẫn.
+              </p>
+            </div>
+
+            <ol className="col-span-12 md:col-span-7 space-y-10">
+              {[
+                { n: "I.", t: "Làm sạch & chà nhám nhẹ", d: "Lau bụi, dầu mỡ. Chà nhám P240 cho bề mặt mịn và bám sơn tốt." },
+                { n: "II.", t: "Sơn lớp đầu, chờ 2 giờ", d: "Pha loãng 5–10% nước, sơn mỏng đều bằng cọ hoặc lăn. Để khô trong 2 giờ." },
+                { n: "III.", t: "Phủ lớp hoàn thiện", d: "Sơn lớp thứ hai để màng sơn đều màu, mịn và đạt độ bền tối ưu." },
+              ].map((s) => (
+                <li key={s.n} className="grid grid-cols-12 items-baseline gap-4 border-t border-walnut/15 pt-6">
+                  <span className="col-span-2 font-serif text-3xl text-clay">{s.n}</span>
+                  <div className="col-span-10">
+                    <h3 className="font-serif text-2xl text-charcoal">{s.t}</h3>
+                    <p className="mt-2 text-sm leading-relaxed text-walnut/75">{s.d}</p>
+                  </div>
+                </li>
+              ))}
+            </ol>
+          </div>
+        </div>
+      </section>
+
+      {/* PALETTE */}
+      <section id="palette" className="border-t border-walnut/10">
+        <div className="mx-auto max-w-[1400px] px-6 py-20 md:px-12 md:py-32">
+          <div className="flex flex-col items-start justify-between gap-8 md:flex-row md:items-end">
+            <div>
+              <span className="text-[11px] uppercase tracking-[0.3em] text-walnut/70">07 — Bảng màu</span>
+              <h2 className="mt-5 font-serif text-4xl leading-tight text-charcoal md:text-5xl">
+                Một bảng màu
+                <br />
+                cho ngôi nhà tĩnh tại.
+              </h2>
+            </div>
+            <div className="inline-flex border border-walnut/25 text-[12px] uppercase tracking-[0.2em]">
+              <button
+                onClick={() => setTab("indoor")}
+                className={`px-5 py-3 transition ${tab === "indoor" ? "bg-charcoal text-cream" : "text-walnut hover:bg-sand/60"}`}
+              >
+                Indoor
+              </button>
+              <button
+                onClick={() => setTab("outdoor")}
+                className={`px-5 py-3 transition ${tab === "outdoor" ? "bg-charcoal text-cream" : "text-walnut hover:bg-sand/60"}`}
+              >
+                Outdoor
+              </button>
+            </div>
+          </div>
+
+          <div className="mt-14 grid grid-cols-2 gap-x-6 gap-y-10 sm:grid-cols-3 lg:grid-cols-4">
+            {palette.map((c) => (
+              <figure key={c.name} className="group">
+                <div
+                  className="aspect-[4/5] w-full transition group-hover:scale-[1.01]"
+                  style={{ backgroundColor: c.hex }}
+                />
+                <figcaption className="mt-4 flex items-baseline justify-between border-t border-walnut/20 pt-3">
+                  <div>
+                    <div className="font-serif text-lg text-charcoal">{c.name}</div>
+                    <div className="text-[11px] uppercase tracking-[0.2em] text-walnut/60">{c.tone}</div>
+                  </div>
+                  <span className="text-[11px] text-walnut/50">{c.hex}</span>
+                </figcaption>
+              </figure>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* TESTIMONIAL */}
+      <section className="border-t border-walnut/10 bg-cream">
+        <div className="mx-auto max-w-[1400px] px-6 py-20 md:px-12 md:py-32">
+          <div className="grid grid-cols-12 gap-6">
+            <figure className="col-span-12 md:col-span-5">
+              <img
+                src={woodGrain}
+                alt="Cận cảnh vân gỗ tự nhiên được hoàn thiện bằng Lotus Woodstain"
+                loading="lazy"
+                className="aspect-[4/5] w-full object-cover"
+                width={1400}
+                height={1000}
+              />
+            </figure>
+            <blockquote className="col-span-12 md:col-span-7 md:pl-10 flex flex-col justify-center">
+              <span className="text-[11px] uppercase tracking-[0.3em] text-walnut/70">08 — Cảm nhận</span>
+              <p className="mt-6 font-serif text-3xl leading-[1.3] text-charcoal md:text-4xl">
+                “Mình sơn lại bộ bàn ăn ngay trong căn hộ chung cư. Không mùi xăng,
+                không phải dời con sang nhà ngoại. Sáng hôm sau cả nhà đã ngồi ăn
+                bình thường — chiếc bàn nhìn như mới hoàn toàn.”
+              </p>
+              <footer className="mt-8 text-sm text-walnut/70">
+                Linh — Thảo Điền, TP. HCM · Lotus Wood Paint sắc Khói
+              </footer>
+            </blockquote>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA / ADVISE */}
+      <section id="advise" className="border-t border-walnut/10 bg-charcoal text-cream">
+        <div className="mx-auto max-w-[1400px] px-6 py-20 md:px-12 md:py-32">
+          <div className="grid grid-cols-12 gap-x-6 gap-y-12">
+            <div className="col-span-12 md:col-span-6">
+              <span className="text-[11px] uppercase tracking-[0.3em] text-cream/60">09 — Tư vấn</span>
+              <h2 className="mt-5 font-serif text-4xl leading-tight md:text-6xl">
+                Để Lotus
+                <br />
+                gợi ý cho bạn.
+              </h2>
+              <p className="mt-8 max-w-md text-[15px] leading-relaxed text-cream/75">
+                Gửi cho chúng tôi bề mặt gỗ bạn đang muốn làm mới — Lotus sẽ tư vấn
+                dòng sơn, sắc màu, dung tích và cách thi công phù hợp, hoàn toàn miễn phí.
+              </p>
+              <div className="mt-12 space-y-4 text-sm text-cream/70">
+                <div>Hotline · <span className="text-cream">1900 0000</span></div>
+                <div>Email · <span className="text-cream">hello@lotuspaint.vn</span></div>
+                <div>Giờ tư vấn · 8:00 – 20:00, mỗi ngày</div>
+              </div>
+            </div>
+
+            <form
+              onSubmit={(e) => {
+                e.preventDefault();
+                alert("Cảm ơn bạn — Lotus sẽ liên hệ trong vòng 24 giờ.");
+              }}
+              className="col-span-12 md:col-span-6 md:pl-10 space-y-6"
+            >
+              <Field label="Họ và tên">
+                <Input
+                  required
+                  className="h-12 rounded-none border-0 border-b border-cream/30 bg-transparent px-0 text-base text-cream placeholder:text-cream/40 focus-visible:border-clay focus-visible:ring-0"
+                  placeholder="Nguyễn An"
+                />
+              </Field>
+              <Field label="Số điện thoại">
+                <Input
+                  required
+                  type="tel"
+                  className="h-12 rounded-none border-0 border-b border-cream/30 bg-transparent px-0 text-base text-cream placeholder:text-cream/40 focus-visible:border-clay focus-visible:ring-0"
+                  placeholder="09xx xxx xxx"
+                />
+              </Field>
+              <Field label="Bề mặt bạn muốn sơn">
+                <Textarea
+                  required
+                  rows={3}
+                  className="rounded-none border-0 border-b border-cream/30 bg-transparent px-0 text-base text-cream placeholder:text-cream/40 focus-visible:border-clay focus-visible:ring-0"
+                  placeholder="VD: Bộ bàn ăn gỗ sồi cũ, mong muốn sơn lại màu xanh rêu nhẹ."
+                />
+              </Field>
+
+              <Button
+                type="submit"
+                className="mt-4 h-14 w-full rounded-none bg-clay text-[13px] font-medium uppercase tracking-[0.2em] text-cream hover:bg-clay/90"
+              >
+                Nhận tư vấn theo bề mặt gỗ
+              </Button>
+              <p className="text-[11px] uppercase tracking-[0.18em] text-cream/50">
+                Lotus sẽ phản hồi trong vòng 24 giờ làm việc.
+              </p>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <Footer />
     </div>
   );
 }
 
-function Stat({ label, value }: { label: string; value: string }) {
+function Header() {
+  return (
+    <header className="sticky top-0 z-40 border-b border-walnut/10 bg-cream/85 backdrop-blur">
+      <div className="mx-auto flex max-w-[1400px] items-center justify-between px-6 py-5 md:px-12">
+        <a href="#" className="font-serif text-2xl tracking-tight text-charcoal">
+          Lotus<span className="text-clay">.</span>
+        </a>
+        <nav className="hidden gap-10 text-[12px] uppercase tracking-[0.22em] text-walnut md:flex">
+          <a href="#choose" className="hover:text-clay">Sản phẩm</a>
+          <a href="#palette" className="hover:text-clay">Bảng màu</a>
+          <a href="#advise" className="hover:text-clay">Tư vấn</a>
+        </nav>
+        <a
+          href="#choose"
+          className="hidden md:inline-flex items-center gap-2 border border-charcoal px-5 py-2.5 text-[11px] uppercase tracking-[0.2em] text-charcoal transition hover:bg-charcoal hover:text-cream"
+        >
+          Chọn loại sơn
+          <ArrowRight className="h-3.5 w-3.5" />
+        </a>
+      </div>
+    </header>
+  );
+}
+
+function Footer() {
+  return (
+    <footer className="border-t border-walnut/15 bg-cream">
+      <div className="mx-auto max-w-[1400px] px-6 py-14 md:px-12">
+        <div className="grid grid-cols-12 gap-6">
+          <div className="col-span-12 md:col-span-5">
+            <div className="font-serif text-3xl text-charcoal">Lotus<span className="text-clay">.</span></div>
+            <p className="mt-4 max-w-sm text-sm leading-relaxed text-walnut/70">
+              Sơn gỗ hệ nước cho không gian sống tinh tế.
+              Hoàn thiện đẹp, an toàn — dành cho gia đình hiện đại.
+            </p>
+          </div>
+          <div className="col-span-6 md:col-span-3">
+            <div className="text-[11px] uppercase tracking-[0.22em] text-walnut/60">Sản phẩm</div>
+            <ul className="mt-4 space-y-2 text-sm text-charcoal">
+              <li><a href="#choose" className="hover:text-clay">Wood Paint — Indoor</a></li>
+              <li><a href="#choose" className="hover:text-clay">Woodstain Finish — Outdoor</a></li>
+              <li><a href="#palette" className="hover:text-clay">Bảng màu</a></li>
+            </ul>
+          </div>
+          <div className="col-span-6 md:col-span-4">
+            <div className="text-[11px] uppercase tracking-[0.22em] text-walnut/60">Liên hệ</div>
+            <ul className="mt-4 space-y-2 text-sm text-charcoal">
+              <li>Hotline · 1900 0000</li>
+              <li>hello@lotuspaint.vn</li>
+              <li>Showroom · Thảo Điền, TP. HCM</li>
+            </ul>
+          </div>
+        </div>
+        <div className="mt-12 flex flex-col justify-between gap-3 border-t border-walnut/15 pt-6 text-[11px] uppercase tracking-[0.2em] text-walnut/60 md:flex-row">
+          <span>© {new Date().getFullYear()} Lotus Paint Studio</span>
+          <span>Made with care · Vietnam</span>
+        </div>
+      </div>
+    </footer>
+  );
+}
+
+function Stat({ k, v }: { k: string; v: string }) {
   return (
     <div>
-      <div className="text-xs text-slate-500">{label}</div>
-      <div className="font-semibold text-slate-900">{value}</div>
+      <dt className="text-[11px] uppercase tracking-[0.25em] text-clay">{k}</dt>
+      <dd className="mt-2 text-[13px] leading-snug text-walnut/85">{v}</dd>
     </div>
   );
 }
 
-function FloatingInput({
-  id,
-  label,
-  type = "text",
-  required,
-  pattern,
+function FinishCard({
+  index,
+  eyebrow,
+  title,
+  body,
+  img,
+  tags,
 }: {
-  id: string;
-  label: string;
-  type?: string;
-  required?: boolean;
-  pattern?: string;
+  index: string;
+  eyebrow: string;
+  title: string;
+  body: string;
+  img: string;
+  tags: string[];
 }) {
   return (
-    <div className="relative">
-      <Input
-        id={id}
-        type={type}
-        required={required}
-        pattern={pattern}
-        placeholder=" "
-        className="peer h-12 rounded-lg border-gray-300 pt-4 text-sm placeholder-transparent focus-visible:ring-green-600"
-      />
-      <Label
-        htmlFor={id}
-        className="pointer-events-none absolute left-3 top-1 text-[11px] font-medium text-slate-500 transition-all peer-placeholder-shown:top-3.5 peer-placeholder-shown:text-sm peer-placeholder-shown:text-slate-400 peer-focus:top-1 peer-focus:text-[11px] peer-focus:text-green-700"
-      >
-        {label}
-      </Label>
-    </div>
+    <article className="group flex flex-col">
+      <div className="overflow-hidden">
+        <img
+          src={img}
+          alt={title}
+          loading="lazy"
+          className="aspect-[5/6] w-full object-cover transition duration-700 group-hover:scale-[1.03]"
+          width={1200}
+          height={1500}
+        />
+      </div>
+      <div className="mt-8 flex items-baseline gap-4">
+        <span className="font-serif text-2xl text-clay">{index}</span>
+        <span className="text-[11px] uppercase tracking-[0.25em] text-walnut/70">{eyebrow}</span>
+      </div>
+      <h3 className="mt-4 font-serif text-3xl leading-tight text-charcoal md:text-4xl">{title}</h3>
+      <p className="mt-5 max-w-lg text-[15px] leading-relaxed text-walnut/80">{body}</p>
+      <ul className="mt-7 flex flex-wrap gap-2 text-[11px] uppercase tracking-[0.18em] text-walnut">
+        {tags.map((t) => (
+          <li key={t} className="border border-walnut/30 px-3 py-1.5">{t}</li>
+        ))}
+      </ul>
+    </article>
   );
 }
 
-function isLight(hex: string) {
-  const h = hex.replace("#", "");
-  const r = parseInt(h.substring(0, 2), 16);
-  const g = parseInt(h.substring(2, 4), 16);
-  const b = parseInt(h.substring(4, 6), 16);
-  return (r * 299 + g * 587 + b * 114) / 1000 > 160;
+function Field({ label, children }: { label: string; children: React.ReactNode }) {
+  return (
+    <label className="block">
+      <span className="text-[11px] uppercase tracking-[0.22em] text-cream/60">{label}</span>
+      <div className="mt-2">{children}</div>
+    </label>
+  );
 }
-
-// (legacy Index removed)
