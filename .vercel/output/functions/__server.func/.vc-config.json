@@ -1,0 +1,7 @@
+{
+  "handler": "index.mjs",
+  "launcherType": "Nodejs",
+  "shouldAddHelpers": false,
+  "supportsResponseStreaming": false,
+  "runtime": "nodejs20.x"
+}
