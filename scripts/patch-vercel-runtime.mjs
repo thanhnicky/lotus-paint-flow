@@ -1,12 +1,33 @@
-import { readFileSync, writeFileSync, existsSync } from "fs";
+import { readFileSync, writeFileSync, existsSync, renameSync } from "fs";
 
-const vcConfigPath = ".vercel/output/functions/__server.func/.vc-config.json";
+const outputDir = ".vercel/output";
+const oldFuncDir = `${outputDir}/functions/__server.func`;
+const newFuncDir = `${outputDir}/functions/ssr.func`;
+const configPath = `${outputDir}/config.json`;
 
-if (existsSync(vcConfigPath)) {
-  const config = JSON.parse(readFileSync(vcConfigPath, "utf8"));
-  config.runtime = "nodejs20.x";
-  writeFileSync(vcConfigPath, JSON.stringify(config, null, 2));
-  console.log("Patched .vc-config.json: runtime set to nodejs20.x");
+if (existsSync(oldFuncDir)) {
+  // Rename __server.func to ssr.func to avoid Vercel internal route conflicts
+  renameSync(oldFuncDir, newFuncDir);
+  console.log("Renamed __server.func -> ssr.func");
+
+  // Patch .vc-config.json
+  const vcConfigPath = `${newFuncDir}/.vc-config.json`;
+  if (existsSync(vcConfigPath)) {
+    const vcConfig = JSON.parse(readFileSync(vcConfigPath, "utf8"));
+    vcConfig.runtime = "nodejs20.x";
+    vcConfig.supportsResponseStreaming = false;
+    writeFileSync(vcConfigPath, JSON.stringify(vcConfig, null, 2));
+    console.log("Patched .vc-config.json: runtime=nodejs20.x, streaming=false");
+  }
+
+  // Update config.json routes to point to /ssr instead of /__server
+  if (existsSync(configPath)) {
+    const config = JSON.parse(readFileSync(configPath, "utf8"));
+    const configStr = JSON.stringify(config);
+    const patched = configStr.replaceAll("/__server", "/ssr");
+    writeFileSync(configPath, patched);
+    console.log("Patched config.json: /__server -> /ssr");
+  }
 } else {
-  console.warn("No .vc-config.json found, skipping patch.");
+  console.warn("No __server.func found, skipping patch.");
 }
