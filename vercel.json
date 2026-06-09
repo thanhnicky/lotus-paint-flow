@@ -1,4 +1,4 @@
 {
-  "buildCommand": "LOVABLE_SANDBOX=0 npm run build",
+  "buildCommand": "LOVABLE_SANDBOX=0 DEV_SERVER__PROJECT_PATH='' npm run build",
   "installCommand": "npm install --legacy-peer-deps"
 }
