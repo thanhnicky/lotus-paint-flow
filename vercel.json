@@ -1,4 +1,4 @@
 {
-  "buildCommand": "echo 'using pre-built output from git'",
+  "buildCommand": "rm -rf .vercel/output node_modules/.nitro && LOVABLE_SANDBOX=0 npm run build",
   "installCommand": "npm install --legacy-peer-deps"
 }
