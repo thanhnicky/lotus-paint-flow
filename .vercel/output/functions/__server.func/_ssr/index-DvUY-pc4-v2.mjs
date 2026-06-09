@@ -511,9 +511,11 @@ function Index() {
           /* @__PURE__ */ jsxRuntimeExports.jsx(ArrowRight, { className: "h-4 w-4" })
         ] })
       ] }),
-      /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "col-span-12 md:col-span-8 lg:col-span-8", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "relative", children: [
-        /* @__PURE__ */ jsxRuntimeExports.jsx("img", { src: beforeAfter, alt: "Ghế gỗ trước và sau khi sơn lại bằng Lotus Wood Paint màu rêu", loading: "lazy", className: "aspect-[3/2] w-full object-cover md:aspect-[4/3]", width: 1600, height: 1200 }),
-        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute bottom-4 left-4 text-[10px] uppercase tracking-[0.22em] text-cream/80 sm:bottom-5 sm:left-5", children: "Ghế gỗ · Lotus Wood Paint · sắc Rêu" })
+      /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "col-span-12 md:col-span-8 lg:col-span-8", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "relative overflow-hidden", children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsx("img", { src: beforeAfter, alt: "Ghế gỗ trước và sau khi sơn lại bằng Lotus Wood Paint màu rêu", loading: "lazy", className: "w-full h-auto block", width: 1600, height: 900 }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "pointer-events-none absolute inset-y-0 left-1/2 w-px -translate-x-1/2 bg-cream/30" }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute bottom-4 left-[8%] text-[9px] uppercase tracking-[0.28em] text-cream/75 sm:bottom-5 sm:text-[10px]", children: "Trước khi sơn" }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute bottom-4 right-[8%] text-[9px] uppercase tracking-[0.28em] text-cream/75 sm:bottom-5 sm:text-[10px]", children: "Sau khi sơn" })
       ] }) })
     ] }) }) }),
     /* @__PURE__ */ jsxRuntimeExports.jsx("section", { className: "border-t border-walnut/10", children: /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "mx-auto max-w-[1400px] px-5 py-24 md:px-12 md:py-36", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "grid grid-cols-1 gap-16 lg:grid-cols-12 lg:gap-10", children: [

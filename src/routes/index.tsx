@@ -434,17 +434,23 @@ function Index() {
               </a>
             </div>
             <div className="col-span-12 md:col-span-8 lg:col-span-8">
-              <div className="relative">
+              <div className="relative overflow-hidden">
                 <img
                   src={beforeAfter}
                   alt="Ghế gỗ trước và sau khi sơn lại bằng Lotus Wood Paint màu rêu"
                   loading="lazy"
-                  className="aspect-[3/2] w-full object-cover md:aspect-[4/3]"
+                  className="w-full h-auto block"
                   width={1600}
-                  height={1200}
+                  height={900}
                 />
-                <div className="absolute bottom-4 left-4 text-[10px] uppercase tracking-[0.22em] text-cream/80 sm:bottom-5 sm:left-5">
-                  Ghế gỗ · Lotus Wood Paint · sắc Rêu
+                {/* Divider line center */}
+                <div className="pointer-events-none absolute inset-y-0 left-1/2 w-px -translate-x-1/2 bg-cream/30" />
+                {/* Labels */}
+                <div className="absolute bottom-4 left-[8%] text-[9px] uppercase tracking-[0.28em] text-cream/75 sm:bottom-5 sm:text-[10px]">
+                  Trước khi sơn
+                </div>
+                <div className="absolute bottom-4 right-[8%] text-[9px] uppercase tracking-[0.28em] text-cream/75 sm:bottom-5 sm:text-[10px]">
+                  Sau khi sơn
                 </div>
               </div>
             </div>
