@@ -461,35 +461,39 @@ function Index() {
       {/* BENEFITS */}
       <section className="border-t border-walnut/10">
         <div className="mx-auto max-w-[1400px] px-5 py-24 md:px-12 md:py-36">
-          <div className="grid grid-cols-1 gap-16 lg:grid-cols-12 lg:gap-10">
-            <div className="lg:col-span-5 lg:pt-1">
+          {/* Top — headline + featured main point */}
+          <div className="grid grid-cols-1 gap-8 lg:grid-cols-12 lg:gap-14">
+            <div className="lg:col-span-5">
               <span className="text-[11px] uppercase tracking-[0.3em] text-walnut/70">06 — Vì sao hệ nước</span>
               <h2 className="mt-5 font-serif text-[32px] leading-tight text-charcoal sm:text-4xl md:text-5xl">
                 Sạch hơn cho ngôi nhà.
                 <br />
                 Dễ hơn cho đôi tay.
               </h2>
-              <p className="mt-8 font-serif text-[18px] leading-[1.55] text-walnut/75 md:text-[20px]">
-                Không mùi xăng, không phòng thi công riêng. Sơn trong căn hộ, cạnh con nhỏ — quay lại sinh hoạt bình thường chỉ sau vài giờ.
+            </div>
+            <div className="lg:col-span-7 lg:pt-[3.5rem]">
+              <p className="font-serif text-[20px] leading-[1.6] text-charcoal md:text-[22px]">
+                Lotus không có mùi xăng — bạn sơn được ngay trong phòng ngủ, cạnh con nhỏ, không cần thông gió đặc biệt hay tạm dời đồ ra khỏi phòng.
               </p>
             </div>
-            <ul className="lg:col-span-7 divide-y divide-walnut/15">
-              {[
-                { n: "01", t: "Hệ nước nhẹ mùi", d: "Không xăng thơm, không dung môi nặng. An toàn cho phòng ngủ và phòng trẻ." },
-                { n: "02", t: "Khô nhanh trong giờ", d: "Khô bề mặt 30 phút, sơn lớp tiếp theo sau 2 giờ. Một buổi chiều là xong." },
-                { n: "03", t: "Rửa bằng nước thường", d: "Cọ, khay, tay áo — sạch chỉ với vòi nước. Không cần dung môi." },
-                { n: "04", t: "Bền cho đời sống thật", d: "Kháng ẩm, kháng trầy nhẹ, chịu được lau chùi hằng ngày trong gia đình." },
-              ].map((b) => (
-                <li key={b.n} className="flex gap-8 py-7 first:pt-0 last:pb-0">
-                  <span className="mt-0.5 w-5 shrink-0 text-[11px] uppercase tracking-[0.25em] text-clay">{b.n}</span>
-                  <div>
-                    <div className="font-serif text-xl text-charcoal sm:text-2xl">{b.t}</div>
-                    <p className="mt-2 text-[14px] leading-relaxed text-walnut/70">{b.d}</p>
-                  </div>
-                </li>
-              ))}
-            </ul>
           </div>
+
+          {/* Bottom — 3 supporting points */}
+          <ul className="mt-16 grid grid-cols-1 divide-y divide-walnut/12 border-t border-walnut/15 sm:grid-cols-3 sm:divide-x sm:divide-y-0">
+            {[
+              { n: "02", t: "Khô nhanh trong giờ", d: "Khô bề mặt 30 phút, sơn lớp tiếp theo sau 2 giờ. Một buổi chiều là xong." },
+              { n: "03", t: "Rửa bằng nước thường", d: "Cọ, khay, tay áo — sạch chỉ với vòi nước. Không cần dung môi." },
+              { n: "04", t: "Bền màu, không ố vàng", d: "Kháng ẩm, kháng trầy nhẹ, chịu lau chùi hằng ngày trong nhiều năm." },
+            ].map((b, i) => (
+              <li key={b.n} className={`py-9 ${
+                i === 0 ? "sm:pr-10" : i === 1 ? "sm:px-10" : "sm:pl-10"
+              }`}>
+                <div className="text-[10px] uppercase tracking-[0.28em] text-clay">{b.n}</div>
+                <div className="mt-3 font-serif text-[19px] text-charcoal">{b.t}</div>
+                <p className="mt-2 text-[13px] leading-relaxed text-walnut/58">{b.d}</p>
+              </li>
+            ))}
+          </ul>
         </div>
       </section>
 
@@ -497,34 +501,38 @@ function Index() {
       <section className="border-t border-walnut/10 bg-sand/40">
         <div className="mx-auto max-w-[1400px] px-5 py-20 md:px-12 md:py-32">
           <div className="grid grid-cols-12 gap-6">
-            <div className="col-span-12 md:col-span-5">
+            <div className="col-span-12 md:col-span-4">
               <span className="text-[11px] uppercase tracking-[0.3em] text-walnut/70">07 — Thi công</span>
               <h2 className="mt-5 font-serif text-[32px] leading-tight text-charcoal sm:text-4xl md:text-5xl">
                 Ba bước,
                 <br />
                 một buổi chiều.
               </h2>
-              <p className="mt-6 max-w-sm text-[15px] leading-relaxed text-walnut/80">
-                Quy trình tinh giản — không cần thợ, không cần máy chuyên dụng.
-                Chỉ cọ, lăn và một chút kiên nhẫn.
+              <p className="mt-6 max-w-xs text-[14px] leading-relaxed text-walnut/70">
+                Không cần thợ. Không cần máy. Chỉ cọ, lăn — và một chút kiên nhẫn.
               </p>
             </div>
 
-            <ol className="col-span-12 md:col-span-7 space-y-8">
-              {[
-                { n: "I.", t: "Làm sạch & chà nhám nhẹ", d: "Lau bụi, dầu mỡ. Chà nhám P240 cho bề mặt mịn và bám sơn tốt." },
-                { n: "II.", t: "Sơn lớp đầu, chờ 2 giờ", d: "Pha loãng 5–10% nước, sơn mỏng đều bằng cọ hoặc lăn. Để khô trong 2 giờ." },
-                { n: "III.", t: "Phủ lớp hoàn thiện", d: "Sơn lớp thứ hai để màng sơn đều màu, mịn và đạt độ bền tối ưu." },
-              ].map((s) => (
-                <li key={s.n} className="grid grid-cols-12 items-start gap-4 border-t border-walnut/15 pt-7">
-                  <span className="col-span-2 font-serif text-3xl text-clay sm:text-4xl leading-none pt-1">{s.n}</span>
-                  <div className="col-span-10">
-                    <h3 className="font-serif text-[22px] text-charcoal sm:text-[26px] leading-tight">{s.t}</h3>
-                    <p className="mt-2.5 text-[14px] leading-relaxed text-walnut/70">{s.d}</p>
-                  </div>
-                </li>
-              ))}
-            </ol>
+            <div className="col-span-12 md:col-span-8 md:pl-4">
+              <ol>
+                {[
+                  { n: "I", t: "Làm sạch & chà nhám nhẹ", d: "Lau bụi, dầu mỡ. Chà P240 để bề mặt mịn và bám sơn tốt." },
+                  { n: "II", t: "Sơn lớp đầu, chờ khô", d: "Pha loãng 5–10% nước, sơn mỏng đều bằng cọ hoặc lăn. Để khô 2 giờ." },
+                  { n: "III", t: "Phủ lớp hoàn thiện", d: "Lớp hai cho màng sơn đều màu, mịn, đạt độ bền tối ưu." },
+                ].map((s) => (
+                  <li key={s.n} className="flex gap-6 border-t border-walnut/15 py-8 md:gap-10">
+                    <span className="mt-0.5 w-10 shrink-0 font-serif text-[2.8rem] leading-none text-clay/50 sm:text-[3.5rem]">{s.n}</span>
+                    <div className="pt-1">
+                      <h3 className="font-serif text-[20px] leading-tight text-charcoal sm:text-[24px]">{s.t}</h3>
+                      <p className="mt-2.5 text-[13px] leading-relaxed text-walnut/60">{s.d}</p>
+                    </div>
+                  </li>
+                ))}
+              </ol>
+              <p className="mt-2 border-t border-walnut/15 pt-6 font-serif text-[15px] italic text-walnut/50">
+                Hầu hết hoàn thành trong một buổi chiều — không cần nghỉ làm, không cần thợ.
+              </p>
+            </div>
           </div>
         </div>
       </section>
@@ -706,25 +714,24 @@ function Index() {
 
       {/* TRUST / COMMITMENTS */}
       <section className="border-t border-walnut/10 bg-cream">
-        <div className="mx-auto max-w-[1400px] px-5 py-14 md:px-12 md:py-20">
-          <ul className="grid grid-cols-1 divide-y divide-walnut/15 sm:grid-cols-2 sm:divide-y-0 lg:grid-cols-4 lg:divide-x">
-            <li className="py-8 sm:pr-8 lg:pr-10">
-              <div className="font-serif text-lg text-charcoal">Tư vấn đúng hệ sơn</div>
-              <p className="mt-2 text-sm leading-relaxed text-walnut/70">Đội Lotus xác nhận đúng dòng sơn theo bề mặt thực tế — không tư vấn dư, không bán nhầm.</p>
-            </li>
-            <li className="py-8 sm:px-8 lg:px-10">
-              <div className="font-serif text-lg text-charcoal">Đổi trả trong 7 ngày</div>
-              <p className="mt-2 text-sm leading-relaxed text-walnut/70">Sản phẩm còn nguyên seal được đổi hoặc trả lại trong 7 ngày kể từ ngày nhận hàng.</p>
-            </li>
-            <li className="py-8 sm:px-8 lg:px-10">
-              <div className="font-serif text-lg text-charcoal">Giao toàn quốc · COD</div>
-              <p className="mt-2 text-sm leading-relaxed text-walnut/70">Nội thành 1–2 ngày, các tỉnh 2–5 ngày. Miễn phí vận chuyển từ 2 hũ. Thanh toán khi nhận.</p>
-            </li>
-            <li className="py-8 sm:pl-8 lg:pl-10">
-              <div className="font-serif text-lg text-charcoal">Hỗ trợ trong khi thi công</div>
-              <p className="mt-2 text-sm leading-relaxed text-walnut/70">Có vướng mắc khi tự sơn? Nhắn Lotus qua Zalo — đội kỹ thuật trả lời trong giờ làm việc.</p>
-            </li>
-          </ul>
+        <div className="mx-auto max-w-[1400px] px-5 py-20 md:px-12 md:py-28">
+          <div className="mx-auto max-w-2xl text-center">
+            <p className="font-serif text-[22px] leading-[1.65] text-charcoal md:text-[25px]">
+              Lotus đồng hành từ lúc bạn chưa biết cần mua gì — đến khi hoàn thiện xong bề mặt cuối cùng.
+            </p>
+            <p className="mt-6 text-[15px] leading-[1.75] text-walnut/65">
+              Đội kỹ thuật tư vấn miễn phí qua Zalo — xác nhận đúng dòng sơn theo bề mặt thực tế, không tư vấn dư, không bán nhầm. Giao toàn quốc, thanh toán khi nhận, đổi trả trong 7 ngày nếu sản phẩm còn nguyên seal.
+            </p>
+            <a
+              href="https://zalo.me/843966662"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-9 inline-flex items-center gap-3 text-[12px] font-medium uppercase tracking-[0.18em] text-charcoal transition hover:text-clay sm:text-[13px]"
+            >
+              Nhắn Zalo để hỏi trước khi mua
+              <ArrowRight className="h-4 w-4" />
+            </a>
+          </div>
         </div>
       </section>
 
@@ -767,28 +774,28 @@ function Index() {
         </div>
       </section>
 
-      {/* FORM — KÊNH PHỤ TRỢ */}
+      {/* FORM — TƯVAN & ĐẶT HÀNG */}
       <section id="advise" className="border-t border-walnut/10 bg-charcoal text-cream">
         <div className="mx-auto max-w-[1400px] px-5 py-20 md:px-12 md:py-32">
-          <div className="grid grid-cols-12 gap-x-6 gap-y-12">
-            <div className="col-span-12 md:col-span-6">
-              <span className="text-[11px] uppercase tracking-[0.3em] text-cream/50">12 — Đặt hàng nhanh</span>
-              <h2 className="mt-5 font-serif text-[36px] leading-tight sm:text-5xl md:text-6xl">
-                Nếu bạn đã rõ
+          <div className="grid grid-cols-12 gap-x-6 gap-y-14">
+            <div className="col-span-12 md:col-span-5">
+              <span className="text-[11px] uppercase tracking-[0.3em] text-cream/45">12 — Tư vấn & đặt hàng</span>
+              <h2 className="mt-5 font-serif text-[34px] leading-tight sm:text-5xl">
+                Để Lotus gợi ý
                 <br />
-                mình cần gì.
+                combo phù hợp.
               </h2>
-              <p className="mt-7 max-w-md text-[15px] leading-relaxed text-cream/65">
-                Điền form đưới đây nếu bạn đã sẵn sàng. Hoặc nhắn Zalo để gửi ảnh bề mặt — đội tư vấn sẽ chọn đúng dòng sơn cho bạn.
+              <p className="mt-7 max-w-sm text-[15px] leading-[1.75] text-cream/58">
+                Bạn chỉ cần điền tên và bề mặt dự định sơn. Đội ngũ Lotus sẽ liên hệ để đề xuất dòng sơn và lượng cần dùng phù hợp nhất cho không gian của bạn.
               </p>
               <div className="mt-10">
                 <a
                   href="https://zalo.me/843966662"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-3 border-b border-cream/40 pb-1 text-[12px] font-medium uppercase tracking-[0.18em] text-cream transition hover:border-cream/80"
+                  className="inline-flex items-center gap-3 border-b border-cream/30 pb-1 text-[12px] font-medium uppercase tracking-[0.18em] text-cream/70 transition hover:text-cream hover:border-cream/60"
                 >
-                  Gửi ảnh bề mặt qua Zalo
+                  Hoặc nhắn ảnh bề mặt qua Zalo
                   <ArrowRight className="h-4 w-4" />
                 </a>
               </div>
@@ -799,24 +806,24 @@ function Index() {
                 e.preventDefault();
                 alert("Cảm ơn bạn — Lotus sẽ liên hệ trong vòng 24 giờ.");
               }}
-              className="col-span-12 md:col-span-6 md:border-l md:border-cream/15 md:pl-12 space-y-6"
+              className="col-span-12 md:col-span-7 md:border-l md:border-cream/12 md:pl-14 space-y-7"
             >
               <Field label="Họ và tên">
                 <Input
                   required
-                  className="h-12 rounded-none border-0 border-b border-cream/30 bg-transparent px-0 text-base text-cream placeholder:text-cream/40 focus-visible:border-clay focus-visible:ring-0"
+                  className="h-[52px] rounded-none border-0 border-b border-cream/25 bg-transparent px-0 text-[15px] text-cream placeholder:text-cream/30 focus-visible:border-clay focus-visible:ring-0"
                 />
               </Field>
               <Field label="Số điện thoại / Zalo">
                 <Input
                   required
                   type="tel"
-                  className="h-12 rounded-none border-0 border-b border-cream/30 bg-transparent px-0 text-base text-cream placeholder:text-cream/40 focus-visible:border-clay focus-visible:ring-0"
+                  className="h-[52px] rounded-none border-0 border-b border-cream/25 bg-transparent px-0 text-[15px] text-cream placeholder:text-cream/30 focus-visible:border-clay focus-visible:ring-0"
                 />
               </Field>
               <Field label="Bề mặt dự định sơn">
                 <Select value={surface} onValueChange={setSurface} required>
-                  <SelectTrigger className="h-12 rounded-none border-0 border-b border-cream/30 bg-transparent px-0 text-base text-cream focus:border-clay focus:ring-0 [&>span]:text-cream data-[placeholder]:[&>span]:text-cream/40">
+                  <SelectTrigger className="h-[52px] rounded-none border-0 border-b border-cream/25 bg-transparent px-0 text-[15px] text-cream focus:border-clay focus:ring-0 [&>span]:text-cream data-[placeholder]:[&>span]:text-cream/30">
                     <SelectValue placeholder="Chọn loại bề mặt" />
                   </SelectTrigger>
                   <SelectContent>
@@ -828,8 +835,8 @@ function Index() {
               </Field>
               <Field label="Dòng sơn dự kiến">
                 <Select required>
-                  <SelectTrigger className="h-12 rounded-none border-0 border-b border-cream/30 bg-transparent px-0 text-base text-cream focus:border-clay focus:ring-0 [&>span]:text-cream data-[placeholder]:[&>span]:text-cream/40">
-                    <SelectValue placeholder="Chọn dòng sơn" />
+                  <SelectTrigger className="h-[52px] rounded-none border-0 border-b border-cream/25 bg-transparent px-0 text-[15px] text-cream focus:border-clay focus:ring-0 [&>span]:text-cream data-[placeholder]:[&>span]:text-cream/30">
+                    <SelectValue placeholder="Chọn dòng sơn, hoặc ‘Nhờ tư vấn’" />
                   </SelectTrigger>
                   <SelectContent>
                     {paintOptions.map((o) => (
@@ -839,26 +846,17 @@ function Index() {
                 </Select>
               </Field>
 
-              <div className="flex items-start gap-3 pt-2">
-                <input
-                  type="checkbox"
-                  id="zalo-sent"
-                  className="mt-1 h-4 w-4 border-cream/30 bg-transparent text-clay focus:ring-clay"
-                />
-                <label htmlFor="zalo-sent" className="text-sm text-cream/80">
-                  Tôi đã gửi ảnh bề mặt qua Zalo / Facebook
-                </label>
+              <div className="pt-3">
+                <Button
+                  type="submit"
+                  className="h-[54px] w-full rounded-none bg-clay text-[12px] font-medium uppercase tracking-[0.22em] text-cream transition hover:bg-clay/90 sm:text-[13px]"
+                >
+                  Gửi thông tin — Lotus liên hệ trong 24h
+                </Button>
+                <p className="mt-4 text-[11px] tracking-[0.15em] text-cream/30">
+                  Không spam. Không chia sẻ thông tin.
+                </p>
               </div>
-
-              <Button
-                type="submit"
-                className="mt-6 h-[52px] w-full rounded-none bg-clay text-[12px] font-medium uppercase tracking-[0.22em] text-cream hover:bg-clay/90 sm:text-[13px]"
-              >
-                Gửi yêu cầu — Lotus liên hệ trong 24h
-              </Button>
-              <p className="text-[11px] tracking-[0.15em] text-cream/40">
-                Không spam. Không bán thông tin.
-              </p>
             </form>
           </div>
         </div>
