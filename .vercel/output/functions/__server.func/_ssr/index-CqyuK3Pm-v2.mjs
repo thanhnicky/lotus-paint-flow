@@ -5,7 +5,7 @@ import { c as clsx } from "../_libs/clsx.mjs";
 import { t as twMerge } from "../_libs/tailwind-merge.mjs";
 import { S as Select$1, a as SelectValue$1, b as SelectTrigger$1, c as SelectIcon, d as SelectPortal, e as SelectContent$1, f as SelectViewport, g as SelectItem$1, h as SelectItemIndicator, i as SelectItemText, j as SelectScrollUpButton$1, k as SelectScrollDownButton$1, l as SelectLabel$1, m as SelectSeparator$1 } from "../_libs/radix-ui__react-select.mjs";
 import { R as Root2, I as Item, H as Header$1, T as Trigger2, C as Content2 } from "../_libs/radix-ui__react-accordion.mjs";
-import { A as ArrowRight, Q as Quote, S as ShieldCheck, T as Truck, M as MessageCircle, C as ChevronDown, a as Check, b as ChevronUp } from "../_libs/lucide-react.mjs";
+import { A as ArrowRight, C as ChevronDown, a as Check, b as ChevronUp } from "../_libs/lucide-react.mjs";
 import "../_libs/radix-ui__react-compose-refs.mjs";
 import "../_libs/react-dom.mjs";
 import "util";
@@ -423,10 +423,12 @@ function Index() {
           ] }),
           /* @__PURE__ */ jsxRuntimeExports.jsx("a", { href: "#choose", className: "text-[12px] font-medium uppercase tracking-[0.18em] text-walnut underline-offset-8 hover:underline sm:text-[13px]", children: "Xem 2 kiểu hoàn thiện" })
         ] }),
-        /* @__PURE__ */ jsxRuntimeExports.jsxs("dl", { className: "mt-14 grid grid-cols-3 gap-5 border-t border-walnut/15 pt-8 text-walnut", children: [
-          /* @__PURE__ */ jsxRuntimeExports.jsx(Stat, { k: "01", v: "Hệ nước ít mùi" }),
-          /* @__PURE__ */ jsxRuntimeExports.jsx(Stat, { k: "02", v: "2 kiểu: bệt / giữ vân" }),
-          /* @__PURE__ */ jsxRuntimeExports.jsx(Stat, { k: "03", v: "Tư vấn qua Zalo" })
+        /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "mt-12 flex flex-wrap gap-x-6 gap-y-1.5 border-t border-walnut/15 pt-6", children: [
+          /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-[11px] uppercase tracking-[0.22em] text-walnut/60", children: "Hệ nước ít mùi" }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-[11px] text-walnut/30", children: "/" }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-[11px] uppercase tracking-[0.22em] text-walnut/60", children: "2 kiểu hoàn thiện" }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-[11px] text-walnut/30", children: "/" }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-[11px] uppercase tracking-[0.22em] text-walnut/60", children: "Tư vấn qua Zalo" })
         ] })
       ] }),
       /* @__PURE__ */ jsxRuntimeExports.jsxs("figure", { className: "col-span-12 md:col-span-6 lg:col-span-7 relative", children: [
@@ -438,9 +440,9 @@ function Index() {
       ] })
     ] }) }) }),
     /* @__PURE__ */ jsxRuntimeExports.jsx("section", { id: "choose", className: "border-t border-walnut/10 bg-sand/40", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "mx-auto max-w-[1400px] px-5 py-20 md:px-12 md:py-32", children: [
-      /* @__PURE__ */ jsxRuntimeExports.jsxs("header", { className: "mx-auto max-w-2xl text-center", children: [
+      /* @__PURE__ */ jsxRuntimeExports.jsxs("header", { children: [
         /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-[11px] uppercase tracking-[0.3em] text-walnut/70", children: "02 — Chọn kiểu hoàn thiện" }),
-        /* @__PURE__ */ jsxRuntimeExports.jsxs("h2", { className: "mt-5 font-serif text-[34px] leading-tight text-charcoal sm:text-4xl md:text-5xl", children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsxs("h2", { className: "mt-5 font-serif text-[34px] leading-tight text-charcoal sm:text-4xl md:text-5xl lg:text-[56px]", children: [
           "Bạn muốn phủ kín màu",
           /* @__PURE__ */ jsxRuntimeExports.jsx("br", {}),
           "hay giữ vân gỗ?"
@@ -452,8 +454,8 @@ function Index() {
       ] })
     ] }) }),
     /* @__PURE__ */ jsxRuntimeExports.jsx("section", { className: "border-t border-walnut/10", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "mx-auto max-w-[1400px] px-5 py-20 md:px-12 md:py-28", children: [
-      /* @__PURE__ */ jsxRuntimeExports.jsxs("header", { className: "grid grid-cols-12 gap-6", children: [
-        /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "col-span-12 md:col-span-6", children: [
+      /* @__PURE__ */ jsxRuntimeExports.jsxs("header", { className: "flex flex-col gap-4 md:flex-row md:items-baseline md:justify-between", children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
           /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-[11px] uppercase tracking-[0.3em] text-walnut/70", children: "03 — Quy cách" }),
           /* @__PURE__ */ jsxRuntimeExports.jsxs("h2", { className: "mt-5 font-serif text-[32px] leading-tight text-charcoal sm:text-4xl md:text-5xl", children: [
             "Mọi con số bạn",
@@ -461,13 +463,13 @@ function Index() {
             "cần biết trước khi đặt."
           ] })
         ] }),
-        /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "col-span-12 md:col-span-6 md:pt-12 text-[15px] leading-relaxed text-walnut/80", children: "Thông số tham khảo cho người dùng tự thi công — đã được Lotus kiểm thử trên các bề mặt gỗ phổ biến tại Việt Nam. Đội tư vấn sẽ tính chính xác lượng sơn theo diện tích thực tế của bạn." })
+        /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "max-w-xs text-[13px] leading-relaxed text-walnut/65", children: "Đội tư vấn sẽ tính chính xác lượng sơn theo diện tích thực tế của bạn." })
       ] }),
-      /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "mt-14 grid grid-cols-2 gap-y-10 border-t border-walnut/20 sm:grid-cols-4 sm:divide-x sm:divide-walnut/20", children: [
-        /* @__PURE__ */ jsxRuntimeExports.jsx(SpecCell, { k: "Quy cách", v: "Hũ 1kg", sub: "Có thể đặt combo nhiều hũ" }),
-        /* @__PURE__ */ jsxRuntimeExports.jsx(SpecCell, { k: "Độ phủ tham khảo", v: "8–10 m²/kg", sub: "Mỗi lớp · bề mặt phẳng" }),
-        /* @__PURE__ */ jsxRuntimeExports.jsx(SpecCell, { k: "Số lớp khuyến nghị", v: "2 lớp", sub: "3 lớp cho sàn & ngoại thất" }),
-        /* @__PURE__ */ jsxRuntimeExports.jsx(SpecCell, { k: "Thời gian khô", v: "30 phút", sub: "Khô bề mặt · sơn lớp 2 sau 2h" })
+      /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "mt-14 grid grid-cols-2 gap-y-12 border-t border-walnut/20 pt-2 sm:grid-cols-4 sm:divide-x sm:divide-walnut/15", children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsx(SpecCell, { k: "Quy cách", v: "Hũ 1kg", sub: "Đặt combo nhiều hũ" }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx(SpecCell, { k: "Độ phủ", v: "8–10 m²", sub: "Mỗi lớp · bề mặt phẳng" }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx(SpecCell, { k: "Số lớp", v: "2 lớp", sub: "3 lớp cho sàn & ngoại thất" }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx(SpecCell, { k: "Khô bề mặt", v: "30 phút", sub: "Lớp 2 sau 2 giờ" })
       ] }),
       /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "mt-10 flex flex-col items-start justify-between gap-4 border-t border-walnut/20 pt-8 sm:flex-row sm:items-center", children: [
         /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-sm text-walnut/75", children: "Cần tính chính xác lượng sơn cho diện tích nhà bạn?" }),
@@ -488,7 +490,7 @@ function Index() {
         /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "mt-6 max-w-sm text-[15px] leading-relaxed text-walnut/80", children: "Chọn bề mặt để xem gợi ý dòng sơn phù hợp. Gửi ảnh qua Zalo để được tư vấn chi tiết." })
       ] }),
       /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "col-span-12 lg:col-span-8", children: [
-        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "space-y-4", children: surfaces.map((s) => /* @__PURE__ */ jsxRuntimeExports.jsx(SurfaceOption, { label: s.label, desc: s.desc, recommendation: s.recommendation, detail: s.detail }, s.label)) }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "border-b border-walnut/15", children: surfaces.map((s) => /* @__PURE__ */ jsxRuntimeExports.jsx(SurfaceOption, { label: s.label, desc: s.desc, recommendation: s.recommendation, detail: s.detail }, s.label)) }),
         /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "mt-8 pt-6 border-t border-walnut/20", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("a", { href: "https://zalo.me/843966662", target: "_blank", rel: "noopener noreferrer", className: "inline-flex items-center gap-3 text-[12px] font-medium uppercase tracking-[0.18em] text-charcoal transition hover:text-clay sm:text-[13px]", children: [
           "Gửi ảnh bề mặt này qua Zalo để xem kỹ hơn",
           /* @__PURE__ */ jsxRuntimeExports.jsx(ArrowRight, { className: "h-4 w-4" })
@@ -496,7 +498,7 @@ function Index() {
       ] })
     ] }) }) }),
     /* @__PURE__ */ jsxRuntimeExports.jsx("section", { className: "border-t border-walnut/10 bg-walnut text-cream", children: /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "mx-auto max-w-[1400px] px-5 py-20 md:px-12 md:py-32", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "grid grid-cols-12 gap-x-6 gap-y-10", children: [
-      /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "col-span-12 md:col-span-5", children: [
+      /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "col-span-12 md:col-span-4 lg:col-span-4", children: [
         /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-[11px] uppercase tracking-[0.3em] text-cream/60", children: "05 — Trước & Sau" }),
         /* @__PURE__ */ jsxRuntimeExports.jsxs("h2", { className: "mt-5 font-serif text-[32px] leading-tight sm:text-4xl md:text-5xl", children: [
           "Đồ gỗ cũ,",
@@ -509,21 +511,22 @@ function Index() {
           /* @__PURE__ */ jsxRuntimeExports.jsx(ArrowRight, { className: "h-4 w-4" })
         ] })
       ] }),
-      /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "col-span-12 md:col-span-7", children: /* @__PURE__ */ jsxRuntimeExports.jsx("img", { src: beforeAfter, alt: "Ghế gỗ trước và sau khi sơn lại bằng Lotus Wood Paint màu rêu", loading: "lazy", className: "aspect-[16/10] w-full object-cover", width: 1600, height: 1e3 }) })
+      /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "col-span-12 md:col-span-8 lg:col-span-8", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "relative", children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsx("img", { src: beforeAfter, alt: "Ghế gỗ trước và sau khi sơn lại bằng Lotus Wood Paint màu rêu", loading: "lazy", className: "aspect-[3/2] w-full object-cover md:aspect-[4/3]", width: 1600, height: 1200 }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute bottom-4 left-4 text-[10px] uppercase tracking-[0.22em] text-cream/80 sm:bottom-5 sm:left-5", children: "Ghế gỗ · Lotus Wood Paint · sắc Rêu" })
+      ] }) })
     ] }) }) }),
-    /* @__PURE__ */ jsxRuntimeExports.jsx("section", { className: "border-t border-walnut/10", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "mx-auto max-w-[1400px] px-5 py-20 md:px-12 md:py-32", children: [
-      /* @__PURE__ */ jsxRuntimeExports.jsxs("header", { className: "grid grid-cols-12 gap-6", children: [
-        /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "col-span-12 md:col-span-6", children: [
-          /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-[11px] uppercase tracking-[0.3em] text-walnut/70", children: "06 — Vì sao hệ nước" }),
-          /* @__PURE__ */ jsxRuntimeExports.jsxs("h2", { className: "mt-5 font-serif text-[32px] leading-tight text-charcoal sm:text-4xl md:text-5xl", children: [
-            "Sạch hơn cho ngôi nhà.",
-            /* @__PURE__ */ jsxRuntimeExports.jsx("br", {}),
-            "Dễ hơn cho đôi tay."
-          ] })
+    /* @__PURE__ */ jsxRuntimeExports.jsx("section", { className: "border-t border-walnut/10", children: /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "mx-auto max-w-[1400px] px-5 py-24 md:px-12 md:py-36", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "grid grid-cols-1 gap-16 lg:grid-cols-12 lg:gap-10", children: [
+      /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "lg:col-span-5 lg:pt-1", children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-[11px] uppercase tracking-[0.3em] text-walnut/70", children: "06 — Vì sao hệ nước" }),
+        /* @__PURE__ */ jsxRuntimeExports.jsxs("h2", { className: "mt-5 font-serif text-[32px] leading-tight text-charcoal sm:text-4xl md:text-5xl", children: [
+          "Sạch hơn cho ngôi nhà.",
+          /* @__PURE__ */ jsxRuntimeExports.jsx("br", {}),
+          "Dễ hơn cho đôi tay."
         ] }),
-        /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "col-span-12 md:col-span-6 md:pt-12 text-[15px] leading-relaxed text-walnut/80", children: "Lotus được pha chế gốc nước — không dung môi nặng, không mùi gắt, không cần phòng thi công riêng. Bạn có thể sơn trong căn hộ, ở cạnh con nhỏ, và quay lại sinh hoạt bình thường chỉ sau vài giờ." })
+        /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "mt-8 font-serif text-[18px] leading-[1.55] text-walnut/75 md:text-[20px]", children: "Không mùi xăng, không phòng thi công riêng. Sơn trong căn hộ, cạnh con nhỏ — quay lại sinh hoạt bình thường chỉ sau vài giờ." })
       ] }),
-      /* @__PURE__ */ jsxRuntimeExports.jsx("ul", { className: "mt-14 grid grid-cols-1 gap-x-10 gap-y-10 sm:grid-cols-2 lg:grid-cols-4", children: [{
+      /* @__PURE__ */ jsxRuntimeExports.jsx("ul", { className: "lg:col-span-7 divide-y divide-walnut/15", children: [{
         n: "01",
         t: "Hệ nước nhẹ mùi",
         d: "Không xăng thơm, không dung môi nặng. An toàn cho phòng ngủ và phòng trẻ."
@@ -539,12 +542,14 @@ function Index() {
         n: "04",
         t: "Bền cho đời sống thật",
         d: "Kháng ẩm, kháng trầy nhẹ, chịu được lau chùi hằng ngày trong gia đình."
-      }].map((b) => /* @__PURE__ */ jsxRuntimeExports.jsxs("li", { className: "border-t border-walnut/20 pt-6", children: [
-        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "text-[11px] uppercase tracking-[0.3em] text-clay", children: b.n }),
-        /* @__PURE__ */ jsxRuntimeExports.jsx("h3", { className: "mt-4 font-serif text-xl text-charcoal sm:text-2xl", children: b.t }),
-        /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "mt-3 text-sm leading-relaxed text-walnut/75", children: b.d })
+      }].map((b) => /* @__PURE__ */ jsxRuntimeExports.jsxs("li", { className: "flex gap-8 py-7 first:pt-0 last:pb-0", children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "mt-0.5 w-5 shrink-0 text-[11px] uppercase tracking-[0.25em] text-clay", children: b.n }),
+        /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
+          /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "font-serif text-xl text-charcoal sm:text-2xl", children: b.t }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "mt-2 text-[14px] leading-relaxed text-walnut/70", children: b.d })
+        ] })
       ] }, b.n)) })
-    ] }) }),
+    ] }) }) }),
     /* @__PURE__ */ jsxRuntimeExports.jsx("section", { className: "border-t border-walnut/10 bg-sand/40", children: /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "mx-auto max-w-[1400px] px-5 py-20 md:px-12 md:py-32", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "grid grid-cols-12 gap-6", children: [
       /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "col-span-12 md:col-span-5", children: [
         /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-[11px] uppercase tracking-[0.3em] text-walnut/70", children: "07 — Thi công" }),
@@ -567,11 +572,11 @@ function Index() {
         n: "III.",
         t: "Phủ lớp hoàn thiện",
         d: "Sơn lớp thứ hai để màng sơn đều màu, mịn và đạt độ bền tối ưu."
-      }].map((s) => /* @__PURE__ */ jsxRuntimeExports.jsxs("li", { className: "grid grid-cols-12 items-baseline gap-4 border-t border-walnut/15 pt-6", children: [
-        /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "col-span-2 font-serif text-2xl text-clay sm:text-3xl", children: s.n }),
+      }].map((s) => /* @__PURE__ */ jsxRuntimeExports.jsxs("li", { className: "grid grid-cols-12 items-start gap-4 border-t border-walnut/15 pt-7", children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "col-span-2 font-serif text-3xl text-clay sm:text-4xl leading-none pt-1", children: s.n }),
         /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "col-span-10", children: [
-          /* @__PURE__ */ jsxRuntimeExports.jsx("h3", { className: "font-serif text-xl text-charcoal sm:text-2xl", children: s.t }),
-          /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "mt-2 text-sm leading-relaxed text-walnut/75", children: s.d })
+          /* @__PURE__ */ jsxRuntimeExports.jsx("h3", { className: "font-serif text-[22px] text-charcoal sm:text-[26px] leading-tight", children: s.t }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "mt-2.5 text-[14px] leading-relaxed text-walnut/70", children: s.d })
         ] })
       ] }, s.n)) })
     ] }) }) }),
@@ -594,12 +599,9 @@ function Index() {
         const moodColors = palette.filter((c) => c.mood === mood);
         if (moodColors.length === 0) return null;
         return /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
-          /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "text-[11px] uppercase tracking-[0.25em] text-clay mb-6", children: [
-            "Mood: ",
-            mood
-          ] }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "text-[10px] uppercase tracking-[0.3em] text-walnut/45 mb-6", children: mood }),
           /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "grid grid-cols-2 gap-x-5 gap-y-8 sm:grid-cols-3 sm:gap-x-6 sm:gap-y-10 lg:grid-cols-4", children: moodColors.map((c) => /* @__PURE__ */ jsxRuntimeExports.jsxs("figure", { className: "group", children: [
-            /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "aspect-[4/5] w-full transition group-hover:scale-[1.01]", style: {
+            /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "aspect-square w-full transition-transform duration-300 group-hover:scale-[1.02]", style: {
               backgroundColor: c.hex
             } }),
             /* @__PURE__ */ jsxRuntimeExports.jsxs("figcaption", { className: "mt-4 flex items-baseline justify-between border-t border-walnut/20 pt-3", children: [
@@ -625,45 +627,75 @@ function Index() {
         ] }),
         /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "max-w-sm text-[14px] leading-relaxed text-walnut/75", children: "Những căn nhà đã được làm mới cùng Lotus — từ đồ gỗ trầy xước đến bề mặt sạch, màu mới hoặc giữ vân gỗ đẹp." })
       ] }),
-      /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 lg:gap-8", children: projects.map((p) => /* @__PURE__ */ jsxRuntimeExports.jsxs("figure", { className: "group", children: [
-        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "overflow-hidden", children: /* @__PURE__ */ jsxRuntimeExports.jsx("img", { src: p.img, alt: p.label, loading: "lazy", className: "aspect-[4/5] w-full object-cover transition duration-700 group-hover:scale-[1.03]", width: 1e3, height: 1250 }) }),
-        /* @__PURE__ */ jsxRuntimeExports.jsxs("figcaption", { className: "mt-4 border-t border-walnut/20 pt-3", children: [
-          /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "font-serif text-lg text-charcoal", children: p.label }),
-          /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "mt-1 text-[11px] uppercase tracking-[0.2em] text-walnut/60", children: p.place })
-        ] })
-      ] }, p.label)) })
+      /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "mt-12 grid grid-cols-1 gap-5 lg:grid-cols-12", children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsxs("figure", { className: "group lg:col-span-7", children: [
+          /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "overflow-hidden", children: /* @__PURE__ */ jsxRuntimeExports.jsx("img", { src: projects[0].img, alt: projects[0].label, loading: "lazy", className: "aspect-[4/5] w-full object-cover transition duration-700 group-hover:scale-[1.03]", width: 1e3, height: 1250 }) }),
+          /* @__PURE__ */ jsxRuntimeExports.jsxs("figcaption", { className: "mt-4 border-t border-walnut/20 pt-3", children: [
+            /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "font-serif text-lg text-charcoal", children: projects[0].label }),
+            /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "mt-1 text-[11px] uppercase tracking-[0.2em] text-walnut/60", children: projects[0].place })
+          ] })
+        ] }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "flex flex-col gap-5 lg:col-span-5", children: projects.slice(1).map((p) => /* @__PURE__ */ jsxRuntimeExports.jsxs("figure", { className: "group flex-1", children: [
+          /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "overflow-hidden", children: /* @__PURE__ */ jsxRuntimeExports.jsx("img", { src: p.img, alt: p.label, loading: "lazy", className: "aspect-[4/3] w-full object-cover transition duration-700 group-hover:scale-[1.03]", width: 900, height: 675 }) }),
+          /* @__PURE__ */ jsxRuntimeExports.jsxs("figcaption", { className: "mt-3 border-t border-walnut/20 pt-3", children: [
+            /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "font-serif text-base text-charcoal", children: p.label }),
+            /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "mt-0.5 text-[11px] uppercase tracking-[0.2em] text-walnut/60", children: p.place })
+          ] })
+        ] }, p.label)) })
+      ] })
     ] }) }),
-    /* @__PURE__ */ jsxRuntimeExports.jsx("section", { className: "border-t border-walnut/10", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "mx-auto max-w-[1400px] px-5 py-20 md:px-12 md:py-32", children: [
-      /* @__PURE__ */ jsxRuntimeExports.jsxs("header", { className: "mx-auto max-w-2xl text-center", children: [
-        /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-[11px] uppercase tracking-[0.3em] text-walnut/70", children: "10 — Cảm nhận khách hàng" }),
-        /* @__PURE__ */ jsxRuntimeExports.jsxs("h2", { className: "mt-5 font-serif text-[32px] leading-tight text-charcoal sm:text-4xl md:text-5xl", children: [
-          "Vợ chồng trẻ,",
-          /* @__PURE__ */ jsxRuntimeExports.jsx("br", {}),
-          "chủ nhà tự làm DIY."
+    /* @__PURE__ */ jsxRuntimeExports.jsx("section", { className: "border-t border-walnut/10", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "mx-auto max-w-[1400px] px-5 py-24 md:px-12 md:py-36", children: [
+      /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex flex-col gap-2 md:flex-row md:items-end md:justify-between", children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
+          /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-[11px] uppercase tracking-[0.3em] text-walnut/70", children: "10 — Cảm nhận khách hàng" }),
+          /* @__PURE__ */ jsxRuntimeExports.jsxs("h2", { className: "mt-5 font-serif text-[32px] leading-tight text-charcoal sm:text-4xl md:text-5xl", children: [
+            "Vợ chồng trẻ,",
+            /* @__PURE__ */ jsxRuntimeExports.jsx("br", {}),
+            "chủ nhà tự làm DIY."
+          ] })
+        ] }),
+        /* @__PURE__ */ jsxRuntimeExports.jsxs("a", { href: "https://www.facebook.com/lotuspaint", target: "_blank", rel: "noopener noreferrer", className: "hidden md:inline-flex items-center gap-3 text-[12px] font-medium uppercase tracking-[0.18em] text-walnut/55 transition hover:text-clay", children: [
+          "Xem thêm trên fanpage",
+          /* @__PURE__ */ jsxRuntimeExports.jsx(ArrowRight, { className: "h-4 w-4" })
         ] })
       ] }),
-      /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "mt-14 grid grid-cols-1 gap-6 md:grid-cols-3 lg:gap-8", children: testimonials.map((t) => /* @__PURE__ */ jsxRuntimeExports.jsxs("blockquote", { className: "flex flex-col border border-walnut/20 bg-cream p-7 sm:p-8", children: [
-        /* @__PURE__ */ jsxRuntimeExports.jsx(Quote, { className: "h-5 w-5 text-clay", strokeWidth: 1.5 }),
-        /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "mt-5 flex-1 font-serif text-[19px] leading-[1.45] text-charcoal sm:text-[20px]", children: t.quote }),
-        /* @__PURE__ */ jsxRuntimeExports.jsxs("footer", { className: "mt-7 border-t border-walnut/15 pt-4", children: [
+      /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "mt-16 grid grid-cols-1 divide-y divide-walnut/15 md:grid-cols-3 md:divide-x md:divide-y-0", children: testimonials.map((t, i) => /* @__PURE__ */ jsxRuntimeExports.jsxs("blockquote", { className: `flex flex-col py-10 md:py-0 ${i === 0 ? "md:pr-10" : i === 1 ? "md:px-10" : "md:pl-10"}`, children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsxs("p", { className: "flex-1 font-serif text-[18px] leading-[1.6] text-charcoal sm:text-[19px]", children: [
+          "“",
+          t.quote,
+          "”"
+        ] }),
+        /* @__PURE__ */ jsxRuntimeExports.jsxs("footer", { className: "mt-8 border-t border-walnut/15 pt-5", children: [
           /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "text-sm font-medium text-charcoal", children: t.name }),
-          /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "text-[11px] uppercase tracking-[0.2em] text-walnut/60", children: [
+          /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "mt-0.5 text-[11px] uppercase tracking-[0.2em] text-walnut/55", children: [
             t.place,
             " · ",
             t.product
           ] })
         ] })
       ] }, t.name)) }),
-      /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "mt-12 text-center", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("a", { href: "https://www.facebook.com/lotuspaint", target: "_blank", rel: "noopener noreferrer", className: "inline-flex items-center gap-3 text-[12px] font-medium uppercase tracking-[0.18em] text-charcoal transition hover:text-clay sm:text-[13px]", children: [
+      /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "mt-10 md:hidden", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("a", { href: "https://www.facebook.com/lotuspaint", target: "_blank", rel: "noopener noreferrer", className: "inline-flex items-center gap-3 text-[12px] font-medium uppercase tracking-[0.18em] text-charcoal transition hover:text-clay sm:text-[13px]", children: [
         "Xem thêm ảnh & feedback trên fanpage Lotus",
         /* @__PURE__ */ jsxRuntimeExports.jsx(ArrowRight, { className: "h-4 w-4" })
       ] }) })
     ] }) }),
-    /* @__PURE__ */ jsxRuntimeExports.jsx("section", { className: "border-t border-walnut/10 bg-cream", children: /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "mx-auto max-w-[1400px] px-5 py-16 md:px-12 md:py-24", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("ul", { className: "grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-4 lg:gap-12", children: [
-      /* @__PURE__ */ jsxRuntimeExports.jsx(Commit, { k: "Tư vấn đúng hệ sơn", v: "Đội Lotus xác nhận đúng dòng sơn theo bề mặt thực tế của bạn — không tư vấn dư, không bán nhầm.", icon: /* @__PURE__ */ jsxRuntimeExports.jsx(ShieldCheck, { className: "h-5 w-5", strokeWidth: 1.5 }) }),
-      /* @__PURE__ */ jsxRuntimeExports.jsx(Commit, { k: "Đổi trả trong 7 ngày", v: "Sản phẩm còn nguyên seal được đổi hoặc trả lại trong 7 ngày kể từ ngày nhận hàng.", icon: /* @__PURE__ */ jsxRuntimeExports.jsx(ShieldCheck, { className: "h-5 w-5", strokeWidth: 1.5 }) }),
-      /* @__PURE__ */ jsxRuntimeExports.jsx(Commit, { k: "Giao toàn quốc · COD", v: "Nội thành 1–2 ngày, các tỉnh 2–5 ngày. Miễn phí vận chuyển từ 2 hũ. Thanh toán khi nhận.", icon: /* @__PURE__ */ jsxRuntimeExports.jsx(Truck, { className: "h-5 w-5", strokeWidth: 1.5 }) }),
-      /* @__PURE__ */ jsxRuntimeExports.jsx(Commit, { k: "Hỗ trợ trong khi thi công", v: "Có vướng mắc khi tự sơn? Nhắn Lotus qua Zalo, đội kỹ thuật trả lời trong giờ làm việc.", icon: /* @__PURE__ */ jsxRuntimeExports.jsx(MessageCircle, { className: "h-5 w-5", strokeWidth: 1.5 }) })
+    /* @__PURE__ */ jsxRuntimeExports.jsx("section", { className: "border-t border-walnut/10 bg-cream", children: /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "mx-auto max-w-[1400px] px-5 py-14 md:px-12 md:py-20", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("ul", { className: "grid grid-cols-1 divide-y divide-walnut/15 sm:grid-cols-2 sm:divide-y-0 lg:grid-cols-4 lg:divide-x", children: [
+      /* @__PURE__ */ jsxRuntimeExports.jsxs("li", { className: "py-8 sm:pr-8 lg:pr-10", children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "font-serif text-lg text-charcoal", children: "Tư vấn đúng hệ sơn" }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "mt-2 text-sm leading-relaxed text-walnut/70", children: "Đội Lotus xác nhận đúng dòng sơn theo bề mặt thực tế — không tư vấn dư, không bán nhầm." })
+      ] }),
+      /* @__PURE__ */ jsxRuntimeExports.jsxs("li", { className: "py-8 sm:px-8 lg:px-10", children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "font-serif text-lg text-charcoal", children: "Đổi trả trong 7 ngày" }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "mt-2 text-sm leading-relaxed text-walnut/70", children: "Sản phẩm còn nguyên seal được đổi hoặc trả lại trong 7 ngày kể từ ngày nhận hàng." })
+      ] }),
+      /* @__PURE__ */ jsxRuntimeExports.jsxs("li", { className: "py-8 sm:px-8 lg:px-10", children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "font-serif text-lg text-charcoal", children: "Giao toàn quốc · COD" }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "mt-2 text-sm leading-relaxed text-walnut/70", children: "Nội thành 1–2 ngày, các tỉnh 2–5 ngày. Miễn phí vận chuyển từ 2 hũ. Thanh toán khi nhận." })
+      ] }),
+      /* @__PURE__ */ jsxRuntimeExports.jsxs("li", { className: "py-8 sm:pl-8 lg:pl-10", children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "font-serif text-lg text-charcoal", children: "Hỗ trợ trong khi thi công" }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "mt-2 text-sm leading-relaxed text-walnut/70", children: "Có vướng mắc khi tự sơn? Nhắn Lotus qua Zalo — đội kỹ thuật trả lời trong giờ làm việc." })
+      ] })
     ] }) }) }),
     /* @__PURE__ */ jsxRuntimeExports.jsx("section", { className: "border-t border-walnut/10 bg-sand/40", children: /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "mx-auto max-w-[1400px] px-5 py-20 md:px-12 md:py-32", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "grid grid-cols-12 gap-6", children: [
       /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "col-span-12 md:col-span-4", children: [
@@ -682,14 +714,14 @@ function Index() {
     ] }) }) }),
     /* @__PURE__ */ jsxRuntimeExports.jsx("section", { id: "advise", className: "border-t border-walnut/10 bg-charcoal text-cream", children: /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "mx-auto max-w-[1400px] px-5 py-20 md:px-12 md:py-32", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "grid grid-cols-12 gap-x-6 gap-y-12", children: [
       /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "col-span-12 md:col-span-6", children: [
-        /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-[11px] uppercase tracking-[0.3em] text-cream/60", children: "12 — Đặt hàng nhanh" }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-[11px] uppercase tracking-[0.3em] text-cream/50", children: "12 — Đặt hàng nhanh" }),
         /* @__PURE__ */ jsxRuntimeExports.jsxs("h2", { className: "mt-5 font-serif text-[36px] leading-tight sm:text-5xl md:text-6xl", children: [
           "Nếu bạn đã rõ",
           /* @__PURE__ */ jsxRuntimeExports.jsx("br", {}),
           "mình cần gì."
         ] }),
-        /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "mt-8 max-w-md text-[15px] leading-relaxed text-cream/75", children: "Nếu bạn đã xem kỹ hướng dẫn và muốn đặt hàng nhanh, điền form dưới đây. Nếu vẫn phân vân, hãy nhắn Zalo để gửi ảnh bề mặt." }),
-        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "mt-12", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("a", { href: "https://zalo.me/843966662", target: "_blank", rel: "noopener noreferrer", className: "inline-flex items-center gap-3 border border-cream/40 px-5 py-3 text-[12px] font-medium uppercase tracking-[0.18em] text-cream transition hover:bg-cream/10 hover:border-cream sm:text-[13px]", children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "mt-7 max-w-md text-[15px] leading-relaxed text-cream/65", children: "Điền form đưới đây nếu bạn đã sẵn sàng. Hoặc nhắn Zalo để gửi ảnh bề mặt — đội tư vấn sẽ chọn đúng dòng sơn cho bạn." }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "mt-10", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("a", { href: "https://zalo.me/843966662", target: "_blank", rel: "noopener noreferrer", className: "inline-flex items-center gap-3 border-b border-cream/40 pb-1 text-[12px] font-medium uppercase tracking-[0.18em] text-cream transition hover:border-cream/80", children: [
           "Gửi ảnh bề mặt qua Zalo",
           /* @__PURE__ */ jsxRuntimeExports.jsx(ArrowRight, { className: "h-4 w-4" })
         ] }) })
@@ -697,7 +729,7 @@ function Index() {
       /* @__PURE__ */ jsxRuntimeExports.jsxs("form", { onSubmit: (e) => {
         e.preventDefault();
         alert("Cảm ơn bạn — Lotus sẽ liên hệ trong vòng 24 giờ.");
-      }, className: "col-span-12 md:col-span-6 md:pl-10 space-y-6", children: [
+      }, className: "col-span-12 md:col-span-6 md:border-l md:border-cream/15 md:pl-12 space-y-6", children: [
         /* @__PURE__ */ jsxRuntimeExports.jsx(Field, { label: "Họ và tên", children: /* @__PURE__ */ jsxRuntimeExports.jsx(Input, { required: true, className: "h-12 rounded-none border-0 border-b border-cream/30 bg-transparent px-0 text-base text-cream placeholder:text-cream/40 focus-visible:border-clay focus-visible:ring-0" }) }),
         /* @__PURE__ */ jsxRuntimeExports.jsx(Field, { label: "Số điện thoại / Zalo", children: /* @__PURE__ */ jsxRuntimeExports.jsx(Input, { required: true, type: "tel", className: "h-12 rounded-none border-0 border-b border-cream/30 bg-transparent px-0 text-base text-cream placeholder:text-cream/40 focus-visible:border-clay focus-visible:ring-0" }) }),
         /* @__PURE__ */ jsxRuntimeExports.jsx(Field, { label: "Bề mặt dự định sơn", children: /* @__PURE__ */ jsxRuntimeExports.jsxs(Select, { value: surface, onValueChange: setSurface, required: true, children: [
@@ -712,8 +744,8 @@ function Index() {
           /* @__PURE__ */ jsxRuntimeExports.jsx("input", { type: "checkbox", id: "zalo-sent", className: "mt-1 h-4 w-4 border-cream/30 bg-transparent text-clay focus:ring-clay" }),
           /* @__PURE__ */ jsxRuntimeExports.jsx("label", { htmlFor: "zalo-sent", className: "text-sm text-cream/80", children: "Tôi đã gửi ảnh bề mặt qua Zalo / Facebook" })
         ] }),
-        /* @__PURE__ */ jsxRuntimeExports.jsx(Button, { type: "submit", className: "mt-4 h-14 w-full rounded-none bg-clay text-[12px] font-medium uppercase tracking-[0.2em] text-cream hover:bg-clay/90 sm:text-[13px]", children: "Gửi yêu cầu đặt hàng" }),
-        /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-[11px] uppercase tracking-[0.18em] text-cream/50", children: "Lotus sẽ phản hồi trong vòng 24 giờ làm việc." })
+        /* @__PURE__ */ jsxRuntimeExports.jsx(Button, { type: "submit", className: "mt-6 h-[52px] w-full rounded-none bg-clay text-[12px] font-medium uppercase tracking-[0.22em] text-cream hover:bg-clay/90 sm:text-[13px]", children: "Gửi yêu cầu — Lotus liên hệ trong 24h" }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-[11px] tracking-[0.15em] text-cream/40", children: "Không spam. Không bán thông tin." })
       ] })
     ] }) }) }),
     /* @__PURE__ */ jsxRuntimeExports.jsx(Footer, {})
@@ -770,35 +802,15 @@ function Footer() {
     ] })
   ] }) });
 }
-function Stat({
-  k,
-  v
-}) {
-  return /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
-    /* @__PURE__ */ jsxRuntimeExports.jsx("dt", { className: "text-[11px] uppercase tracking-[0.25em] text-clay", children: k }),
-    /* @__PURE__ */ jsxRuntimeExports.jsx("dd", { className: "mt-2 text-[12px] leading-snug text-walnut/85 sm:text-[13px]", children: v })
-  ] });
-}
 function SpecCell({
   k,
   v,
   sub
 }) {
-  return /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "sm:px-6 sm:first:pl-0 sm:last:pr-0", children: [
-    /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "text-[11px] uppercase tracking-[0.25em] text-clay", children: k }),
-    /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "mt-3 font-serif text-2xl text-charcoal sm:text-3xl", children: v }),
-    /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "mt-1 text-[12px] text-walnut/65", children: sub })
-  ] });
-}
-function Commit({
-  k,
-  v,
-  icon
-}) {
-  return /* @__PURE__ */ jsxRuntimeExports.jsxs("li", { className: "border-t border-walnut/20 pt-6", children: [
-    /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "text-clay", children: icon }),
-    /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "mt-4 font-serif text-lg text-charcoal sm:text-xl", children: k }),
-    /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "mt-2 text-sm leading-relaxed text-walnut/75", children: v })
+  return /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "pt-8 sm:px-8 sm:pt-10 sm:first:pl-0 sm:last:pr-0", children: [
+    /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "text-[10px] uppercase tracking-[0.28em] text-clay", children: k }),
+    /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "mt-4 font-serif text-[2.8rem] leading-none text-charcoal sm:text-[3.2rem] md:text-[3.8rem]", children: v }),
+    /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "mt-2 text-[12px] text-walnut/55", children: sub })
   ] });
 }
 function SurfaceOption({
@@ -807,13 +819,14 @@ function SurfaceOption({
   recommendation,
   detail
 }) {
-  return /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "border border-walnut/15 bg-cream/50 p-5 transition hover:bg-cream/80", children: [
-    /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "font-serif text-xl text-charcoal", children: label }),
-    /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "mt-1 text-sm text-walnut/70", children: desc }),
-    /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "mt-4 pt-4 border-t border-walnut/15", children: [
-      /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "text-[11px] uppercase tracking-[0.2em] text-clay", children: "Gợi ý" }),
-      /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "mt-1 text-sm font-medium text-charcoal", children: recommendation }),
-      /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "mt-1 text-xs text-walnut/70", children: detail })
+  return /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex cursor-default items-start justify-between gap-6 border-t border-walnut/15 py-5 px-1 transition-colors hover:bg-sand/40", children: [
+    /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex-1 min-w-0", children: [
+      /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "font-serif text-[19px] text-charcoal", children: label }),
+      /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "mt-0.5 text-[13px] text-walnut/60", children: desc })
+    ] }),
+    /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "shrink-0 text-right max-w-[200px]", children: [
+      /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "text-[10px] uppercase tracking-[0.2em] text-clay", children: recommendation }),
+      /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "mt-1 text-[12px] text-walnut/60 leading-relaxed", children: detail })
     ] })
   ] });
 }
