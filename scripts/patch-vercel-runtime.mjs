@@ -19,10 +19,10 @@ if (existsSync(resolve(outputDir, "functions"))) {
 if (existsSync(vcConfigPath)) {
   const vcConfig = JSON.parse(readFileSync(vcConfigPath, "utf8"));
   console.log(`[patch] Current runtime: ${vcConfig.runtime}`);
-  vcConfig.runtime = "nodejs20.x";
+  vcConfig.runtime = "nodejs22.x";
   vcConfig.supportsResponseStreaming = false;
   writeFileSync(vcConfigPath, JSON.stringify(vcConfig, null, 2));
-  console.log("[patch] Patched .vc-config.json: runtime=nodejs20.x");
+  console.log("[patch] Patched .vc-config.json: runtime=nodejs22.x");
 } else {
   console.error("[patch] FATAL: No .vc-config.json found at:", vcConfigPath);
   process.exit(1);
