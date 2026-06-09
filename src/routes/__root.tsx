@@ -77,6 +77,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
+      { name: "build-check", content: "lotus-v2-zalo-2026" },
       { title: "Lovable App" },
       { name: "description", content: "Lotus Paint Pro is a zero-touch e-commerce landing page for DIY wood finishing." },
       { name: "author", content: "Lovable" },
