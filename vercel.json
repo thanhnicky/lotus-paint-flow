@@ -1,4 +1,4 @@
 {
-  "buildCommand": "rm -rf node_modules/.vite node_modules/.cache .nitro && LOVABLE_SANDBOX=0 DEV_SERVER__PROJECT_PATH='' npm run build",
-  "installCommand": "npm install --legacy-peer-deps"
+  "buildCommand": "rm -rf node_modules/.vite node_modules/.cache .nitro .tanstack && LOVABLE_SANDBOX=0 npm run build",
+  "installCommand": "npm ci --legacy-peer-deps"
 }
