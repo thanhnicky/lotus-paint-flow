@@ -33,7 +33,6 @@ import beforeAfter from "@/assets/before-after.jpg";
 import project1 from "@/assets/project-1.jpg";
 import project2 from "@/assets/project-2.jpg";
 import project3 from "@/assets/project-3.jpg";
-import logoLotus from "@/assets/logo-lotus.jpg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -844,7 +843,7 @@ function Header() {
     <header className="sticky top-0 z-40 border-b border-walnut/10 bg-cream/85 backdrop-blur">
       <div className="mx-auto flex max-w-[1400px] items-center justify-between px-5 py-4 md:px-12 md:py-5">
         <a href="#" className="flex items-center">
-          <img src={logoLotus} alt="Lotus Logo" className="h-10 w-auto" />
+          <img src="/logo-lotus.jpg" alt="Lotus Logo" className="h-10 w-auto" />
         </a>
         <nav className="hidden gap-10 text-[12px] uppercase tracking-[0.22em] text-walnut md:flex">
           <a href="#choose" className="hover:text-clay">Sản phẩm</a>
@@ -869,7 +868,7 @@ function Footer() {
       <div className="mx-auto max-w-[1400px] px-5 py-14 md:px-12">
         <div className="grid grid-cols-12 gap-6">
           <div className="col-span-12 md:col-span-5">
-            <img src={logoLotus} alt="Lotus Logo" className="h-12 w-auto mb-4" />
+            <img src="/logo-lotus.jpg" alt="Lotus Logo" className="h-12 w-auto mb-4" />
             <p className="max-w-sm text-sm leading-relaxed text-walnut/70">
               CÔNG TY TNHH SẢN XUẤT THƯƠNG MẠI DỊCH VỤ BÍCH TRANG
             </p>
