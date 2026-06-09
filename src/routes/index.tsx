@@ -843,8 +843,8 @@ function Header() {
   return (
     <header className="sticky top-0 z-40 border-b border-walnut/10 bg-cream/85 backdrop-blur">
       <div className="mx-auto flex max-w-[1400px] items-center justify-between px-5 py-4 md:px-12 md:py-5">
-        <a href="#" className="font-serif text-2xl tracking-tight text-charcoal">
-          Lotus<span className="text-clay">.</span>
+        <a href="#" className="flex items-center">
+          <img src={logoLotus} alt="Lotus Logo" className="h-10 w-auto" />
         </a>
         <nav className="hidden gap-10 text-[12px] uppercase tracking-[0.22em] text-walnut md:flex">
           <a href="#choose" className="hover:text-clay">Sản phẩm</a>
