@@ -1,5 +1,5 @@
-import { readFileSync, writeFileSync, existsSync, readdirSync } from "fs";
-import { resolve } from "path";
+import { readFileSync, writeFileSync, existsSync, readdirSync, renameSync } from "fs";
+import { resolve, join } from "path";
 
 // Use absolute path to avoid CWD issues on Vercel build servers
 const projectRoot = new URL("..", import.meta.url).pathname;
@@ -38,4 +38,53 @@ if (existsSync(configPath)) {
   ];
   writeFileSync(configPath, JSON.stringify(config, null, 2));
   console.log("[patch] Patched config.json routes");
+}
+
+// Rename JS/CSS assets with -v2 suffix to bust CDN immutable cache,
+// then update all references inside the SSR function bundle.
+function walkDir(dir, cb) {
+  if (!existsSync(dir)) return;
+  for (const entry of readdirSync(dir, { withFileTypes: true })) {
+    const full = join(dir, entry.name);
+    if (entry.isDirectory()) walkDir(full, cb);
+    else cb(full, entry.name);
+  }
+}
+
+const staticAssetsDir = resolve(outputDir, "static/assets");
+const renameMap = {};
+
+if (existsSync(staticAssetsDir)) {
+  for (const name of readdirSync(staticAssetsDir)) {
+    const isJs = name.endsWith(".js");
+    const isCss = name.endsWith(".css");
+    if ((isJs || isCss) && !name.includes("-v2.")) {
+      const ext = isJs ? ".js" : ".css";
+      const newName = name.slice(0, -ext.length) + "-v2" + ext;
+      renameSync(join(staticAssetsDir, name), join(staticAssetsDir, newName));
+      renameMap[name] = newName;
+      console.log(`[patch] Renamed: ${name} → ${newName}`);
+    }
+  }
+}
+
+if (Object.keys(renameMap).length > 0) {
+  walkDir(funcDir, (fullPath) => {
+    if (!fullPath.endsWith(".mjs") && !fullPath.endsWith(".js")) return;
+    let content = readFileSync(fullPath, "utf8");
+    let changed = false;
+    for (const [oldName, newName] of Object.entries(renameMap)) {
+      if (content.includes(oldName)) {
+        content = content.replaceAll(oldName, newName);
+        changed = true;
+      }
+    }
+    if (changed) {
+      writeFileSync(fullPath, content);
+      console.log(`[patch] Updated refs: ${fullPath.split("/").slice(-2).join("/")}`);
+    }
+  });
+  console.log(`[patch] Asset rename complete: ${Object.keys(renameMap).length} files`);
+} else {
+  console.log("[patch] No assets to rename (already have -v2 suffix or none found)");
 }
