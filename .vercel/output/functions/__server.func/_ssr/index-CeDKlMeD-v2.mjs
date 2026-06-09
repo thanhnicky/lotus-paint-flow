@@ -447,8 +447,8 @@ function Index() {
         ] })
       ] }),
       /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "mt-14 grid grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-16", children: [
-        /* @__PURE__ */ jsxRuntimeExports.jsx(DecisionCard, { index: "01", title: "Phủ kín màu, che vân gỗ", subtitle: "Sơn gỗ màu bệt — Nội thất", body: "Phủ trọn bề mặt gỗ, MDF, plywood. Màng sơn mịn như sứ, độ cứng cao, che hoàn toàn vân và màu gốc. Phù hợp tủ, kệ, bàn nội thất muốn đổi màu hoàn toàn.", img: diyHands, bullets: ["Tủ áo, tủ bếp, kệ TV, bàn làm việc", "Che nền cũ, đổi màu hoàn toàn", "Màu ấm: Sứ, Mộc, Khói, Rêu"], ctaText: "Xem bảng màu nội thất", ctaLink: "#palette" }),
-        /* @__PURE__ */ jsxRuntimeExports.jsx(DecisionCard, { index: "02", title: "Giữ vân gỗ, nhìn giống gỗ tự nhiên", subtitle: "Woodstain Finish — Nội & Ngoại thất", body: "Thấm sâu vào gỗ, tôn trọn vân tự nhiên. Dẻo dai, kháng ẩm, chịu nắng mưa. Phù hợp cửa, sàn, lan can, đồ ngoại thất muốn giữ vẻ đẹp gỗ.", img: exteriorDoor, bullets: ["Cửa, khung cửa, sàn gỗ, lan can", "Giữ vân, chống trầy, kháng ẩm", "Màu tự nhiên: Sồi, Teak, Walnut, Mun"], ctaText: "Xem bảng màu ngoại thất", ctaLink: "#palette" })
+        /* @__PURE__ */ jsxRuntimeExports.jsx(DecisionCard, { index: "01", title: "Phủ kín màu, che vân gỗ", subtitle: "Sơn gỗ màu bệt — Nội thất", body: "Phủ trọn bề mặt gỗ, MDF, plywood. Màng sơn mịn như sứ, độ cứng cao, che hoàn toàn vân và màu gốc. Phù hợp tủ, kệ, bàn nội thất muốn đổi màu hoàn toàn.", img: diyHands, bullets: ["Tủ áo, tủ bếp, kệ TV, bàn làm việc", "Che nền cũ, đổi màu hoàn toàn", "Màu ấm: Sứ, Mộc, Khói, Rêu"], ctaText: "Xem bảng màu sơn bệt", ctaLink: "#palette", onCtaClick: () => setTab("indoor") }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx(DecisionCard, { index: "02", title: "Giữ vân gỗ, nhìn giống gỗ tự nhiên", subtitle: "Woodstain Finish — Nội & Ngoại thất", body: "Thấm sâu vào gỗ, tôn trọn vân tự nhiên. Dẻo dai, kháng ẩm, chịu nắng mưa. Phù hợp cửa, sàn, lan can, đồ ngoại thất muốn giữ vẻ đẹp gỗ.", img: exteriorDoor, bullets: ["Cửa, khung cửa, sàn gỗ, lan can", "Giữ vân, chống trầy, kháng ẩm", "Màu tự nhiên: Sồi, Teak, Walnut, Mun"], ctaText: "Xem bảng màu sơn giữ vân gỗ", ctaLink: "#palette", onCtaClick: () => setTab("outdoor") })
       ] })
     ] }) }),
     /* @__PURE__ */ jsxRuntimeExports.jsx("section", { className: "border-t border-walnut/10", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "mx-auto max-w-[1400px] px-5 py-20 md:px-12 md:py-28", children: [
@@ -825,7 +825,8 @@ function DecisionCard({
   img,
   bullets,
   ctaText,
-  ctaLink
+  ctaLink,
+  onCtaClick
 }) {
   return /* @__PURE__ */ jsxRuntimeExports.jsxs("article", { className: "group flex flex-col", children: [
     /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "overflow-hidden", children: /* @__PURE__ */ jsxRuntimeExports.jsx("img", { src: img, alt: title, loading: "lazy", className: "aspect-[5/6] w-full object-cover transition duration-700 group-hover:scale-[1.03]", width: 1200, height: 1500 }) }),
@@ -836,7 +837,7 @@ function DecisionCard({
     /* @__PURE__ */ jsxRuntimeExports.jsx("h3", { className: "mt-4 font-serif text-[28px] leading-tight text-charcoal sm:text-3xl md:text-4xl", children: title }),
     /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "mt-4 max-w-lg text-[15px] leading-relaxed text-walnut/80", children: body }),
     /* @__PURE__ */ jsxRuntimeExports.jsx("ul", { className: "mt-6 space-y-2 text-[13px] leading-relaxed text-walnut/75", children: bullets.map((b) => /* @__PURE__ */ jsxRuntimeExports.jsx("li", { className: "pl-4 border-l border-walnut/20", children: b }, b)) }),
-    /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "mt-8 border-t border-walnut/20 pt-6", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("a", { href: ctaLink, className: "group/btn inline-flex items-center gap-3 text-[12px] font-medium uppercase tracking-[0.18em] text-charcoal transition hover:text-clay sm:text-[13px]", children: [
+    /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "mt-8 border-t border-walnut/20 pt-6", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("a", { href: ctaLink, onClick: () => onCtaClick?.(), className: "group/btn inline-flex items-center gap-3 text-[12px] font-medium uppercase tracking-[0.18em] text-charcoal transition hover:text-clay sm:text-[13px]", children: [
       ctaText,
       /* @__PURE__ */ jsxRuntimeExports.jsx(ArrowRight, { className: "h-4 w-4 transition group-hover/btn:translate-x-1" })
     ] }) })

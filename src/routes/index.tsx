@@ -308,8 +308,9 @@ function Index() {
                 "Che nền cũ, đổi màu hoàn toàn",
                 "Màu ấm: Sứ, Mộc, Khói, Rêu"
               ]}
-              ctaText="Xem bảng màu nội thất"
+              ctaText="Xem bảng màu sơn bệt"
               ctaLink="#palette"
+              onCtaClick={() => setTab("indoor")}
             />
             <DecisionCard
               index="02"
@@ -322,8 +323,9 @@ function Index() {
                 "Giữ vân, chống trầy, kháng ẩm",
                 "Màu tự nhiên: Sồi, Teak, Walnut, Mun"
               ]}
-              ctaText="Xem bảng màu ngoại thất"
+              ctaText="Xem bảng màu sơn giữ vân gỗ"
               ctaLink="#palette"
+              onCtaClick={() => setTab("outdoor")}
             />
           </div>
         </div>
@@ -1029,6 +1031,7 @@ function DecisionCard({
   bullets,
   ctaText,
   ctaLink,
+  onCtaClick,
 }: {
   index: string;
   title: string;
@@ -1038,6 +1041,7 @@ function DecisionCard({
   bullets: string[];
   ctaText: string;
   ctaLink: string;
+  onCtaClick?: () => void;
 }) {
   return (
     <article className="group flex flex-col">
@@ -1068,6 +1072,7 @@ function DecisionCard({
       <div className="mt-8 border-t border-walnut/20 pt-6">
         <a
           href={ctaLink}
+          onClick={() => onCtaClick?.()}
           className="group/btn inline-flex items-center gap-3 text-[12px] font-medium uppercase tracking-[0.18em] text-charcoal transition hover:text-clay sm:text-[13px]"
         >
           {ctaText}
