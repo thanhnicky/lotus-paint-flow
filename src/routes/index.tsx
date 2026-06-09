@@ -33,6 +33,7 @@ import beforeAfter from "@/assets/before-after.jpg";
 import project1 from "@/assets/project-1.jpg";
 import project2 from "@/assets/project-2.jpg";
 import project3 from "@/assets/project-3.jpg";
+import logoLotus from "@/assets/logo-lotus.jpg";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -53,45 +54,74 @@ export const Route = createFileRoute("/")({
   component: Index,
 });
 
-type Palette = { name: string; hex: string; tone: string };
+type Palette = { name: string; hex: string; tone: string; mood: string };
 
 const interiorPalette: Palette[] = [
-  { name: "Sứ", hex: "#F4EFE6", tone: "Trắng ấm" },
-  { name: "Mộc", hex: "#E8DCC6", tone: "Be sữa" },
-  { name: "Khói", hex: "#B7AFA3", tone: "Xám ấm" },
-  { name: "Mây", hex: "#D9D3C7", tone: "Xám sáng" },
-  { name: "Rêu", hex: "#7C8A6E", tone: "Xanh trầm" },
-  { name: "Olive", hex: "#5A6147", tone: "Xanh sâu" },
-  { name: "Sét", hex: "#B25C3B", tone: "Đất nung" },
-  { name: "Than", hex: "#2A2724", tone: "Đen mờ" },
+  { name: "Sứ", hex: "#F4EFE6", tone: "Trắng ấm", mood: "Ấm" },
+  { name: "Mộc", hex: "#E8DCC6", tone: "Be sữa", mood: "Ấm" },
+  { name: "Sét", hex: "#B25C3B", tone: "Đất nung", mood: "Ấm" },
+  { name: "Khói", hex: "#B7AFA3", tone: "Xám ấm", mood: "Trung tính" },
+  { name: "Mây", hex: "#D9D3C7", tone: "Xám sáng", mood: "Trung tính" },
+  { name: "Than", hex: "#2A2724", tone: "Đen mờ", mood: "Lạnh" },
+  { name: "Rêu", hex: "#7C8A6E", tone: "Xanh trầm", mood: "Lạnh" },
+  { name: "Olive", hex: "#5A6147", tone: "Xanh sâu", mood: "Lạnh" },
 ];
 
 const exteriorPalette: Palette[] = [
-  { name: "Sồi", hex: "#C9A26B", tone: "Vàng tự nhiên" },
-  { name: "Teak", hex: "#A6713C", tone: "Vàng ấm" },
-  { name: "Căm xe", hex: "#8B4A2B", tone: "Nâu đỏ" },
-  { name: "Hương", hex: "#6B2E22", tone: "Nâu thẫm" },
-  { name: "Walnut", hex: "#3E2418", tone: "Óc chó" },
-  { name: "Mun", hex: "#1F1611", tone: "Đen tự nhiên" },
+  { name: "Sồi", hex: "#C9A26B", tone: "Vàng tự nhiên", mood: "Ấm" },
+  { name: "Teak", hex: "#A6713C", tone: "Vàng ấm", mood: "Ấm" },
+  { name: "Căm xe", hex: "#8B4A2B", tone: "Nâu đỏ", mood: "Ấm" },
+  { name: "Hương", hex: "#6B2E22", tone: "Nâu thẫm", mood: "Trung tính" },
+  { name: "Walnut", hex: "#3E2418", tone: "Óc chó", mood: "Lạnh" },
+  { name: "Mun", hex: "#1F1611", tone: "Đen tự nhiên", mood: "Lạnh" },
 ];
 
 const surfaces = [
-  { label: "Bàn ghế", desc: "Bàn ăn, bàn cafe, ghế gỗ." },
-  { label: "Tủ kệ", desc: "Tủ áo, kệ sách, tủ bếp." },
-  { label: "Cửa gỗ", desc: "Cửa chính, cửa phòng, cửa thông gió." },
-  { label: "Sàn gỗ", desc: "Sàn tự nhiên, sàn engineered." },
-  { label: "Ngoại thất", desc: "Lam gỗ, hàng rào, đồ sân vườn." },
-  { label: "Đồ gỗ cũ", desc: "Refurbish, làm mới đồ thanh lý." },
+  { 
+    label: "Bàn ăn / bàn làm việc", 
+    desc: "Bàn gỗ nội thất dùng hàng ngày",
+    recommendation: "Sơn gỗ màu bệt (Indoor)",
+    detail: "2 lớp, độ phủ 8-10m²/kg, màu ấm: Sứ, Mộc, Khói"
+  },
+  { 
+    label: "Tủ áo / tủ bếp / kệ TV", 
+    desc: "Tủ kệ nội thất lớn",
+    recommendation: "Sơn gỗ màu bệt (Indoor)",
+    detail: "2-3 lớp, độ phủ 8-10m²/kg, che nền cũ tốt"
+  },
+  { 
+    label: "Cửa, khung cửa, lan can", 
+    desc: "Cửa nội thất hoặc ngoại thất",
+    recommendation: "Woodstain Finish (Nội/Ngoại thất)",
+    detail: "2-3 lớp, giữ vân gỗ, kháng ẩm & UV"
+  },
+  { 
+    label: "Sàn gỗ, bậc cầu thang", 
+    desc: "Sàn tự nhiên hoặc engineered",
+    recommendation: "Woodstain Finish (Sàn)",
+    detail: "3 lớp, độ bền cao, chịu ma sát"
+  },
+  { 
+    label: "Vật dụng nhỏ (ghế, kệ, đồ trang trí)", 
+    desc: "Đồ gỗ nhỏ, decor",
+    recommendation: "Sơn gỗ màu bệt (Indoor)",
+    detail: "2 lớp, ít sơn, dễ thi công"
+  },
 ];
 
 const surfaceOptions = [
-  "Bàn / Ghế gỗ",
-  "Tủ áo / Kệ sách / Tủ bếp",
-  "Cửa gỗ",
-  "Sàn gỗ",
-  "Lam gỗ / Đồ ngoại thất",
-  "Đồ gỗ cũ — refurbish",
+  "Bàn ăn / bàn làm việc",
+  "Tủ áo / tủ bếp / kệ TV",
+  "Cửa, khung cửa, lan can",
+  "Sàn gỗ, bậc cầu thang",
+  "Vật dụng nhỏ (ghế, kệ, đồ trang trí)",
   "Khác — sẽ mô tả thêm",
+];
+
+const paintOptions = [
+  "Chưa rõ, nhờ tư vấn",
+  "Sơn gỗ màu bệt (Indoor)",
+  "Woodstain Finish (Nội/Ngoại thất)",
 ];
 
 const projects = [
@@ -155,68 +185,98 @@ const faqs = [
   },
 ];
 
+/*
+ART DIRECTION REFACTOR — B2C FOCUS
+
+Mục tiêu: Tối ưu conversion cho khách B2C tự sơn tại nhà
+- CTA chính: Gửi ảnh qua Zalo để tư vấn loại sơn + số kg
+- Decision flow: 2 kiểu hoàn thiện rõ ràng ngay sau hero
+- Selector bề mặt thực tế với gợi ý dòng sơn phù hợp
+- Flow: Bảng màu → Ảnh thực tế → Testimonial
+- Form cuối trang là kênh phụ, tối giản
+
+Tone: Premium, nội thất, ấm áp, không icon/emoji/grid startup
+*/
+
 function Index() {
   const [tab, setTab] = useState<"indoor" | "outdoor">("indoor");
   const palette = tab === "indoor" ? interiorPalette : exteriorPalette;
   const [surface, setSurface] = useState<string>("");
+  const [showSticky, setShowSticky] = useState(false);
+
+  // Sticky CTA bar trigger on scroll
+  const handleScroll = () => {
+    const heroSection = document.getElementById('hero');
+    if (heroSection) {
+      const rect = heroSection.getBoundingClientRect();
+      setShowSticky(rect.bottom < 0);
+    }
+  };
+
+  if (typeof window !== 'undefined') {
+    window.addEventListener('scroll', handleScroll);
+  }
 
   return (
     <div className="min-h-screen bg-cream text-charcoal font-sans antialiased">
       <Header />
+      {showSticky && <StickyCTA />}
 
-      {/* HERO */}
-      <section className="relative">
+      {/* HERO — B2C OPTIMIZED */}
+      <section id="hero" className="relative">
         <div className="mx-auto max-w-[1400px] px-5 pt-10 pb-16 md:px-12 md:pt-16 md:pb-28">
           <div className="grid grid-cols-12 gap-x-6 gap-y-10">
             <div className="col-span-12 md:col-span-6 lg:col-span-5 flex flex-col">
               <span className="text-[11px] uppercase tracking-[0.3em] text-walnut/70">
-                Lotus · Wood Finishing Studio
+                Lotus · Sơn gỗ hệ nước cho gia đình
               </span>
               <h1 className="mt-6 font-serif text-[38px] leading-[1.05] tracking-tight text-charcoal sm:text-[44px] md:text-[60px] lg:text-[72px]">
-                Làm mới đồ gỗ
+                Làm mới đồ gỗ tại nhà
                 <br />
-                <em className="not-italic text-clay">tại nhà</em>, theo cách
+                <em className="not-italic text-clay">ít mùi, an toàn</em>,
                 <br />
-                sạch hơn, đẹp hơn.
+                tự thi công được.
               </h1>
               <p className="mt-7 max-w-md text-[15px] leading-relaxed text-walnut/80">
-                Sơn gỗ hệ nước Lotus — hoàn thiện bề mặt gỗ trong không gian sống của bạn:
-                nhẹ mùi, an toàn cho gia đình, đủ tinh tế cho một ngôi nhà hiện đại.
+                Sơn gỗ hệ nước Lotus có 2 kiểu hoàn thiện: màu bệt phủ kín hoặc giữ vân gỗ tự nhiên. 
+                Gửi ảnh bề mặt qua Zalo để được tư vấn đúng dòng sơn + số kg cụ thể cho đồ gỗ của bạn.
               </p>
 
               <div className="mt-9 flex flex-wrap items-center gap-4">
                 <a
-                  href="#choose"
-                  className="group inline-flex items-center gap-3 bg-charcoal px-6 py-4 text-[12px] font-medium uppercase tracking-[0.18em] text-cream transition hover:bg-clay sm:px-7 sm:text-[13px]"
+                  href="https://zalo.me/843966662"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group inline-flex items-center gap-3 bg-clay px-6 py-4 text-[12px] font-medium uppercase tracking-[0.18em] text-cream transition hover:bg-clay/90 sm:px-7 sm:text-[13px]"
                 >
-                  Chọn loại sơn phù hợp
+                  Gửi ảnh bề mặt qua Zalo
                   <ArrowRight className="h-4 w-4 transition group-hover:translate-x-1" />
                 </a>
                 <a
-                  href="#palette"
+                  href="#choose"
                   className="text-[12px] font-medium uppercase tracking-[0.18em] text-walnut underline-offset-8 hover:underline sm:text-[13px]"
                 >
-                  Xem bảng màu
+                  Xem 2 kiểu hoàn thiện
                 </a>
               </div>
 
               <dl className="mt-14 grid grid-cols-3 gap-5 border-t border-walnut/15 pt-8 text-walnut">
-                <Stat k="01" v="Hệ nước Acrylic & PU hybrid" />
-                <Stat k="02" v="Khô bề mặt sau 30 phút" />
-                <Stat k="03" v="Tự thi công không cần thợ" />
+                <Stat k="01" v="Hệ nước ít mùi" />
+                <Stat k="02" v="2 kiểu: bệt / giữ vân" />
+                <Stat k="03" v="Tư vấn qua Zalo" />
               </dl>
             </div>
 
             <figure className="col-span-12 md:col-span-6 lg:col-span-7 relative">
               <img
                 src={heroInterior}
-                alt="Tủ gỗ hoàn thiện màu kem trong không gian nội thất ấm"
+                alt="Phòng khách với tủ gỗ hoàn thiện màu ấm, không gian sống gia đình"
                 className="aspect-[4/5] md:aspect-[5/6] w-full object-cover"
                 width={1600}
                 height={1200}
               />
               <figcaption className="absolute bottom-5 left-5 right-5 flex items-end justify-between text-[10px] uppercase tracking-[0.22em] text-cream mix-blend-difference sm:text-[11px]">
-                <span>Lotus Wood Paint · sắc Mộc</span>
+                <span>Phòng khách · Lotus Wood Paint</span>
                 <span>— 001</span>
               </figcaption>
             </figure>
@@ -224,38 +284,46 @@ function Index() {
         </div>
       </section>
 
-      {/* TWO FINISHES */}
+      {/* DECISION BLOCK — 2 KIỂU HOÀN THIỆN */}
       <section id="choose" className="border-t border-walnut/10 bg-sand/40">
         <div className="mx-auto max-w-[1400px] px-5 py-20 md:px-12 md:py-32">
           <header className="mx-auto max-w-2xl text-center">
-            <span className="text-[11px] uppercase tracking-[0.3em] text-walnut/70">02 — Hai kiểu hoàn thiện</span>
+            <span className="text-[11px] uppercase tracking-[0.3em] text-walnut/70">02 — Chọn kiểu hoàn thiện</span>
             <h2 className="mt-5 font-serif text-[34px] leading-tight text-charcoal sm:text-4xl md:text-5xl">
-              Hai dòng sản phẩm.
+              Bạn muốn phủ kín màu
               <br />
-              Hai cảm xúc thẩm mỹ.
+              hay giữ vân gỗ?
             </h2>
           </header>
 
           <div className="mt-14 grid grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-16">
-            <FinishCard
-              index="i."
-              eyebrow="Lotus Wood Paint — Indoor"
-              title="Màu bệt hiện đại"
-              body="Sơn phủ màu bệt 1 thành phần hệ nước. Màng sơn bóng nhẹ, mịn như sứ, độ cứng cao và hạn chế trầy xước — phủ trọn bề mặt gỗ nội thất, MDF, plywood, hay làm mới những món đồ gỗ cũ."
+            <DecisionCard
+              index="01"
+              title="Phủ kín màu, che vân gỗ"
+              subtitle="Sơn gỗ màu bệt — Nội thất"
+              body="Phủ trọn bề mặt gỗ, MDF, plywood. Màng sơn mịn như sứ, độ cứng cao, che hoàn toàn vân và màu gốc. Phù hợp tủ, kệ, bàn nội thất muốn đổi màu hoàn toàn."
               img={diyHands}
-              tags={["Nội thất", "MDF / Plywood", "Đồ gỗ cũ"]}
-              price="199.000đ"
-              unit="/ hũ 1kg"
+              bullets={[
+                "Tủ áo, tủ bếp, kệ TV, bàn làm việc",
+                "Che nền cũ, đổi màu hoàn toàn",
+                "Màu ấm: Sứ, Mộc, Khói, Rêu"
+              ]}
+              ctaText="Xem bảng màu nội thất"
+              ctaLink="#palette"
             />
-            <FinishCard
-              index="ii."
-              eyebrow="Lotus Woodstain Finish — Ngoại thất & Sàn"
-              title="Giữ vân tự nhiên"
-              body="Sơn 2-trong-1 vừa tạo màu vừa hoàn thiện, công nghệ polyurethane hybrid hệ nước. Thấm sâu, tôn trọn vân gỗ, dẻo dai và kháng ẩm — bền đẹp cho cửa, sàn và đồ ngoại thất."
+            <DecisionCard
+              index="02"
+              title="Giữ vân gỗ, nhìn giống gỗ tự nhiên"
+              subtitle="Woodstain Finish — Nội & Ngoại thất"
+              body="Thấm sâu vào gỗ, tôn trọn vân tự nhiên. Dẻo dai, kháng ẩm, chịu nắng mưa. Phù hợp cửa, sàn, lan can, đồ ngoại thất muốn giữ vẻ đẹp gỗ."
               img={exteriorDoor}
-              tags={["Cửa & Sàn", "Ngoại thất", "Kháng UV & nước"]}
-              price="259.000đ"
-              unit="/ hũ 1kg"
+              bullets={[
+                "Cửa, khung cửa, sàn gỗ, lan can",
+                "Giữ vân, chống trầy, kháng ẩm",
+                "Màu tự nhiên: Sồi, Teak, Walnut, Mun"
+              ]}
+              ctaText="Xem bảng màu ngoại thất"
+              ctaLink="#palette"
             />
           </div>
         </div>
@@ -302,7 +370,7 @@ function Index() {
         </div>
       </section>
 
-      {/* SURFACES — Bạn đang sơn gì */}
+      {/* SURFACE SELECTOR — BẠN ĐANG SƠN GÌ */}
       <section className="border-t border-walnut/10 bg-sand/40">
         <div className="mx-auto max-w-[1400px] px-5 py-20 md:px-12 md:py-32">
           <div className="grid grid-cols-12 gap-6">
@@ -314,29 +382,35 @@ function Index() {
                 sơn gì?
               </h2>
               <p className="mt-6 max-w-sm text-[15px] leading-relaxed text-walnut/80">
-                Chọn bề mặt — chúng tôi sẽ gợi ý dòng sơn, độ phủ và cách thi công
-                phù hợp nhất cho không gian của bạn.
+                Chọn bề mặt để xem gợi ý dòng sơn phù hợp. Gửi ảnh qua Zalo để được tư vấn chi tiết.
               </p>
             </div>
 
-            <ul className="col-span-12 lg:col-span-8 grid grid-cols-1 divide-y divide-walnut/15 border-y border-walnut/15 sm:grid-cols-2 sm:divide-y-0 sm:[&>li]:border-b sm:[&>li]:border-walnut/15">
-              {surfaces.map((s) => (
-                <li key={s.label}>
-                  <a
-                    href="#advise"
-                    className="group flex items-center justify-between gap-6 px-1 py-6 transition hover:bg-cream/80 sm:px-2 sm:py-7"
-                  >
-                    <div>
-                      <div className="font-serif text-xl text-charcoal sm:text-2xl">{s.label}</div>
-                      <div className="mt-1 text-sm text-walnut/70">{s.desc}</div>
-                    </div>
-                    <span className="flex h-10 w-10 flex-shrink-0 items-center justify-center border border-walnut/30 text-walnut transition group-hover:bg-charcoal group-hover:text-cream group-hover:border-charcoal">
-                      <ArrowUpRight className="h-4 w-4" />
-                    </span>
-                  </a>
-                </li>
-              ))}
-            </ul>
+            <div className="col-span-12 lg:col-span-8">
+              <div className="space-y-4">
+                {surfaces.map((s) => (
+                  <SurfaceOption
+                    key={s.label}
+                    label={s.label}
+                    desc={s.desc}
+                    recommendation={s.recommendation}
+                    detail={s.detail}
+                  />
+                ))}
+              </div>
+
+              <div className="mt-8 pt-6 border-t border-walnut/20">
+                <a
+                  href="https://zalo.me/843966662"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-3 text-[12px] font-medium uppercase tracking-[0.18em] text-charcoal transition hover:text-clay sm:text-[13px]"
+                >
+                  Gửi ảnh bề mặt này qua Zalo để xem kỹ hơn
+                  <ArrowRight className="h-4 w-4" />
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -450,16 +524,16 @@ function Index() {
         </div>
       </section>
 
-      {/* PALETTE */}
+      {/* PALETTE — BẢNG MÀU THEO MOOD */}
       <section id="palette" className="border-t border-walnut/10">
         <div className="mx-auto max-w-[1400px] px-5 py-20 md:px-12 md:py-32">
           <div className="flex flex-col items-start justify-between gap-6 md:flex-row md:items-end md:gap-8">
             <div>
               <span className="text-[11px] uppercase tracking-[0.3em] text-walnut/70">08 — Bảng màu</span>
               <h2 className="mt-5 font-serif text-[32px] leading-tight text-charcoal sm:text-4xl md:text-5xl">
-                Một bảng màu
+                Chọn màu phù hợp
                 <br />
-                cho ngôi nhà tĩnh tại.
+                với không gian của bạn.
               </h2>
             </div>
             <div className="inline-flex border border-walnut/25 text-[11px] uppercase tracking-[0.2em] sm:text-[12px]">
@@ -467,52 +541,62 @@ function Index() {
                 onClick={() => setTab("indoor")}
                 className={`px-4 py-3 transition sm:px-5 ${tab === "indoor" ? "bg-charcoal text-cream" : "text-walnut hover:bg-sand/60"}`}
               >
-                Indoor
+                Nội thất
               </button>
               <button
                 onClick={() => setTab("outdoor")}
                 className={`px-4 py-3 transition sm:px-5 ${tab === "outdoor" ? "bg-charcoal text-cream" : "text-walnut hover:bg-sand/60"}`}
               >
-                Outdoor
+                Ngoại thất
               </button>
             </div>
           </div>
 
-          <div className="mt-12 grid grid-cols-2 gap-x-5 gap-y-8 sm:grid-cols-3 sm:gap-x-6 sm:gap-y-10 lg:grid-cols-4">
-            {palette.map((c) => (
-              <figure key={c.name} className="group">
-                <div
-                  className="aspect-[4/5] w-full transition group-hover:scale-[1.01]"
-                  style={{ backgroundColor: c.hex }}
-                />
-                <figcaption className="mt-4 flex items-baseline justify-between border-t border-walnut/20 pt-3">
-                  <div>
-                    <div className="font-serif text-lg text-charcoal">{c.name}</div>
-                    <div className="text-[10px] uppercase tracking-[0.2em] text-walnut/60 sm:text-[11px]">{c.tone}</div>
+          <div className="mt-12 space-y-12">
+            {["Ấm", "Trung tính", "Lạnh"].map((mood) => {
+              const moodColors = palette.filter((c) => c.mood === mood);
+              if (moodColors.length === 0) return null;
+              return (
+                <div key={mood}>
+                  <div className="text-[11px] uppercase tracking-[0.25em] text-clay mb-6">Mood: {mood}</div>
+                  <div className="grid grid-cols-2 gap-x-5 gap-y-8 sm:grid-cols-3 sm:gap-x-6 sm:gap-y-10 lg:grid-cols-4">
+                    {moodColors.map((c) => (
+                      <figure key={c.name} className="group">
+                        <div
+                          className="aspect-[4/5] w-full transition group-hover:scale-[1.01]"
+                          style={{ backgroundColor: c.hex }}
+                        />
+                        <figcaption className="mt-4 flex items-baseline justify-between border-t border-walnut/20 pt-3">
+                          <div>
+                            <div className="font-serif text-lg text-charcoal">{c.name}</div>
+                            <div className="text-[10px] uppercase tracking-[0.2em] text-walnut/60 sm:text-[11px]">{c.tone}</div>
+                          </div>
+                          <span className="text-[10px] text-walnut/50 sm:text-[11px]">{c.hex}</span>
+                        </figcaption>
+                      </figure>
+                    ))}
                   </div>
-                  <span className="text-[10px] text-walnut/50 sm:text-[11px]">{c.hex}</span>
-                </figcaption>
-              </figure>
-            ))}
+                </div>
+              );
+            })}
           </div>
         </div>
       </section>
 
-      {/* PROJECTS / TRUST GALLERY */}
+      {/* PROJECTS / TRUST GALLERY — CÔNG TRÌNH THẬT */}
       <section className="border-t border-walnut/10 bg-sand/40">
         <div className="mx-auto max-w-[1400px] px-5 py-20 md:px-12 md:py-32">
           <header className="flex flex-col items-start justify-between gap-4 md:flex-row md:items-end">
             <div>
               <span className="text-[11px] uppercase tracking-[0.3em] text-walnut/70">09 — Công trình thật</span>
               <h2 className="mt-5 font-serif text-[32px] leading-tight text-charcoal sm:text-4xl md:text-5xl">
-                Đã có mặt
+                Từ đồ gỗ cũ
                 <br />
-                trong những căn nhà.
+                đến không gian mới.
               </h2>
             </div>
             <p className="max-w-sm text-[14px] leading-relaxed text-walnut/75">
-              Một vài không gian sống đã được hoàn thiện cùng Lotus —
-              chia sẻ bởi chính khách hàng của chúng tôi.
+              Những căn nhà đã được làm mới cùng Lotus — từ đồ gỗ trầy xước đến bề mặt sạch, màu mới hoặc giữ vân gỗ đẹp.
             </p>
           </header>
 
@@ -539,15 +623,15 @@ function Index() {
         </div>
       </section>
 
-      {/* TESTIMONIALS */}
+      {/* TESTIMONIALS — CẢM NHẬN KHÁCH HÀNG B2C */}
       <section className="border-t border-walnut/10">
         <div className="mx-auto max-w-[1400px] px-5 py-20 md:px-12 md:py-32">
           <header className="mx-auto max-w-2xl text-center">
-            <span className="text-[11px] uppercase tracking-[0.3em] text-walnut/70">10 — Cảm nhận</span>
+            <span className="text-[11px] uppercase tracking-[0.3em] text-walnut/70">10 — Cảm nhận khách hàng</span>
             <h2 className="mt-5 font-serif text-[32px] leading-tight text-charcoal sm:text-4xl md:text-5xl">
-              Lời kể từ
+              Vợ chồng trẻ,
               <br />
-              chính ngôi nhà của họ.
+              chủ nhà tự làm DIY.
             </h2>
           </header>
 
@@ -569,6 +653,18 @@ function Index() {
                 </footer>
               </blockquote>
             ))}
+          </div>
+
+          <div className="mt-12 text-center">
+            <a
+              href="https://www.facebook.com/lotuspaint"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-3 text-[12px] font-medium uppercase tracking-[0.18em] text-charcoal transition hover:text-clay sm:text-[13px]"
+            >
+              Xem thêm ảnh & feedback trên fanpage Lotus
+              <ArrowRight className="h-4 w-4" />
+            </a>
           </div>
         </div>
       </section>
@@ -640,35 +736,32 @@ function Index() {
         </div>
       </section>
 
-      {/* CTA / ADVISE */}
+      {/* FORM — KÊNH PHỤ TRỢ */}
       <section id="advise" className="border-t border-walnut/10 bg-charcoal text-cream">
         <div className="mx-auto max-w-[1400px] px-5 py-20 md:px-12 md:py-32">
           <div className="grid grid-cols-12 gap-x-6 gap-y-12">
             <div className="col-span-12 md:col-span-6">
-              <span className="text-[11px] uppercase tracking-[0.3em] text-cream/60">12 — Tư vấn</span>
+              <span className="text-[11px] uppercase tracking-[0.3em] text-cream/60">12 — Đặt hàng nhanh</span>
               <h2 className="mt-5 font-serif text-[36px] leading-tight sm:text-5xl md:text-6xl">
-                Để Lotus
+                Nếu bạn đã rõ
                 <br />
-                gợi ý cho bạn.
+                mình cần gì.
               </h2>
               <p className="mt-8 max-w-md text-[15px] leading-relaxed text-cream/75">
-                Gửi cho chúng tôi bề mặt gỗ bạn đang muốn làm mới — Lotus sẽ tư vấn
-                dòng sơn, sắc màu, dung tích và cách thi công phù hợp, hoàn toàn miễn phí.
+                Nếu bạn đã xem kỹ hướng dẫn và muốn đặt hàng nhanh, điền form dưới đây. 
+                Nếu vẫn phân vân, hãy nhắn Zalo để gửi ảnh bề mặt.
               </p>
-              <ul className="mt-12 space-y-5 text-sm text-cream/75">
-                <li className="flex items-start gap-3">
-                  <ShieldCheck className="mt-0.5 h-4 w-4 text-clay" strokeWidth={1.5} />
-                  <span>Cam kết tư vấn đúng hệ sơn theo bề mặt — không bán dư.</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <Truck className="mt-0.5 h-4 w-4 text-clay" strokeWidth={1.5} />
-                  <span>Giao toàn quốc · COD · Miễn phí ship từ 2 hũ.</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <MessageCircle className="mt-0.5 h-4 w-4 text-clay" strokeWidth={1.5} />
-                  <span>Phản hồi trong 24 giờ làm việc, mỗi ngày 8:00 – 20:00.</span>
-                </li>
-              </ul>
+              <div className="mt-12">
+                <a
+                  href="https://zalo.me/843966662"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-3 border border-cream/40 px-5 py-3 text-[12px] font-medium uppercase tracking-[0.18em] text-cream transition hover:bg-cream/10 hover:border-cream sm:text-[13px]"
+                >
+                  Gửi ảnh bề mặt qua Zalo
+                  <ArrowRight className="h-4 w-4" />
+                </a>
+              </div>
             </div>
 
             <form
@@ -684,14 +777,14 @@ function Index() {
                   className="h-12 rounded-none border-0 border-b border-cream/30 bg-transparent px-0 text-base text-cream placeholder:text-cream/40 focus-visible:border-clay focus-visible:ring-0"
                 />
               </Field>
-              <Field label="Số điện thoại">
+              <Field label="Số điện thoại / Zalo">
                 <Input
                   required
                   type="tel"
                   className="h-12 rounded-none border-0 border-b border-cream/30 bg-transparent px-0 text-base text-cream placeholder:text-cream/40 focus-visible:border-clay focus-visible:ring-0"
                 />
               </Field>
-              <Field label="Loại bề mặt cần sơn">
+              <Field label="Bề mặt dự định sơn">
                 <Select value={surface} onValueChange={setSurface} required>
                   <SelectTrigger className="h-12 rounded-none border-0 border-b border-cream/30 bg-transparent px-0 text-base text-cream focus:border-clay focus:ring-0 [&>span]:text-cream data-[placeholder]:[&>span]:text-cream/40">
                     <SelectValue placeholder="Chọn loại bề mặt" />
@@ -703,19 +796,35 @@ function Index() {
                   </SelectContent>
                 </Select>
               </Field>
-              <Field label="Mô tả thêm (tuỳ chọn)">
-                <Textarea
-                  rows={3}
-                  className="rounded-none border-0 border-b border-cream/30 bg-transparent px-0 text-base text-cream placeholder:text-cream/40 focus-visible:border-clay focus-visible:ring-0"
-                  placeholder="Diện tích, màu mong muốn, thời gian thi công…"
-                />
+              <Field label="Dòng sơn dự kiến">
+                <Select required>
+                  <SelectTrigger className="h-12 rounded-none border-0 border-b border-cream/30 bg-transparent px-0 text-base text-cream focus:border-clay focus:ring-0 [&>span]:text-cream data-[placeholder]:[&>span]:text-cream/40">
+                    <SelectValue placeholder="Chọn dòng sơn" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    {paintOptions.map((o) => (
+                      <SelectItem key={o} value={o}>{o}</SelectItem>
+                    ))}
+                  </SelectContent>
+                </Select>
               </Field>
+
+              <div className="flex items-start gap-3 pt-2">
+                <input
+                  type="checkbox"
+                  id="zalo-sent"
+                  className="mt-1 h-4 w-4 border-cream/30 bg-transparent text-clay focus:ring-clay"
+                />
+                <label htmlFor="zalo-sent" className="text-sm text-cream/80">
+                  Tôi đã gửi ảnh bề mặt qua Zalo / Facebook
+                </label>
+              </div>
 
               <Button
                 type="submit"
                 className="mt-4 h-14 w-full rounded-none bg-clay text-[12px] font-medium uppercase tracking-[0.2em] text-cream hover:bg-clay/90 sm:text-[13px]"
               >
-                Nhận tư vấn theo bề mặt gỗ
+                Gửi yêu cầu đặt hàng
               </Button>
               <p className="text-[11px] uppercase tracking-[0.18em] text-cream/50">
                 Lotus sẽ phản hồi trong vòng 24 giờ làm việc.
@@ -760,10 +869,15 @@ function Footer() {
       <div className="mx-auto max-w-[1400px] px-5 py-14 md:px-12">
         <div className="grid grid-cols-12 gap-6">
           <div className="col-span-12 md:col-span-5">
-            <div className="font-serif text-3xl text-charcoal">Lotus<span className="text-clay">.</span></div>
-            <p className="mt-4 max-w-sm text-sm leading-relaxed text-walnut/70">
-              Sơn gỗ hệ nước cho không gian sống tinh tế.
-              Hoàn thiện đẹp, an toàn — dành cho gia đình hiện đại.
+            <img src={logoLotus} alt="Lotus Logo" className="h-12 w-auto mb-4" />
+            <p className="max-w-sm text-sm leading-relaxed text-walnut/70">
+              CÔNG TY TNHH SẢN XUẤT THƯƠNG MẠI DỊCH VỤ BÍCH TRANG
+            </p>
+            <p className="mt-2 text-xs text-walnut/60">
+              MST: 0313351528
+            </p>
+            <p className="mt-2 text-xs text-walnut/60">
+              99/5 Đường XTT26-1, Ấp 2, Xã Bà Điểm, TP.HCM
             </p>
           </div>
           <div className="col-span-6 md:col-span-3">
@@ -777,14 +891,15 @@ function Footer() {
           <div className="col-span-6 md:col-span-4">
             <div className="text-[11px] uppercase tracking-[0.22em] text-walnut/60">Liên hệ</div>
             <ul className="mt-4 space-y-2 text-sm text-charcoal">
-              <li><a href="#advise" className="hover:text-clay">Gửi yêu cầu tư vấn</a></li>
+              <li><a href="https://zalo.me/843966662" target="_blank" rel="noopener noreferrer" className="hover:text-clay">Hotline: 0943 966 662</a></li>
+              <li><a href="mailto:sales@sonlotus.vn" className="hover:text-clay">sales@sonlotus.vn</a></li>
+              <li><a href="https://sonlotus.vn" target="_blank" rel="noopener noreferrer" className="hover:text-clay">www.sonlotus.vn</a></li>
               <li>Giờ làm việc · 8:00 – 20:00</li>
-              <li>Giao hàng toàn quốc</li>
             </ul>
           </div>
         </div>
         <div className="mt-12 flex flex-col justify-between gap-3 border-t border-walnut/15 pt-6 text-[11px] uppercase tracking-[0.2em] text-walnut/60 md:flex-row">
-          <span>© {new Date().getFullYear()} Lotus Paint Studio</span>
+          <span>© {new Date().getFullYear()} CÔNG TY TNHH SX TM DV BÍCH TRANG</span>
           <span>Made with care · Vietnam</span>
         </div>
       </div>
@@ -878,6 +993,109 @@ function FinishCard({
         </a>
       </div>
     </article>
+  );
+}
+
+function SurfaceOption({
+  label,
+  desc,
+  recommendation,
+  detail,
+}: {
+  label: string;
+  desc: string;
+  recommendation: string;
+  detail: string;
+}) {
+  return (
+    <div className="border border-walnut/15 bg-cream/50 p-5 transition hover:bg-cream/80">
+      <div className="font-serif text-xl text-charcoal">{label}</div>
+      <div className="mt-1 text-sm text-walnut/70">{desc}</div>
+      <div className="mt-4 pt-4 border-t border-walnut/15">
+        <div className="text-[11px] uppercase tracking-[0.2em] text-clay">Gợi ý</div>
+        <div className="mt-1 text-sm font-medium text-charcoal">{recommendation}</div>
+        <div className="mt-1 text-xs text-walnut/70">{detail}</div>
+      </div>
+    </div>
+  );
+}
+
+function DecisionCard({
+  index,
+  title,
+  subtitle,
+  body,
+  img,
+  bullets,
+  ctaText,
+  ctaLink,
+}: {
+  index: string;
+  title: string;
+  subtitle: string;
+  body: string;
+  img: string;
+  bullets: string[];
+  ctaText: string;
+  ctaLink: string;
+}) {
+  return (
+    <article className="group flex flex-col">
+      <div className="overflow-hidden">
+        <img
+          src={img}
+          alt={title}
+          loading="lazy"
+          className="aspect-[5/6] w-full object-cover transition duration-700 group-hover:scale-[1.03]"
+          width={1200}
+          height={1500}
+        />
+      </div>
+      <div className="mt-7 flex items-baseline gap-4">
+        <span className="font-serif text-2xl text-clay">{index}</span>
+        <span className="text-[11px] uppercase tracking-[0.25em] text-walnut/70">{subtitle}</span>
+      </div>
+      <h3 className="mt-4 font-serif text-[28px] leading-tight text-charcoal sm:text-3xl md:text-4xl">{title}</h3>
+      <p className="mt-4 max-w-lg text-[15px] leading-relaxed text-walnut/80">{body}</p>
+      <ul className="mt-6 space-y-2 text-[13px] leading-relaxed text-walnut/75">
+        {bullets.map((b) => (
+          <li key={b} className="pl-4 border-l border-walnut/20">
+            {b}
+          </li>
+        ))}
+      </ul>
+
+      <div className="mt-8 border-t border-walnut/20 pt-6">
+        <a
+          href={ctaLink}
+          className="group/btn inline-flex items-center gap-3 text-[12px] font-medium uppercase tracking-[0.18em] text-charcoal transition hover:text-clay sm:text-[13px]"
+        >
+          {ctaText}
+          <ArrowRight className="h-4 w-4 transition group-hover/btn:translate-x-1" />
+        </a>
+      </div>
+    </article>
+  );
+}
+
+function StickyCTA() {
+  return (
+    <div className="fixed bottom-0 left-0 right-0 z-50 bg-charcoal/95 backdrop-blur border-t border-walnut/20 py-3 px-5 md:py-4">
+      <div className="mx-auto max-w-[1400px] flex flex-col sm:flex-row items-center justify-between gap-3">
+        <p className="text-[11px] uppercase tracking-[0.18em] text-cream/80 sm:text-[12px]">
+          Muốn chọn đúng sơn & số kg? Gửi ảnh bề mặt qua Zalo.
+        </p>
+        <a
+          href="https://zalo.me/843966662"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-2 bg-clay px-5 py-2.5 text-[11px] font-medium uppercase tracking-[0.18em] text-cream transition hover:bg-clay/90 sm:text-[12px]"
+        >
+          Gửi ảnh qua Zalo
+          <ArrowRight className="h-3.5 w-3.5" />
+        </a>
+      </div>
+    </div>
   );
 }
 
