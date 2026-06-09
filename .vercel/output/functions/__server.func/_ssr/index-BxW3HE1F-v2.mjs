@@ -586,8 +586,8 @@ function Index() {
           ] })
         ] }),
         /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "inline-flex border border-walnut/25 text-[11px] uppercase tracking-[0.2em] sm:text-[12px]", children: [
-          /* @__PURE__ */ jsxRuntimeExports.jsx("button", { onClick: () => setTab("indoor"), className: `px-4 py-3 transition sm:px-5 ${tab === "indoor" ? "bg-charcoal text-cream" : "text-walnut hover:bg-sand/60"}`, children: "Nội thất" }),
-          /* @__PURE__ */ jsxRuntimeExports.jsx("button", { onClick: () => setTab("outdoor"), className: `px-4 py-3 transition sm:px-5 ${tab === "outdoor" ? "bg-charcoal text-cream" : "text-walnut hover:bg-sand/60"}`, children: "Ngoại thất" })
+          /* @__PURE__ */ jsxRuntimeExports.jsx("button", { onClick: () => setTab("indoor"), className: `px-4 py-3 transition sm:px-5 ${tab === "indoor" ? "bg-charcoal text-cream" : "text-walnut hover:bg-sand/60"}`, children: "Màu Bệt" }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx("button", { onClick: () => setTab("outdoor"), className: `px-4 py-3 transition sm:px-5 ${tab === "outdoor" ? "bg-charcoal text-cream" : "text-walnut hover:bg-sand/60"}`, children: "Màu Giữ Vân Gỗ" })
         ] })
       ] }),
       /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "mt-12 space-y-12", children: ["Ấm", "Trung tính", "Lạnh"].map((mood) => {

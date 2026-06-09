@@ -541,13 +541,13 @@ function Index() {
                 onClick={() => setTab("indoor")}
                 className={`px-4 py-3 transition sm:px-5 ${tab === "indoor" ? "bg-charcoal text-cream" : "text-walnut hover:bg-sand/60"}`}
               >
-                Nội thất
+                Màu Bệt
               </button>
               <button
                 onClick={() => setTab("outdoor")}
                 className={`px-4 py-3 transition sm:px-5 ${tab === "outdoor" ? "bg-charcoal text-cream" : "text-walnut hover:bg-sand/60"}`}
               >
-                Ngoại thất
+                Màu Giữ Vân Gỗ
               </button>
             </div>
           </div>
