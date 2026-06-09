@@ -75,16 +75,11 @@ const createLucideIcon = (iconName, iconNode) => {
   Component.displayName = toPascalCase(iconName);
   return Component;
 };
-const __iconNode$8 = [
+const __iconNode$7 = [
   ["path", { d: "M5 12h14", key: "1ays0h" }],
   ["path", { d: "m12 5 7 7-7 7", key: "xquz4c" }]
 ];
-const ArrowRight = createLucideIcon("arrow-right", __iconNode$8);
-const __iconNode$7 = [
-  ["path", { d: "M7 7h10v10", key: "1tivn9" }],
-  ["path", { d: "M7 17 17 7", key: "1vkiza" }]
-];
-const ArrowUpRight = createLucideIcon("arrow-up-right", __iconNode$7);
+const ArrowRight = createLucideIcon("arrow-right", __iconNode$7);
 const __iconNode$6 = [["path", { d: "M20 6 9 17l-5-5", key: "1gmf2c" }]];
 const Check = createLucideIcon("check", __iconNode$6);
 const __iconNode$5 = [["path", { d: "m6 9 6 6 6-6", key: "qrunsl" }]];
@@ -150,7 +145,6 @@ export {
   Quote as Q,
   ShieldCheck as S,
   Truck as T,
-  ArrowUpRight as a,
-  Check as b,
-  ChevronUp as c
+  Check as a,
+  ChevronUp as b
 };

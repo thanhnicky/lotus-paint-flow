@@ -15,7 +15,7 @@ import "crypto";
 import "async_hooks";
 import "stream";
 import "../_libs/isbot.mjs";
-const appCss = "/assets/styles-BlnU3je2.css";
+const appCss = "/assets/styles-Cm3nkrDD-v2.css";
 function reportLovableError(error, context = {}) {
   if (typeof window === "undefined") return;
   window.__lovableEvents?.captureException?.(
@@ -84,6 +84,7 @@ const Route$1 = createRootRouteWithContext()({
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
+      { name: "build-check", content: "lotus-v2-zalo-2026" },
       { title: "Lovable App" },
       { name: "description", content: "Lotus Paint Pro is a zero-touch e-commerce landing page for DIY wood finishing." },
       { name: "author", content: "Lovable" },
@@ -128,7 +129,7 @@ function RootComponent() {
   const { queryClient } = Route$1.useRouteContext();
   return /* @__PURE__ */ jsxRuntimeExports.jsx(QueryClientProvider, { client: queryClient, children: /* @__PURE__ */ jsxRuntimeExports.jsx(Outlet, {}) });
 }
-const $$splitComponentImporter = () => import("./index-CefBAThT.mjs");
+const $$splitComponentImporter = () => import("./index-BThXLjLC-v2.mjs");
 const Route = createFileRoute("/")({
   head: () => ({
     meta: [{
