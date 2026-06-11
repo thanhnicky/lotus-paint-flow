@@ -4,14 +4,21 @@ import { Link } from "@tanstack/react-router";
 export const Route = createFileRoute("/thank-you")({
   component: ThankYouPage,
   validateSearch: (search: Record<string, unknown>) => ({
+    name: typeof search.name === "string" ? search.name : "",
     phone: typeof search.phone === "string" ? search.phone : "",
     payment: typeof search.payment === "string" ? search.payment : "cod",
     amount: typeof search.amount === "string" ? search.amount : "",
+    product: typeof search.product === "string" ? search.product : "",
+    env: typeof search.env === "string" ? search.env : "",
+    color: typeof search.color === "string" ? search.color : "",
+    surface: typeof search.surface === "string" ? search.surface : "",
+    size: typeof search.size === "string" ? search.size : "",
+    qty: typeof search.qty === "string" ? search.qty : "1",
   }),
 });
 
 function ThankYouPage() {
-  const { phone, payment, amount } = Route.useSearch();
+  const { name, phone, payment, amount, product, env, color, surface, size, qty } = Route.useSearch();
 
   const bankInfo = {
     account: "211014851223910",
@@ -20,8 +27,9 @@ function ThankYouPage() {
     name: "CÔNG TY TNHH SẢN XUẤT THƯƠNG MẠI DỊCH VỤ BÍCH TRANG",
   };
 
-  // Generate QR code URL using a free QR code API
-  const qrContent = `${bankInfo.bank}|${bankInfo.account}|${bankInfo.name}|${amount}`;
+  // Generate QR code with transfer syntax: Lotus + phone
+  const transferSyntax = `Lotus ${phone}`;
+  const qrContent = `${bankInfo.bank}|${bankInfo.account}|${bankInfo.name}|${amount}|${transferSyntax}`;
   const qrUrl = `https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=${encodeURIComponent(qrContent)}`;
 
   return (
@@ -30,11 +38,41 @@ function ThankYouPage() {
         <div className="bg-cream border border-walnut/15 p-8 text-center">
           <div className="mb-6 text-5xl">✓</div>
           <h1 className="mb-4 font-serif text-3xl text-charcoal">
-            Cảm ơn bạn đã đặt hàng
+            Cảm ơn Anh/chị {name} đã sử dụng sản phẩm của Sơn Lotus
           </h1>
-          <p className="mb-8 text-[15px] text-walnut/70">
-            Lotus sẽ liên hệ số điện thoại <span className="font-medium text-charcoal">{phone}</span> để xác nhận và giao hàng.
-          </p>
+
+          {/* Order Summary */}
+          <div className="mb-8 rounded-lg border border-walnut/15 bg-sand/30 p-6 text-left">
+            <h2 className="mb-4 text-[13px] uppercase tracking-[0.25em] text-walnut/50">
+              Tóm tắt đơn hàng
+            </h2>
+            <div className="space-y-2 text-[14px]">
+              <div className="flex justify-between">
+                <span className="text-walnut/70">Sản phẩm</span>
+                <span className="text-charcoal">{product}</span>
+              </div>
+              <div className="flex justify-between">
+                <span className="text-walnut/70">Môi trường</span>
+                <span className="text-charcoal">{env}</span>
+              </div>
+              <div className="flex justify-between">
+                <span className="text-walnut/70">Màu</span>
+                <span className="text-charcoal">{color}</span>
+              </div>
+              <div className="flex justify-between">
+                <span className="text-walnut/70">Bề mặt</span>
+                <span className="text-charcoal">{surface}</span>
+              </div>
+              <div className="flex justify-between border-t border-walnut/15 pt-2">
+                <span className="text-walnut/70">Quy cách</span>
+                <span className="text-charcoal">{size} × {qty}</span>
+              </div>
+              <div className="flex justify-between border-t border-walnut/20 pt-2 text-[16px] font-medium">
+                <span className="text-walnut/80">Tổng cộng</span>
+                <span className="text-clay">{amount}</span>
+              </div>
+            </div>
+          </div>
 
           {payment === "online" && (
             <div className="mb-8 rounded-lg border border-walnut/15 bg-sand/30 p-6">
@@ -49,7 +87,8 @@ function ThankYouPage() {
                 <p><span className="font-medium text-charcoal">Chi nhánh:</span> {bankInfo.branch}</p>
                 <p><span className="font-medium text-charcoal">Số tài khoản:</span> {bankInfo.account}</p>
                 <p><span className="font-medium text-charcoal">Chủ tài khoản:</span> {bankInfo.name}</p>
-                {amount && <p><span className="font-medium text-charcoal">Số tiền:</span> {amount}</p>}
+                <p><span className="font-medium text-charcoal">Số tiền:</span> {amount}</p>
+                <p><span className="font-medium text-charcoal">Nội dung chuyển khoản:</span> <span className="text-clay">{transferSyntax}</span></p>
               </div>
             </div>
           )}

@@ -899,9 +899,16 @@ function Index() {
               navigate({
                 to: "/thank-you",
                 search: {
+                  name: orderName,
                   phone: orderPhone,
                   payment: orderPayment,
                   amount: formatVND(total),
+                  product: orderProduct === "bet" ? "Sơn màu bệt" : "Sơn giữ vân gỗ",
+                  env: orderEnv === "indoor" ? "Trong nhà" : "Ngoài trời",
+                  color: orderColor,
+                  surface: orderSurface === "bong" ? "Bóng" : orderSurface === "bong-50" ? "Bóng 50%" : "Mờ",
+                  size: orderSize,
+                  qty: orderQty.toString(),
                 },
               });
             }}
