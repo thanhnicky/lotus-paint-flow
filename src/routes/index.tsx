@@ -153,7 +153,7 @@ const faqs = [
   },
   {
     q: "Tôi chưa sơn bao giờ, có tự làm được không?",
-    a: "Hoàn toàn được. Sơn hệ nước dễ tãi đều, không kén tay nghề. Bạn chỉ cần cọ hoặc rulo, một miếng giấy nhám P240 và khoảng một buổi chiều. Hướng dẫn thi công chi tiết có trong phần Thi công bên dưới."
+    a: "Hoàn toàn được. Sơn hệ nước dễ tán đều, không kén tay nghề. Bạn chỉ cần cọ hoặc rulo, một miếng giấy nhám P240 và khoảng một buổi chiều. Hướng dẫn thi công chi tiết có trong phần Thi công bên dưới."
   },
   {
     q: "Mua số lượng lớn có giá tốt không?",
@@ -177,7 +177,7 @@ const faqs = [
   },
   {
     q: "Tôi ở tỉnh, có giao hàng không? Bao lâu nhận được?",
-    a: "Lotus giao toàn quốc. Nội thành Hà Nội & TP. HCM nhận trong 1–2 ngày, các tỉnh thành khác 2–5 ngày. Đơn từ 2 hũ trở lên được miễn phí vận chuyển. Thanh toán khi nhận hàng (COD).",
+    a: "Lotus giao toàn quốc. Nội thành Hà Nội & TP. HCM nhận trong 1–2 ngày, các tỉnh thành khác 2–5 ngày. Thanh toán online được miễn phí vận chuyển. COD tính phí theo địa chỉ.",
   },
 ];
 
@@ -257,18 +257,18 @@ function Index() {
           <div className="grid grid-cols-12 gap-x-6 gap-y-10">
             <div className="col-span-12 md:col-span-6 lg:col-span-5 flex flex-col">
               <span className="text-[11px] uppercase tracking-[0.3em] text-walnut/70">
-                Lotus · Sơn gỗ hệ nước cho gia đình
+                Lotus · Sơn gỗ hệ nước — Tự làm tại nhà
               </span>
               <h1 className="mt-6 font-serif text-[38px] leading-[1.05] tracking-tight text-charcoal sm:text-[44px] md:text-[60px] lg:text-[72px]">
-                Làm mới đồ gỗ tại nhà
+                Sơn lại đồ gỗ tại nhà
                 <br />
-                <em className="not-italic text-clay">ít mùi, an toàn</em>,
+                <em className="not-italic text-clay">ít mùi, khô nhanh</em>,
                 <br />
-                tự thi công được.
+                xong trong một buổi.
               </h1>
               <p className="mt-7 max-w-md text-[15px] leading-relaxed text-walnut/80">
-                Sơn gỗ hệ nước Lotus có 2 kiểu hoàn thiện: màu bệt phủ kín hoặc giữ vân gỗ tự nhiên.
-                Tự thi công tại nhà, giao toàn quốc, đặt hàng trực tiếp — không cần tư vấn.
+                Chọn màu, đặt online, nhận hàng tại nhà. Không cần hỏi, không cần chờ.
+                1 hũ sơn khoảng 7–9 m² mỗi lớp.
               </p>
 
               <div className="mt-9 flex flex-wrap items-center gap-4">
@@ -330,7 +330,7 @@ function Index() {
               index="01"
               title="Phủ kín màu, che vân gỗ"
               subtitle="Sơn gỗ màu bệt — Nội thất"
-              body="Phủ trọn bề mặt gỗ, MDF, plywood. Màng sơn mịn như sứ, độ cứng cao, che hoàn toàn vân và màu gốc. Phù hợp tủ, kệ, bàn nội thất muốn đổi màu hoàn toàn."
+              body="Chọn loại này khi muốn đổi màu hoàn toàn cho tủ, kệ, bàn. Phủ trọn bề mặt, màng sơn mịn như sứ, che hoàn toàn vân và màu gốc."
               img={diyHands}
               bullets={[
                 "Tủ áo, tủ bếp, kệ TV, bàn làm việc",
@@ -345,7 +345,7 @@ function Index() {
               index="02"
               title="Giữ vân gỗ, nhìn giống gỗ tự nhiên"
               subtitle="Woodstain Finish — Nội & Ngoại thất"
-              body="Thấm sâu vào gỗ, tôn trọn vân tự nhiên. Dẻo dai, kháng ẩm, chịu nắng mưa. Phù hợp cửa, sàn, lan can, đồ ngoại thất muốn giữ vẻ đẹp gỗ."
+              body="Chọn loại này khi muốn giữ vẻ đẹp gỗ tự nhiên cho cửa, sàn, lan can. Thấm sâu vào gỗ, tôn trọn vân, chịu nắng mưa."
               img={exteriorDoor}
               bullets={[
                 "Cửa, khung cửa, sàn gỗ, lan can",
@@ -367,13 +367,13 @@ function Index() {
             <div>
               <span className="text-[11px] uppercase tracking-[0.3em] text-walnut/70">03 — Quy cách</span>
               <h2 className="mt-5 font-serif text-[32px] leading-tight text-charcoal sm:text-4xl md:text-5xl">
-                Mọi con số bạn
+                1 hũ sơn được bao nhiêu?
                 <br />
-                cần biết trước khi đặt.
+                Cần mua bao nhiêu?
               </h2>
             </div>
             <p className="max-w-xs text-[13px] leading-relaxed text-walnut/65">
-              1 hũ sơn khoảng 7–9 m² mỗi lớp. Khuyến nghị sơn 2 lớp.
+              1 hũ 1kg sơn được 7–9 m² mỗi lớp. Khuyến nghị sơn 2 lớp.
             </p>
           </header>
 
@@ -470,14 +470,16 @@ function Index() {
             <div className="lg:col-span-5">
               <span className="text-[11px] uppercase tracking-[0.3em] text-walnut/70">06 — Vì sao hệ nước</span>
               <h2 className="mt-5 font-serif text-[32px] leading-tight text-charcoal sm:text-4xl md:text-5xl">
-                Sạch hơn cho ngôi nhà.
+                Ít mùi.
                 <br />
-                Dễ hơn cho đôi tay.
+                Khô nhanh.
+                <br />
+                Dễ làm sạch.
               </h2>
             </div>
             <div className="lg:col-span-7 lg:pt-[3.5rem]">
               <p className="font-serif text-[20px] leading-[1.6] text-charcoal md:text-[22px]">
-                Lotus không có mùi xăng — bạn sơn được ngay trong phòng ngủ, cạnh con nhỏ, không cần thông gió đặc biệt hay tạm dời đồ ra khỏi phòng.
+                Sơn được ngay trong phòng ngủ, cạnh con nhỏ. Không mùi xăng, không cần thông gió đặc biệt.
               </p>
             </div>
           </div>
@@ -485,9 +487,9 @@ function Index() {
           {/* Bottom — 3 supporting points */}
           <ul className="mt-16 grid grid-cols-1 divide-y divide-walnut/12 border-t border-walnut/15 sm:grid-cols-3 sm:divide-x sm:divide-y-0">
             {[
-              { n: "02", t: "Khô nhanh trong giờ", d: "Khô bề mặt 30 phút, sơn lớp tiếp theo sau 2 giờ. Một buổi chiều là xong." },
-              { n: "03", t: "Rửa bằng nước thường", d: "Cọ, khay, tay áo — sạch chỉ với vòi nước. Không cần dung môi." },
-              { n: "04", t: "Bền màu, không ố vàng", d: "Kháng ẩm, kháng trầy nhẹ, chịu lau chùi hằng ngày trong nhiều năm." },
+              { n: "02", t: "Khô nhanh trong giờ", d: "Khô bề mặt sau 30 phút, sơn lớp tiếp theo sau 2 giờ. Xong trong một buổi chiều." },
+              { n: "03", t: "Rửa bằng nước thường", d: "Cọ, khay, tay áo — sạch chỉ với vòi nước. Không cần dung môi hay xăng." },
+              { n: "04", t: "Bền màu, không ố vàng", d: "Kháng ẩm, kháng trầy nhẹ, chịu lau chùi hằng ngày. Màu giữ nguyên nhiều năm." },
             ].map((b, i) => (
               <li key={b.n} className={`py-9 ${
                 i === 0 ? "sm:pr-10" : i === 1 ? "sm:px-10" : "sm:pl-10"
@@ -548,12 +550,12 @@ function Index() {
             <div>
               <span className="text-[11px] uppercase tracking-[0.3em] text-walnut/70">08 — Bảng màu</span>
               <h2 className="mt-5 font-serif text-[32px] leading-tight text-charcoal sm:text-4xl md:text-5xl">
-                Chọn màu
+                Chọn màu,
                 <br />
-                phù hợp với không gian.
+                bấm xuống đặt hàng.
               </h2>
               <p className="mt-4 max-w-lg text-[15px] leading-relaxed text-walnut/70">
-                Khám phá bộ màu Lotus. Để đặt hàng, chọn màu trực tiếp trong phần đặt hàng bên dưới.
+                Bấm vào màu để chọn tự động. Sau đó cuộn xuống phần đặt hàng để hoàn tất.
               </p>
             </div>
             <div className="inline-flex border border-walnut/25 text-[11px] uppercase tracking-[0.2em] sm:text-[12px]">
@@ -881,11 +883,11 @@ function Index() {
           <div className="mb-12">
             <span className="text-[11px] uppercase tracking-[0.3em] text-walnut/50">12 — Đặt hàng</span>
             <h2 className="mt-4 font-serif text-[34px] leading-tight sm:text-5xl">
-              Chọn màu,
-              <br />đặt hàng ngay.
+              Điền thông tin,
+              <br />nhận hàng tại nhà.
             </h2>
             <p className="mt-5 max-w-xl text-[15px] leading-[1.7] text-walnut/65">
-              Mua lẻ trực tiếp — không cần tư vấn. Chọn dòng sơn, môi trường sử dụng, màu và kích thước. Lotus giao toàn quốc.
+              Chọn dòng sơn, màu, kích thước. COD toàn quốc hoặc thanh toán online giảm 10%.
             </p>
           </div>
 
@@ -1003,51 +1005,51 @@ function Index() {
             <div className="col-span-12 lg:col-span-5 lg:border-l lg:border-walnut/15 lg:pl-12 px-5 lg:px-0">
 
               {/* Live order summary */}
-              <div className="mb-8 w-full space-y-3 border border-walnut/15 p-6 bg-cream/30">
+              <div className="mb-8 w-full space-y-3 border border-walnut/15 p-6 bg-cream/30 overflow-hidden">
                 <div className="mb-4 text-[10px] uppercase tracking-[0.3em] text-walnut/50">Tóm tắt đơn</div>
-                <div className="flex items-center justify-between text-[14px]">
-                  <span className="text-walnut/70">Sản phẩm</span>
-                  <span className="text-charcoal">{orderProduct === "bet" ? "Sơn màu bệt" : "Sơn giữ vân gỗ"}</span>
+                <div className="flex items-center justify-between text-[14px] gap-2">
+                  <span className="text-walnut/70 shrink-0">Sản phẩm</span>
+                  <span className="text-charcoal min-w-0 truncate text-right">{orderProduct === "bet" ? "Sơn màu bệt" : "Sơn giữ vân gỗ"}</span>
                 </div>
-                <div className="flex items-center justify-between text-[14px]">
-                  <span className="text-walnut/70">Môi trường</span>
-                  <span className="text-charcoal">{orderEnv === "indoor" ? "Trong nhà" : "Ngoài trời"}</span>
+                <div className="flex items-center justify-between text-[14px] gap-2">
+                  <span className="text-walnut/70 shrink-0">Môi trường</span>
+                  <span className="text-charcoal min-w-0 truncate text-right">{orderEnv === "indoor" ? "Trong nhà" : "Ngoài trời"}</span>
                 </div>
-                <div className="flex items-center justify-between text-[14px]">
-                  <span className="text-walnut/70">Màu</span>
-                  <span className="text-charcoal">
+                <div className="flex items-center justify-between text-[14px] gap-2">
+                  <span className="text-walnut/70 shrink-0">Màu</span>
+                  <span className="text-charcoal min-w-0 truncate text-right">
                     {orderColor || <span className="italic text-walnut/35">Chưa chọn</span>}
                   </span>
                 </div>
-                <div className="flex items-center justify-between text-[14px]">
-                  <span className="text-walnut/70">Bề mặt</span>
-                  <span className="text-charcoal">
+                <div className="flex items-center justify-between text-[14px] gap-2">
+                  <span className="text-walnut/70 shrink-0">Bề mặt</span>
+                  <span className="text-charcoal min-w-0 truncate text-right">
                     {orderSurface === "bong" ? "Bóng" : orderSurface === "bong-50" ? "Bóng 50%" : "Mờ"}
                   </span>
                 </div>
-                <div className="flex items-center justify-between border-t border-walnut/15 pt-3 text-[14px]">
-                  <span className="text-walnut/70">Hũ {orderSize} × {orderQty}</span>
-                  <span className="text-charcoal">{formatVND(unitPrice)} / hũ</span>
+                <div className="flex items-center justify-between border-t border-walnut/15 pt-3 text-[14px] gap-2">
+                  <span className="text-walnut/70 shrink-0">Hũ {orderSize} × {orderQty}</span>
+                  <span className="text-charcoal min-w-0 truncate text-right">{formatVND(unitPrice)} / hũ</span>
                 </div>
-                <div className="flex items-center justify-between text-[14px]">
-                  <span className="text-walnut/70">Tạm tính</span>
-                  <span className="text-charcoal">{formatVND(subtotal)}</span>
+                <div className="flex items-center justify-between text-[14px] gap-2">
+                  <span className="text-walnut/70 shrink-0">Tạm tính</span>
+                  <span className="text-charcoal min-w-0 truncate text-right">{formatVND(subtotal)}</span>
                 </div>
                 {orderPayment === "online" && (
-                  <div className="flex items-center justify-between text-[13px]">
-                    <span className="text-clay/80">Giảm 10% (online)</span>
-                    <span className="text-clay">−{formatVND(Math.round(subtotal * 0.1))}</span>
+                  <div className="flex items-center justify-between text-[13px] gap-2">
+                    <span className="text-clay/80 shrink-0">Giảm 10% (online)</span>
+                    <span className="text-clay min-w-0 truncate text-right">−{formatVND(Math.round(subtotal * 0.1))}</span>
                   </div>
                 )}
-                <div className="flex items-center justify-between text-[13px]">
-                  <span className="text-walnut/70">Vận chuyển</span>
+                <div className="flex items-center justify-between text-[13px] gap-2">
+                  <span className="text-walnut/70 shrink-0">Vận chuyển</span>
                   <span className={orderPayment === "online" ? "text-clay" : "text-walnut/60"}>
                     {orderPayment === "online" ? "Miễn phí" : "Tính theo địa chỉ"}
                   </span>
                 </div>
-                <div className="flex items-center justify-between border-t border-walnut/20 pt-3 text-[16px] font-medium">
-                  <span className="text-walnut/80">Tổng cộng</span>
-                  <span className="text-clay">{formatVND(total)}</span>
+                <div className="flex items-center justify-between border-t border-walnut/20 pt-3 text-[16px] font-medium gap-2">
+                  <span className="text-walnut/80 shrink-0">Tổng cộng</span>
+                  <span className="text-clay min-w-0 truncate text-right">{formatVND(total)}</span>
                 </div>
               </div>
 
@@ -1103,7 +1105,7 @@ function Index() {
                     Đặt hàng
                   </Button>
                   <p className="mt-4 text-[11px] tracking-[0.15em] text-walnut/50">
-                    COD toàn quốc · Đổi trả 7 ngày · Hỗ trợ kỹ thuật miễn phí
+                    COD toàn quốc · Đổi trả 7 ngày
                   </p>
                 </div>
               </form>
@@ -1119,10 +1121,10 @@ function Index() {
               {/* Bulk order note */}
               <div className="mt-8 border-t border-walnut/15 pt-6">
                 <p className="text-[13px] text-walnut/60">
-                  Mua số lượng lớn cho xưởng hoặc công ty?{" "}
+                  Mua từ 50kg trở lên?{" "}
                   <a href="https://zalo.me/843966662" target="_blank" rel="noopener noreferrer"
                     className="text-walnut/70 underline underline-offset-2 transition hover:text-clay">
-                    Nhắn Zalo để được hỗ trợ riêng.
+                    Nhắn Zalo để nhận giá sỉ.
                   </a>
                 </p>
               </div>
