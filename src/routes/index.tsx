@@ -132,7 +132,7 @@ const testimonials = [
   },
   {
     quote:
-      "Tủ áo cũ của mẹ mình được sơn lại sắc Mộc, đặt cạnh giường nhìn rất tĩnh. Đội Lotus tư vấn rất kỹ về số lớp và lượng sơn cần đặt.",
+      "Tủ áo cũ của mẹ mình được sơn lại sắc Mộc, đặt cạnh giường nhìn rất tĩnh. Sơn 2 lớp, mỗi hũ 1kg đủ cho cả tủ — mình đặt thêm 1 hũ dự phòng.",
     name: "Anh Phúc",
     place: "Quận Cầu Giấy, Hà Nội",
     product: "Wood Paint · sắc Mộc",
@@ -153,7 +153,15 @@ const faqs = [
   },
   {
     q: "Tôi chưa sơn bao giờ, có tự làm được không?",
-    a: "Hoàn toàn được. Sơn hệ nước dễ tãi đều, không kén tay nghề. Bạn chỉ cần cọ hoặc rulo, một miếng giấy nhám P240 và khoảng một buổi chiều. Đội Lotus có thể nhắn hướng dẫn theo đúng bề mặt của bạn trước khi sơn.",
+    a: "Hoàn toàn được. Sơn hệ nước dễ tãi đều, không kén tay nghề. Bạn chỉ cần cọ hoặc rulo, một miếng giấy nhám P240 và khoảng một buổi chiều. Hướng dẫn thi công chi tiết có trong phần Thi công bên dưới."
+  },
+  {
+    q: "Mua số lượng lớn có giá tốt không?",
+    a: "Có. Đơn từ 10 hũ trở lên được giá sỉ. Liên hệ Zalo để nhận báo giá riêng cho xưởng, công ty, hoặc dự án lớn."
+  },
+  {
+    q: "Nếu chọn sai màu hoặc không ưng thì sao?",
+    a: "Sản phẩm còn nguyên seal được đổi trả trong 7 ngày. Bạn có thể xem bảng màu đầy đủ trước khi đặt hàng. Màu hiển thị trên màn hình có thể chênh nhẹ so với thực tế."
   },
   {
     q: "Một hũ 1kg sơn được bao nhiêu m²?",
@@ -170,10 +178,6 @@ const faqs = [
   {
     q: "Tôi ở tỉnh, có giao hàng không? Bao lâu nhận được?",
     a: "Lotus giao toàn quốc. Nội thành Hà Nội & TP. HCM nhận trong 1–2 ngày, các tỉnh thành khác 2–5 ngày. Đơn từ 2 hũ trở lên được miễn phí vận chuyển. Thanh toán khi nhận hàng (COD).",
-  },
-  {
-    q: "Nếu chọn sai màu hoặc không ưng thì sao?",
-    a: "Lotus cam kết tư vấn đúng hệ sơn theo bề mặt bạn mô tả. Sản phẩm còn nguyên seal được đổi trả trong 7 ngày. Với màu sắc, đội tư vấn có thể gửi swatch thật trước khi bạn quyết định.",
   },
 ];
 
@@ -369,7 +373,7 @@ function Index() {
               </h2>
             </div>
             <p className="max-w-xs text-[13px] leading-relaxed text-walnut/65">
-              Đội tư vấn sẽ tính chính xác lượng sơn theo diện tích thực tế của bạn.
+              1 hũ sơn khoảng 8–10 m² mỗi lớp. Khuyến nghị sơn 2 lớp.
             </p>
           </header>
 
@@ -380,18 +384,6 @@ function Index() {
             <SpecCell k="Khô bề mặt" v="30 phút" sub="Lớp 2 sau 2 giờ" />
           </div>
 
-          <div className="mt-10 flex flex-col items-start justify-between gap-4 border-t border-walnut/20 pt-8 sm:flex-row sm:items-center">
-            <p className="text-sm text-walnut/75">
-              Cần tính chính xác lượng sơn cho diện tích nhà bạn?
-            </p>
-            <a
-              href="#advise"
-              className="inline-flex items-center gap-3 border border-charcoal px-5 py-3 text-[12px] uppercase tracking-[0.2em] text-charcoal transition hover:bg-charcoal hover:text-cream"
-            >
-              Nhận tư vấn lượng sơn
-              <ArrowRight className="h-3.5 w-3.5" />
-            </a>
-          </div>
         </div>
       </section>
 
@@ -407,7 +399,7 @@ function Index() {
                 sơn gì?
               </h2>
               <p className="mt-6 max-w-sm text-[15px] leading-relaxed text-walnut/80">
-                Chọn bề mặt để xem gợi ý dòng sơn phù hợp. Gửi ảnh qua Zalo để được tư vấn chi tiết.
+                Chọn bề mặt để xem gợi ý dòng sơn phù hợp.
               </p>
             </div>
 
@@ -424,17 +416,6 @@ function Index() {
                 ))}
               </div>
 
-              <div className="mt-8 pt-6 border-t border-walnut/20">
-                <a
-                  href="https://zalo.me/843966662"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-3 text-[12px] font-medium uppercase tracking-[0.18em] text-charcoal transition hover:text-clay sm:text-[13px]"
-                >
-                  Gửi ảnh bề mặt này qua Zalo để xem kỹ hơn
-                  <ArrowRight className="h-4 w-4" />
-                </a>
-              </div>
             </div>
           </div>
         </div>
@@ -455,13 +436,6 @@ function Index() {
                 Một lớp Lotus đủ để biến chiếc ghế đã ngả màu thành chi tiết trầm tĩnh,
                 hoà với phần còn lại của ngôi nhà — không cần thay mới.
               </p>
-              <a
-                href="#advise"
-                className="mt-8 inline-flex items-center gap-3 border-b border-cream/60 pb-1 text-[12px] uppercase tracking-[0.2em] hover:text-clay hover:border-clay sm:text-[13px]"
-              >
-                Nhận tư vấn theo bề mặt gỗ
-                <ArrowRight className="h-4 w-4" />
-              </a>
             </div>
             <div className="col-span-12 md:col-span-8 lg:col-span-8">
               <div className="relative overflow-hidden">
@@ -584,13 +558,13 @@ function Index() {
             </div>
             <div className="inline-flex border border-walnut/25 text-[11px] uppercase tracking-[0.2em] sm:text-[12px]">
               <button
-                onClick={() => setTab("indoor")}
+                onClick={() => { setTab("indoor"); setOrderColor(""); }}
                 className={`px-4 py-3 transition sm:px-5 ${tab === "indoor" ? "bg-charcoal text-cream" : "text-walnut hover:bg-sand/60"}`}
               >
                 Sơn màu bệt
               </button>
               <button
-                onClick={() => setTab("outdoor")}
+                onClick={() => { setTab("outdoor"); setOrderColor(""); }}
                 className={`px-4 py-3 transition sm:px-5 ${tab === "outdoor" ? "bg-charcoal text-cream" : "text-walnut hover:bg-sand/60"}`}
               >
                 Sơn giữ vân gỗ
@@ -885,8 +859,7 @@ function Index() {
                 khách hay hỏi.
               </h2>
               <p className="mt-6 max-w-xs text-[14px] leading-relaxed text-walnut/75">
-                Chưa thấy câu trả lời cho trường hợp của bạn? Gửi câu hỏi qua form
-                bên dưới — Lotus sẽ phản hồi trong vòng 24 giờ.
+                Mua số lượng lớn cho xưởng hoặc dự án? Liên hệ Zalo để nhận giá sỉ.
               </p>
             </div>
 
