@@ -43,39 +43,24 @@ export const Route = createFileRoute("/")({
 
 type ColorOption = { name: string; code?: string; image?: string; hex?: string };
 
-// Import color images
-import woodStain005 from "~/assets/Son-giu-van-go-005.png";
-import woodStain011 from "~/assets/Son-giu-van-go-011.png";
-import woodStain012 from "~/assets/Son-giu-van-go-012.png";
-import woodStain018 from "~/assets/Son-giu-van-go-018.png";
-import woodStain019 from "~/assets/Son-giu-van-go-019.png";
-import woodStain021 from "~/assets/Son-giu-van-go-021.png";
-
-import solid008 from "~/assets/Son-mau-bet-008.png";
-import solid019 from "~/assets/Son-mau-bet-019.png";
-import solid047 from "~/assets/Son-mau-bet-047.png";
-import solid066 from "~/assets/Son-mau-bet-066.png";
-import solid070 from "~/assets/Son-mau-bet-070.png";
-import solid090 from "~/assets/Son-mau-bet-090.png";
-
 // Wood stain colors with real images
 const woodStainColors: ColorOption[] = [
-  { name: "Sơn giữ vân gỗ 005", image: woodStain005 },
-  { name: "Sơn giữ vân gỗ 011", image: woodStain011 },
-  { name: "Sơn giữ vân gỗ 012", image: woodStain012 },
-  { name: "Sơn giữ vân gỗ 018", image: woodStain018 },
-  { name: "Sơn giữ vân gỗ 019", image: woodStain019 },
-  { name: "Sơn giữ vân gỗ 021", image: woodStain021 },
+  { name: "Sơn giữ vân gỗ 005", image: "/Son-giu-van-go-005.png" },
+  { name: "Sơn giữ vân gỗ 011", image: "/Son-giu-van-go-011.png" },
+  { name: "Sơn giữ vân gỗ 012", image: "/Son-giu-van-go-012.png" },
+  { name: "Sơn giữ vân gỗ 018", image: "/Son-giu-van-go-018.png" },
+  { name: "Sơn giữ vân gỗ 019", image: "/Son-giu-van-go-019.png" },
+  { name: "Sơn giữ vân gỗ 021", image: "/Son-giu-van-go-021.png" },
 ];
 
 // Solid colors with real images
 const solidColors: ColorOption[] = [
-  { name: "Sơn màu bệt 008", image: solid008 },
-  { name: "Sơn màu bệt 019", image: solid019 },
-  { name: "Sơn màu bệt 047", image: solid047 },
-  { name: "Sơn màu bệt 066", image: solid066 },
-  { name: "Sơn màu bệt 070", image: solid070 },
-  { name: "Sơn màu bệt 090", image: solid090 },
+  { name: "Sơn màu bệt 008", image: "/Son-mau-bet-008.png" },
+  { name: "Sơn màu bệt 019", image: "/Son-mau-bet-019.png" },
+  { name: "Sơn màu bệt 047", image: "/Son-mau-bet-047.png" },
+  { name: "Sơn màu bệt 066", image: "/Son-mau-bet-066.png" },
+  { name: "Sơn màu bệt 070", image: "/Son-mau-bet-070.png" },
+  { name: "Sơn màu bệt 090", image: "/Son-mau-bet-090.png" },
 ];
 
 // Real reference images
