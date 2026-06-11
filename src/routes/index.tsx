@@ -1005,51 +1005,51 @@ function Index() {
             <div className="col-span-12 lg:col-span-5 lg:border-l lg:border-walnut/15 lg:pl-12 px-5 lg:px-0">
 
               {/* Live order summary */}
-              <div className="mb-8 w-full max-w-full space-y-3 border border-walnut/15 p-6 bg-cream/30 box-border overflow-visible">
+              <div className="mb-8 w-full max-w-full space-y-3 border border-walnut/15 p-4 sm:p-6 bg-cream/30 box-border overflow-visible">
                 <div className="mb-4 text-[10px] uppercase tracking-[0.3em] text-walnut/50">Tóm tắt đơn</div>
-                <div className="flex justify-between items-baseline w-full min-w-0 text-[14px] gap-3">
-                  <span className="text-walnut/70 shrink-0 whitespace-nowrap">Sản phẩm</span>
-                  <span className="text-charcoal flex-1 min-w-0 text-right overflow-hidden text-ellipsis whitespace-nowrap">{orderProduct === "bet" ? "Sơn màu bệt" : "Sơn giữ vân gỗ"}</span>
+                <div className="flex flex-col gap-1 sm:flex-row sm:justify-between sm:items-start w-full text-[14px]">
+                  <span className="text-walnut/70">Sản phẩm</span>
+                  <span className="text-charcoal sm:text-right">{orderProduct === "bet" ? "Sơn màu bệt" : "Sơn giữ vân gỗ"}</span>
                 </div>
-                <div className="flex justify-between items-baseline w-full min-w-0 text-[14px] gap-3">
-                  <span className="text-walnut/70 shrink-0 whitespace-nowrap">Môi trường</span>
-                  <span className="text-charcoal flex-1 min-w-0 text-right overflow-hidden text-ellipsis whitespace-nowrap">{orderEnv === "indoor" ? "Trong nhà" : "Ngoài trời"}</span>
+                <div className="flex flex-col gap-1 sm:flex-row sm:justify-between sm:items-start w-full text-[14px]">
+                  <span className="text-walnut/70">Môi trường</span>
+                  <span className="text-charcoal sm:text-right">{orderEnv === "indoor" ? "Trong nhà" : "Ngoài trời"}</span>
                 </div>
-                <div className="flex justify-between items-baseline w-full min-w-0 text-[14px] gap-3">
-                  <span className="text-walnut/70 shrink-0 whitespace-nowrap">Màu</span>
-                  <span className="text-charcoal flex-1 min-w-0 text-right overflow-hidden text-ellipsis whitespace-nowrap">
+                <div className="flex flex-col gap-1 sm:flex-row sm:justify-between sm:items-start w-full text-[14px]">
+                  <span className="text-walnut/70">Màu</span>
+                  <span className="text-charcoal sm:text-right">
                     {orderColor || <span className="italic text-walnut/35">Chưa chọn</span>}
                   </span>
                 </div>
-                <div className="flex justify-between items-baseline w-full min-w-0 text-[14px] gap-3">
-                  <span className="text-walnut/70 shrink-0 whitespace-nowrap">Bề mặt</span>
-                  <span className="text-charcoal flex-1 min-w-0 text-right overflow-hidden text-ellipsis whitespace-nowrap">
+                <div className="flex flex-col gap-1 sm:flex-row sm:justify-between sm:items-start w-full text-[14px]">
+                  <span className="text-walnut/70">Bề mặt</span>
+                  <span className="text-charcoal sm:text-right">
                     {orderSurface === "bong" ? "Bóng" : orderSurface === "bong-50" ? "Bóng 50%" : "Mờ"}
                   </span>
                 </div>
-                <div className="flex justify-between items-baseline w-full min-w-0 border-t border-walnut/15 pt-3 text-[14px] gap-3">
-                  <span className="text-walnut/70 shrink-0 whitespace-nowrap">Hũ {orderSize} × {orderQty}</span>
-                  <span className="text-charcoal flex-1 min-w-0 text-right overflow-hidden text-ellipsis whitespace-nowrap">{formatVND(unitPrice)} / hũ</span>
+                <div className="flex flex-col gap-1 sm:flex-row sm:justify-between sm:items-start w-full border-t border-walnut/15 pt-3 text-[14px]">
+                  <span className="text-walnut/70">Hũ {orderSize} × {orderQty}</span>
+                  <span className="text-charcoal sm:text-right">{formatVND(unitPrice)} / hũ</span>
                 </div>
-                <div className="flex justify-between items-baseline w-full min-w-0 text-[14px] gap-3">
-                  <span className="text-walnut/70 shrink-0 whitespace-nowrap">Tạm tính</span>
-                  <span className="text-charcoal flex-1 min-w-0 text-right overflow-hidden text-ellipsis whitespace-nowrap">{formatVND(subtotal)}</span>
+                <div className="flex flex-col gap-1 sm:flex-row sm:justify-between sm:items-start w-full text-[14px]">
+                  <span className="text-walnut/70">Tạm tính</span>
+                  <span className="text-charcoal sm:text-right">{formatVND(subtotal)}</span>
                 </div>
                 {orderPayment === "online" && (
-                  <div className="flex justify-between items-baseline w-full min-w-0 text-[13px] gap-3">
-                    <span className="text-clay/80 shrink-0 whitespace-nowrap">Giảm 10% (online)</span>
-                    <span className="text-clay flex-1 min-w-0 text-right overflow-hidden text-ellipsis whitespace-nowrap">−{formatVND(Math.round(subtotal * 0.1))}</span>
+                  <div className="flex flex-col gap-1 sm:flex-row sm:justify-between sm:items-start w-full text-[13px]">
+                    <span className="text-clay/80">Giảm 10% (online)</span>
+                    <span className="text-clay sm:text-right">−{formatVND(Math.round(subtotal * 0.1))}</span>
                   </div>
                 )}
-                <div className="flex justify-between items-baseline w-full min-w-0 text-[13px] gap-3">
-                  <span className="text-walnut/70 shrink-0 whitespace-nowrap">Vận chuyển</span>
-                  <span className={orderPayment === "online" ? "text-clay flex-1 min-w-0 text-right overflow-hidden text-ellipsis whitespace-nowrap" : "text-walnut/60 flex-1 min-w-0 text-right overflow-hidden text-ellipsis whitespace-nowrap"}>
+                <div className="flex flex-col gap-1 sm:flex-row sm:justify-between sm:items-start w-full text-[13px]">
+                  <span className="text-walnut/70">Vận chuyển</span>
+                  <span className={orderPayment === "online" ? "text-clay sm:text-right" : "text-walnut/60 sm:text-right"}>
                     {orderPayment === "online" ? "Miễn phí" : "Tính theo địa chỉ"}
                   </span>
                 </div>
-                <div className="flex justify-between items-baseline w-full min-w-0 border-t border-walnut/20 pt-3 text-[16px] font-medium gap-3">
-                  <span className="text-walnut/80 shrink-0 whitespace-nowrap">Tổng cộng</span>
-                  <span className="text-clay flex-1 min-w-0 text-right overflow-hidden text-ellipsis whitespace-nowrap">{formatVND(total)}</span>
+                <div className="flex flex-col gap-1 sm:flex-row sm:justify-between sm:items-start w-full border-t border-walnut/20 pt-3 text-[16px] font-medium">
+                  <span className="text-walnut/80">Tổng cộng</span>
+                  <span className="text-clay sm:text-right">{formatVND(total)}</span>
                 </div>
               </div>
 
@@ -1058,12 +1058,12 @@ function Index() {
                 <div className="mb-4 text-[11px] uppercase tracking-[0.25em] text-walnut/50">06 — Hình thức thanh toán</div>
                 <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
                   <button type="button" onClick={() => setOrderPayment("cod")}
-                    className={`flex flex-col gap-2 border p-5 text-left transition ${orderPayment === "cod" ? "border-walnut/40 bg-sand/50" : "border-walnut/15 hover:border-walnut/30"}`}>
+                    className={`flex flex-col gap-2 border p-4 sm:p-5 text-left transition h-full ${orderPayment === "cod" ? "border-walnut/40 bg-sand/50" : "border-walnut/15 hover:border-walnut/30"}`}>
                     <span className={`text-[13px] font-medium ${orderPayment === "cod" ? "text-charcoal" : "text-walnut/60"}`}>COD — Thanh toán khi nhận</span>
                     <span className={`text-[12px] ${orderPayment === "cod" ? "text-walnut/55" : "text-walnut/40"}`}>Không cần thanh toán trước</span>
                   </button>
                   <button type="button" onClick={() => setOrderPayment("online")}
-                    className={`flex flex-col gap-2 border p-5 text-left transition ${orderPayment === "online" ? "border-clay/60 bg-clay/5" : "border-walnut/15 hover:border-walnut/30"}`}>
+                    className={`flex flex-col gap-2 border p-4 sm:p-5 text-left transition h-full ${orderPayment === "online" ? "border-clay/60 bg-clay/5" : "border-walnut/15 hover:border-walnut/30"}`}>
                     <span className={`text-[13px] font-medium ${orderPayment === "online" ? "text-clay" : "text-walnut/60"}`}>Thanh toán Online</span>
                     <span className={`text-[12px] ${orderPayment === "online" ? "text-clay/80" : "text-walnut/40"}`}>Giảm 10% + Miễn phí giao hàng</span>
                   </button>
@@ -1077,7 +1077,7 @@ function Index() {
                   if (!orderColor) { alert("Bạn chưa chọn màu sơn."); return; }
                   alert(`Cảm ơn ${orderName} — Lotus sẽ liên hệ ${orderPhone} để xác nhận và giao hàng.`);
                 }}
-                className="w-full space-y-6"
+                className="w-full space-y-4 sm:space-y-6"
               >
                 <Field label="Họ và tên">
                   <Input required value={orderName} onChange={(e) => setOrderName(e.target.value)}
@@ -1104,14 +1104,14 @@ function Index() {
                     className="h-[54px] w-full rounded-none bg-clay text-[12px] font-medium uppercase tracking-[0.22em] text-cream transition hover:bg-clay/90 sm:text-[13px]">
                     Đặt hàng
                   </Button>
-                  <p className="mt-4 text-[11px] tracking-[0.15em] text-walnut/50">
+                  <p className="mt-4 text-[11px] tracking-normal sm:tracking-[0.15em] text-walnut/50">
                     COD toàn quốc · Đổi trả 7 ngày
                   </p>
                 </div>
               </form>
 
               {/* Color accuracy note */}
-              <div className="mt-6 flex items-start gap-3 text-[11px] text-walnut/50">
+              <div className="mt-4 sm:mt-6 flex items-start gap-3 text-[11px] text-walnut/50">
                 <span className="mt-0.5 text-walnut/25">※</span>
                 <p>
                   Màu hiển thị trên màn hình có thể chênh nhẹ so với thực tế.
@@ -1119,7 +1119,7 @@ function Index() {
               </div>
 
               {/* Bulk order note */}
-              <div className="mt-8 border-t border-walnut/15 pt-6">
+              <div className="mt-6 sm:mt-8 border-t border-walnut/15 pt-4 sm:pt-6">
                 <p className="text-[13px] text-walnut/60">
                   Mua từ 50kg trở lên?{" "}
                   <a href="https://zalo.me/843966662" target="_blank" rel="noopener noreferrer"
