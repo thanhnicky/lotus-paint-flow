@@ -875,64 +875,69 @@ function Index() {
         </div>
       </section>
 
-      {/* ORDER — ĐẶT HÀNG */}
+      {/* ORDER — ĐẶT HÀNG (NEW MOBILE-FIRST VERSION) */}
       <section id="advise" className="border-t border-walnut/10 bg-sand/30 text-charcoal">
-        <div className="mx-auto max-w-[1400px] px-5 py-16 md:px-12 md:py-28">
+        <div className="mx-auto max-w-[600px] px-5 py-16 md:py-28">
 
           {/* Header */}
-          <div className="mb-12">
+          <div className="mb-10 text-center md:text-left">
             <span className="text-[11px] uppercase tracking-[0.3em] text-walnut/50">12 — Đặt hàng</span>
-            <h2 className="mt-4 font-serif text-[34px] leading-tight sm:text-5xl">
+            <h2 className="mt-4 font-serif text-[32px] leading-tight sm:text-5xl">
               Điền thông tin,
               <br />nhận hàng tại nhà.
             </h2>
-            <p className="mt-5 max-w-xl text-[15px] leading-[1.7] text-walnut/65">
+            <p className="mt-4 text-[15px] leading-[1.7] text-walnut/65">
               Chọn dòng sơn, màu, kích thước. COD toàn quốc hoặc thanh toán online giảm 10%.
             </p>
           </div>
 
-          <div className="grid grid-cols-12 gap-x-10 gap-y-16 px-5 lg:px-0">
-
-            {/* LEFT — Selectors */}
-            <div className="col-span-12 lg:col-span-7 space-y-10">
-
-              {/* 01 Dòng sơn */}
+          <form
+            onSubmit={(e) => {
+              e.preventDefault();
+              if (!orderColor) { alert("Bạn chưa chọn màu sơn."); return; }
+              alert(`Cảm ơn ${orderName} — Lotus sẽ liên hệ ${orderPhone} để xác nhận và giao hàng.`);
+            }}
+            className="space-y-8"
+          >
+            {/* Product Selection */}
+            <div className="space-y-6">
+              {/* Dòng sơn */}
               <div>
-                <div className="mb-4 text-[11px] uppercase tracking-[0.25em] text-walnut/50">01 — Dòng sơn</div>
-                <div className="inline-flex border border-walnut/20">
+                <label className="mb-3 block text-[11px] uppercase tracking-[0.25em] text-walnut/50">Dòng sơn</label>
+                <div className="grid grid-cols-2 gap-3">
                   <button type="button"
                     onClick={() => { setOrderProduct("bet"); setOrderColor(""); }}
-                    className={`px-6 py-3.5 text-[13px] transition ${orderProduct === "bet" ? "bg-clay text-cream font-medium" : "text-walnut/60 hover:text-charcoal"}`}>
+                    className={`border py-3 text-[13px] transition ${orderProduct === "bet" ? "border-clay bg-clay text-cream font-medium" : "border-walnut/20 text-walnut/60 hover:border-walnut/40"}`}>
                     Sơn màu bệt
                   </button>
                   <button type="button"
                     onClick={() => { setOrderProduct("van-go"); setOrderColor(""); }}
-                    className={`border-l border-walnut/20 px-6 py-3.5 text-[13px] transition ${orderProduct === "van-go" ? "bg-clay text-cream font-medium" : "text-walnut/60 hover:text-charcoal"}`}>
+                    className={`border py-3 text-[13px] transition ${orderProduct === "van-go" ? "border-clay bg-clay text-cream font-medium" : "border-walnut/20 text-walnut/60 hover:border-walnut/40"}`}>
                     Sơn giữ vân gỗ
                   </button>
                 </div>
               </div>
 
-              {/* 02 Môi trường */}
+              {/* Môi trường */}
               <div>
-                <div className="mb-4 text-[11px] uppercase tracking-[0.25em] text-walnut/50">02 — Môi trường sử dụng</div>
-                <div className="inline-flex border border-walnut/20">
+                <label className="mb-3 block text-[11px] uppercase tracking-[0.25em] text-walnut/50">Môi trường sử dụng</label>
+                <div className="grid grid-cols-2 gap-3">
                   <button type="button"
                     onClick={() => setOrderEnv("indoor")}
-                    className={`px-6 py-3.5 text-[13px] transition ${orderEnv === "indoor" ? "bg-clay text-cream font-medium" : "text-walnut/60 hover:text-charcoal"}`}>
+                    className={`border py-3 text-[13px] transition ${orderEnv === "indoor" ? "border-clay bg-clay text-cream font-medium" : "border-walnut/20 text-walnut/60 hover:border-walnut/40"}`}>
                     Trong nhà
                   </button>
                   <button type="button"
                     onClick={() => setOrderEnv("outdoor")}
-                    className={`border-l border-walnut/20 px-6 py-3.5 text-[13px] transition ${orderEnv === "outdoor" ? "bg-clay text-cream font-medium" : "text-walnut/60 hover:text-charcoal"}`}>
+                    className={`border py-3 text-[13px] transition ${orderEnv === "outdoor" ? "border-clay bg-clay text-cream font-medium" : "border-walnut/20 text-walnut/60 hover:border-walnut/40"}`}>
                     Ngoài trời
                   </button>
                 </div>
               </div>
 
-              {/* 03 Màu sơn */}
+              {/* Màu sơn */}
               <div>
-                <div className="mb-4 text-[11px] uppercase tracking-[0.25em] text-walnut/50">03 — Màu sơn</div>
+                <label className="mb-3 block text-[11px] uppercase tracking-[0.25em] text-walnut/50">Màu sơn</label>
                 <input
                   type="text"
                   value={orderColor}
@@ -952,185 +957,191 @@ function Index() {
                 </button>
               </div>
 
-              {/* 04 Bề mặt */}
+              {/* Bề mặt */}
               <div>
-                <div className="mb-4 text-[11px] uppercase tracking-[0.25em] text-walnut/50">04 — Bề mặt</div>
-                <div className="inline-flex border border-walnut/20">
+                <label className="mb-3 block text-[11px] uppercase tracking-[0.25em] text-walnut/50">Bề mặt</label>
+                <div className="grid grid-cols-3 gap-3">
                   <button type="button"
                     onClick={() => setOrderSurface("bong")}
-                    className={`px-6 py-3.5 text-[13px] transition ${orderSurface === "bong" ? "bg-clay text-cream font-medium" : "text-walnut/60 hover:text-charcoal"}`}>
+                    className={`border py-3 text-[13px] transition ${orderSurface === "bong" ? "border-clay bg-clay text-cream font-medium" : "border-walnut/20 text-walnut/60 hover:border-walnut/40"}`}>
                     Bóng
                   </button>
                   <button type="button"
                     onClick={() => setOrderSurface("bong-50")}
-                    className={`border-l border-walnut/20 px-6 py-3.5 text-[13px] transition ${orderSurface === "bong-50" ? "bg-clay text-cream font-medium" : "text-walnut/60 hover:text-charcoal"}`}>
+                    className={`border py-3 text-[13px] transition ${orderSurface === "bong-50" ? "border-clay bg-clay text-cream font-medium" : "border-walnut/20 text-walnut/60 hover:border-walnut/40"}`}>
                     Bóng 50%
                   </button>
                   <button type="button"
                     onClick={() => setOrderSurface("mo")}
-                    className={`border-l border-walnut/20 px-6 py-3.5 text-[13px] transition ${orderSurface === "mo" ? "bg-clay text-cream font-medium" : "text-walnut/60 hover:text-charcoal"}`}>
+                    className={`border py-3 text-[13px] transition ${orderSurface === "mo" ? "border-clay bg-clay text-cream font-medium" : "border-walnut/20 text-walnut/60 hover:border-walnut/40"}`}>
                     Mờ
                   </button>
                 </div>
               </div>
 
-              {/* 05 Kích thước & số lượng */}
+              {/* Kích thước & số lượng */}
               <div>
-                <div className="mb-4 text-[11px] uppercase tracking-[0.25em] text-walnut/50">05 — Kích thước & số lượng</div>
-                <div className="flex flex-col gap-4 sm:flex-row sm:items-center">
-                  <div className="inline-flex border border-walnut/20 w-full sm:w-auto">
+                <label className="mb-3 block text-[11px] uppercase tracking-[0.25em] text-walnut/50">Kích thước & số lượng</label>
+                <div className="space-y-3">
+                  <div className="grid grid-cols-2 gap-3">
                     <button type="button" onClick={() => setOrderSize("1kg")}
-                      className={`flex-1 sm:flex-none px-5 py-3.5 text-[13px] transition ${orderSize === "1kg" ? "bg-clay text-cream font-medium" : "text-walnut/60 hover:text-charcoal"}`}>
+                      className={`border py-3 text-[13px] transition ${orderSize === "1kg" ? "border-clay bg-clay text-cream font-medium" : "border-walnut/20 text-walnut/60 hover:border-walnut/40"}`}>
                       Hũ 1 kg
                       <span className="ml-2 text-[11px] opacity-60">{formatVND(PRICES[orderProduct][orderEnv]["1kg"])}</span>
                     </button>
                     <button type="button" onClick={() => setOrderSize("5kg")}
-                      className={`border-l border-walnut/20 flex-1 sm:flex-none px-5 py-3.5 text-[13px] transition ${orderSize === "5kg" ? "bg-clay text-cream font-medium" : "text-walnut/60 hover:text-charcoal"}`}>
+                      className={`border py-3 text-[13px] transition ${orderSize === "5kg" ? "border-clay bg-clay text-cream font-medium" : "border-walnut/20 text-walnut/60 hover:border-walnut/40"}`}>
                       Hũ 5 kg
                       <span className="ml-2 text-[11px] opacity-60">{formatVND(PRICES[orderProduct][orderEnv]["5kg"])}</span>
                     </button>
                   </div>
-                  <div className="flex items-center border border-walnut/20 w-full sm:w-auto">
+                  <div className="flex items-center border border-walnut/20">
                     <button type="button" onClick={() => setOrderQty(Math.max(1, orderQty - 1))}
-                      className="flex h-[46px] w-11 items-center justify-center text-xl leading-none text-walnut/50 transition hover:text-charcoal">−</button>
+                      className="flex h-[46px] w-12 items-center justify-center text-xl leading-none text-walnut/50 transition hover:text-charcoal">−</button>
                     <span className="flex-1 text-center text-[15px] text-charcoal">{orderQty}</span>
                     <button type="button" onClick={() => setOrderQty(orderQty + 1)}
-                      className="flex h-[46px] w-11 items-center justify-center text-xl leading-none text-walnut/50 transition hover:text-charcoal">+</button>
+                      className="flex h-[46px] w-12 items-center justify-center text-xl leading-none text-walnut/50 transition hover:text-charcoal">+</button>
                   </div>
                 </div>
               </div>
             </div>
 
-            {/* RIGHT — Summary + Form */}
-            <div className="col-span-12 lg:col-span-5 lg:border-l lg:border-walnut/15 lg:pl-12">
-
-              {/* Live order summary */}
-              <div className="mb-8 w-full max-w-full space-y-3 border border-walnut/15 p-4 sm:p-6 bg-cream/30 box-border overflow-visible">
-                <div className="mb-4 text-[10px] uppercase tracking-[0.3em] text-walnut/50">Tóm tắt đơn</div>
-                <div className="flex flex-col gap-1 sm:flex-row sm:justify-between sm:items-start w-full text-[14px]">
+            {/* Order Summary */}
+            <div className="space-y-3 border border-walnut/15 p-5 bg-cream/30">
+              <div className="mb-3 text-[10px] uppercase tracking-[0.3em] text-walnut/50">Tóm tắt đơn</div>
+              <div className="space-y-2 text-[14px]">
+                <div className="flex justify-between">
                   <span className="text-walnut/70">Sản phẩm</span>
-                  <span className="text-charcoal sm:text-right">{orderProduct === "bet" ? "Sơn màu bệt" : "Sơn giữ vân gỗ"}</span>
+                  <span className="text-charcoal">{orderProduct === "bet" ? "Sơn màu bệt" : "Sơn giữ vân gỗ"}</span>
                 </div>
-                <div className="flex flex-col gap-1 sm:flex-row sm:justify-between sm:items-start w-full text-[14px]">
+                <div className="flex justify-between">
                   <span className="text-walnut/70">Môi trường</span>
-                  <span className="text-charcoal sm:text-right">{orderEnv === "indoor" ? "Trong nhà" : "Ngoài trời"}</span>
+                  <span className="text-charcoal">{orderEnv === "indoor" ? "Trong nhà" : "Ngoài trời"}</span>
                 </div>
-                <div className="flex flex-col gap-1 sm:flex-row sm:justify-between sm:items-start w-full text-[14px]">
+                <div className="flex justify-between">
                   <span className="text-walnut/70">Màu</span>
-                  <span className="text-charcoal sm:text-right">
-                    {orderColor || <span className="italic text-walnut/35">Chưa chọn</span>}
-                  </span>
+                  <span className="text-charcoal">{orderColor || <span className="italic text-walnut/35">Chưa chọn</span>}</span>
                 </div>
-                <div className="flex flex-col gap-1 sm:flex-row sm:justify-between sm:items-start w-full text-[14px]">
+                <div className="flex justify-between">
                   <span className="text-walnut/70">Bề mặt</span>
-                  <span className="text-charcoal sm:text-right">
-                    {orderSurface === "bong" ? "Bóng" : orderSurface === "bong-50" ? "Bóng 50%" : "Mờ"}
-                  </span>
+                  <span className="text-charcoal">{orderSurface === "bong" ? "Bóng" : orderSurface === "bong-50" ? "Bóng 50%" : "Mờ"}</span>
                 </div>
-                <div className="flex flex-col gap-1 sm:flex-row sm:justify-between sm:items-start w-full border-t border-walnut/15 pt-3 text-[14px]">
+                <div className="flex justify-between border-t border-walnut/15 pt-2">
                   <span className="text-walnut/70">Hũ {orderSize} × {orderQty}</span>
-                  <span className="text-charcoal sm:text-right">{formatVND(unitPrice)} / hũ</span>
+                  <span className="text-charcoal">{formatVND(unitPrice)} / hũ</span>
                 </div>
-                <div className="flex flex-col gap-1 sm:flex-row sm:justify-between sm:items-start w-full text-[14px]">
+                <div className="flex justify-between">
                   <span className="text-walnut/70">Tạm tính</span>
-                  <span className="text-charcoal sm:text-right">{formatVND(subtotal)}</span>
+                  <span className="text-charcoal">{formatVND(subtotal)}</span>
                 </div>
                 {orderPayment === "online" && (
-                  <div className="flex flex-col gap-1 sm:flex-row sm:justify-between sm:items-start w-full text-[13px]">
+                  <div className="flex justify-between text-[13px]">
                     <span className="text-clay/80">Giảm 10% (online)</span>
-                    <span className="text-clay sm:text-right">−{formatVND(Math.round(subtotal * 0.1))}</span>
+                    <span className="text-clay">−{formatVND(Math.round(subtotal * 0.1))}</span>
                   </div>
                 )}
-                <div className="flex flex-col gap-1 sm:flex-row sm:justify-between sm:items-start w-full text-[13px]">
+                <div className="flex justify-between text-[13px]">
                   <span className="text-walnut/70">Vận chuyển</span>
-                  <span className={orderPayment === "online" ? "text-clay sm:text-right" : "text-walnut/60 sm:text-right"}>
+                  <span className={orderPayment === "online" ? "text-clay" : "text-walnut/60"}>
                     {orderPayment === "online" ? "Miễn phí" : "Tính theo địa chỉ"}
                   </span>
                 </div>
-                <div className="flex flex-col gap-1 sm:flex-row sm:justify-between sm:items-start w-full border-t border-walnut/20 pt-3 text-[16px] font-medium">
+                <div className="flex justify-between border-t border-walnut/20 pt-2 text-[16px] font-medium">
                   <span className="text-walnut/80">Tổng cộng</span>
-                  <span className="text-clay sm:text-right">{formatVND(total)}</span>
+                  <span className="text-clay">{formatVND(total)}</span>
                 </div>
               </div>
-
-              {/* 06 Hình thức thanh toán */}
-              <div className="w-full">
-                <div className="mb-4 text-[11px] uppercase tracking-[0.25em] text-walnut/50">06 — Hình thức thanh toán</div>
-                <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
-                  <button type="button" onClick={() => setOrderPayment("cod")}
-                    className={`flex flex-col gap-2 border p-4 sm:p-5 text-left transition h-full ${orderPayment === "cod" ? "border-walnut/40 bg-sand/50" : "border-walnut/15 hover:border-walnut/30"}`}>
-                    <span className={`text-[13px] font-medium ${orderPayment === "cod" ? "text-charcoal" : "text-walnut/60"}`}>COD — Thanh toán khi nhận</span>
-                    <span className={`text-[12px] ${orderPayment === "cod" ? "text-walnut/55" : "text-walnut/40"}`}>Không cần thanh toán trước</span>
-                  </button>
-                  <button type="button" onClick={() => setOrderPayment("online")}
-                    className={`flex flex-col gap-2 border p-4 sm:p-5 text-left transition h-full ${orderPayment === "online" ? "border-clay/60 bg-clay/5" : "border-walnut/15 hover:border-walnut/30"}`}>
-                    <span className={`text-[13px] font-medium ${orderPayment === "online" ? "text-clay" : "text-walnut/60"}`}>Thanh toán Online</span>
-                    <span className={`text-[12px] ${orderPayment === "online" ? "text-clay/80" : "text-walnut/40"}`}>Giảm 10% + Miễn phí giao hàng</span>
-                  </button>
-                </div>
-              </div>
-
-              {/* Contact form */}
-              <form
-                onSubmit={(e) => {
-                  e.preventDefault();
-                  if (!orderColor) { alert("Bạn chưa chọn màu sơn."); return; }
-                  alert(`Cảm ơn ${orderName} — Lotus sẽ liên hệ ${orderPhone} để xác nhận và giao hàng.`);
-                }}
-                className="w-full space-y-4 sm:space-y-6"
-              >
-                <Field label="Họ và tên">
-                  <Input required value={orderName} onChange={(e) => setOrderName(e.target.value)}
-                    placeholder="Nhập họ và tên của bạn"
-                    className="h-[52px] rounded-none border-0 border-b border-walnut/25 bg-transparent px-0 text-[15px] text-charcoal placeholder:text-walnut/35 focus-visible:border-clay focus-visible:ring-0" />
-                </Field>
-                <Field label="Số điện thoại">
-                  <Input required type="tel" value={orderPhone} onChange={(e) => setOrderPhone(e.target.value)}
-                    placeholder="Nhập số điện thoại của bạn"
-                    className="h-[52px] rounded-none border-0 border-b border-walnut/25 bg-transparent px-0 text-[15px] text-charcoal placeholder:text-walnut/35 focus-visible:border-clay focus-visible:ring-0" />
-                </Field>
-                <Field label="Địa chỉ nhận hàng">
-                  <Input required value={orderAddress} onChange={(e) => setOrderAddress(e.target.value)}
-                    placeholder="Số nhà, đường, phường / xã, tỉnh / thành phố..."
-                    className="h-[52px] rounded-none border-0 border-b border-walnut/25 bg-transparent px-0 text-[15px] text-charcoal placeholder:text-walnut/35 focus-visible:border-clay focus-visible:ring-0" />
-                </Field>
-                <Field label="Ghi chú (tuỳ chọn)">
-                  <Textarea value={orderNote} onChange={(e) => setOrderNote(e.target.value)}
-                    placeholder="Giờ giao hàng, yêu cầu thêm..."
-                    className="min-h-[52px] resize-none rounded-none border-0 border-b border-walnut/25 bg-transparent px-0 text-[15px] text-charcoal placeholder:text-walnut/35 focus-visible:border-clay focus-visible:ring-0" />
-                </Field>
-                <div className="pt-3">
-                  <Button type="submit"
-                    className="h-[54px] w-full rounded-none bg-clay text-[12px] font-medium uppercase tracking-[0.22em] text-cream transition hover:bg-clay/90 sm:text-[13px]">
-                    Đặt hàng
-                  </Button>
-                  <p className="mt-4 text-[11px] tracking-normal sm:tracking-[0.15em] text-walnut/50">
-                    COD toàn quốc · Đổi trả 7 ngày
-                  </p>
-                </div>
-              </form>
-
-              {/* Color accuracy note */}
-              <div className="mt-4 sm:mt-6 flex items-start gap-3 text-[11px] text-walnut/50">
-                <span className="mt-0.5 text-walnut/25">※</span>
-                <p>
-                  Màu hiển thị trên màn hình có thể chênh nhẹ so với thực tế.
-                </p>
-              </div>
-
-              {/* Bulk order note */}
-              <div className="mt-6 sm:mt-8 border-t border-walnut/15 pt-4 sm:pt-6">
-                <p className="text-[13px] text-walnut/60">
-                  Mua từ 50kg trở lên?{" "}
-                  <a href="https://zalo.me/843966662" target="_blank" rel="noopener noreferrer"
-                    className="text-walnut/70 underline underline-offset-2 transition hover:text-clay">
-                    Nhắn Zalo để nhận giá sỉ.
-                  </a>
-                </p>
-              </div>
-
             </div>
+
+            {/* Payment Method */}
+            <div>
+              <label className="mb-3 block text-[11px] uppercase tracking-[0.25em] text-walnut/50">Hình thức thanh toán</label>
+              <div className="space-y-3">
+                <button type="button" onClick={() => setOrderPayment("cod")}
+                  className={`w-full border p-4 text-left transition ${orderPayment === "cod" ? "border-walnut/40 bg-sand/50" : "border-walnut/15 hover:border-walnut/30"}`}>
+                  <span className={`block text-[13px] font-medium ${orderPayment === "cod" ? "text-charcoal" : "text-walnut/60"}`}>COD — Thanh toán khi nhận</span>
+                  <span className={`block text-[12px] ${orderPayment === "cod" ? "text-walnut/55" : "text-walnut/40"}`}>Không cần thanh toán trước</span>
+                </button>
+                <button type="button" onClick={() => setOrderPayment("online")}
+                  className={`w-full border p-4 text-left transition ${orderPayment === "online" ? "border-clay/60 bg-clay/5" : "border-walnut/15 hover:border-walnut/30"}`}>
+                  <span className={`block text-[13px] font-medium ${orderPayment === "online" ? "text-clay" : "text-walnut/60"}`}>Thanh toán Online</span>
+                  <span className={`block text-[12px] ${orderPayment === "online" ? "text-clay/80" : "text-walnut/40"}`}>Giảm 10% + Miễn phí giao hàng</span>
+                </button>
+              </div>
+            </div>
+
+            {/* Customer Info */}
+            <div className="space-y-5">
+              <div>
+                <label className="mb-2 block text-[13px] text-walnut/70">Họ và tên</label>
+                <input
+                  required
+                  type="text"
+                  value={orderName}
+                  onChange={(e) => setOrderName(e.target.value)}
+                  placeholder="Nhập họ và tên của bạn"
+                  className="w-full border border-walnut/20 bg-cream px-4 py-3 text-[15px] text-charcoal placeholder:text-walnut/35 focus:border-clay focus:outline-none"
+                />
+              </div>
+              <div>
+                <label className="mb-2 block text-[13px] text-walnut/70">Số điện thoại</label>
+                <input
+                  required
+                  type="tel"
+                  value={orderPhone}
+                  onChange={(e) => setOrderPhone(e.target.value)}
+                  placeholder="Nhập số điện thoại của bạn"
+                  className="w-full border border-walnut/20 bg-cream px-4 py-3 text-[15px] text-charcoal placeholder:text-walnut/35 focus:border-clay focus:outline-none"
+                />
+              </div>
+              <div>
+                <label className="mb-2 block text-[13px] text-walnut/70">Địa chỉ nhận hàng</label>
+                <input
+                  required
+                  type="text"
+                  value={orderAddress}
+                  onChange={(e) => setOrderAddress(e.target.value)}
+                  placeholder="Số nhà, đường, phường / xã, tỉnh / thành phố..."
+                  className="w-full border border-walnut/20 bg-cream px-4 py-3 text-[15px] text-charcoal placeholder:text-walnut/35 focus:border-clay focus:outline-none"
+                />
+              </div>
+              <div>
+                <label className="mb-2 block text-[13px] text-walnut/70">Ghi chú (tuỳ chọn)</label>
+                <textarea
+                  value={orderNote}
+                  onChange={(e) => setOrderNote(e.target.value)}
+                  placeholder="Giờ giao hàng, yêu cầu thêm..."
+                  className="w-full min-h-[80px] border border-walnut/20 bg-cream px-4 py-3 text-[15px] text-charcoal placeholder:text-walnut/35 focus:border-clay focus:outline-none resize-none"
+                />
+              </div>
+            </div>
+
+            {/* Submit */}
+            <div className="pt-2">
+              <button
+                type="submit"
+                className="h-[54px] w-full bg-clay text-[12px] font-medium uppercase tracking-[0.22em] text-cream transition hover:bg-clay/90"
+              >
+                Đặt hàng
+              </button>
+              <p className="mt-4 text-center text-[11px] text-walnut/50">
+                COD toàn quốc · Đổi trả 7 ngày
+              </p>
+            </div>
+          </form>
+
+          {/* Notes */}
+          <div className="mt-8 space-y-4 text-[11px] text-walnut/50">
+            <p>※ Màu hiển thị trên màn hình có thể chênh nhẹ so với thực tế.</p>
+            <p className="border-t border-walnut/15 pt-4">
+              Mua từ 50kg trở lên?{" "}
+              <a href="https://zalo.me/843966662" target="_blank" rel="noopener noreferrer"
+                className="underline underline-offset-2 transition hover:text-clay">
+                Nhắn Zalo để nhận giá sỉ.
+              </a>
+            </p>
           </div>
+
         </div>
       </section>
 
