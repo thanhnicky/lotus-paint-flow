@@ -148,36 +148,40 @@ const testimonials = [
 
 const faqs = [
   {
-    q: "Lotus có thực sự an toàn để sơn trong nhà có trẻ nhỏ không?",
-    a: "Có. Lotus là sơn hệ nước, không chứa dung môi nặng và hàm lượng VOC thấp. Bạn có thể thi công ngay trong phòng ngủ, phòng bếp; sau 4–6 giờ là có thể sinh hoạt lại bình thường. Vẫn nên mở cửa cho thoáng trong lúc sơn.",
+    q: "Sơn gỗ hệ nước là gì? Khác gì với sơn dầu?",
+    a: "Sơn gỗ hệ nước dùng nước làm dung môi thay vì dung môi dầu. Ít mùi, khô nhanh, dễ vệ sinh dụng cụ, an toàn hơn cho sức khỏe. Sơn dầu bền hơn nhưng mùi mạnh, lâu khô, cần dung môi xóa rửa. Lotus là sơn hệ nước cao cấp, phù hợp nội thất gia đình.",
   },
   {
-    q: "Tôi chưa sơn bao giờ, có tự làm được không?",
-    a: "Hoàn toàn được. Sơn hệ nước dễ tán đều, không kén tay nghề. Bạn chỉ cần cọ hoặc rulo, một miếng giấy nhám P240 và khoảng một buổi chiều. Hướng dẫn thi công chi tiết có trong phần Thi công bên dưới."
+    q: "Sơn gỗ hệ nước có an toàn cho nhà có trẻ nhỏ không?",
+    a: "Có. Lotus là sơn hệ nước, hàm lượng VOC thấp, không chứa dung môi nặng. Bạn có thể thi công ngay trong phòng ngủ, phòng bếp; sau 4–6 giờ là có thể sinh hoạt lại bình thường. Vẫn nên mở cửa cho thoáng trong lúc sơn và tránh tiếp xúc trực tiếp với trẻ nhỏ trong thời gian sơn.",
   },
   {
-    q: "Mua số lượng lớn có giá tốt không?",
-    a: "Có. Đơn từ 50kg trở lên được giá sỉ. Liên hệ Zalo để nhận báo giá riêng cho xưởng, công ty, hoặc dự án lớn."
+    q: "Người chưa từng sơn có tự làm được không?",
+    a: "Hoàn toàn được. Sơn hệ nước dễ tán đều, không kén tay nghề. Bạn chỉ cần cọ hoặc rulo, một miếng giấy nhám P240 và khoảng một buổi chiều. Không cần kỹ thuật chuyên nghiệp, hướng dẫn thi công chi tiết có trong phần Thi công bên dưới.",
   },
   {
-    q: "Nếu chọn sai màu hoặc không ưng thì sao?",
-    a: "Sản phẩm còn nguyên seal được đổi trả trong 7 ngày. Bạn có thể xem bảng màu đầy đủ trước khi đặt hàng. Màu hiển thị trên màn hình có thể chênh nhẹ so với thực tế."
+    q: "Nên chọn sơn giữ vân gỗ hay sơn màu bệt?",
+    a: "Sơn giữ vân gỗ phù hợp đồ gỗ đẹp vân tự nhiên, muốn giữ vẻ đẹp gỗ gốc. Sơn màu bệt phù hợp muốn đổi màu hoàn toàn, tạo vẻ hiện đại, đồng nhất. Cả hai đều bền, dễ vệ sinh. Chọn theo mục đích sử dụng và sở thích thẩm mỹ.",
   },
   {
     q: "Một hũ 1kg sơn được bao nhiêu m²?",
-    a: "Khoảng 7–9 m² cho mỗi lớp tuỳ bề mặt. Khuyến nghị sơn 2 lớp để màng sơn đều và bền — tương đương 4–5 m² hoàn thiện cho 1kg.",
+    a: "Khoảng 7–9 m² cho mỗi lớp tuỳ bề mặt. Khuyến nghị sơn 2 lớp để màng sơn đều và bền — tương đương 4–5 m² hoàn thiện cho 1kg. Tính diện tích cần sơn để mua đủ lượng, tránh thừa hoặc thiếu.",
   },
   {
     q: "Sơn lên đồ gỗ cũ đã có sơn cũ thì cần xử lý thế nào?",
-    a: "Chà nhám nhẹ bằng giấy P180–P240 để lớp sơn cũ bớt bóng và bám tốt hơn. Nếu bề mặt bong tróc nhiều, cần cạo phần bong rồi chà phẳng. Lotus bám trực tiếp lên sơn cũ còn nguyên, không cần lót.",
+    a: "Chà nhám nhẹ bằng giấy P180–P240 để lớp sơn cũ bớt bóng và bám tốt hơn. Nếu bề mặt bong tróc nhiều, cần cạo phần bong rồi chà phẳng. Lotus bám trực tiếp lên sơn cũ còn nguyên, không cần lót. Bề mặt sạch, khô là có thể sơn.",
   },
   {
-    q: "Bao lâu thì có thể sử dụng bình thường?",
-    a: "Khô bề mặt sau 30 phút, sơn lớp tiếp theo sau 2 giờ. Sử dụng nhẹ sau 24 giờ. Đạt độ cứng tối đa sau khoảng 7 ngày — trong tuần đầu hạn chế vật nặng kéo lê trên bề mặt.",
+    q: "Bao lâu thì khô? Khi nào có thể sử dụng bình thường?",
+    a: "Khô bề mặt sau 30 phút, sơn lớp tiếp theo sau 2 giờ. Sử dụng nhẹ sau 24 giờ. Đạt độ cứng tối đa sau khoảng 7 ngày — trong tuần đầu hạn chế vật nặng kéo lê trên bề mặt để tránh hư hại.",
   },
   {
-    q: "Tôi ở tỉnh, có giao hàng không? Bao lâu nhận được?",
-    a: "Lotus giao toàn quốc. Nội thành Hà Nội & TP. HCM nhận trong 1–2 ngày, các tỉnh thành khác 2–5 ngày. Thanh toán online được miễn phí vận chuyển. COD tính phí theo địa chỉ.",
+    q: "Giao hàng toàn quốc không? Bao lâu nhận được?",
+    a: "Lotus giao toàn quốc. Nội thành Hà Nội & TP. HCM nhận trong 1–2 ngày, các tỉnh thành khác 2–5 ngày. Thanh toán online được miễn phí vận chuyển. COD tính phí theo địa chỉ. Mua từ 50kg trở lên liên hệ Zalo để nhận giá sỉ.",
+  },
+  {
+    q: "Nếu chọn sai màu hoặc không ưng thì sao?",
+    a: "Sản phẩm còn nguyên seal được đổi trả trong 7 ngày. Bạn có thể xem bảng màu đầy đủ trước khi đặt hàng. Màu hiển thị trên màn hình có thể chênh nhẹ so với thực tế, nên cân nhắc chọn màu nhỏ thử trước khi sơn toàn bộ.",
   },
 ];
 
@@ -258,7 +262,7 @@ function Index() {
           <div className="grid grid-cols-12 gap-x-6 gap-y-10">
             <div className="col-span-12 md:col-span-6 lg:col-span-5 flex flex-col">
               <span className="text-[11px] uppercase tracking-[0.3em] text-walnut/70">
-                Lotus · Sơn gỗ hệ nước — Tự làm tại nhà
+                Lotus · Sơn gỗ hệ nước cho gia đình
               </span>
               <h1 className="mt-6 font-serif text-[38px] leading-[1.05] tracking-tight text-charcoal sm:text-[44px] md:text-[60px] lg:text-[72px]">
                 Sơn lại đồ gỗ tại nhà
@@ -268,8 +272,7 @@ function Index() {
                 xong trong một buổi.
               </h1>
               <p className="mt-7 max-w-md text-[15px] leading-relaxed text-walnut/80">
-                Chọn màu, đặt online, nhận hàng tại nhà. Không cần hỏi, không cần chờ.
-                1 hũ sơn khoảng 7–9 m² mỗi lớp.
+                Sơn gỗ hệ nước Lotus: ít mùi, an toàn cho nhà có trẻ nhỏ, dễ tự thi công. Chọn màu, đặt online, nhận hàng tại nhà. 1 hũ sơn khoảng 7–9 m² mỗi lớp.
               </p>
 
               <div className="mt-9 flex flex-wrap items-center gap-4">
@@ -676,7 +679,7 @@ function Index() {
             </h3>
             <img
               src={tab === "indoor" ? SOLID_PALETTE_IMAGE : WOODSTAIN_PALETTE_IMAGE}
-              alt={tab === "indoor" ? "Bảng màu sơn màu bệt Lotus" : "Bảng màu sơn giữ vân gỗ Lotus"}
+              alt={tab === "indoor" ? "Bảng màu sơn màu bệt Lotus cho nội thất trong nhà" : "Bảng màu sơn giữ vân gỗ Lotus cho nội thất trong và ngoài trời"}
               className="w-full border border-walnut/10 max-h-[60vh] object-contain"
             />
             <div className="mt-6 flex justify-end gap-3">
@@ -843,6 +846,38 @@ function Index() {
               <p className="mt-6 max-w-xs text-[15px] leading-relaxed text-walnut/70">
                 Mua số lượng lớn cho xưởng hoặc dự án? Liên hệ Zalo để nhận giá sỉ.
               </p>
+
+              {/* Trust Signals */}
+              <div className="mt-8 space-y-4 border-t border-walnut/15 pt-6">
+                <div className="flex items-start gap-3">
+                  <span className="text-clay">✓</span>
+                  <div>
+                    <p className="text-[13px] font-medium text-charcoal">Sản xuất tại Việt Nam</p>
+                    <p className="text-[12px] text-walnut/60">Công ty TNHH Sản Xuất Thương Mại Dịch Vụ Bích Trang</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <span className="text-clay">✓</span>
+                  <div>
+                    <p className="text-[13px] font-medium text-charcoal">Bảo hành 7 ngày</p>
+                    <p className="text-[12px] text-walnut/60">Đổi trả sản phẩm còn nguyên seal</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <span className="text-clay">✓</span>
+                  <div>
+                    <p className="text-[13px] font-medium text-charcoal">Giao hàng toàn quốc</p>
+                    <p className="text-[12px] text-walnut/60">1-2 ngày nội thành, 2-5 ngày tỉnh khác</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <span className="text-clay">✓</span>
+                  <div>
+                    <p className="text-[13px] font-medium text-charcoal">Hỗ trợ kỹ thuật</p>
+                    <p className="text-[12px] text-walnut/60">Tư vấn qua Zalo: 0396 666 2</p>
+                  </div>
+                </div>
+              </div>
             </div>
 
             <div className="col-span-12 md:col-span-8">
