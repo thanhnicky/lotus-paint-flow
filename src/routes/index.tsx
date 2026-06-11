@@ -516,9 +516,9 @@ function Index() {
             <div className="col-span-12 md:col-span-8 md:pl-4">
               <ol>
                 {[
-                  { n: "I", t: "Làm sạch & chà nhám nhẹ", d: "Lau bụi, dầu mỡ. Chà P240 để bề mặt mịn và bám sơn tốt." },
-                  { n: "II", t: "Sơn lớp đầu, chờ khô", d: "Pha loãng 5–10% nước, sơn mỏng đều bằng cọ hoặc lăn. Để khô 2 giờ." },
-                  { n: "III", t: "Phủ lớp hoàn thiện", d: "Lớp hai cho màng sơn đều màu, mịn, đạt độ bền tối ưu." },
+                  { n: "1", t: "Làm sạch & chà nhám nhẹ", d: "Lau bụi, dầu mỡ. Chà P240 để bề mặt mịn và bám sơn tốt." },
+                  { n: "2", t: "Sơn lớp đầu, chờ khô", d: "Pha loãng 5–10% nước, sơn mỏng đều bằng cọ hoặc lăn. Để khô 2 giờ." },
+                  { n: "3", t: "Phủ lớp hoàn thiện", d: "Lớp hai cho màng sơn đều màu, mịn, đạt độ bền tối ưu." },
                 ].map((s) => (
                   <li key={s.n} className="flex gap-6 border-t border-walnut/15 py-8 md:gap-10">
                     <span className="mt-0.5 w-10 shrink-0 font-serif text-[2.8rem] leading-none text-clay/50 sm:text-[3.5rem]">{s.n}</span>
