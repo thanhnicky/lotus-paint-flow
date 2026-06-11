@@ -926,6 +926,7 @@ function Index() {
               // Send data to Google Apps Script
               const scriptUrl = "https://script.google.com/macros/s/AKfycbyhdiuj8uxH-ja9h-OM62KffjmD2v8W3isiYEG0nZizZR-ig7t6l6s_KFZRAXZ1ecCS/exec";
               const orderData = {
+                source: "lotus-paint",
                 name: orderName,
                 phone: orderPhone,
                 product: orderProduct === "bet" ? "Sơn màu bệt" : "Sơn giữ vân gỗ",
