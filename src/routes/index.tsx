@@ -1000,7 +1000,7 @@ function Index() {
             </div>
 
             {/* RIGHT — Summary + Form */}
-            <div className="col-span-12 lg:col-span-5 lg:border-l lg:border-walnut/15 lg:pl-12">
+            <div className="col-span-12 lg:col-span-5 lg:border-l lg:border-walnut/15 lg:pl-12 px-5 lg:px-0">
 
               {/* Live order summary */}
               <div className="mb-8 space-y-3 border border-walnut/15 p-6 bg-cream/30">
