@@ -172,7 +172,7 @@ function requireReactDom() {
   }
   return reactDom.exports;
 }
-var reactDomExports = requireReactDom();
+requireReactDom();
 var server_node = {};
 var reactDomServerLegacy_node_production = {};
 var hasRequiredReactDomServerLegacy_node_production;
@@ -10774,6 +10774,5 @@ function requireServer_node() {
 var server_nodeExports = requireServer_node();
 const ReactDOMServer = /* @__PURE__ */ getDefaultExportFromCjs(server_nodeExports);
 export {
-  ReactDOMServer as R,
-  reactDomExports as r
+  ReactDOMServer as R
 };

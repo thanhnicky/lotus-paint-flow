@@ -1,5 +1,5 @@
 import { r as reactExports, j as jsxRuntimeExports } from "./react.mjs";
-import { r as reactDomExports } from "./react-dom.mjs";
+import "./react-dom.mjs";
 import { c as createSlot } from "./radix-ui__react-slot.mjs";
 var NODES = [
   "a",
@@ -33,10 +33,6 @@ var Primitive = NODES.reduce((primitive, node) => {
   Node.displayName = `Primitive.${node}`;
   return { ...primitive, [node]: Node };
 }, {});
-function dispatchDiscreteCustomEvent(target, event) {
-  if (target) reactDomExports.flushSync(() => target.dispatchEvent(event));
-}
 export {
-  Primitive as P,
-  dispatchDiscreteCustomEvent as d
+  Primitive as P
 };

@@ -3,49 +3,24 @@ import { S as Slot } from "../_libs/radix-ui__react-slot.mjs";
 import { c as cva } from "../_libs/class-variance-authority.mjs";
 import { c as clsx } from "../_libs/clsx.mjs";
 import { t as twMerge } from "../_libs/tailwind-merge.mjs";
-import { S as Select$1, a as SelectValue$1, b as SelectTrigger$1, c as SelectIcon, d as SelectPortal, e as SelectContent$1, f as SelectViewport, g as SelectItem$1, h as SelectItemIndicator, i as SelectItemText, j as SelectScrollUpButton$1, k as SelectScrollDownButton$1, l as SelectLabel$1, m as SelectSeparator$1 } from "../_libs/radix-ui__react-select.mjs";
 import { R as Root2, I as Item, H as Header$1, T as Trigger2, C as Content2 } from "../_libs/radix-ui__react-accordion.mjs";
-import { A as ArrowRight, C as ChevronDown, a as Check, b as ChevronUp } from "../_libs/lucide-react.mjs";
+import { A as ArrowRight, C as ChevronDown } from "../_libs/lucide-react.mjs";
 import "../_libs/radix-ui__react-compose-refs.mjs";
+import "../_libs/radix-ui__react-context.mjs";
+import "../_libs/radix-ui__react-collection.mjs";
+import "../_libs/radix-ui__primitive.mjs";
+import "../_libs/@radix-ui/react-use-controllable-state+[...].mjs";
+import "../_libs/@radix-ui/react-use-layout-effect+[...].mjs";
+import "../_libs/radix-ui__react-primitive.mjs";
 import "../_libs/react-dom.mjs";
 import "util";
 import "crypto";
 import "async_hooks";
 import "stream";
-import "../_libs/radix-ui__number.mjs";
-import "../_libs/radix-ui__primitive.mjs";
-import "../_libs/radix-ui__react-collection.mjs";
-import "../_libs/radix-ui__react-context.mjs";
-import "../_libs/radix-ui__react-direction.mjs";
-import "../_libs/@radix-ui/react-dismissable-layer+[...].mjs";
-import "../_libs/radix-ui__react-primitive.mjs";
-import "../_libs/@radix-ui/react-use-callback-ref+[...].mjs";
-import "../_libs/@radix-ui/react-use-escape-keydown+[...].mjs";
-import "../_libs/radix-ui__react-focus-guards.mjs";
-import "../_libs/radix-ui__react-focus-scope.mjs";
-import "../_libs/radix-ui__react-id.mjs";
-import "../_libs/@radix-ui/react-use-layout-effect+[...].mjs";
-import "../_libs/radix-ui__react-popper.mjs";
-import "../_libs/floating-ui__react-dom.mjs";
-import "../_libs/floating-ui__dom.mjs";
-import "../_libs/floating-ui__core.mjs";
-import "../_libs/floating-ui__utils.mjs";
-import "../_libs/radix-ui__react-arrow.mjs";
-import "../_libs/radix-ui__react-use-size.mjs";
-import "../_libs/radix-ui__react-portal.mjs";
-import "../_libs/radix-ui__react-presence.mjs";
-import "../_libs/@radix-ui/react-use-controllable-state+[...].mjs";
-import "../_libs/radix-ui__react-use-previous.mjs";
-import "../_libs/@radix-ui/react-visually-hidden+[...].mjs";
-import "../_libs/aria-hidden.mjs";
-import "../_libs/react-remove-scroll.mjs";
-import "tslib";
-import "../_libs/react-remove-scroll-bar.mjs";
-import "../_libs/react-style-singleton.mjs";
-import "../_libs/get-nonce.mjs";
-import "../_libs/use-sidecar.mjs";
-import "../_libs/use-callback-ref.mjs";
 import "../_libs/radix-ui__react-collapsible.mjs";
+import "../_libs/radix-ui__react-presence.mjs";
+import "../_libs/radix-ui__react-id.mjs";
+import "../_libs/radix-ui__react-direction.mjs";
 function cn(...inputs) {
   return twMerge(clsx(inputs));
 }
@@ -98,106 +73,22 @@ const Input = reactExports.forwardRef(
   }
 );
 Input.displayName = "Input";
-const Select = Select$1;
-const SelectValue = SelectValue$1;
-const SelectTrigger = reactExports.forwardRef(({ className, children, ...props }, ref) => /* @__PURE__ */ jsxRuntimeExports.jsxs(
-  SelectTrigger$1,
-  {
-    ref,
-    className: cn(
-      "flex h-9 w-full items-center justify-between whitespace-nowrap rounded-md border border-input bg-transparent px-3 py-2 text-sm shadow-sm ring-offset-background cursor-pointer data-[placeholder]:text-muted-foreground focus:outline-none focus:ring-1 focus:ring-ring disabled:cursor-not-allowed disabled:opacity-50 [&>span]:line-clamp-1",
-      className
-    ),
-    ...props,
-    children: [
-      children,
-      /* @__PURE__ */ jsxRuntimeExports.jsx(SelectIcon, { asChild: true, children: /* @__PURE__ */ jsxRuntimeExports.jsx(ChevronDown, { className: "h-4 w-4 opacity-50" }) })
-    ]
+const Textarea = reactExports.forwardRef(
+  ({ className, ...props }, ref) => {
+    return /* @__PURE__ */ jsxRuntimeExports.jsx(
+      "textarea",
+      {
+        className: cn(
+          "flex min-h-[60px] w-full rounded-md border border-input bg-transparent px-3 py-2 text-base shadow-sm placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50 md:text-sm",
+          className
+        ),
+        ref,
+        ...props
+      }
+    );
   }
-));
-SelectTrigger.displayName = SelectTrigger$1.displayName;
-const SelectScrollUpButton = reactExports.forwardRef(({ className, ...props }, ref) => /* @__PURE__ */ jsxRuntimeExports.jsx(
-  SelectScrollUpButton$1,
-  {
-    ref,
-    className: cn("flex cursor-default items-center justify-center py-1", className),
-    ...props,
-    children: /* @__PURE__ */ jsxRuntimeExports.jsx(ChevronUp, { className: "h-4 w-4" })
-  }
-));
-SelectScrollUpButton.displayName = SelectScrollUpButton$1.displayName;
-const SelectScrollDownButton = reactExports.forwardRef(({ className, ...props }, ref) => /* @__PURE__ */ jsxRuntimeExports.jsx(
-  SelectScrollDownButton$1,
-  {
-    ref,
-    className: cn("flex cursor-default items-center justify-center py-1", className),
-    ...props,
-    children: /* @__PURE__ */ jsxRuntimeExports.jsx(ChevronDown, { className: "h-4 w-4" })
-  }
-));
-SelectScrollDownButton.displayName = SelectScrollDownButton$1.displayName;
-const SelectContent = reactExports.forwardRef(({ className, children, position = "popper", ...props }, ref) => /* @__PURE__ */ jsxRuntimeExports.jsx(SelectPortal, { children: /* @__PURE__ */ jsxRuntimeExports.jsxs(
-  SelectContent$1,
-  {
-    ref,
-    className: cn(
-      "relative z-50 max-h-(--radix-select-content-available-height) min-w-[8rem] overflow-y-auto overflow-x-hidden rounded-md border bg-popover text-popover-foreground shadow-md data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2 origin-(--radix-select-content-transform-origin)",
-      position === "popper" && "data-[side=bottom]:translate-y-1 data-[side=left]:-translate-x-1 data-[side=right]:translate-x-1 data-[side=top]:-translate-y-1",
-      className
-    ),
-    position,
-    ...props,
-    children: [
-      /* @__PURE__ */ jsxRuntimeExports.jsx(SelectScrollUpButton, {}),
-      /* @__PURE__ */ jsxRuntimeExports.jsx(
-        SelectViewport,
-        {
-          className: cn(
-            "p-1",
-            position === "popper" && "h-[var(--radix-select-trigger-height)] w-full min-w-[var(--radix-select-trigger-width)]"
-          ),
-          children
-        }
-      ),
-      /* @__PURE__ */ jsxRuntimeExports.jsx(SelectScrollDownButton, {})
-    ]
-  }
-) }));
-SelectContent.displayName = SelectContent$1.displayName;
-const SelectLabel = reactExports.forwardRef(({ className, ...props }, ref) => /* @__PURE__ */ jsxRuntimeExports.jsx(
-  SelectLabel$1,
-  {
-    ref,
-    className: cn("px-2 py-1.5 text-sm font-semibold", className),
-    ...props
-  }
-));
-SelectLabel.displayName = SelectLabel$1.displayName;
-const SelectItem = reactExports.forwardRef(({ className, children, ...props }, ref) => /* @__PURE__ */ jsxRuntimeExports.jsxs(
-  SelectItem$1,
-  {
-    ref,
-    className: cn(
-      "relative flex w-full cursor-default select-none items-center rounded-sm py-1.5 pl-2 pr-8 text-sm outline-none focus:bg-accent focus:text-accent-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50",
-      className
-    ),
-    ...props,
-    children: [
-      /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "absolute right-2 flex h-3.5 w-3.5 items-center justify-center", children: /* @__PURE__ */ jsxRuntimeExports.jsx(SelectItemIndicator, { children: /* @__PURE__ */ jsxRuntimeExports.jsx(Check, { className: "h-4 w-4" }) }) }),
-      /* @__PURE__ */ jsxRuntimeExports.jsx(SelectItemText, { children })
-    ]
-  }
-));
-SelectItem.displayName = SelectItem$1.displayName;
-const SelectSeparator = reactExports.forwardRef(({ className, ...props }, ref) => /* @__PURE__ */ jsxRuntimeExports.jsx(
-  SelectSeparator$1,
-  {
-    ref,
-    className: cn("-mx-1 my-1 h-px bg-muted", className),
-    ...props
-  }
-));
-SelectSeparator.displayName = SelectSeparator$1.displayName;
+);
+Textarea.displayName = "Textarea";
 const Accordion = Root2;
 const AccordionItem = reactExports.forwardRef(({ className, ...props }, ref) => /* @__PURE__ */ jsxRuntimeExports.jsx(Item, { ref, className: cn("border-b", className), ...props }));
 AccordionItem.displayName = "AccordionItem";
@@ -333,8 +224,6 @@ const surfaces = [{
   recommendation: "Sơn gỗ màu bệt (Indoor)",
   detail: "2 lớp, ít sơn, dễ thi công"
 }];
-const surfaceOptions = ["Bàn ăn / bàn làm việc", "Tủ áo / tủ bếp / kệ TV", "Cửa, khung cửa, lan can", "Sàn gỗ, bậc cầu thang", "Vật dụng nhỏ (ghế, kệ, đồ trang trí)", "Khác — sẽ mô tả thêm"];
-const paintOptions = ["Chưa rõ, nhờ tư vấn", "Sơn gỗ màu bệt (Indoor)", "Woodstain Finish (Nội/Ngoại thất)"];
 const projects = [{
   img: project1,
   label: "Tủ TV — sắc Rêu",
@@ -389,7 +278,14 @@ const faqs = [{
 function Index() {
   const [tab, setTab] = reactExports.useState("indoor");
   const palette = tab === "indoor" ? interiorPalette : exteriorPalette;
-  const [surface, setSurface] = reactExports.useState("");
+  const [orderProduct, setOrderProduct] = reactExports.useState("bet");
+  const [orderColor, setOrderColor] = reactExports.useState("");
+  const [orderFinish, setOrderFinish] = reactExports.useState("bong-50");
+  const [orderSize, setOrderSize] = reactExports.useState("1kg");
+  const [orderQty, setOrderQty] = reactExports.useState(1);
+  const [orderName, setOrderName] = reactExports.useState("");
+  const [orderPhone, setOrderPhone] = reactExports.useState("");
+  const [orderNote, setOrderNote] = reactExports.useState("");
   const [showSticky, setShowSticky] = reactExports.useState(false);
   const handleScroll = () => {
     const heroSection = document.getElementById("hero");
@@ -703,40 +599,112 @@ function Index() {
         /* @__PURE__ */ jsxRuntimeExports.jsx(AccordionContent, { className: "pb-6 text-[15px] leading-relaxed text-walnut/80", children: f.a })
       ] }, i)) }) })
     ] }) }) }),
-    /* @__PURE__ */ jsxRuntimeExports.jsx("section", { id: "advise", className: "border-t border-walnut/10 bg-charcoal text-cream", children: /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "mx-auto max-w-[1400px] px-5 py-20 md:px-12 md:py-32", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "grid grid-cols-12 gap-x-6 gap-y-14", children: [
-      /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "col-span-12 md:col-span-5", children: [
-        /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-[11px] uppercase tracking-[0.3em] text-cream/45", children: "12 — Tư vấn & đặt hàng" }),
-        /* @__PURE__ */ jsxRuntimeExports.jsxs("h2", { className: "mt-5 font-serif text-[34px] leading-tight sm:text-5xl", children: [
-          "Để Lotus gợi ý",
+    /* @__PURE__ */ jsxRuntimeExports.jsx("section", { id: "advise", className: "border-t border-walnut/10 bg-charcoal text-cream", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "mx-auto max-w-[1400px] px-5 py-20 md:px-12 md:py-32", children: [
+      /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "mb-14 grid grid-cols-12", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "col-span-12 lg:col-span-8", children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-[11px] uppercase tracking-[0.3em] text-cream/45", children: "12 — Đặt hàng" }),
+        /* @__PURE__ */ jsxRuntimeExports.jsxs("h2", { className: "mt-4 font-serif text-[34px] leading-tight sm:text-5xl", children: [
+          "Chọn màu,",
           /* @__PURE__ */ jsxRuntimeExports.jsx("br", {}),
-          "combo phù hợp."
+          "đặt hàng ngay."
         ] }),
-        /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "mt-7 max-w-sm text-[15px] leading-[1.75] text-cream/58", children: "Bạn chỉ cần điền tên và bề mặt dự định sơn. Đội ngũ Lotus sẽ liên hệ để đề xuất dòng sơn và lượng cần dùng phù hợp nhất cho không gian của bạn." }),
-        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "mt-10", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("a", { href: "https://zalo.me/843966662", target: "_blank", rel: "noopener noreferrer", className: "inline-flex items-center gap-3 border-b border-cream/30 pb-1 text-[12px] font-medium uppercase tracking-[0.18em] text-cream/70 transition hover:text-cream hover:border-cream/60", children: [
-          "Hoặc nhắn ảnh bề mặt qua Zalo",
-          /* @__PURE__ */ jsxRuntimeExports.jsx(ArrowRight, { className: "h-4 w-4" })
-        ] }) })
-      ] }),
-      /* @__PURE__ */ jsxRuntimeExports.jsxs("form", { onSubmit: (e) => {
-        e.preventDefault();
-        alert("Cảm ơn bạn — Lotus sẽ liên hệ trong vòng 24 giờ.");
-      }, className: "col-span-12 md:col-span-7 md:border-l md:border-cream/12 md:pl-14 space-y-7", children: [
-        /* @__PURE__ */ jsxRuntimeExports.jsx(Field, { label: "Họ và tên", children: /* @__PURE__ */ jsxRuntimeExports.jsx(Input, { required: true, className: "h-[52px] rounded-none border-0 border-b border-cream/25 bg-transparent px-0 text-[15px] text-cream placeholder:text-cream/30 focus-visible:border-clay focus-visible:ring-0" }) }),
-        /* @__PURE__ */ jsxRuntimeExports.jsx(Field, { label: "Số điện thoại / Zalo", children: /* @__PURE__ */ jsxRuntimeExports.jsx(Input, { required: true, type: "tel", className: "h-[52px] rounded-none border-0 border-b border-cream/25 bg-transparent px-0 text-[15px] text-cream placeholder:text-cream/30 focus-visible:border-clay focus-visible:ring-0" }) }),
-        /* @__PURE__ */ jsxRuntimeExports.jsx(Field, { label: "Bề mặt dự định sơn", children: /* @__PURE__ */ jsxRuntimeExports.jsxs(Select, { value: surface, onValueChange: setSurface, required: true, children: [
-          /* @__PURE__ */ jsxRuntimeExports.jsx(SelectTrigger, { className: "h-[52px] rounded-none border-0 border-b border-cream/25 bg-transparent px-0 text-[15px] text-cream focus:border-clay focus:ring-0 [&>span]:text-cream data-[placeholder]:[&>span]:text-cream/30", children: /* @__PURE__ */ jsxRuntimeExports.jsx(SelectValue, { placeholder: "Chọn loại bề mặt" }) }),
-          /* @__PURE__ */ jsxRuntimeExports.jsx(SelectContent, { children: surfaceOptions.map((o) => /* @__PURE__ */ jsxRuntimeExports.jsx(SelectItem, { value: o, children: o }, o)) })
-        ] }) }),
-        /* @__PURE__ */ jsxRuntimeExports.jsx(Field, { label: "Dòng sơn dự kiến", children: /* @__PURE__ */ jsxRuntimeExports.jsxs(Select, { required: true, children: [
-          /* @__PURE__ */ jsxRuntimeExports.jsx(SelectTrigger, { className: "h-[52px] rounded-none border-0 border-b border-cream/25 bg-transparent px-0 text-[15px] text-cream focus:border-clay focus:ring-0 [&>span]:text-cream data-[placeholder]:[&>span]:text-cream/30", children: /* @__PURE__ */ jsxRuntimeExports.jsx(SelectValue, { placeholder: "Chọn dòng sơn, hoặc ‘Nhờ tư vấn’" }) }),
-          /* @__PURE__ */ jsxRuntimeExports.jsx(SelectContent, { children: paintOptions.map((o) => /* @__PURE__ */ jsxRuntimeExports.jsx(SelectItem, { value: o, children: o }, o)) })
-        ] }) }),
-        /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "pt-3", children: [
-          /* @__PURE__ */ jsxRuntimeExports.jsx(Button, { type: "submit", className: "h-[54px] w-full rounded-none bg-clay text-[12px] font-medium uppercase tracking-[0.22em] text-cream transition hover:bg-clay/90 sm:text-[13px]", children: "Gửi thông tin — Lotus liên hệ trong 24h" }),
-          /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "mt-4 text-[11px] tracking-[0.15em] text-cream/30", children: "Không spam. Không chia sẻ thông tin." })
+        /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "mt-5 max-w-lg text-[15px] leading-[1.7] text-cream/55", children: "Chọn dòng sơn, màu và kích thước. Điền số điện thoại — Lotus xác nhận và giao hàng toàn quốc." })
+      ] }) }),
+      /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "grid grid-cols-12 gap-x-8 gap-y-14", children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "col-span-12 lg:col-span-7 space-y-11", children: [
+          /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
+            /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "mb-4 text-[11px] uppercase tracking-[0.25em] text-cream/40", children: "01 — Dòng sơn" }),
+            /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "inline-flex border border-cream/20", children: [
+              /* @__PURE__ */ jsxRuntimeExports.jsx("button", { type: "button", onClick: () => {
+                setOrderProduct("bet");
+                setOrderColor("");
+              }, className: `px-6 py-3.5 text-[13px] transition ${orderProduct === "bet" ? "bg-cream text-charcoal font-medium" : "text-cream/60 hover:text-cream"}`, children: "Sơn bệt" }),
+              /* @__PURE__ */ jsxRuntimeExports.jsx("button", { type: "button", onClick: () => {
+                setOrderProduct("van-go");
+                setOrderColor("");
+              }, className: `border-l border-cream/20 px-6 py-3.5 text-[13px] transition ${orderProduct === "van-go" ? "bg-cream text-charcoal font-medium" : "text-cream/60 hover:text-cream"}`, children: "Sơn giữ vân gỗ" })
+            ] })
+          ] }),
+          /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
+            /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "mb-4 text-[11px] uppercase tracking-[0.25em] text-cream/40", children: "02 — Màu sơn" }),
+            /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "grid grid-cols-4 gap-3 sm:grid-cols-6 lg:grid-cols-4 xl:grid-cols-6", children: (orderProduct === "bet" ? interiorPalette : exteriorPalette).map((c) => /* @__PURE__ */ jsxRuntimeExports.jsxs("button", { type: "button", onClick: () => setOrderColor(c.name), className: "group flex flex-col items-center gap-2", children: [
+              /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: `h-12 w-full transition-all duration-200 ${orderColor === c.name ? "ring-2 ring-cream ring-offset-2 ring-offset-charcoal" : "opacity-60 group-hover:opacity-90"}`, style: {
+                backgroundColor: c.hex
+              } }),
+              /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: `text-[11px] transition ${orderColor === c.name ? "text-cream" : "text-cream/45"}`, children: c.name })
+            ] }, c.name)) })
+          ] }),
+          /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
+            /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "mb-4 text-[11px] uppercase tracking-[0.25em] text-cream/40", children: "03 — Bề mặt hoàn thiện" }),
+            /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "inline-flex border border-cream/20", children: ["bong", "bong-50", "mo"].map((k, i) => /* @__PURE__ */ jsxRuntimeExports.jsx("button", { type: "button", onClick: () => setOrderFinish(k), className: `px-5 py-3.5 text-[13px] transition ${i > 0 ? "border-l border-cream/20" : ""} ${orderFinish === k ? "bg-cream text-charcoal font-medium" : "text-cream/60 hover:text-cream"}`, children: k === "bong" ? "Bóng" : k === "bong-50" ? "Bóng 50%" : "Mờ" }, k)) })
+          ] }),
+          /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
+            /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "mb-4 text-[11px] uppercase tracking-[0.25em] text-cream/40", children: "04 — Kích thước & số lượng" }),
+            /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex flex-wrap items-center gap-4", children: [
+              /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "inline-flex border border-cream/20", children: [
+                /* @__PURE__ */ jsxRuntimeExports.jsx("button", { type: "button", onClick: () => setOrderSize("1kg"), className: `px-5 py-3.5 text-[13px] transition ${orderSize === "1kg" ? "bg-cream text-charcoal font-medium" : "text-cream/60 hover:text-cream"}`, children: "Hũ 1 kg" }),
+                /* @__PURE__ */ jsxRuntimeExports.jsx("button", { type: "button", onClick: () => setOrderSize("5kg"), className: `border-l border-cream/20 px-5 py-3.5 text-[13px] transition ${orderSize === "5kg" ? "bg-cream text-charcoal font-medium" : "text-cream/60 hover:text-cream"}`, children: "Hũ 5 kg" })
+              ] }),
+              /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center border border-cream/20", children: [
+                /* @__PURE__ */ jsxRuntimeExports.jsx("button", { type: "button", onClick: () => setOrderQty(Math.max(1, orderQty - 1)), className: "flex h-[46px] w-11 items-center justify-center text-xl leading-none text-cream/60 transition hover:text-cream", children: "−" }),
+                /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "w-10 text-center text-[15px] text-cream", children: orderQty }),
+                /* @__PURE__ */ jsxRuntimeExports.jsx("button", { type: "button", onClick: () => setOrderQty(orderQty + 1), className: "flex h-[46px] w-11 items-center justify-center text-xl leading-none text-cream/60 transition hover:text-cream", children: "+" })
+              ] })
+            ] })
+          ] })
+        ] }),
+        /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "col-span-12 lg:col-span-5 lg:border-l lg:border-cream/12 lg:pl-12", children: [
+          /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "mb-9 space-y-3 border border-cream/12 p-6", children: [
+            /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "mb-4 text-[10px] uppercase tracking-[0.3em] text-cream/38", children: "Tóm tắt đơn" }),
+            /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center justify-between text-[14px]", children: [
+              /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-cream/55", children: "Dòng sơn" }),
+              /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-cream", children: orderProduct === "bet" ? "Sơn bệt" : "Sơn giữ vân gỗ" })
+            ] }),
+            /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center justify-between text-[14px]", children: [
+              /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-cream/55", children: "Màu" }),
+              /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "flex items-center gap-2 text-cream", children: orderColor ? /* @__PURE__ */ jsxRuntimeExports.jsxs(jsxRuntimeExports.Fragment, { children: [
+                /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "inline-block h-3.5 w-3.5 shrink-0", style: {
+                  backgroundColor: (orderProduct === "bet" ? interiorPalette : exteriorPalette).find((c) => c.name === orderColor)?.hex
+                } }),
+                orderColor
+              ] }) : /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "italic text-cream/30", children: "Chưa chọn" }) })
+            ] }),
+            /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center justify-between text-[14px]", children: [
+              /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-cream/55", children: "Hoàn thiện" }),
+              /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-cream", children: orderFinish === "bong" ? "Bóng" : orderFinish === "bong-50" ? "Bóng 50%" : "Mờ" })
+            ] }),
+            /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center justify-between border-t border-cream/12 pt-3 text-[14px]", children: [
+              /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-cream/55", children: "Kích thước × SL" }),
+              /* @__PURE__ */ jsxRuntimeExports.jsxs("span", { className: "text-cream", children: [
+                "Hũ ",
+                orderSize,
+                " × ",
+                orderQty
+              ] })
+            ] }),
+            /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center justify-between text-[13px]", children: [
+              /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-cream/35", children: "Tổng tiền" }),
+              /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-[12px] italic text-cream/35", children: "Xác nhận qua Zalo" })
+            ] })
+          ] }),
+          /* @__PURE__ */ jsxRuntimeExports.jsxs("form", { onSubmit: (e) => {
+            e.preventDefault();
+            if (!orderColor) {
+              alert("Bạn chưa chọn màu sơn.");
+              return;
+            }
+            alert(`Cảm ơn ${orderName} — Lotus sẽ liên hệ ${orderPhone} để xác nhận đơn và giao hàng.`);
+          }, className: "space-y-6", children: [
+            /* @__PURE__ */ jsxRuntimeExports.jsx(Field, { label: "Họ và tên", children: /* @__PURE__ */ jsxRuntimeExports.jsx(Input, { required: true, value: orderName, onChange: (e) => setOrderName(e.target.value), className: "h-[52px] rounded-none border-0 border-b border-cream/25 bg-transparent px-0 text-[15px] text-cream placeholder:text-cream/30 focus-visible:border-clay focus-visible:ring-0" }) }),
+            /* @__PURE__ */ jsxRuntimeExports.jsx(Field, { label: "Số điện thoại / Zalo", children: /* @__PURE__ */ jsxRuntimeExports.jsx(Input, { required: true, type: "tel", value: orderPhone, onChange: (e) => setOrderPhone(e.target.value), className: "h-[52px] rounded-none border-0 border-b border-cream/25 bg-transparent px-0 text-[15px] text-cream placeholder:text-cream/30 focus-visible:border-clay focus-visible:ring-0" }) }),
+            /* @__PURE__ */ jsxRuntimeExports.jsx(Field, { label: "Ghi chú giao hàng (tuỳ chọn)", children: /* @__PURE__ */ jsxRuntimeExports.jsx(Textarea, { value: orderNote, onChange: (e) => setOrderNote(e.target.value), placeholder: "Địa chỉ, yêu cầu thêm...", className: "min-h-[56px] resize-none rounded-none border-0 border-b border-cream/25 bg-transparent px-0 text-[15px] text-cream placeholder:text-cream/30 focus-visible:border-clay focus-visible:ring-0" }) }),
+            /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "pt-2", children: [
+              /* @__PURE__ */ jsxRuntimeExports.jsx(Button, { type: "submit", className: "h-[54px] w-full rounded-none bg-clay text-[12px] font-medium uppercase tracking-[0.22em] text-cream transition hover:bg-clay/90 sm:text-[13px]", children: "Đặt hàng — Lotus xác nhận trong 24h" }),
+              /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "mt-4 text-[11px] tracking-[0.15em] text-cream/30", children: "COD toàn quốc · Đổi trả 7 ngày · Hỗ trợ kỹ thuật miễn phí" })
+            ] })
+          ] })
         ] })
       ] })
-    ] }) }) }),
+    ] }) }),
     /* @__PURE__ */ jsxRuntimeExports.jsx(Footer, {})
   ] });
 }

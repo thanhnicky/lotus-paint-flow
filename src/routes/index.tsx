@@ -3,13 +3,7 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
+
 import {
   Accordion,
   AccordionContent,
@@ -102,20 +96,6 @@ const surfaces = [
   },
 ];
 
-const surfaceOptions = [
-  "Bàn ăn / bàn làm việc",
-  "Tủ áo / tủ bếp / kệ TV",
-  "Cửa, khung cửa, lan can",
-  "Sàn gỗ, bậc cầu thang",
-  "Vật dụng nhỏ (ghế, kệ, đồ trang trí)",
-  "Khác — sẽ mô tả thêm",
-];
-
-const paintOptions = [
-  "Chưa rõ, nhờ tư vấn",
-  "Sơn gỗ màu bệt (Indoor)",
-  "Woodstain Finish (Nội/Ngoại thất)",
-];
 
 const projects = [
   { img: project1, label: "Tủ TV — sắc Rêu", place: "Căn hộ · Quận 2, TP. HCM" },
@@ -194,7 +174,15 @@ Tone: Premium, nội thất, ấm áp, không icon/emoji/grid startup
 function Index() {
   const [tab, setTab] = useState<"indoor" | "outdoor">("indoor");
   const palette = tab === "indoor" ? interiorPalette : exteriorPalette;
-  const [surface, setSurface] = useState<string>("");
+
+  const [orderProduct, setOrderProduct] = useState<"bet" | "van-go">("bet");
+  const [orderColor, setOrderColor] = useState("");
+  const [orderFinish, setOrderFinish] = useState<"bong" | "bong-50" | "mo">("bong-50");
+  const [orderSize, setOrderSize] = useState<"1kg" | "5kg">("1kg");
+  const [orderQty, setOrderQty] = useState(1);
+  const [orderName, setOrderName] = useState("");
+  const [orderPhone, setOrderPhone] = useState("");
+  const [orderNote, setOrderNote] = useState("");
   const [showSticky, setShowSticky] = useState(false);
 
   // Sticky CTA bar trigger on scroll
@@ -774,90 +762,218 @@ function Index() {
         </div>
       </section>
 
-      {/* FORM — TƯVAN & ĐẶT HÀNG */}
+      {/* ORDER — ĐẶT HÀNG */}
       <section id="advise" className="border-t border-walnut/10 bg-charcoal text-cream">
         <div className="mx-auto max-w-[1400px] px-5 py-20 md:px-12 md:py-32">
-          <div className="grid grid-cols-12 gap-x-6 gap-y-14">
-            <div className="col-span-12 md:col-span-5">
-              <span className="text-[11px] uppercase tracking-[0.3em] text-cream/45">12 — Tư vấn & đặt hàng</span>
-              <h2 className="mt-5 font-serif text-[34px] leading-tight sm:text-5xl">
-                Để Lotus gợi ý
+
+          {/* Header */}
+          <div className="mb-14 grid grid-cols-12">
+            <div className="col-span-12 lg:col-span-8">
+              <span className="text-[11px] uppercase tracking-[0.3em] text-cream/45">12 — Đặt hàng</span>
+              <h2 className="mt-4 font-serif text-[34px] leading-tight sm:text-5xl">
+                Chọn màu,
                 <br />
-                combo phù hợp.
+                đặt hàng ngay.
               </h2>
-              <p className="mt-7 max-w-sm text-[15px] leading-[1.75] text-cream/58">
-                Bạn chỉ cần điền tên và bề mặt dự định sơn. Đội ngũ Lotus sẽ liên hệ để đề xuất dòng sơn và lượng cần dùng phù hợp nhất cho không gian của bạn.
+              <p className="mt-5 max-w-lg text-[15px] leading-[1.7] text-cream/55">
+                Chọn dòng sơn, màu và kích thước. Điền số điện thoại — Lotus xác nhận và giao hàng toàn quốc.
               </p>
-              <div className="mt-10">
-                <a
-                  href="https://zalo.me/843966662"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-3 border-b border-cream/30 pb-1 text-[12px] font-medium uppercase tracking-[0.18em] text-cream/70 transition hover:text-cream hover:border-cream/60"
-                >
-                  Hoặc nhắn ảnh bề mặt qua Zalo
-                  <ArrowRight className="h-4 w-4" />
-                </a>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-12 gap-x-8 gap-y-14">
+
+            {/* LEFT — Product selectors */}
+            <div className="col-span-12 lg:col-span-7 space-y-11">
+
+              {/* 1. Dòng sơn */}
+              <div>
+                <div className="mb-4 text-[11px] uppercase tracking-[0.25em] text-cream/40">01 — Dòng sơn</div>
+                <div className="inline-flex border border-cream/20">
+                  <button
+                    type="button"
+                    onClick={() => { setOrderProduct("bet"); setOrderColor(""); }}
+                    className={`px-6 py-3.5 text-[13px] transition ${orderProduct === "bet" ? "bg-cream text-charcoal font-medium" : "text-cream/60 hover:text-cream"}`}
+                  >
+                    Sơn bệt
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => { setOrderProduct("van-go"); setOrderColor(""); }}
+                    className={`border-l border-cream/20 px-6 py-3.5 text-[13px] transition ${orderProduct === "van-go" ? "bg-cream text-charcoal font-medium" : "text-cream/60 hover:text-cream"}`}
+                  >
+                    Sơn giữ vân gỗ
+                  </button>
+                </div>
+              </div>
+
+              {/* 2. Màu sơn */}
+              <div>
+                <div className="mb-4 text-[11px] uppercase tracking-[0.25em] text-cream/40">02 — Màu sơn</div>
+                <div className="grid grid-cols-4 gap-3 sm:grid-cols-6 lg:grid-cols-4 xl:grid-cols-6">
+                  {(orderProduct === "bet" ? interiorPalette : exteriorPalette).map((c) => (
+                    <button
+                      key={c.name}
+                      type="button"
+                      onClick={() => setOrderColor(c.name)}
+                      className="group flex flex-col items-center gap-2"
+                    >
+                      <div
+                        className={`h-12 w-full transition-all duration-200 ${orderColor === c.name ? "ring-2 ring-cream ring-offset-2 ring-offset-charcoal" : "opacity-60 group-hover:opacity-90"}`}
+                        style={{ backgroundColor: c.hex }}
+                      />
+                      <span className={`text-[11px] transition ${orderColor === c.name ? "text-cream" : "text-cream/45"}`}>{c.name}</span>
+                    </button>
+                  ))}
+                </div>
+              </div>
+
+              {/* 3. Bề mặt hoàn thiện */}
+              <div>
+                <div className="mb-4 text-[11px] uppercase tracking-[0.25em] text-cream/40">03 — Bề mặt hoàn thiện</div>
+                <div className="inline-flex border border-cream/20">
+                  {(["bong", "bong-50", "mo"] as const).map((k, i) => (
+                    <button
+                      key={k}
+                      type="button"
+                      onClick={() => setOrderFinish(k)}
+                      className={`px-5 py-3.5 text-[13px] transition ${i > 0 ? "border-l border-cream/20" : ""} ${orderFinish === k ? "bg-cream text-charcoal font-medium" : "text-cream/60 hover:text-cream"}`}
+                    >
+                      {k === "bong" ? "Bóng" : k === "bong-50" ? "Bóng 50%" : "Mờ"}
+                    </button>
+                  ))}
+                </div>
+              </div>
+
+              {/* 4. Kích thước & số lượng */}
+              <div>
+                <div className="mb-4 text-[11px] uppercase tracking-[0.25em] text-cream/40">04 — Kích thước & số lượng</div>
+                <div className="flex flex-wrap items-center gap-4">
+                  <div className="inline-flex border border-cream/20">
+                    <button
+                      type="button"
+                      onClick={() => setOrderSize("1kg")}
+                      className={`px-5 py-3.5 text-[13px] transition ${orderSize === "1kg" ? "bg-cream text-charcoal font-medium" : "text-cream/60 hover:text-cream"}`}
+                    >
+                      Hũ 1 kg
+                    </button>
+                    <button
+                      type="button"
+                      onClick={() => setOrderSize("5kg")}
+                      className={`border-l border-cream/20 px-5 py-3.5 text-[13px] transition ${orderSize === "5kg" ? "bg-cream text-charcoal font-medium" : "text-cream/60 hover:text-cream"}`}
+                    >
+                      Hũ 5 kg
+                    </button>
+                  </div>
+                  <div className="flex items-center border border-cream/20">
+                    <button
+                      type="button"
+                      onClick={() => setOrderQty(Math.max(1, orderQty - 1))}
+                      className="flex h-[46px] w-11 items-center justify-center text-xl leading-none text-cream/60 transition hover:text-cream"
+                    >
+                      −
+                    </button>
+                    <span className="w-10 text-center text-[15px] text-cream">{orderQty}</span>
+                    <button
+                      type="button"
+                      onClick={() => setOrderQty(orderQty + 1)}
+                      className="flex h-[46px] w-11 items-center justify-center text-xl leading-none text-cream/60 transition hover:text-cream"
+                    >
+                      +
+                    </button>
+                  </div>
+                </div>
               </div>
             </div>
 
-            <form
-              onSubmit={(e) => {
-                e.preventDefault();
-                alert("Cảm ơn bạn — Lotus sẽ liên hệ trong vòng 24 giờ.");
-              }}
-              className="col-span-12 md:col-span-7 md:border-l md:border-cream/12 md:pl-14 space-y-7"
-            >
-              <Field label="Họ và tên">
-                <Input
-                  required
-                  className="h-[52px] rounded-none border-0 border-b border-cream/25 bg-transparent px-0 text-[15px] text-cream placeholder:text-cream/30 focus-visible:border-clay focus-visible:ring-0"
-                />
-              </Field>
-              <Field label="Số điện thoại / Zalo">
-                <Input
-                  required
-                  type="tel"
-                  className="h-[52px] rounded-none border-0 border-b border-cream/25 bg-transparent px-0 text-[15px] text-cream placeholder:text-cream/30 focus-visible:border-clay focus-visible:ring-0"
-                />
-              </Field>
-              <Field label="Bề mặt dự định sơn">
-                <Select value={surface} onValueChange={setSurface} required>
-                  <SelectTrigger className="h-[52px] rounded-none border-0 border-b border-cream/25 bg-transparent px-0 text-[15px] text-cream focus:border-clay focus:ring-0 [&>span]:text-cream data-[placeholder]:[&>span]:text-cream/30">
-                    <SelectValue placeholder="Chọn loại bề mặt" />
-                  </SelectTrigger>
-                  <SelectContent>
-                    {surfaceOptions.map((o) => (
-                      <SelectItem key={o} value={o}>{o}</SelectItem>
-                    ))}
-                  </SelectContent>
-                </Select>
-              </Field>
-              <Field label="Dòng sơn dự kiến">
-                <Select required>
-                  <SelectTrigger className="h-[52px] rounded-none border-0 border-b border-cream/25 bg-transparent px-0 text-[15px] text-cream focus:border-clay focus:ring-0 [&>span]:text-cream data-[placeholder]:[&>span]:text-cream/30">
-                    <SelectValue placeholder="Chọn dòng sơn, hoặc ‘Nhờ tư vấn’" />
-                  </SelectTrigger>
-                  <SelectContent>
-                    {paintOptions.map((o) => (
-                      <SelectItem key={o} value={o}>{o}</SelectItem>
-                    ))}
-                  </SelectContent>
-                </Select>
-              </Field>
+            {/* RIGHT — Summary + Contact */}
+            <div className="col-span-12 lg:col-span-5 lg:border-l lg:border-cream/12 lg:pl-12">
 
-              <div className="pt-3">
-                <Button
-                  type="submit"
-                  className="h-[54px] w-full rounded-none bg-clay text-[12px] font-medium uppercase tracking-[0.22em] text-cream transition hover:bg-clay/90 sm:text-[13px]"
-                >
-                  Gửi thông tin — Lotus liên hệ trong 24h
-                </Button>
-                <p className="mt-4 text-[11px] tracking-[0.15em] text-cream/30">
-                  Không spam. Không chia sẻ thông tin.
-                </p>
+              {/* Order summary */}
+              <div className="mb-9 space-y-3 border border-cream/12 p-6">
+                <div className="mb-4 text-[10px] uppercase tracking-[0.3em] text-cream/38">Tóm tắt đơn</div>
+                <div className="flex items-center justify-between text-[14px]">
+                  <span className="text-cream/55">Dòng sơn</span>
+                  <span className="text-cream">{orderProduct === "bet" ? "Sơn bệt" : "Sơn giữ vân gỗ"}</span>
+                </div>
+                <div className="flex items-center justify-between text-[14px]">
+                  <span className="text-cream/55">Màu</span>
+                  <span className="flex items-center gap-2 text-cream">
+                    {orderColor ? (
+                      <>
+                        <span
+                          className="inline-block h-3.5 w-3.5 shrink-0"
+                          style={{ backgroundColor: (orderProduct === "bet" ? interiorPalette : exteriorPalette).find((c) => c.name === orderColor)?.hex }}
+                        />
+                        {orderColor}
+                      </>
+                    ) : <span className="italic text-cream/30">Chưa chọn</span>}
+                  </span>
+                </div>
+                <div className="flex items-center justify-between text-[14px]">
+                  <span className="text-cream/55">Hoàn thiện</span>
+                  <span className="text-cream">
+                    {orderFinish === "bong" ? "Bóng" : orderFinish === "bong-50" ? "Bóng 50%" : "Mờ"}
+                  </span>
+                </div>
+                <div className="flex items-center justify-between border-t border-cream/12 pt-3 text-[14px]">
+                  <span className="text-cream/55">Kích thước × SL</span>
+                  <span className="text-cream">Hũ {orderSize} × {orderQty}</span>
+                </div>
+                <div className="flex items-center justify-between text-[13px]">
+                  <span className="text-cream/35">Tổng tiền</span>
+                  <span className="text-[12px] italic text-cream/35">Xác nhận qua Zalo</span>
+                </div>
               </div>
-            </form>
+
+              {/* Contact */}
+              <form
+                onSubmit={(e) => {
+                  e.preventDefault();
+                  if (!orderColor) { alert("Bạn chưa chọn màu sơn."); return; }
+                  alert(`Cảm ơn ${orderName} — Lotus sẽ liên hệ ${orderPhone} để xác nhận đơn và giao hàng.`);
+                }}
+                className="space-y-6"
+              >
+                <Field label="Họ và tên">
+                  <Input
+                    required
+                    value={orderName}
+                    onChange={(e) => setOrderName(e.target.value)}
+                    className="h-[52px] rounded-none border-0 border-b border-cream/25 bg-transparent px-0 text-[15px] text-cream placeholder:text-cream/30 focus-visible:border-clay focus-visible:ring-0"
+                  />
+                </Field>
+                <Field label="Số điện thoại / Zalo">
+                  <Input
+                    required
+                    type="tel"
+                    value={orderPhone}
+                    onChange={(e) => setOrderPhone(e.target.value)}
+                    className="h-[52px] rounded-none border-0 border-b border-cream/25 bg-transparent px-0 text-[15px] text-cream placeholder:text-cream/30 focus-visible:border-clay focus-visible:ring-0"
+                  />
+                </Field>
+                <Field label="Ghi chú giao hàng (tuỳ chọn)">
+                  <Textarea
+                    value={orderNote}
+                    onChange={(e) => setOrderNote(e.target.value)}
+                    placeholder="Địa chỉ, yêu cầu thêm..."
+                    className="min-h-[56px] resize-none rounded-none border-0 border-b border-cream/25 bg-transparent px-0 text-[15px] text-cream placeholder:text-cream/30 focus-visible:border-clay focus-visible:ring-0"
+                  />
+                </Field>
+                <div className="pt-2">
+                  <Button
+                    type="submit"
+                    className="h-[54px] w-full rounded-none bg-clay text-[12px] font-medium uppercase tracking-[0.22em] text-cream transition hover:bg-clay/90 sm:text-[13px]"
+                  >
+                    Đặt hàng — Lotus xác nhận trong 24h
+                  </Button>
+                  <p className="mt-4 text-[11px] tracking-[0.15em] text-cream/30">
+                    COD toàn quốc · Đổi trả 7 ngày · Hỗ trợ kỹ thuật miễn phí
+                  </p>
+                </div>
+              </form>
+            </div>
+
           </div>
         </div>
       </section>
