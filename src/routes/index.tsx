@@ -919,9 +919,41 @@ function Index() {
           </div>
 
           <form
-            onSubmit={(e) => {
+            onSubmit={async (e) => {
               e.preventDefault();
               if (!orderColor) { alert("Bạn chưa chọn màu sơn."); return; }
+
+              // Send data to Google Apps Script
+              const scriptUrl = "https://script.google.com/macros/s/AKfycbyhdiuj8uxH-ja9h-OM62KffjmD2v8W3isiYEG0nZizZR-ig7t6l6s_KFZRAXZ1ecCS/exec";
+              const orderData = {
+                name: orderName,
+                phone: orderPhone,
+                product: orderProduct === "bet" ? "Sơn màu bệt" : "Sơn giữ vân gỗ",
+                env: orderEnv === "indoor" ? "Trong nhà" : "Ngoài trời",
+                color: orderColor,
+                surface: orderSurface === "bong" ? "Bóng" : orderSurface === "bong-50" ? "Bóng 50%" : "Mờ",
+                size: orderSize,
+                qty: orderQty.toString(),
+                amount: formatVND(total),
+                payment: orderPayment,
+                address: orderAddress,
+                note: orderNote,
+              };
+
+              try {
+                await fetch(scriptUrl, {
+                  method: "POST",
+                  mode: "no-cors",
+                  headers: {
+                    "Content-Type": "application/json",
+                  },
+                  body: JSON.stringify(orderData),
+                });
+              } catch (error) {
+                console.error("Error sending data to Google Sheet:", error);
+              }
+
+              // Navigate to thank-you page
               navigate({
                 to: "/thank-you",
                 search: {
