@@ -1,6 +1,6 @@
 import { j as jsxRuntimeExports } from "../_libs/react.mjs";
 import { L as Link } from "../_libs/tanstack__react-router.mjs";
-import { R as Route$1 } from "./router-DVUO98ZM-v2.mjs";
+import { R as Route$1 } from "./router-Bj-6v5P8-v2.mjs";
 import "../_libs/tanstack__router-core.mjs";
 import "../_libs/tanstack__history.mjs";
 import "../_libs/cookie-es.mjs";
@@ -32,12 +32,14 @@ function ThankYouPage() {
   const bankInfo = {
     account: "211014851223910",
     bank: "Eximbank",
+    bankId: "EIB",
     branch: "CN TP.HCM",
     name: "CÔNG TY TNHH SẢN XUẤT THƯƠNG MẠI DỊCH VỤ BÍCH TRANG"
   };
   const transferSyntax = `Lotus ${phone}`;
-  const qrContent = `${bankInfo.bank}|${bankInfo.account}|${bankInfo.name}|${amount}|${transferSyntax}`;
-  const qrUrl = `https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=${encodeURIComponent(qrContent)}`;
+  const accountNameEncoded = encodeURIComponent(bankInfo.name);
+  const amountClean = amount.replace(/[^\d]/g, "");
+  const qrUrl = `https://img.vietqr.io/image/${bankInfo.bankId}-${bankInfo.account}-compact2.png?amount=${amountClean}&addInfo=${encodeURIComponent(transferSyntax)}&accountName=${accountNameEncoded}`;
   return /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "min-h-screen bg-sand/30 py-16 px-5", children: /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "mx-auto max-w-[600px]", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "bg-cream border border-walnut/15 p-8 text-center", children: [
     /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "mb-6 text-5xl", children: "✓" }),
     /* @__PURE__ */ jsxRuntimeExports.jsxs("h1", { className: "mb-4 font-serif text-3xl text-charcoal", children: [

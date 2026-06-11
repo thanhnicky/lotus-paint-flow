@@ -17,6 +17,7 @@ import "stream";
 import "../_libs/isbot.mjs";
 const appCss = "/assets/styles-VhXoo7fV-v2.css";
 const favicon = "/assets/favicon-a9lNDvJV-v2.ico";
+const ogImage = "/assets/son-go-lotus-khong-mui-BsHU4fPI-v2.jpeg";
 function reportLovableError(error, context = {}) {
   if (typeof window === "undefined") return;
   window.__lovableEvents?.captureException?.(
@@ -86,18 +87,113 @@ const Route$2 = createRootRouteWithContext()({
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { name: "build-check", content: "lotus-v2-zalo-2026" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lotus Paint Pro is a zero-touch e-commerce landing page for DIY wood finishing." },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lotus Paint Pro is a zero-touch e-commerce landing page for DIY wood finishing." },
+      { title: "Sơn Gỗ Hệ Nước Lotus - Sơn Giữ Vân Gỗ, Sơn Màu Bệt Cho Nội Thất Gia Đình" },
+      { name: "description", content: "Sơn gỗ hệ nước Lotus: sơn giữ vân gỗ và sơn màu bệt ít mùi, khô nhanh, dễ tự thi công tại nhà. Phù hợp tủ, cửa, bàn ghế nội thất. Giao hàng toàn quốc, bảo hành 7 ngày." },
+      { name: "keywords", content: "sơn gỗ, sơn giữ vân gỗ, sơn màu bệt, sơn nội thất, sơn gỗ hệ nước, sơn gỗ ít mùi, sơn gỗ khô nhanh, sơn gỗ tự thi công, sơn tủ gỗ, sơn cửa gỗ" },
+      { name: "author", content: "Lotus Paint" },
+      { property: "og:title", content: "Sơn Gỗ Hệ Nước Lotus - Sơn Giữ Vân Gỗ, Sơn Màu Bệt Cho Nội Thất Gia Đình" },
+      { property: "og:description", content: "Sơn gỗ hệ nước Lotus: sơn giữ vân gỗ và sơn màu bệt ít mùi, khô nhanh, dễ tự thi công tại nhà. Phù hợp tủ, cửa, bàn ghế nội thất. Giao hàng toàn quốc." },
       { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary" },
-      { name: "twitter:site", content: "@Lovable" },
-      { name: "twitter:title", content: "Lovable App" },
-      { name: "twitter:description", content: "Lotus Paint Pro is a zero-touch e-commerce landing page for DIY wood finishing." },
-      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/e7dcdd75-21c0-4358-a17d-cedb001668f5/id-preview-d897f159--f86487ce-dcaa-47fe-b9de-eff2e9a5b016.lovable.app-1780917533474.png" },
-      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/e7dcdd75-21c0-4358-a17d-cedb001668f5/id-preview-d897f159--f86487ce-dcaa-47fe-b9de-eff2e9a5b016.lovable.app-1780917533474.png" }
+      { property: "og:url", content: "https://lotus-paint-flow.vercel.app/" },
+      { property: "og:locale", content: "vi_VN" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Sơn Gỗ Hệ Nước Lotus - Sơn Giữ Vân Gỗ, Sơn Màu Bết Cho Nội Thất Gia Đình" },
+      { name: "twitter:description", content: "Sơn gỗ hệ nước Lotus: sơn giữ vân gỗ và sơn màu bệt ít mùi, khô nhanh, dễ tự thi công tại nhà. Phù hợp tủ, cửa, bàn ghế nội thất." },
+      { property: "og:image", content: ogImage },
+      { name: "twitter:image", content: ogImage },
+      { rel: "canonical", href: "https://lotus-paint-flow.vercel.app/" },
+      {
+        "script:ld+json": {
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "Organization",
+              "name": "Lotus Paint",
+              "description": "Sơn gỗ hệ nước chuyên nghiệp: sơn giữ vân gỗ và sơn màu bệt cho nội thất gia đình",
+              "url": "https://lotus-paint-flow.vercel.app/",
+              "logo": "https://lotus-paint-flow.vercel.app/logo-lotus.jpg",
+              "contactPoint": {
+                "@type": "ContactPoint",
+                "telephone": "+84-396-666-2",
+                "contactType": "customer service",
+                "availableLanguage": "Vietnamese"
+              }
+            },
+            {
+              "@type": "WebSite",
+              "name": "Lotus Paint",
+              "url": "https://lotus-paint-flow.vercel.app/",
+              "description": "Sơn gỗ hệ nước Lotus: sơn giữ vân gỗ và sơn màu bět ít mùi, khô nhanh, dễ tự thi công tại nhà",
+              "potentialAction": {
+                "@type": "SearchAction",
+                "target": "https://lotus-paint-flow.vercel.app/?q={search_term_string}",
+                "query-input": "required name=search_term_string"
+              }
+            },
+            {
+              "@type": "Product",
+              "name": "Sơn Gỗ Hệ Nước Lotus",
+              "description": "Sơn gỗ hệ nước cao cấp: sơn giữ vân gỗ và sơn màu bět ít mùi, khô nhanh, dễ tự thi công tại nhà. Phù hợp tủ, cửa, bàn ghế nội thất.",
+              "brand": {
+                "@type": "Brand",
+                "name": "Lotus Paint"
+              },
+              "category": "Sơn nội thất",
+              "offers": {
+                "@type": "Offer",
+                "priceCurrency": "VND",
+                "availability": "https://schema.org/InStock",
+                "deliveryLeadTime": "1-5 ngày"
+              }
+            },
+            {
+              "@type": "FAQPage",
+              "mainEntity": [
+                {
+                  "@type": "Question",
+                  "name": "Sơn gỗ hệ nước là gì? Khác gì với sơn dầu?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Sơn gỗ hệ nước dùng nước làm dung môi thay vì dung môi dầu. Ít mùi, khô nhanh, dễ vệ sinh dụng cụ, an toàn hơn cho sức khỏe. Sơn dầu bền hơn nhưng mùi mạnh, lâu khô, cần dung môi xóa rửa. Lotus là sơn hệ nước cao cấp, phù hợp nội thất gia đình."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Sơn gỗ hệ nước có an toàn cho nhà có trẻ nhỏ không?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Có. Lotus là sơn hệ nước, hàm lượng VOC thấp, không chứa dung môi nặng. Bạn có thể thi công ngay trong phòng ngủ, phòng bếp; sau 4–6 giờ là có thể sinh hoạt lại bình thường."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Người chưa từng sơn có tự làm được không?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Hoàn toàn được. Sơn hệ nước dễ tán đều, không kén tay nghề. Bạn chỉ cần cọ hoặc rulo, một miếng giấy nhám P240 và khoảng một buổi chiều."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Nên chọn sơn giữ vân gỗ hay sơn màu bệt?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Sơn giữ vân gỗ phù hợp đồ gỗ đẹp vân tự nhiên, muốn giữ vẻ đẹp gỗ gốc. Sơn màu bệt phù hợp muốn đổi màu hoàn toàn, tạo vẻ hiện đại, đồng nhất."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Một hũ 1kg sơn được bao nhiêu m²?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Khoảng 7–9 m² cho mỗi lớp tuỳ bề mặt. Khuyến nghị sơn 2 lớp để màng sơn đều và bền — tương đương 4–5 m² hoàn thiện cho 1kg."
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      }
     ],
     links: [
       {
@@ -135,7 +231,7 @@ function RootComponent() {
   const { queryClient } = Route$2.useRouteContext();
   return /* @__PURE__ */ jsxRuntimeExports.jsx(QueryClientProvider, { client: queryClient, children: /* @__PURE__ */ jsxRuntimeExports.jsx(Outlet, {}) });
 }
-const $$splitComponentImporter$1 = () => import("./thank-you-MLVDou6F-v2.mjs");
+const $$splitComponentImporter$1 = () => import("./thank-you-C55-V-jd-v2.mjs");
 const Route$1 = createFileRoute("/thank-you")({
   component: lazyRouteComponent($$splitComponentImporter$1, "component"),
   validateSearch: (search) => ({
@@ -151,7 +247,7 @@ const Route$1 = createFileRoute("/thank-you")({
     qty: typeof search.qty === "string" ? search.qty : "1"
   })
 });
-const $$splitComponentImporter = () => import("./index-CAPdZDJl-v2.mjs");
+const $$splitComponentImporter = () => import("./index-CQoIxlNq-v2.mjs");
 const Route = createFileRoute("/")({
   head: () => ({
     meta: [{

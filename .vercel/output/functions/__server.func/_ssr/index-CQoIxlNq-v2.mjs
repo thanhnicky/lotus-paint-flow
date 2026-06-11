@@ -190,29 +190,32 @@ const testimonials = [{
   product: "Woodstain · Walnut"
 }];
 const faqs = [{
-  q: "Lotus có thực sự an toàn để sơn trong nhà có trẻ nhỏ không?",
-  a: "Có. Lotus là sơn hệ nước, không chứa dung môi nặng và hàm lượng VOC thấp. Bạn có thể thi công ngay trong phòng ngủ, phòng bếp; sau 4–6 giờ là có thể sinh hoạt lại bình thường. Vẫn nên mở cửa cho thoáng trong lúc sơn."
+  q: "Sơn gỗ hệ nước là gì? Khác gì với sơn dầu?",
+  a: "Sơn gỗ hệ nước dùng nước làm dung môi thay vì dung môi dầu. Ít mùi, khô nhanh, dễ vệ sinh dụng cụ, an toàn hơn cho sức khỏe. Sơn dầu bền hơn nhưng mùi mạnh, lâu khô, cần dung môi xóa rửa. Lotus là sơn hệ nước cao cấp, phù hợp nội thất gia đình."
 }, {
-  q: "Tôi chưa sơn bao giờ, có tự làm được không?",
-  a: "Hoàn toàn được. Sơn hệ nước dễ tán đều, không kén tay nghề. Bạn chỉ cần cọ hoặc rulo, một miếng giấy nhám P240 và khoảng một buổi chiều. Hướng dẫn thi công chi tiết có trong phần Thi công bên dưới."
+  q: "Sơn gỗ hệ nước có an toàn cho nhà có trẻ nhỏ không?",
+  a: "Có. Lotus là sơn hệ nước, hàm lượng VOC thấp, không chứa dung môi nặng. Bạn có thể thi công ngay trong phòng ngủ, phòng bếp; sau 4–6 giờ là có thể sinh hoạt lại bình thường. Vẫn nên mở cửa cho thoáng trong lúc sơn và tránh tiếp xúc trực tiếp với trẻ nhỏ trong thời gian sơn."
 }, {
-  q: "Mua số lượng lớn có giá tốt không?",
-  a: "Có. Đơn từ 50kg trở lên được giá sỉ. Liên hệ Zalo để nhận báo giá riêng cho xưởng, công ty, hoặc dự án lớn."
+  q: "Người chưa từng sơn có tự làm được không?",
+  a: "Hoàn toàn được. Sơn hệ nước dễ tán đều, không kén tay nghề. Bạn chỉ cần cọ hoặc rulo, một miếng giấy nhám P240 và khoảng một buổi chiều. Không cần kỹ thuật chuyên nghiệp, hướng dẫn thi công chi tiết có trong phần Thi công bên dưới."
 }, {
-  q: "Nếu chọn sai màu hoặc không ưng thì sao?",
-  a: "Sản phẩm còn nguyên seal được đổi trả trong 7 ngày. Bạn có thể xem bảng màu đầy đủ trước khi đặt hàng. Màu hiển thị trên màn hình có thể chênh nhẹ so với thực tế."
+  q: "Nên chọn sơn giữ vân gỗ hay sơn màu bệt?",
+  a: "Sơn giữ vân gỗ phù hợp đồ gỗ đẹp vân tự nhiên, muốn giữ vẻ đẹp gỗ gốc. Sơn màu bệt phù hợp muốn đổi màu hoàn toàn, tạo vẻ hiện đại, đồng nhất. Cả hai đều bền, dễ vệ sinh. Chọn theo mục đích sử dụng và sở thích thẩm mỹ."
 }, {
   q: "Một hũ 1kg sơn được bao nhiêu m²?",
-  a: "Khoảng 7–9 m² cho mỗi lớp tuỳ bề mặt. Khuyến nghị sơn 2 lớp để màng sơn đều và bền — tương đương 4–5 m² hoàn thiện cho 1kg."
+  a: "Khoảng 7–9 m² cho mỗi lớp tuỳ bề mặt. Khuyến nghị sơn 2 lớp để màng sơn đều và bền — tương đương 4–5 m² hoàn thiện cho 1kg. Tính diện tích cần sơn để mua đủ lượng, tránh thừa hoặc thiếu."
 }, {
   q: "Sơn lên đồ gỗ cũ đã có sơn cũ thì cần xử lý thế nào?",
-  a: "Chà nhám nhẹ bằng giấy P180–P240 để lớp sơn cũ bớt bóng và bám tốt hơn. Nếu bề mặt bong tróc nhiều, cần cạo phần bong rồi chà phẳng. Lotus bám trực tiếp lên sơn cũ còn nguyên, không cần lót."
+  a: "Chà nhám nhẹ bằng giấy P180–P240 để lớp sơn cũ bớt bóng và bám tốt hơn. Nếu bề mặt bong tróc nhiều, cần cạo phần bong rồi chà phẳng. Lotus bám trực tiếp lên sơn cũ còn nguyên, không cần lót. Bề mặt sạch, khô là có thể sơn."
 }, {
-  q: "Bao lâu thì có thể sử dụng bình thường?",
-  a: "Khô bề mặt sau 30 phút, sơn lớp tiếp theo sau 2 giờ. Sử dụng nhẹ sau 24 giờ. Đạt độ cứng tối đa sau khoảng 7 ngày — trong tuần đầu hạn chế vật nặng kéo lê trên bề mặt."
+  q: "Bao lâu thì khô? Khi nào có thể sử dụng bình thường?",
+  a: "Khô bề mặt sau 30 phút, sơn lớp tiếp theo sau 2 giờ. Sử dụng nhẹ sau 24 giờ. Đạt độ cứng tối đa sau khoảng 7 ngày — trong tuần đầu hạn chế vật nặng kéo lê trên bề mặt để tránh hư hại."
 }, {
-  q: "Tôi ở tỉnh, có giao hàng không? Bao lâu nhận được?",
-  a: "Lotus giao toàn quốc. Nội thành Hà Nội & TP. HCM nhận trong 1–2 ngày, các tỉnh thành khác 2–5 ngày. Thanh toán online được miễn phí vận chuyển. COD tính phí theo địa chỉ."
+  q: "Giao hàng toàn quốc không? Bao lâu nhận được?",
+  a: "Lotus giao toàn quốc. Nội thành Hà Nội & TP. HCM nhận trong 1–2 ngày, các tỉnh thành khác 2–5 ngày. Thanh toán online được miễn phí vận chuyển. COD tính phí theo địa chỉ. Mua từ 50kg trở lên liên hệ Zalo để nhận giá sỉ."
+}, {
+  q: "Nếu chọn sai màu hoặc không ưng thì sao?",
+  a: "Sản phẩm còn nguyên seal được đổi trả trong 7 ngày. Bạn có thể xem bảng màu đầy đủ trước khi đặt hàng. Màu hiển thị trên màn hình có thể chênh nhẹ so với thực tế, nên cân nhắc chọn màu nhỏ thử trước khi sơn toàn bộ."
 }];
 function Index() {
   const navigate = useNavigate();
@@ -265,7 +268,7 @@ function Index() {
     showSticky && /* @__PURE__ */ jsxRuntimeExports.jsx(StickyCTA, {}),
     /* @__PURE__ */ jsxRuntimeExports.jsx("section", { id: "hero", className: "relative", children: /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "mx-auto max-w-[1400px] px-5 pt-12 pb-20 md:px-12 md:pt-20 md:pb-32", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "grid grid-cols-12 gap-x-6 gap-y-10", children: [
       /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "col-span-12 md:col-span-6 lg:col-span-5 flex flex-col", children: [
-        /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-[11px] uppercase tracking-[0.3em] text-walnut/70", children: "Lotus · Sơn gỗ hệ nước — Tự làm tại nhà" }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-[11px] uppercase tracking-[0.3em] text-walnut/70", children: "Lotus · Sơn gỗ hệ nước cho gia đình" }),
         /* @__PURE__ */ jsxRuntimeExports.jsxs("h1", { className: "mt-6 font-serif text-[38px] leading-[1.05] tracking-tight text-charcoal sm:text-[44px] md:text-[60px] lg:text-[72px]", children: [
           "Sơn lại đồ gỗ tại nhà",
           /* @__PURE__ */ jsxRuntimeExports.jsx("br", {}),
@@ -274,7 +277,7 @@ function Index() {
           /* @__PURE__ */ jsxRuntimeExports.jsx("br", {}),
           "xong trong một buổi."
         ] }),
-        /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "mt-7 max-w-md text-[15px] leading-relaxed text-walnut/80", children: "Chọn màu, đặt online, nhận hàng tại nhà. Không cần hỏi, không cần chờ. 1 hũ sơn khoảng 7–9 m² mỗi lớp." }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "mt-7 max-w-md text-[15px] leading-relaxed text-walnut/80", children: "Sơn gỗ hệ nước Lotus: ít mùi, an toàn cho nhà có trẻ nhỏ, dễ tự thi công. Chọn màu, đặt online, nhận hàng tại nhà. 1 hũ sơn khoảng 7–9 m² mỗi lớp." }),
         /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "mt-9 flex flex-wrap items-center gap-4", children: [
           /* @__PURE__ */ jsxRuntimeExports.jsxs("a", { href: "#advise", className: "group inline-flex items-center gap-3 bg-clay px-6 py-4 text-[12px] font-medium uppercase tracking-[0.18em] text-cream transition hover:bg-clay/90 sm:px-7 sm:text-[13px]", children: [
             "Chọn màu & đặt mua",
@@ -484,7 +487,7 @@ function Index() {
         "Bảng màu ",
         tab === "indoor" ? "sơn màu bệt" : "sơn giữ vân gỗ"
       ] }),
-      /* @__PURE__ */ jsxRuntimeExports.jsx("img", { src: tab === "indoor" ? SOLID_PALETTE_IMAGE : WOODSTAIN_PALETTE_IMAGE, alt: tab === "indoor" ? "Bảng màu sơn màu bệt Lotus" : "Bảng màu sơn giữ vân gỗ Lotus", className: "w-full border border-walnut/10 max-h-[60vh] object-contain" }),
+      /* @__PURE__ */ jsxRuntimeExports.jsx("img", { src: tab === "indoor" ? SOLID_PALETTE_IMAGE : WOODSTAIN_PALETTE_IMAGE, alt: tab === "indoor" ? "Bảng màu sơn màu bệt Lotus cho nội thất trong nhà" : "Bảng màu sơn giữ vân gỗ Lotus cho nội thất trong và ngoài trời", className: "w-full border border-walnut/10 max-h-[60vh] object-contain" }),
       /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "mt-6 flex justify-end gap-3", children: [
         /* @__PURE__ */ jsxRuntimeExports.jsxs("button", { type: "button", onClick: handleDownloadPalette, className: "inline-flex items-center gap-2 border border-walnut/20 px-6 py-3 text-[12px] uppercase tracking-[0.18em] text-charcoal transition hover:bg-sand/60", children: [
           "Tải xuống",
@@ -564,7 +567,37 @@ function Index() {
           /* @__PURE__ */ jsxRuntimeExports.jsx("br", {}),
           "khách hay hỏi."
         ] }),
-        /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "mt-6 max-w-xs text-[15px] leading-relaxed text-walnut/70", children: "Mua số lượng lớn cho xưởng hoặc dự án? Liên hệ Zalo để nhận giá sỉ." })
+        /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "mt-6 max-w-xs text-[15px] leading-relaxed text-walnut/70", children: "Mua số lượng lớn cho xưởng hoặc dự án? Liên hệ Zalo để nhận giá sỉ." }),
+        /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "mt-8 space-y-4 border-t border-walnut/15 pt-6", children: [
+          /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-start gap-3", children: [
+            /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-clay", children: "✓" }),
+            /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
+              /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-[13px] font-medium text-charcoal", children: "Sản xuất tại Việt Nam" }),
+              /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-[12px] text-walnut/60", children: "Công ty TNHH Sản Xuất Thương Mại Dịch Vụ Bích Trang" })
+            ] })
+          ] }),
+          /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-start gap-3", children: [
+            /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-clay", children: "✓" }),
+            /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
+              /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-[13px] font-medium text-charcoal", children: "Bảo hành 7 ngày" }),
+              /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-[12px] text-walnut/60", children: "Đổi trả sản phẩm còn nguyên seal" })
+            ] })
+          ] }),
+          /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-start gap-3", children: [
+            /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-clay", children: "✓" }),
+            /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
+              /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-[13px] font-medium text-charcoal", children: "Giao hàng toàn quốc" }),
+              /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-[12px] text-walnut/60", children: "1-2 ngày nội thành, 2-5 ngày tỉnh khác" })
+            ] })
+          ] }),
+          /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-start gap-3", children: [
+            /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-clay", children: "✓" }),
+            /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
+              /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-[13px] font-medium text-charcoal", children: "Hỗ trợ kỹ thuật" }),
+              /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-[12px] text-walnut/60", children: "Tư vấn qua Zalo: 0396 666 2" })
+            ] })
+          ] })
+        ] })
       ] }),
       /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "col-span-12 md:col-span-8", children: /* @__PURE__ */ jsxRuntimeExports.jsx(Accordion, { type: "single", collapsible: true, className: "border-t border-walnut/20", children: faqs.map((f, i) => /* @__PURE__ */ jsxRuntimeExports.jsxs(AccordionItem, { value: `f-${i}`, className: "border-b border-walnut/20", children: [
         /* @__PURE__ */ jsxRuntimeExports.jsx(AccordionTrigger, { className: "py-5 text-left font-serif text-lg text-charcoal hover:no-underline sm:text-xl", children: f.q }),
@@ -581,11 +614,50 @@ function Index() {
         ] }),
         /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "mt-4 text-[15px] leading-[1.7] text-walnut/65", children: "Chọn dòng sơn, màu, kích thước. COD toàn quốc hoặc thanh toán online giảm 10%." })
       ] }),
-      /* @__PURE__ */ jsxRuntimeExports.jsxs("form", { onSubmit: (e) => {
+      /* @__PURE__ */ jsxRuntimeExports.jsxs("form", { onSubmit: async (e) => {
         e.preventDefault();
         if (!orderColor) {
           alert("Bạn chưa chọn màu sơn.");
           return;
+        }
+        const scriptUrl = "https://script.google.com/macros/s/AKfycbwiEZ825HeXNV4WWih31l9yE9qBc4SlfFefUAiPRkiBbQ8JhAE31VdUAajrraOnQLN7/exec";
+        const orderData = {
+          source: "lotus-paint",
+          name: orderName,
+          phone: orderPhone,
+          product: orderProduct === "bet" ? "Sơn màu bệt" : "Sơn giữ vân gỗ",
+          env: orderEnv === "indoor" ? "Trong nhà" : "Ngoài trời",
+          color: orderColor,
+          surface: orderSurface === "bong" ? "Bóng" : orderSurface === "bong-50" ? "Bóng 50%" : "Mờ",
+          size: orderSize,
+          qty: orderQty.toString(),
+          amount: formatVND(total),
+          payment: orderPayment,
+          address: orderAddress,
+          note: orderNote
+        };
+        console.log("=== Sending to Google Apps Script ===");
+        console.log("URL:", scriptUrl);
+        console.log("Data:", orderData);
+        try {
+          console.log("Starting fetch...");
+          const response = await fetch(scriptUrl, {
+            method: "POST",
+            mode: "no-cors",
+            headers: {
+              "Content-Type": "application/json"
+            },
+            body: JSON.stringify(orderData)
+          });
+          console.log("Fetch completed. Response:", response);
+          console.log("Response status:", response.status);
+          console.log("Response ok:", response.ok);
+        } catch (error) {
+          console.error("=== Error sending data to Google Sheet ===");
+          console.error("Error:", error);
+          console.error("Error message:", error.message);
+          console.error("Error stack:", error.stack);
+          alert("Lỗi khi gửi đơn hàng: " + error.message);
         }
         navigate({
           to: "/thank-you",
