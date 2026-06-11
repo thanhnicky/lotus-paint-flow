@@ -10,6 +10,7 @@ import {
 import { useEffect, type ReactNode } from "react";
 
 import appCss from "../styles.css?url";
+import favicon from "../assets/favicon.ico?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
 
 function NotFoundComponent() {
@@ -92,6 +93,11 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/e7dcdd75-21c0-4358-a17d-cedb001668f5/id-preview-d897f159--f86487ce-dcaa-47fe-b9de-eff2e9a5b016.lovable.app-1780917533474.png" },
     ],
     links: [
+      {
+        rel: "icon",
+        type: "image/x-icon",
+        href: favicon,
+      },
       {
         rel: "stylesheet",
         href: appCss,

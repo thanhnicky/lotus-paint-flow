@@ -772,15 +772,6 @@ function Index() {
                 chủ nhà tự làm DIY.
               </h2>
             </div>
-            <a
-              href="https://www.facebook.com/lotuspaint"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hidden md:inline-flex items-center gap-3 text-[12px] font-medium uppercase tracking-[0.18em] text-walnut/55 transition hover:text-clay"
-            >
-              Xem thêm trên fanpage
-              <ArrowRight className="h-4 w-4" />
-            </a>
           </div>
 
           <div className="mt-16 grid grid-cols-1 divide-y divide-walnut/15 md:grid-cols-3 md:divide-x md:divide-y-0">
