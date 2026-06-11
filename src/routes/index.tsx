@@ -41,27 +41,31 @@ export const Route = createFileRoute("/")({
   component: Index,
 });
 
-type Palette = { name: string; hex: string; tone: string; mood: string };
+type ColorOption = { name: string; code?: string; image?: string; hex?: string };
 
-const interiorPalette: Palette[] = [
-  { name: "Sứ", hex: "#F4EFE6", tone: "Trắng ấm", mood: "Ấm" },
-  { name: "Mộc", hex: "#E8DCC6", tone: "Be sữa", mood: "Ấm" },
-  { name: "Sét", hex: "#B25C3B", tone: "Đất nung", mood: "Ấm" },
-  { name: "Khói", hex: "#B7AFA3", tone: "Xám ấm", mood: "Trung tính" },
-  { name: "Mây", hex: "#D9D3C7", tone: "Xám sáng", mood: "Trung tính" },
-  { name: "Than", hex: "#2A2724", tone: "Đen mờ", mood: "Lạnh" },
-  { name: "Rêu", hex: "#7C8A6E", tone: "Xanh trầm", mood: "Lạnh" },
-  { name: "Olive", hex: "#5A6147", tone: "Xanh sâu", mood: "Lạnh" },
+// Wood stain colors with real images
+const woodStainColors: ColorOption[] = [
+  { name: "Sơn giữ vân gỗ 005", image: "/src/assets/Son-giu-van-go-005.png" },
+  { name: "Sơn giữ vân gỗ 011", image: "/src/assets/Son-giu-van-go-011.png" },
+  { name: "Sơn giữ vân gỗ 012", image: "/src/assets/Son-giu-van-go-012.png" },
+  { name: "Sơn giữ vân gỗ 018", image: "/src/assets/Son-giu-van-go-018.png" },
+  { name: "Sơn giữ vân gỗ 019", image: "/src/assets/Son-giu-van-go-019.png" },
+  { name: "Sơn giữ vân gỗ 021", image: "/src/assets/Son-giu-van-go-021.png" },
 ];
 
-const exteriorPalette: Palette[] = [
-  { name: "Sồi", hex: "#C9A26B", tone: "Vàng tự nhiên", mood: "Ấm" },
-  { name: "Teak", hex: "#A6713C", tone: "Vàng ấm", mood: "Ấm" },
-  { name: "Căm xe", hex: "#8B4A2B", tone: "Nâu đỏ", mood: "Ấm" },
-  { name: "Hương", hex: "#6B2E22", tone: "Nâu thẫm", mood: "Trung tính" },
-  { name: "Walnut", hex: "#3E2418", tone: "Óc chó", mood: "Lạnh" },
-  { name: "Mun", hex: "#1F1611", tone: "Đen tự nhiên", mood: "Lạnh" },
+// Solid colors with real images
+const solidColors: ColorOption[] = [
+  { name: "Sơn màu bệt 008", image: "/src/assets/Son-mau-bet-008.png" },
+  { name: "Sơn màu bệt 019", image: "/src/assets/Son-mau-bet-019.png" },
+  { name: "Sơn màu bệt 047", image: "/src/assets/Son-mau-bet-047.png" },
+  { name: "Sơn màu bệt 066", image: "/src/assets/Son-mau-bet-066.png" },
+  { name: "Sơn màu bệt 070", image: "/src/assets/Son-mau-bet-070.png" },
+  { name: "Sơn màu bệt 090", image: "/src/assets/Son-mau-bet-090.png" },
 ];
+
+// Real reference images
+const SOLID_PALETTE_IMAGE = "https://w.ladicdn.com/5e3e73f71adefa2bf15bd42f/bang-mau-son-go-lotus-83285p-20251209012759-qpvpg.png";
+const WOODSTAIN_PALETTE_IMAGE = "https://w.ladicdn.com/5e3e73f71adefa2bf15bd42f/screenshot-2025-12-09-at-081030-20251209011056-p-cij.png";
 
 const PRICES = {
   bet: {
@@ -188,18 +192,36 @@ Tone: Premium, nội thất, ấm áp, không icon/emoji/grid startup
 
 function Index() {
   const [tab, setTab] = useState<"indoor" | "outdoor">("indoor");
-  const palette = tab === "indoor" ? interiorPalette : exteriorPalette;
+  const [showPaletteModal, setShowPaletteModal] = useState(false);
+
+  const handleDownloadPalette = async () => {
+    const imageUrl = tab === "indoor" ? SOLID_PALETTE_IMAGE : WOODSTAIN_PALETTE_IMAGE;
+    try {
+      const response = await fetch(imageUrl);
+      const blob = await response.blob();
+      const url = window.URL.createObjectURL(blob);
+      const a = document.createElement("a");
+      a.href = url;
+      a.download = tab === "indoor" ? "bang-mau-son-mau-bet-lotus.png" : "bang-mau-son-giu-van-go-lotus.png";
+      document.body.appendChild(a);
+      a.click();
+      window.URL.revokeObjectURL(url);
+      document.body.removeChild(a);
+    } catch (error) {
+      console.error("Download failed:", error);
+    }
+  };
 
   const [orderProduct, setOrderProduct] = useState<"bet" | "van-go">("bet");
   const [orderEnv, setOrderEnv] = useState<"indoor" | "outdoor">("indoor");
   const [orderColor, setOrderColor] = useState("");
+  const [orderSurface, setOrderSurface] = useState<"bong" | "bong-50" | "mo">("bong");
   const [orderSize, setOrderSize] = useState<"1kg" | "5kg">("1kg");
   const [orderQty, setOrderQty] = useState(1);
   const [orderPayment, setOrderPayment] = useState<"cod" | "online">("cod");
   const [orderName, setOrderName] = useState("");
   const [orderPhone, setOrderPhone] = useState("");
   const [orderAddress, setOrderAddress] = useState("");
-  const [orderProvince, setOrderProvince] = useState("");
   const [orderNote, setOrderNote] = useState("");
 
   const unitPrice = PRICES[orderProduct][orderEnv][orderSize];
@@ -545,88 +567,104 @@ function Index() {
         </div>
       </section>
 
-      {/* PALETTE — BẢNG MÀU THEO MOOD */}
-      <section id="palette" className="border-t border-walnut/10">
+      {/* PALETTE — BẢNG MÀU */}
+      <section id="palette" className="border-t border-walnut/10 bg-cream">
         <div className="mx-auto max-w-[1400px] px-5 py-20 md:px-12 md:py-32">
-          <div className="flex flex-col items-start justify-between gap-6 md:flex-row md:items-end md:gap-8">
+          <header className="mb-12 flex flex-col items-start justify-between gap-4 md:flex-row md:items-end">
             <div>
               <span className="text-[11px] uppercase tracking-[0.3em] text-walnut/70">08 — Bảng màu</span>
               <h2 className="mt-5 font-serif text-[32px] leading-tight text-charcoal sm:text-4xl md:text-5xl">
-                Chọn màu phù hợp
+                Chọn màu
                 <br />
-                với không gian của bạn.
+                phù hợp với không gian.
               </h2>
+              <p className="mt-4 max-w-lg text-[14px] leading-relaxed text-walnut/65">
+                Khám phá bộ màu Lotus. Để đặt hàng, chọn màu trực tiếp trong phần đặt hàng bên dưới.
+              </p>
             </div>
             <div className="inline-flex border border-walnut/25 text-[11px] uppercase tracking-[0.2em] sm:text-[12px]">
               <button
                 onClick={() => setTab("indoor")}
                 className={`px-4 py-3 transition sm:px-5 ${tab === "indoor" ? "bg-charcoal text-cream" : "text-walnut hover:bg-sand/60"}`}
               >
-                Màu Bệt
+                Sơn màu bệt
               </button>
               <button
                 onClick={() => setTab("outdoor")}
                 className={`px-4 py-3 transition sm:px-5 ${tab === "outdoor" ? "bg-charcoal text-cream" : "text-walnut hover:bg-sand/60"}`}
               >
-                Màu Giữ Vân Gỗ
+                Sơn giữ vân gỗ
               </button>
             </div>
-          </div>
+          </header>
 
-          <div className="mt-12 space-y-12">
-            {["Ấm", "Trung tính", "Lạnh"].map((mood) => {
-              const moodColors = palette.filter((c) => c.mood === mood);
-              if (moodColors.length === 0) return null;
-              return (
-                <div key={mood}>
-                  <div className="text-[10px] uppercase tracking-[0.3em] text-walnut/45 mb-6">{mood}</div>
-                  <div className="grid grid-cols-2 gap-x-5 gap-y-8 sm:grid-cols-3 sm:gap-x-6 sm:gap-y-10 lg:grid-cols-4">
-                    {moodColors.map((c) => (
-                      <button
-                        key={c.name}
-                        type="button"
-                        onClick={() => {
-                          setOrderColor(c.name);
-                          setOrderProduct(tab === "indoor" ? "bet" : "van-go");
-                        }}
-                        className="group w-full text-left"
-                      >
-                        <div
-                          className={`aspect-square w-full transition-all duration-300 ${
-                            orderColor === c.name
-                              ? "ring-2 ring-charcoal ring-offset-2"
-                              : "group-hover:scale-[1.02]"
-                          }`}
-                          style={{ backgroundColor: c.hex }}
-                        />
-                        <div className="mt-4 flex items-baseline justify-between border-t border-walnut/20 pt-3">
-                          <div>
-                            <div className={`font-serif text-lg ${orderColor === c.name ? "text-clay" : "text-charcoal"}`}>{c.name}</div>
-                            <div className="text-[10px] uppercase tracking-[0.2em] text-walnut/60 sm:text-[11px]">{c.tone}</div>
-                          </div>
-                          {orderColor === c.name
-                            ? <span className="text-[11px] font-medium uppercase tracking-[0.14em] text-clay">Đã chọn</span>
-                            : <span className="text-[10px] text-walnut/50 sm:text-[11px]">{c.hex}</span>
-                          }
-                        </div>
-                      </button>
-                    ))}
-                  </div>
+          {/* Color swatch grid */}
+          <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6">
+            {(tab === "indoor" ? solidColors : woodStainColors).map((c) => (
+              <button
+                key={c.name}
+                type="button"
+                onClick={() => {
+                  setOrderColor(c.name);
+                  setOrderProduct(tab === "indoor" ? "bet" : "van-go");
+                }}
+                className="group flex flex-col gap-3"
+              >
+                {c.image ? (
+                  <img
+                    src={c.image}
+                    alt={c.name}
+                    className={`aspect-square w-full object-cover transition-all duration-200 ${
+                      orderColor === c.name
+                        ? "ring-2 ring-clay ring-offset-2"
+                        : "opacity-80 group-hover:opacity-100 group-hover:scale-[1.02]"
+                    }`}
+                  />
+                ) : (
+                  <div
+                    className={`aspect-square w-full border border-walnut/15 bg-sand/30 transition-all duration-200 ${
+                      orderColor === c.name
+                        ? "ring-2 ring-clay ring-offset-2"
+                        : "opacity-80 group-hover:opacity-100"
+                    }`}
+                  />
+                )}
+                <div className="flex items-center justify-between">
+                  <span className={`font-serif text-[14px] ${orderColor === c.name ? "text-clay font-medium" : "text-charcoal"}`}>
+                    {c.name}
+                  </span>
+                  {orderColor === c.name && (
+                    <span className="text-[10px] uppercase tracking-[0.14em] text-clay">Đã chọn</span>
+                  )}
                 </div>
-              );
-            })}
+              </button>
+            ))}
           </div>
 
-          {/* Selected color CTA */}
+          {/* Reference link + Modal button */}
+          <div className="mt-10 flex items-center justify-between border-t border-walnut/15 pt-6">
+            <div className="flex items-start gap-3 text-[12px] text-walnut/50">
+              <span className="mt-0.5 text-walnut/30">※</span>
+              <p>
+                Màu hiển thị trên màn hình có thể chênh nhẹ so với thực tế.
+              </p>
+            </div>
+            <button
+              type="button"
+              onClick={() => setShowPaletteModal(true)}
+              className="inline-flex items-center gap-2 text-[11px] uppercase tracking-[0.18em] text-walnut/60 underline underline-offset-2 transition hover:text-clay"
+            >
+              Xem bảng màu đầy đủ
+              <ArrowRight className="h-3.5 w-3.5" />
+            </button>
+          </div>
+
+          {/* CTA to order section */}
           {orderColor && (
-            <div className="mt-10 flex items-center justify-between border-t border-walnut/20 pt-6">
-              <div className="flex items-center gap-3">
-                <div className="h-5 w-5 shrink-0"
-                  style={{ backgroundColor: palette.find((c) => c.name === orderColor)?.hex }} />
-                <span className="text-[14px] text-walnut/80">
-                  Đã chọn: <strong className="text-charcoal">{orderColor}</strong>
-                </span>
-              </div>
+            <div className="mt-8 flex items-center justify-between border-t border-walnut/15 pt-6">
+              <span className="text-[13px] text-walnut/60">
+                Đã chọn: <strong className="text-charcoal">{orderColor}</strong>
+              </span>
               <a href="#advise"
                 className="inline-flex items-center gap-2 text-[12px] font-medium uppercase tracking-[0.18em] text-clay transition hover:text-clay/75">
                 Đặt mua màu này
@@ -636,6 +674,56 @@ function Index() {
           )}
         </div>
       </section>
+
+      {/* PALETTE MODAL */}
+      {showPaletteModal && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-charcoal/80 backdrop-blur-sm p-4"
+          onClick={() => setShowPaletteModal(false)}
+        >
+          <div
+            className="relative max-w-4xl w-full max-h-[90vh] bg-cream p-6 md:p-8 overflow-auto"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <button
+              type="button"
+              onClick={() => setShowPaletteModal(false)}
+              className="absolute right-4 top-4 text-walnut/50 hover:text-charcoal transition z-10"
+            >
+              <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+            <h3 className="mb-4 font-serif text-2xl text-charcoal">
+              Bảng màu {tab === "indoor" ? "sơn màu bệt" : "sơn giữ vân gỗ"}
+            </h3>
+            <img
+              src={tab === "indoor" ? SOLID_PALETTE_IMAGE : WOODSTAIN_PALETTE_IMAGE}
+              alt={tab === "indoor" ? "Bảng màu sơn màu bệt Lotus" : "Bảng màu sơn giữ vân gỗ Lotus"}
+              className="w-full border border-walnut/10 max-h-[60vh] object-contain"
+            />
+            <div className="mt-6 flex justify-end gap-3">
+              <button
+                type="button"
+                onClick={handleDownloadPalette}
+                className="inline-flex items-center gap-2 border border-walnut/20 px-6 py-3 text-[12px] uppercase tracking-[0.18em] text-charcoal transition hover:bg-sand/60"
+              >
+                Tải xuống
+                <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                </svg>
+              </button>
+              <button
+                type="button"
+                onClick={() => setShowPaletteModal(false)}
+                className="inline-flex items-center gap-2 bg-clay px-6 py-3 text-[12px] uppercase tracking-[0.18em] text-cream transition hover:bg-clay/90"
+              >
+                Đóng
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
 
       {/* PROJECTS / TRUST GALLERY — CÔNG TRÌNH THẬT */}
       <section className="border-t border-walnut/10 bg-sand/40">
@@ -882,22 +970,50 @@ function Index() {
               {/* 03 Màu sơn */}
               <div>
                 <div className="mb-4 text-[11px] uppercase tracking-[0.25em] text-walnut/40">03 — Màu sơn</div>
-                <div className="grid grid-cols-4 gap-3 sm:grid-cols-6 lg:grid-cols-4 xl:grid-cols-6">
-                  {(orderProduct === "bet" ? interiorPalette : exteriorPalette).map((c) => (
-                    <button key={c.name} type="button" onClick={() => setOrderColor(c.name)} className="group flex flex-col items-center gap-2">
-                      <div
-                        className={`h-12 w-full transition-all duration-200 ${orderColor === c.name ? "ring-2 ring-clay ring-offset-2" : "opacity-60 group-hover:opacity-90"}`}
-                        style={{ backgroundColor: c.hex }}
-                      />
-                      <span className={`text-[11px] transition ${orderColor === c.name ? "text-clay font-medium" : "text-walnut/50"}`}>{c.name}</span>
-                    </button>
-                  ))}
+                <input
+                  type="text"
+                  value={orderColor}
+                  onChange={(e) => setOrderColor(e.target.value)}
+                  placeholder="Nhập mã màu (ví dụ: 008, 019...)"
+                  className="w-full border border-walnut/20 bg-cream px-4 py-3 text-[13px] text-charcoal placeholder:text-walnut/40 focus:border-clay focus:outline-none"
+                />
+                <button
+                  type="button"
+                  onClick={() => {
+                    setTab(orderProduct === "bet" ? "indoor" : "outdoor");
+                    setShowPaletteModal(true);
+                  }}
+                  className="mt-2 text-[11px] text-walnut/50 underline underline-offset-2 transition hover:text-clay"
+                >
+                  Xem bảng màu đầy đủ
+                </button>
+              </div>
+
+              {/* 04 Bề mặt */}
+              <div>
+                <div className="mb-4 text-[11px] uppercase tracking-[0.25em] text-walnut/40">04 — Bề mặt</div>
+                <div className="inline-flex border border-walnut/20">
+                  <button type="button"
+                    onClick={() => setOrderSurface("bong")}
+                    className={`px-6 py-3.5 text-[13px] transition ${orderSurface === "bong" ? "bg-clay text-cream font-medium" : "text-walnut/60 hover:text-charcoal"}`}>
+                    Bóng
+                  </button>
+                  <button type="button"
+                    onClick={() => setOrderSurface("bong-50")}
+                    className={`border-l border-walnut/20 px-6 py-3.5 text-[13px] transition ${orderSurface === "bong-50" ? "bg-clay text-cream font-medium" : "text-walnut/60 hover:text-charcoal"}`}>
+                    Bóng 50%
+                  </button>
+                  <button type="button"
+                    onClick={() => setOrderSurface("mo")}
+                    className={`border-l border-walnut/20 px-6 py-3.5 text-[13px] transition ${orderSurface === "mo" ? "bg-clay text-cream font-medium" : "text-walnut/60 hover:text-charcoal"}`}>
+                    Mờ
+                  </button>
                 </div>
               </div>
 
-              {/* 04 Kích thước & số lượng */}
+              {/* 05 Kích thước & số lượng */}
               <div>
-                <div className="mb-4 text-[11px] uppercase tracking-[0.25em] text-walnut/40">04 — Kích thước & số lượng</div>
+                <div className="mb-4 text-[11px] uppercase tracking-[0.25em] text-walnut/40">05 — Kích thước & số lượng</div>
                 <div className="flex flex-wrap items-center gap-4">
                   <div className="inline-flex border border-walnut/20">
                     <button type="button" onClick={() => setOrderSize("1kg")}
@@ -921,9 +1037,9 @@ function Index() {
                 </div>
               </div>
 
-              {/* 05 Thanh toán */}
+              {/* 06 Thanh toán */}
               <div>
-                <div className="mb-4 text-[11px] uppercase tracking-[0.25em] text-walnut/40">05 — Hình thức thanh toán</div>
+                <div className="mb-4 text-[11px] uppercase tracking-[0.25em] text-walnut/40">06 — Hình thức thanh toán</div>
                 <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
                   <button type="button" onClick={() => setOrderPayment("cod")}
                     className={`flex flex-col gap-2 border p-5 text-left transition ${orderPayment === "cod" ? "border-walnut/40 bg-sand/50" : "border-walnut/15 hover:border-walnut/30"}`}>
@@ -955,14 +1071,14 @@ function Index() {
                 </div>
                 <div className="flex items-center justify-between text-[14px]">
                   <span className="text-walnut/60">Màu</span>
-                  <span className="flex items-center gap-2 text-charcoal">
-                    {orderColor ? (
-                      <>
-                        <span className="inline-block h-3.5 w-3.5 shrink-0"
-                          style={{ backgroundColor: (orderProduct === "bet" ? interiorPalette : exteriorPalette).find((c) => c.name === orderColor)?.hex }} />
-                        {orderColor}
-                      </>
-                    ) : <span className="italic text-walnut/35">Chưa chọn</span>}
+                  <span className="text-charcoal">
+                    {orderColor || <span className="italic text-walnut/35">Chưa chọn</span>}
+                  </span>
+                </div>
+                <div className="flex items-center justify-between text-[14px]">
+                  <span className="text-walnut/60">Bề mặt</span>
+                  <span className="text-charcoal">
+                    {orderSurface === "bong" ? "Bóng" : orderSurface === "bong-50" ? "Bóng 50%" : "Mờ"}
                   </span>
                 </div>
                 <div className="flex items-center justify-between border-t border-walnut/15 pt-3 text-[14px]">
@@ -1002,20 +1118,17 @@ function Index() {
               >
                 <Field label="Họ và tên">
                   <Input required value={orderName} onChange={(e) => setOrderName(e.target.value)}
+                    placeholder="Nhập họ và tên của bạn"
                     className="h-[52px] rounded-none border-0 border-b border-walnut/25 bg-transparent px-0 text-[15px] text-charcoal placeholder:text-walnut/35 focus-visible:border-clay focus-visible:ring-0" />
                 </Field>
-                <Field label="Số điện thoại / Zalo">
+                <Field label="Số điện thoại">
                   <Input required type="tel" value={orderPhone} onChange={(e) => setOrderPhone(e.target.value)}
+                    placeholder="Nhập số điện thoại của bạn"
                     className="h-[52px] rounded-none border-0 border-b border-walnut/25 bg-transparent px-0 text-[15px] text-charcoal placeholder:text-walnut/35 focus-visible:border-clay focus-visible:ring-0" />
                 </Field>
                 <Field label="Địa chỉ nhận hàng">
                   <Input required value={orderAddress} onChange={(e) => setOrderAddress(e.target.value)}
-                    placeholder="Số nhà, đường, phường / xã..."
-                    className="h-[52px] rounded-none border-0 border-b border-walnut/25 bg-transparent px-0 text-[15px] text-charcoal placeholder:text-walnut/35 focus-visible:border-clay focus-visible:ring-0" />
-                </Field>
-                <Field label="Tỉnh / Thành phố">
-                  <Input required value={orderProvince} onChange={(e) => setOrderProvince(e.target.value)}
-                    placeholder="VD: Hà Nội, TP. Hồ Chí Minh..."
+                    placeholder="Số nhà, đường, phường / xã, tỉnh / thành phố..."
                     className="h-[52px] rounded-none border-0 border-b border-walnut/25 bg-transparent px-0 text-[15px] text-charcoal placeholder:text-walnut/35 focus-visible:border-clay focus-visible:ring-0" />
                 </Field>
                 <Field label="Ghi chú (tuỳ chọn)">
@@ -1033,6 +1146,14 @@ function Index() {
                   </p>
                 </div>
               </form>
+
+              {/* Color accuracy note */}
+              <div className="mt-6 flex items-start gap-3 text-[11px] text-walnut/40">
+                <span className="mt-0.5 text-walnut/25">※</span>
+                <p>
+                  Màu hiển thị trên màn hình có thể chênh nhẹ so với thực tế.
+                </p>
+              </div>
 
               {/* Bulk order note */}
               <div className="mt-8 border-t border-walnut/15 pt-6">
