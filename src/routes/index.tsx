@@ -247,7 +247,7 @@ function Index() {
   }
 
   return (
-    <div className="min-h-screen bg-cream text-charcoal font-sans antialiased overscroll-behavior-none overflow-x-hidden">
+    <div className="min-h-screen bg-cream text-charcoal font-sans antialiased overscroll-behavior-none">
       <Header />
       {showSticky && <StickyCTA />}
 
@@ -1005,51 +1005,51 @@ function Index() {
             <div className="col-span-12 lg:col-span-5 lg:border-l lg:border-walnut/15 lg:pl-12 px-5 lg:px-0">
 
               {/* Live order summary */}
-              <div className="mb-8 w-full space-y-3 border border-walnut/15 p-6 bg-cream/30 overflow-hidden box-border">
+              <div className="mb-8 w-full max-w-full space-y-3 border border-walnut/15 p-6 bg-cream/30 box-border overflow-visible">
                 <div className="mb-4 text-[10px] uppercase tracking-[0.3em] text-walnut/50">Tóm tắt đơn</div>
-                <div className="flex items-center w-full text-[14px] gap-2">
-                  <span className="text-walnut/70 shrink-0">Sản phẩm</span>
-                  <span className="text-charcoal flex-1 min-w-0 max-w-full overflow-hidden text-ellipsis whitespace-nowrap text-right">{orderProduct === "bet" ? "Sơn màu bệt" : "Sơn giữ vân gỗ"}</span>
+                <div className="flex justify-between items-baseline w-full min-w-0 text-[14px] gap-3">
+                  <span className="text-walnut/70 shrink-0 whitespace-nowrap">Sản phẩm</span>
+                  <span className="text-charcoal flex-1 min-w-0 text-right overflow-hidden text-ellipsis whitespace-nowrap">{orderProduct === "bet" ? "Sơn màu bệt" : "Sơn giữ vân gỗ"}</span>
                 </div>
-                <div className="flex items-center w-full text-[14px] gap-2">
-                  <span className="text-walnut/70 shrink-0">Môi trường</span>
-                  <span className="text-charcoal flex-1 min-w-0 max-w-full overflow-hidden text-ellipsis whitespace-nowrap text-right">{orderEnv === "indoor" ? "Trong nhà" : "Ngoài trời"}</span>
+                <div className="flex justify-between items-baseline w-full min-w-0 text-[14px] gap-3">
+                  <span className="text-walnut/70 shrink-0 whitespace-nowrap">Môi trường</span>
+                  <span className="text-charcoal flex-1 min-w-0 text-right overflow-hidden text-ellipsis whitespace-nowrap">{orderEnv === "indoor" ? "Trong nhà" : "Ngoài trời"}</span>
                 </div>
-                <div className="flex items-center w-full text-[14px] gap-2">
-                  <span className="text-walnut/70 shrink-0">Màu</span>
-                  <span className="text-charcoal flex-1 min-w-0 max-w-full overflow-hidden text-ellipsis whitespace-nowrap text-right">
+                <div className="flex justify-between items-baseline w-full min-w-0 text-[14px] gap-3">
+                  <span className="text-walnut/70 shrink-0 whitespace-nowrap">Màu</span>
+                  <span className="text-charcoal flex-1 min-w-0 text-right overflow-hidden text-ellipsis whitespace-nowrap">
                     {orderColor || <span className="italic text-walnut/35">Chưa chọn</span>}
                   </span>
                 </div>
-                <div className="flex items-center w-full text-[14px] gap-2">
-                  <span className="text-walnut/70 shrink-0">Bề mặt</span>
-                  <span className="text-charcoal flex-1 min-w-0 max-w-full overflow-hidden text-ellipsis whitespace-nowrap text-right">
+                <div className="flex justify-between items-baseline w-full min-w-0 text-[14px] gap-3">
+                  <span className="text-walnut/70 shrink-0 whitespace-nowrap">Bề mặt</span>
+                  <span className="text-charcoal flex-1 min-w-0 text-right overflow-hidden text-ellipsis whitespace-nowrap">
                     {orderSurface === "bong" ? "Bóng" : orderSurface === "bong-50" ? "Bóng 50%" : "Mờ"}
                   </span>
                 </div>
-                <div className="flex items-center w-full border-t border-walnut/15 pt-3 text-[14px] gap-2">
-                  <span className="text-walnut/70 shrink-0">Hũ {orderSize} × {orderQty}</span>
-                  <span className="text-charcoal flex-1 min-w-0 max-w-full overflow-hidden text-ellipsis whitespace-nowrap text-right">{formatVND(unitPrice)} / hũ</span>
+                <div className="flex justify-between items-baseline w-full min-w-0 border-t border-walnut/15 pt-3 text-[14px] gap-3">
+                  <span className="text-walnut/70 shrink-0 whitespace-nowrap">Hũ {orderSize} × {orderQty}</span>
+                  <span className="text-charcoal flex-1 min-w-0 text-right overflow-hidden text-ellipsis whitespace-nowrap">{formatVND(unitPrice)} / hũ</span>
                 </div>
-                <div className="flex items-center w-full text-[14px] gap-2">
-                  <span className="text-walnut/70 shrink-0">Tạm tính</span>
-                  <span className="text-charcoal flex-1 min-w-0 max-w-full overflow-hidden text-ellipsis whitespace-nowrap text-right">{formatVND(subtotal)}</span>
+                <div className="flex justify-between items-baseline w-full min-w-0 text-[14px] gap-3">
+                  <span className="text-walnut/70 shrink-0 whitespace-nowrap">Tạm tính</span>
+                  <span className="text-charcoal flex-1 min-w-0 text-right overflow-hidden text-ellipsis whitespace-nowrap">{formatVND(subtotal)}</span>
                 </div>
                 {orderPayment === "online" && (
-                  <div className="flex items-center w-full text-[13px] gap-2">
-                    <span className="text-clay/80 shrink-0">Giảm 10% (online)</span>
-                    <span className="text-clay flex-1 min-w-0 max-w-full overflow-hidden text-ellipsis whitespace-nowrap text-right">−{formatVND(Math.round(subtotal * 0.1))}</span>
+                  <div className="flex justify-between items-baseline w-full min-w-0 text-[13px] gap-3">
+                    <span className="text-clay/80 shrink-0 whitespace-nowrap">Giảm 10% (online)</span>
+                    <span className="text-clay flex-1 min-w-0 text-right overflow-hidden text-ellipsis whitespace-nowrap">−{formatVND(Math.round(subtotal * 0.1))}</span>
                   </div>
                 )}
-                <div className="flex items-center w-full text-[13px] gap-2">
-                  <span className="text-walnut/70 shrink-0">Vận chuyển</span>
+                <div className="flex justify-between items-baseline w-full min-w-0 text-[13px] gap-3">
+                  <span className="text-walnut/70 shrink-0 whitespace-nowrap">Vận chuyển</span>
                   <span className={orderPayment === "online" ? "text-clay" : "text-walnut/60"}>
                     {orderPayment === "online" ? "Miễn phí" : "Tính theo địa chỉ"}
                   </span>
                 </div>
-                <div className="flex items-center w-full border-t border-walnut/20 pt-3 text-[16px] font-medium gap-2">
-                  <span className="text-walnut/80 shrink-0">Tổng cộng</span>
-                  <span className="text-clay flex-1 min-w-0 max-w-full overflow-hidden text-ellipsis whitespace-nowrap text-right">{formatVND(total)}</span>
+                <div className="flex justify-between items-baseline w-full min-w-0 border-t border-walnut/20 pt-3 text-[16px] font-medium gap-3">
+                  <span className="text-walnut/80 shrink-0 whitespace-nowrap">Tổng cộng</span>
+                  <span className="text-clay flex-1 min-w-0 text-right overflow-hidden text-ellipsis whitespace-nowrap">{formatVND(total)}</span>
                 </div>
               </div>
 
