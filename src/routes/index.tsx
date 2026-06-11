@@ -87,19 +87,19 @@ const surfaces = [
     label: "Bàn ăn / bàn làm việc", 
     desc: "Bàn gỗ nội thất dùng hàng ngày",
     recommendation: "Sơn gỗ màu bệt (Indoor)",
-    detail: "2 lớp, độ phủ 8-10m²/kg, màu ấm: Sứ, Mộc, Khói"
+    detail: "2 lớp, độ phủ 8–10 m²/kg, màu ấm: Sứ, Mộc, Khói"
   },
   { 
     label: "Tủ áo / tủ bếp / kệ TV", 
     desc: "Tủ kệ nội thất lớn",
     recommendation: "Sơn gỗ màu bệt (Indoor)",
-    detail: "2-3 lớp, độ phủ 8-10m²/kg, che nền cũ tốt"
+    detail: "2–3 lớp, độ phủ 8–10 m²/kg, che nền cũ tốt"
   },
   { 
     label: "Cửa, khung cửa, lan can", 
     desc: "Cửa nội thất hoặc ngoại thất",
     recommendation: "Woodstain Finish (Nội/Ngoại thất)",
-    detail: "2-3 lớp, giữ vân gỗ, kháng ẩm & UV"
+    detail: "2–3 lớp, giữ vân gỗ, kháng ẩm và UV"
   },
   { 
     label: "Sàn gỗ, bậc cầu thang", 
@@ -253,7 +253,7 @@ function Index() {
 
       {/* HERO — B2C OPTIMIZED */}
       <section id="hero" className="relative">
-        <div className="mx-auto max-w-[1400px] px-5 pt-10 pb-16 md:px-12 md:pt-16 md:pb-28">
+        <div className="mx-auto max-w-[1400px] px-5 pt-12 pb-20 md:px-12 md:pt-20 md:pb-32">
           <div className="grid grid-cols-12 gap-x-6 gap-y-10">
             <div className="col-span-12 md:col-span-6 lg:col-span-5 flex flex-col">
               <span className="text-[11px] uppercase tracking-[0.3em] text-walnut/70">
@@ -276,7 +276,7 @@ function Index() {
                   href="#advise"
                   className="group inline-flex items-center gap-3 bg-clay px-6 py-4 text-[12px] font-medium uppercase tracking-[0.18em] text-cream transition hover:bg-clay/90 sm:px-7 sm:text-[13px]"
                 >
-                  Chọn màu &amp; đặt mua
+                  Chọn màu & đặt mua
                   <ArrowRight className="h-4 w-4 transition group-hover:translate-x-1" />
                 </a>
                 <a
@@ -315,7 +315,7 @@ function Index() {
 
       {/* DECISION BLOCK — 2 KIỂU HOÀN THIỆN */}
       <section id="choose" className="border-t border-walnut/10 bg-sand/40">
-        <div className="mx-auto max-w-[1400px] px-5 py-20 md:px-12 md:py-32">
+        <div className="mx-auto max-w-[1400px] px-5 py-16 md:px-12 md:py-28">
           <header>
             <span className="text-[11px] uppercase tracking-[0.3em] text-walnut/70">02 — Chọn kiểu hoàn thiện</span>
             <h2 className="mt-5 font-serif text-[34px] leading-tight text-charcoal sm:text-4xl md:text-5xl lg:text-[56px]">
@@ -362,7 +362,7 @@ function Index() {
 
       {/* SPECS — Quy cách & thông số */}
       <section className="border-t border-walnut/10">
-        <div className="mx-auto max-w-[1400px] px-5 py-20 md:px-12 md:py-28">
+        <div className="mx-auto max-w-[1400px] px-5 py-16 md:px-12 md:py-24">
           <header className="flex flex-col gap-4 md:flex-row md:items-baseline md:justify-between">
             <div>
               <span className="text-[11px] uppercase tracking-[0.3em] text-walnut/70">03 — Quy cách</span>
@@ -389,7 +389,7 @@ function Index() {
 
       {/* SURFACE SELECTOR — BẠN ĐANG SƠN GÌ */}
       <section className="border-t border-walnut/10 bg-sand/40">
-        <div className="mx-auto max-w-[1400px] px-5 py-20 md:px-12 md:py-32">
+        <div className="mx-auto max-w-[1400px] px-5 py-16 md:px-12 md:py-28">
           <div className="grid grid-cols-12 gap-6">
             <div className="col-span-12 lg:col-span-4">
               <span className="text-[11px] uppercase tracking-[0.3em] text-walnut/70">04 — Bề mặt</span>
@@ -398,7 +398,7 @@ function Index() {
                 <br />
                 sơn gì?
               </h2>
-              <p className="mt-6 max-w-sm text-[15px] leading-relaxed text-walnut/80">
+              <p className="mt-6 max-w-sm text-[15px] leading-relaxed text-walnut/70">
                 Chọn bề mặt để xem gợi ý dòng sơn phù hợp.
               </p>
             </div>
@@ -423,7 +423,7 @@ function Index() {
 
       {/* BEFORE / AFTER */}
       <section className="border-t border-walnut/10 bg-walnut text-cream">
-        <div className="mx-auto max-w-[1400px] px-5 py-20 md:px-12 md:py-32">
+        <div className="mx-auto max-w-[1400px] px-5 py-16 md:px-12 md:py-28">
           <div className="grid grid-cols-12 gap-x-6 gap-y-10">
             <div className="col-span-12 md:col-span-4 lg:col-span-4">
               <span className="text-[11px] uppercase tracking-[0.3em] text-cream/60">05 — Trước & Sau</span>
@@ -464,7 +464,7 @@ function Index() {
 
       {/* BENEFITS */}
       <section className="border-t border-walnut/10">
-        <div className="mx-auto max-w-[1400px] px-5 py-24 md:px-12 md:py-36">
+        <div className="mx-auto max-w-[1400px] px-5 py-20 md:px-12 md:py-32">
           {/* Top — headline + featured main point */}
           <div className="grid grid-cols-1 gap-8 lg:grid-cols-12 lg:gap-14">
             <div className="lg:col-span-5">
@@ -494,7 +494,7 @@ function Index() {
               }`}>
                 <div className="text-[10px] uppercase tracking-[0.28em] text-clay">{b.n}</div>
                 <div className="mt-3 font-serif text-[19px] text-charcoal">{b.t}</div>
-                <p className="mt-2 text-[13px] leading-relaxed text-walnut/58">{b.d}</p>
+                <p className="mt-2 text-[13px] leading-relaxed text-walnut/65">{b.d}</p>
               </li>
             ))}
           </ul>
@@ -503,7 +503,7 @@ function Index() {
 
       {/* PROCESS */}
       <section className="border-t border-walnut/10 bg-sand/40">
-        <div className="mx-auto max-w-[1400px] px-5 py-20 md:px-12 md:py-32">
+        <div className="mx-auto max-w-[1400px] px-5 py-16 md:px-12 md:py-28">
           <div className="grid grid-cols-12 gap-6">
             <div className="col-span-12 md:col-span-4">
               <span className="text-[11px] uppercase tracking-[0.3em] text-walnut/70">07 — Thi công</span>
@@ -528,7 +528,7 @@ function Index() {
                     <span className="mt-0.5 w-10 shrink-0 font-serif text-[2.8rem] leading-none text-clay/50 sm:text-[3.5rem]">{s.n}</span>
                     <div className="pt-1">
                       <h3 className="font-serif text-[20px] leading-tight text-charcoal sm:text-[24px]">{s.t}</h3>
-                      <p className="mt-2.5 text-[13px] leading-relaxed text-walnut/60">{s.d}</p>
+                      <p className="mt-2.5 text-[13px] leading-relaxed text-walnut/65">{s.d}</p>
                     </div>
                   </li>
                 ))}
@@ -543,7 +543,7 @@ function Index() {
 
       {/* PALETTE — BẢNG MÀU */}
       <section id="palette" className="border-t border-walnut/10 bg-cream">
-        <div className="mx-auto max-w-[1400px] px-5 py-20 md:px-12 md:py-32">
+        <div className="mx-auto max-w-[1400px] px-5 py-16 md:px-12 md:py-28">
           <header className="mb-12 flex flex-col items-start justify-between gap-4 md:flex-row md:items-end">
             <div>
               <span className="text-[11px] uppercase tracking-[0.3em] text-walnut/70">08 — Bảng màu</span>
@@ -552,7 +552,7 @@ function Index() {
                 <br />
                 phù hợp với không gian.
               </h2>
-              <p className="mt-4 max-w-lg text-[14px] leading-relaxed text-walnut/65">
+              <p className="mt-4 max-w-lg text-[15px] leading-relaxed text-walnut/70">
                 Khám phá bộ màu Lotus. Để đặt hàng, chọn màu trực tiếp trong phần đặt hàng bên dưới.
               </p>
             </div>
@@ -617,7 +617,7 @@ function Index() {
 
           {/* Reference link + Modal button */}
           <div className="mt-10 flex items-center justify-between border-t border-walnut/15 pt-6">
-            <div className="flex items-start gap-3 text-[12px] text-walnut/50">
+            <div className="flex items-start gap-3 text-[12px] text-walnut/55">
               <span className="mt-0.5 text-walnut/30">※</span>
               <p>
                 Màu hiển thị trên màn hình có thể chênh nhẹ so với thực tế.
@@ -636,7 +636,7 @@ function Index() {
           {/* CTA to order section */}
           {orderColor && (
             <div className="mt-8 flex items-center justify-between border-t border-walnut/15 pt-6">
-              <span className="text-[13px] text-walnut/60">
+              <span className="text-[13px] text-walnut/70">
                 Đã chọn: <strong className="text-charcoal">{orderColor}</strong>
               </span>
               <a href="#advise"
@@ -701,7 +701,7 @@ function Index() {
 
       {/* PROJECTS / TRUST GALLERY — CÔNG TRÌNH THẬT */}
       <section className="border-t border-walnut/10 bg-sand/40">
-        <div className="mx-auto max-w-[1400px] px-5 py-20 md:px-12 md:py-32">
+        <div className="mx-auto max-w-[1400px] px-5 py-16 md:px-12 md:py-28">
           <header className="flex flex-col items-start justify-between gap-4 md:flex-row md:items-end">
             <div>
               <span className="text-[11px] uppercase tracking-[0.3em] text-walnut/70">09 — Công trình thật</span>
@@ -711,7 +711,7 @@ function Index() {
                 đến không gian mới.
               </h2>
             </div>
-            <p className="max-w-sm text-[14px] leading-relaxed text-walnut/75">
+            <p className="max-w-sm text-[15px] leading-relaxed text-walnut/70">
               Những căn nhà đã được làm mới cùng Lotus — từ đồ gỗ trầy xước đến bề mặt sạch, màu mới hoặc giữ vân gỗ đẹp.
             </p>
           </header>
@@ -759,7 +759,7 @@ function Index() {
 
       {/* TESTIMONIALS — CẢM NHẬN KHÁCH HÀNG B2C */}
       <section className="border-t border-walnut/10">
-        <div className="mx-auto max-w-[1400px] px-5 py-24 md:px-12 md:py-36">
+        <div className="mx-auto max-w-[1400px] px-5 py-20 md:px-12 md:py-32">
           <div className="flex flex-col gap-2 md:flex-row md:items-end md:justify-between">
             <div>
               <span className="text-[11px] uppercase tracking-[0.3em] text-walnut/70">10 — Cảm nhận khách hàng</span>
@@ -817,7 +817,7 @@ function Index() {
 
       {/* TRUST / COMMITMENTS */}
       <section className="border-t border-walnut/10 bg-cream">
-        <div className="mx-auto max-w-[1400px] px-5 py-20 md:px-12 md:py-28">
+        <div className="mx-auto max-w-[1400px] px-5 py-16 md:px-12 md:py-24">
           <div className="mx-auto max-w-2xl text-center">
             <p className="font-serif text-[22px] leading-[1.65] text-charcoal md:text-[25px]">
               Đặt hàng trực tiếp, nhận hàng tại nhà — không cần gặp mặt, không cần tư vấn.
@@ -849,7 +849,7 @@ function Index() {
 
       {/* FAQ */}
       <section className="border-t border-walnut/10 bg-sand/40">
-        <div className="mx-auto max-w-[1400px] px-5 py-20 md:px-12 md:py-32">
+        <div className="mx-auto max-w-[1400px] px-5 py-16 md:px-12 md:py-28">
           <div className="grid grid-cols-12 gap-6">
             <div className="col-span-12 md:col-span-4">
               <span className="text-[11px] uppercase tracking-[0.3em] text-walnut/70">11 — Câu hỏi</span>
@@ -858,7 +858,7 @@ function Index() {
                 <br />
                 khách hay hỏi.
               </h2>
-              <p className="mt-6 max-w-xs text-[14px] leading-relaxed text-walnut/75">
+              <p className="mt-6 max-w-xs text-[15px] leading-relaxed text-walnut/70">
                 Mua số lượng lớn cho xưởng hoặc dự án? Liên hệ Zalo để nhận giá sỉ.
               </p>
             </div>
@@ -887,16 +887,16 @@ function Index() {
 
       {/* ORDER — ĐẶT HÀNG */}
       <section id="advise" className="border-t border-walnut/10 bg-sand/30 text-charcoal">
-        <div className="mx-auto max-w-[1400px] px-5 py-20 md:px-12 md:py-32">
+        <div className="mx-auto max-w-[1400px] px-5 py-16 md:px-12 md:py-28">
 
           {/* Header */}
-          <div className="mb-16">
+          <div className="mb-12">
             <span className="text-[11px] uppercase tracking-[0.3em] text-walnut/50">12 — Đặt hàng</span>
             <h2 className="mt-4 font-serif text-[34px] leading-tight sm:text-5xl">
               Chọn màu,
               <br />đặt hàng ngay.
             </h2>
-            <p className="mt-5 max-w-xl text-[15px] leading-[1.7] text-walnut/70">
+            <p className="mt-5 max-w-xl text-[15px] leading-[1.7] text-walnut/65">
               Mua lẻ trực tiếp — không cần tư vấn. Chọn dòng sơn, môi trường sử dụng, màu và kích thước. Lotus giao toàn quốc.
             </p>
           </div>
@@ -904,11 +904,11 @@ function Index() {
           <div className="grid grid-cols-12 gap-x-10 gap-y-16">
 
             {/* LEFT — Selectors */}
-            <div className="col-span-12 lg:col-span-7 space-y-11">
+            <div className="col-span-12 lg:col-span-7 space-y-10">
 
               {/* 01 Dòng sơn */}
               <div>
-                <div className="mb-4 text-[11px] uppercase tracking-[0.25em] text-walnut/40">01 — Dòng sơn</div>
+                <div className="mb-4 text-[11px] uppercase tracking-[0.25em] text-walnut/50">01 — Dòng sơn</div>
                 <div className="inline-flex border border-walnut/20">
                   <button type="button"
                     onClick={() => { setOrderProduct("bet"); setOrderColor(""); }}
@@ -925,7 +925,7 @@ function Index() {
 
               {/* 02 Môi trường */}
               <div>
-                <div className="mb-4 text-[11px] uppercase tracking-[0.25em] text-walnut/40">02 — Môi trường sử dụng</div>
+                <div className="mb-4 text-[11px] uppercase tracking-[0.25em] text-walnut/50">02 — Môi trường sử dụng</div>
                 <div className="inline-flex border border-walnut/20">
                   <button type="button"
                     onClick={() => setOrderEnv("indoor")}
@@ -942,7 +942,7 @@ function Index() {
 
               {/* 03 Màu sơn */}
               <div>
-                <div className="mb-4 text-[11px] uppercase tracking-[0.25em] text-walnut/40">03 — Màu sơn</div>
+                <div className="mb-4 text-[11px] uppercase tracking-[0.25em] text-walnut/50">03 — Màu sơn</div>
                 <input
                   type="text"
                   value={orderColor}
@@ -956,7 +956,7 @@ function Index() {
                     setTab(orderProduct === "bet" ? "indoor" : "outdoor");
                     setShowPaletteModal(true);
                   }}
-                  className="mt-2 text-[11px] text-walnut/50 underline underline-offset-2 transition hover:text-clay"
+                  className="mt-2 text-[11px] text-walnut/55 underline underline-offset-2 transition hover:text-clay"
                 >
                   Xem bảng màu đầy đủ
                 </button>
@@ -964,7 +964,7 @@ function Index() {
 
               {/* 04 Bề mặt */}
               <div>
-                <div className="mb-4 text-[11px] uppercase tracking-[0.25em] text-walnut/40">04 — Bề mặt</div>
+                <div className="mb-4 text-[11px] uppercase tracking-[0.25em] text-walnut/50">04 — Bề mặt</div>
                 <div className="inline-flex border border-walnut/20">
                   <button type="button"
                     onClick={() => setOrderSurface("bong")}
@@ -986,7 +986,7 @@ function Index() {
 
               {/* 05 Kích thước & số lượng */}
               <div>
-                <div className="mb-4 text-[11px] uppercase tracking-[0.25em] text-walnut/40">05 — Kích thước & số lượng</div>
+                <div className="mb-4 text-[11px] uppercase tracking-[0.25em] text-walnut/50">05 — Kích thước & số lượng</div>
                 <div className="flex flex-wrap items-center gap-4">
                   <div className="inline-flex border border-walnut/20">
                     <button type="button" onClick={() => setOrderSize("1kg")}
@@ -1012,7 +1012,7 @@ function Index() {
 
               {/* 06 Thanh toán */}
               <div>
-                <div className="mb-4 text-[11px] uppercase tracking-[0.25em] text-walnut/40">06 — Hình thức thanh toán</div>
+                <div className="mb-4 text-[11px] uppercase tracking-[0.25em] text-walnut/50">06 — Hình thức thanh toán</div>
                 <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
                   <button type="button" onClick={() => setOrderPayment("cod")}
                     className={`flex flex-col gap-2 border p-5 text-left transition ${orderPayment === "cod" ? "border-walnut/40 bg-sand/50" : "border-walnut/15 hover:border-walnut/30"}`}>
@@ -1032,34 +1032,34 @@ function Index() {
             <div className="col-span-12 lg:col-span-5 lg:border-l lg:border-walnut/15 lg:pl-12">
 
               {/* Live order summary */}
-              <div className="mb-10 space-y-3 border border-walnut/15 p-6 bg-cream/30">
-                <div className="mb-4 text-[10px] uppercase tracking-[0.3em] text-walnut/40">Tóm tắt đơn</div>
+              <div className="mb-8 space-y-3 border border-walnut/15 p-6 bg-cream/30">
+                <div className="mb-4 text-[10px] uppercase tracking-[0.3em] text-walnut/50">Tóm tắt đơn</div>
                 <div className="flex items-center justify-between text-[14px]">
-                  <span className="text-walnut/60">Sản phẩm</span>
+                  <span className="text-walnut/70">Sản phẩm</span>
                   <span className="text-charcoal">{orderProduct === "bet" ? "Sơn màu bệt" : "Sơn giữ vân gỗ"}</span>
                 </div>
                 <div className="flex items-center justify-between text-[14px]">
-                  <span className="text-walnut/60">Môi trường</span>
+                  <span className="text-walnut/70">Môi trường</span>
                   <span className="text-charcoal">{orderEnv === "indoor" ? "Trong nhà" : "Ngoài trời"}</span>
                 </div>
                 <div className="flex items-center justify-between text-[14px]">
-                  <span className="text-walnut/60">Màu</span>
+                  <span className="text-walnut/70">Màu</span>
                   <span className="text-charcoal">
                     {orderColor || <span className="italic text-walnut/35">Chưa chọn</span>}
                   </span>
                 </div>
                 <div className="flex items-center justify-between text-[14px]">
-                  <span className="text-walnut/60">Bề mặt</span>
+                  <span className="text-walnut/70">Bề mặt</span>
                   <span className="text-charcoal">
                     {orderSurface === "bong" ? "Bóng" : orderSurface === "bong-50" ? "Bóng 50%" : "Mờ"}
                   </span>
                 </div>
                 <div className="flex items-center justify-between border-t border-walnut/15 pt-3 text-[14px]">
-                  <span className="text-walnut/60">Hũ {orderSize} × {orderQty}</span>
+                  <span className="text-walnut/70">Hũ {orderSize} × {orderQty}</span>
                   <span className="text-charcoal">{formatVND(unitPrice)} / hũ</span>
                 </div>
                 <div className="flex items-center justify-between text-[14px]">
-                  <span className="text-walnut/60">Tạm tính</span>
+                  <span className="text-walnut/70">Tạm tính</span>
                   <span className="text-charcoal">{formatVND(subtotal)}</span>
                 </div>
                 {orderPayment === "online" && (
@@ -1069,13 +1069,13 @@ function Index() {
                   </div>
                 )}
                 <div className="flex items-center justify-between text-[13px]">
-                  <span className="text-walnut/60">Vận chuyển</span>
+                  <span className="text-walnut/70">Vận chuyển</span>
                   <span className={orderPayment === "online" ? "text-clay" : "text-walnut/60"}>
                     {orderPayment === "online" ? "Miễn phí" : "Tính theo địa chỉ"}
                   </span>
                 </div>
                 <div className="flex items-center justify-between border-t border-walnut/20 pt-3 text-[16px] font-medium">
-                  <span className="text-walnut/70">Tổng cộng</span>
+                  <span className="text-walnut/80">Tổng cộng</span>
                   <span className="text-clay">{formatVND(total)}</span>
                 </div>
               </div>
@@ -1087,7 +1087,7 @@ function Index() {
                   if (!orderColor) { alert("Bạn chưa chọn màu sơn."); return; }
                   alert(`Cảm ơn ${orderName} — Lotus sẽ liên hệ ${orderPhone} để xác nhận và giao hàng.`);
                 }}
-                className="space-y-5"
+                className="space-y-6"
               >
                 <Field label="Họ và tên">
                   <Input required value={orderName} onChange={(e) => setOrderName(e.target.value)}
@@ -1114,14 +1114,14 @@ function Index() {
                     className="h-[54px] w-full rounded-none bg-clay text-[12px] font-medium uppercase tracking-[0.22em] text-cream transition hover:bg-clay/90 sm:text-[13px]">
                     Đặt hàng — Lotus xác nhận trong 24h
                   </Button>
-                  <p className="mt-4 text-[11px] tracking-[0.15em] text-walnut/40">
+                  <p className="mt-4 text-[11px] tracking-[0.15em] text-walnut/50">
                     COD toàn quốc · Đổi trả 7 ngày · Hỗ trợ kỹ thuật miễn phí
                   </p>
                 </div>
               </form>
 
               {/* Color accuracy note */}
-              <div className="mt-6 flex items-start gap-3 text-[11px] text-walnut/40">
+              <div className="mt-6 flex items-start gap-3 text-[11px] text-walnut/50">
                 <span className="mt-0.5 text-walnut/25">※</span>
                 <p>
                   Màu hiển thị trên màn hình có thể chênh nhẹ so với thực tế.
@@ -1130,10 +1130,10 @@ function Index() {
 
               {/* Bulk order note */}
               <div className="mt-8 border-t border-walnut/15 pt-6">
-                <p className="text-[13px] text-walnut/50">
+                <p className="text-[13px] text-walnut/60">
                   Mua số lượng lớn cho xưởng hoặc công ty?{" "}
                   <a href="https://zalo.me/843966662" target="_blank" rel="noopener noreferrer"
-                    className="text-walnut/60 underline underline-offset-2 transition hover:text-clay">
+                    className="text-walnut/70 underline underline-offset-2 transition hover:text-clay">
                     Nhắn Zalo để được hỗ trợ riêng.
                   </a>
                 </p>
@@ -1180,27 +1180,27 @@ function Footer() {
         <div className="grid grid-cols-12 gap-6">
           <div className="col-span-12 md:col-span-5">
             <img src={logoLotus} alt="Lotus Logo" className="h-12 w-auto mb-4" />
-            <p className="max-w-sm text-sm leading-relaxed text-walnut/70">
+            <p className="max-w-sm text-sm leading-relaxed text-walnut/65">
               CÔNG TY TNHH SẢN XUẤT THƯƠNG MẠI DỊCH VỤ BÍCH TRANG
             </p>
-            <p className="mt-2 text-xs text-walnut/60">
+            <p className="mt-2 text-xs text-walnut/55">
               MST: 0313351528
             </p>
-            <p className="mt-2 text-xs text-walnut/60">
+            <p className="mt-2 text-xs text-walnut/55">
               99/5 Đường XTT26-1, Ấp 2, Xã Bà Điểm, TP.HCM
             </p>
           </div>
           <div className="col-span-6 md:col-span-3">
-            <div className="text-[11px] uppercase tracking-[0.22em] text-walnut/60">Sản phẩm</div>
-            <ul className="mt-4 space-y-2 text-sm text-charcoal">
+            <div className="text-[11px] uppercase tracking-[0.22em] text-walnut/50 mb-3">Sản phẩm</div>
+            <ul className="mt-4 space-y-2.5 text-sm text-charcoal">
               <li><a href="#choose" className="hover:text-clay">Wood Paint — Indoor</a></li>
               <li><a href="#choose" className="hover:text-clay">Woodstain Finish — Outdoor</a></li>
               <li><a href="#palette" className="hover:text-clay">Bảng màu</a></li>
             </ul>
           </div>
           <div className="col-span-6 md:col-span-4">
-            <div className="text-[11px] uppercase tracking-[0.22em] text-walnut/60">Liên hệ</div>
-            <ul className="mt-4 space-y-2 text-sm text-charcoal">
+            <div className="text-[11px] uppercase tracking-[0.22em] text-walnut/50 mb-3">Liên hệ</div>
+            <ul className="mt-4 space-y-2.5 text-sm text-charcoal">
               <li><a href="https://zalo.me/843966662" target="_blank" rel="noopener noreferrer" className="hover:text-clay">Hotline: 0943 966 662</a></li>
               <li><a href="mailto:sales@sonlotus.vn" className="hover:text-clay">sales@sonlotus.vn</a></li>
               <li><a href="https://sonlotus.vn" target="_blank" rel="noopener noreferrer" className="hover:text-clay">www.sonlotus.vn</a></li>
