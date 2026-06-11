@@ -889,7 +889,7 @@ function Index() {
             </p>
           </div>
 
-          <div className="grid grid-cols-12 gap-x-10 gap-y-16">
+          <div className="grid grid-cols-12 gap-x-10 gap-y-16 px-5 lg:px-0">
 
             {/* LEFT — Selectors */}
             <div className="col-span-12 lg:col-span-7 space-y-10">
