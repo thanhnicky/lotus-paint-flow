@@ -878,7 +878,7 @@ function Index() {
 
       {/* ORDER — ĐẶT HÀNG (NEW MOBILE-FIRST VERSION) */}
       <section id="advise" className="border-t border-walnut/10 bg-sand/30 text-charcoal">
-        <div className="mx-auto max-w-[600px] px-5 py-16 md:py-28">
+        <div className="mx-auto max-w-[1400px] px-5 py-16 md:px-12 md:py-28">
 
           {/* Header */}
           <div className="mb-10 text-center md:text-left">
@@ -912,9 +912,9 @@ function Index() {
                 },
               });
             }}
-            className="space-y-8"
+            className="grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-12"
           >
-            {/* Product Selection */}
+            {/* LEFT COLUMN - Product Selection */}
             <div className="space-y-6">
               {/* Dòng sơn */}
               <div>
@@ -1021,7 +1021,9 @@ function Index() {
               </div>
             </div>
 
-            {/* Order Summary */}
+            {/* RIGHT COLUMN - Summary, Payment, Customer Info */}
+            <div className="space-y-6">
+              {/* Order Summary */}
             <div className="space-y-3 border border-walnut/15 p-5 bg-cream/30">
               <div className="mb-3 text-[10px] uppercase tracking-[0.3em] text-walnut/50">Tóm tắt đơn</div>
               <div className="space-y-2 text-[14px]">
@@ -1142,6 +1144,7 @@ function Index() {
               <p className="mt-4 text-center text-[11px] text-walnut/50">
                 COD toàn quốc · Đổi trả 7 ngày
               </p>
+            </div>
             </div>
           </form>
 
