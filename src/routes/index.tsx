@@ -1003,7 +1003,7 @@ function Index() {
             <div className="col-span-12 lg:col-span-5 lg:border-l lg:border-walnut/15 lg:pl-12 px-5 lg:px-0">
 
               {/* Live order summary */}
-              <div className="mb-8 space-y-3 border border-walnut/15 p-6 bg-cream/30">
+              <div className="mb-8 w-full space-y-3 border border-walnut/15 p-6 bg-cream/30">
                 <div className="mb-4 text-[10px] uppercase tracking-[0.3em] text-walnut/50">Tóm tắt đơn</div>
                 <div className="flex items-center justify-between text-[14px]">
                   <span className="text-walnut/70">Sản phẩm</span>
@@ -1052,9 +1052,9 @@ function Index() {
               </div>
 
               {/* 06 Hình thức thanh toán */}
-              <div>
+              <div className="w-full">
                 <div className="mb-4 text-[11px] uppercase tracking-[0.25em] text-walnut/50">06 — Hình thức thanh toán</div>
-                <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
+                <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 w-full">
                   <button type="button" onClick={() => setOrderPayment("cod")}
                     className={`flex flex-col gap-2 border p-5 text-left transition ${orderPayment === "cod" ? "border-walnut/40 bg-sand/50" : "border-walnut/15 hover:border-walnut/30"}`}>
                     <span className={`text-[13px] font-medium ${orderPayment === "cod" ? "text-charcoal" : "text-walnut/60"}`}>COD — Thanh toán khi nhận</span>
@@ -1075,7 +1075,7 @@ function Index() {
                   if (!orderColor) { alert("Bạn chưa chọn màu sơn."); return; }
                   alert(`Cảm ơn ${orderName} — Lotus sẽ liên hệ ${orderPhone} để xác nhận và giao hàng.`);
                 }}
-                className="space-y-6"
+                className="w-full space-y-6"
               >
                 <Field label="Họ và tên">
                   <Input required value={orderName} onChange={(e) => setOrderName(e.target.value)}
