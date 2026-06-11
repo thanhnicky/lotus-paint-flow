@@ -23,6 +23,7 @@ function ThankYouPage() {
   const bankInfo = {
     account: "211014851223910",
     bank: "Eximbank",
+    bankId: "EIB",
     branch: "CN TP.HCM",
     name: "CÔNG TY TNHH SẢN XUẤT THƯƠNG MẠI DỊCH VỤ BÍCH TRANG",
   };
@@ -31,7 +32,7 @@ function ThankYouPage() {
   const transferSyntax = `Lotus ${phone}`;
   const accountNameEncoded = encodeURIComponent(bankInfo.name);
   const amountClean = amount.replace(/[^\d]/g, ''); // Remove non-numeric characters
-  const qrUrl = `https://img.vietqr.io/image/EXIM-${bankInfo.account}.png?amount=${amountClean}&addInfo=${encodeURIComponent(transferSyntax)}&accountName=${accountNameEncoded}`;
+  const qrUrl = `https://img.vietqr.io/image/${bankInfo.bankId}-${bankInfo.account}-compact2.png?amount=${amountClean}&addInfo=${encodeURIComponent(transferSyntax)}&accountName=${accountNameEncoded}`;
 
   return (
     <div className="min-h-screen bg-sand/30 py-16 px-5">
