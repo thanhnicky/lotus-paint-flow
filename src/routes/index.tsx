@@ -247,7 +247,7 @@ function Index() {
   }
 
   return (
-    <div className="min-h-screen bg-cream text-charcoal font-sans antialiased overscroll-behavior-none">
+    <div className="min-h-screen bg-cream text-charcoal font-sans antialiased overscroll-behavior-none overflow-x-hidden">
       <Header />
       {showSticky && <StickyCTA />}
 
