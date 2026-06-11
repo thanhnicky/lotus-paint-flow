@@ -593,7 +593,7 @@ function Index() {
                     className={`aspect-square w-full object-cover transition-all duration-200 ${
                       orderColor === c.name
                         ? "ring-2 ring-clay ring-offset-2"
-                        : "opacity-80 group-hover:opacity-100 group-hover:scale-[1.02]"
+                        : "group-hover:scale-[1.02]"
                     }`}
                   />
                 ) : (
@@ -601,7 +601,7 @@ function Index() {
                     className={`aspect-square w-full border border-walnut/15 bg-sand/30 transition-all duration-200 ${
                       orderColor === c.name
                         ? "ring-2 ring-clay ring-offset-2"
-                        : "opacity-80 group-hover:opacity-100"
+                        : ""
                     }`}
                   />
                 )}
