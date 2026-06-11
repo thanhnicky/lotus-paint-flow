@@ -1,4 +1,5 @@
 {
   "buildCommand": "rm -rf .vercel/output node_modules/.nitro && LOVABLE_SANDBOX=0 npm run build",
-  "installCommand": "npm install --legacy-peer-deps"
+  "installCommand": "npm install --legacy-peer-deps",
+  "rebuildTrigger": "2025-06-11-18-17"
 }
