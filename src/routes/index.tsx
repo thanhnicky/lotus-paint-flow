@@ -891,10 +891,10 @@ function Index() {
             </p>
           </div>
 
-          <div className="grid grid-cols-12 gap-x-10 gap-y-16">
+          <div className="grid grid-cols-12 gap-x-10 gap-y-16 px-5 lg:px-0">
 
             {/* LEFT — Selectors */}
-            <div className="col-span-12 lg:col-span-7 space-y-10 px-5 lg:px-0">
+            <div className="col-span-12 lg:col-span-7 space-y-10">
 
               {/* 01 Dòng sơn */}
               <div>
@@ -1002,7 +1002,7 @@ function Index() {
             </div>
 
             {/* RIGHT — Summary + Form */}
-            <div className="col-span-12 lg:col-span-5 lg:border-l lg:border-walnut/15 lg:pl-12 px-5 lg:px-0">
+            <div className="col-span-12 lg:col-span-5 lg:border-l lg:border-walnut/15 lg:pl-12">
 
               {/* Live order summary */}
               <div className="mb-8 w-full max-w-full space-y-3 border border-walnut/15 p-4 sm:p-6 bg-cream/30 box-border overflow-visible">
