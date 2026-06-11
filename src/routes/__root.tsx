@@ -11,6 +11,7 @@ import { useEffect, type ReactNode } from "react";
 
 import appCss from "../styles.css?url";
 import favicon from "../assets/favicon.ico?url";
+import ogImage from "../assets/son-go-lotus-khong-mui.jpeg?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
 
 function NotFoundComponent() {
@@ -91,8 +92,8 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: "Sơn Gỗ Hệ Nước Lotus - Sơn Giữ Vân Gỗ, Sơn Màu Bết Cho Nội Thất Gia Đình" },
       { name: "twitter:description", content: "Sơn gỗ hệ nước Lotus: sơn giữ vân gỗ và sơn màu bệt ít mùi, khô nhanh, dễ tự thi công tại nhà. Phù hợp tủ, cửa, bàn ghế nội thất." },
-      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/e7dcdd75-21c0-4358-a17d-cedb001668f5/id-preview-d897f159--f86487ce-dcaa-47fe-b9de-eff2e9a5b016.lovable.app-1780917533474.png" },
-      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/e7dcdd75-21c0-4358-a17d-cedb001668f5/id-preview-d897f159--f86487ce-dcaa-47fe-b9de-eff2e9a5b016.lovable.app-1780917533474.png" },
+      { property: "og:image", content: ogImage },
+      { name: "twitter:image", content: ogImage },
       { rel: "canonical", href: "https://lotus-paint-flow.vercel.app/" },
       {
         "script:ld+json": {
