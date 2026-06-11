@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, useNavigate } from "@tanstack/react-router";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -195,6 +195,7 @@ Tone: Premium, nội thất, ấm áp, không icon/emoji/grid startup
 */
 
 function Index() {
+  const navigate = useNavigate();
   const [tab, setTab] = useState<"indoor" | "outdoor">("indoor");
   const [showPaletteModal, setShowPaletteModal] = useState(false);
 
@@ -895,7 +896,14 @@ function Index() {
             onSubmit={(e) => {
               e.preventDefault();
               if (!orderColor) { alert("Bạn chưa chọn màu sơn."); return; }
-              alert(`Cảm ơn ${orderName} — Lotus sẽ liên hệ ${orderPhone} để xác nhận và giao hàng.`);
+              navigate({
+                to: "/thank-you",
+                search: {
+                  phone: orderPhone,
+                  payment: orderPayment,
+                  amount: formatVND(total),
+                },
+              });
             }}
             className="space-y-8"
           >
