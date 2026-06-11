@@ -87,25 +87,25 @@ const surfaces = [
     label: "Bàn ăn / bàn làm việc", 
     desc: "Bàn gỗ nội thất dùng hàng ngày",
     recommendation: "Sơn gỗ màu bệt (Indoor)",
-    detail: "2 lớp, độ phủ 8–10 m²/kg, màu ấm: Sứ, Mộc, Khói"
+    detail: "2 lớp, độ phủ 7–9 m²/kg, màu ấm: Sứ, Mộc, Khói"
   },
   { 
     label: "Tủ áo / tủ bếp / kệ TV", 
     desc: "Tủ kệ nội thất lớn",
     recommendation: "Sơn gỗ màu bệt (Indoor)",
-    detail: "2–3 lớp, độ phủ 8–10 m²/kg, che nền cũ tốt"
+    detail: "2 lớp, độ phủ 7–9 m²/kg, che nền cũ tốt"
   },
   { 
     label: "Cửa, khung cửa, lan can", 
     desc: "Cửa nội thất hoặc ngoại thất",
     recommendation: "Woodstain Finish (Nội/Ngoại thất)",
-    detail: "2–3 lớp, giữ vân gỗ, kháng ẩm và UV"
+    detail: "2 lớp, giữ vân gỗ, kháng ẩm và UV"
   },
   { 
     label: "Sàn gỗ, bậc cầu thang", 
     desc: "Sàn tự nhiên hoặc engineered",
     recommendation: "Woodstain Finish (Sàn)",
-    detail: "3 lớp, độ bền cao, chịu ma sát"
+    detail: "2 lớp, độ bền cao, chịu ma sát"
   },
   { 
     label: "Vật dụng nhỏ (ghế, kệ, đồ trang trí)", 
@@ -157,7 +157,7 @@ const faqs = [
   },
   {
     q: "Mua số lượng lớn có giá tốt không?",
-    a: "Có. Đơn từ 10 hũ trở lên được giá sỉ. Liên hệ Zalo để nhận báo giá riêng cho xưởng, công ty, hoặc dự án lớn."
+    a: "Có. Đơn từ 50kg trở lên được giá sỉ. Liên hệ Zalo để nhận báo giá riêng cho xưởng, công ty, hoặc dự án lớn."
   },
   {
     q: "Nếu chọn sai màu hoặc không ưng thì sao?",
@@ -165,7 +165,7 @@ const faqs = [
   },
   {
     q: "Một hũ 1kg sơn được bao nhiêu m²?",
-    a: "Khoảng 8–10 m² cho mỗi lớp tuỳ bề mặt. Khuyến nghị sơn 2 lớp để màng sơn đều và bền — tương đương 4–5 m² hoàn thiện cho 1kg.",
+    a: "Khoảng 7–9 m² cho mỗi lớp tuỳ bề mặt. Khuyến nghị sơn 2 lớp để màng sơn đều và bền — tương đương 4–5 m² hoàn thiện cho 1kg.",
   },
   {
     q: "Sơn lên đồ gỗ cũ đã có sơn cũ thì cần xử lý thế nào?",
@@ -247,7 +247,7 @@ function Index() {
   }
 
   return (
-    <div className="min-h-screen bg-cream text-charcoal font-sans antialiased">
+    <div className="min-h-screen bg-cream text-charcoal font-sans antialiased overscroll-behavior-none">
       <Header />
       {showSticky && <StickyCTA />}
 
@@ -373,13 +373,13 @@ function Index() {
               </h2>
             </div>
             <p className="max-w-xs text-[13px] leading-relaxed text-walnut/65">
-              1 hũ sơn khoảng 8–10 m² mỗi lớp. Khuyến nghị sơn 2 lớp.
+              1 hũ sơn khoảng 7–9 m² mỗi lớp. Khuyến nghị sơn 2 lớp.
             </p>
           </header>
 
           <div className="mt-14 grid grid-cols-2 gap-y-12 border-t border-walnut/20 pt-2 sm:grid-cols-4 sm:divide-x sm:divide-walnut/15">
             <SpecCell k="Quy cách" v="Hũ 1kg" sub="Đặt combo nhiều hũ" />
-            <SpecCell k="Độ phủ" v="8–10 m²" sub="Mỗi lớp · bề mặt phẳng" />
+            <SpecCell k="Độ phủ" v="7–9 m²" sub="Mỗi lớp · bề mặt phẳng" />
             <SpecCell k="Số lớp" v="2 lớp" sub="3 lớp cho sàn & ngoại thất" />
             <SpecCell k="Khô bề mặt" v="30 phút" sub="Lớp 2 sau 2 giờ" />
           </div>
@@ -450,10 +450,10 @@ function Index() {
                 {/* Divider line center */}
                 <div className="pointer-events-none absolute inset-y-0 left-1/2 w-px -translate-x-1/2 bg-cream/30" />
                 {/* Labels */}
-                <div className="absolute bottom-4 left-[8%] text-[9px] uppercase tracking-[0.28em] text-cream/75 sm:bottom-5 sm:text-[10px]">
+                <div className="absolute bottom-3 left-3 bg-black/40 px-2 py-1 text-[9px] uppercase tracking-[0.28em] text-cream sm:bottom-5 sm:left-[8%] sm:text-[10px]">
                   Trước khi sơn
                 </div>
-                <div className="absolute bottom-4 right-[8%] text-[9px] uppercase tracking-[0.28em] text-cream/75 sm:bottom-5 sm:text-[10px]">
+                <div className="absolute bottom-3 right-3 bg-black/40 px-2 py-1 text-[9px] uppercase tracking-[0.28em] text-cream sm:bottom-5 sm:right-[8%] sm:text-[10px]">
                   Sau khi sơn
                 </div>
               </div>
@@ -492,9 +492,9 @@ function Index() {
               <li key={b.n} className={`py-9 ${
                 i === 0 ? "sm:pr-10" : i === 1 ? "sm:px-10" : "sm:pl-10"
               }`}>
-                <div className="text-[10px] uppercase tracking-[0.28em] text-clay">{b.n}</div>
+                <div className="text-[14px] uppercase tracking-[0.28em] text-clay">{b.n}</div>
                 <div className="mt-3 font-serif text-[19px] text-charcoal">{b.t}</div>
-                <p className="mt-2 text-[13px] leading-relaxed text-walnut/65">{b.d}</p>
+                <p className="mt-2 text-[14px] leading-relaxed text-walnut/65">{b.d}</p>
               </li>
             ))}
           </ul>
@@ -800,18 +800,6 @@ function Index() {
               </blockquote>
             ))}
           </div>
-
-          <div className="mt-10 md:hidden">
-            <a
-              href="https://www.facebook.com/lotuspaint"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-3 text-[12px] font-medium uppercase tracking-[0.18em] text-charcoal transition hover:text-clay sm:text-[13px]"
-            >
-              Xem thêm ảnh & feedback trên fanpage Lotus
-              <ArrowRight className="h-4 w-4" />
-            </a>
-          </div>
         </div>
       </section>
 
@@ -1009,23 +997,6 @@ function Index() {
                   </div>
                 </div>
               </div>
-
-              {/* 06 Thanh toán */}
-              <div>
-                <div className="mb-4 text-[11px] uppercase tracking-[0.25em] text-walnut/50">06 — Hình thức thanh toán</div>
-                <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
-                  <button type="button" onClick={() => setOrderPayment("cod")}
-                    className={`flex flex-col gap-2 border p-5 text-left transition ${orderPayment === "cod" ? "border-walnut/40 bg-sand/50" : "border-walnut/15 hover:border-walnut/30"}`}>
-                    <span className={`text-[13px] font-medium ${orderPayment === "cod" ? "text-charcoal" : "text-walnut/60"}`}>COD — Thanh toán khi nhận</span>
-                    <span className={`text-[12px] ${orderPayment === "cod" ? "text-walnut/55" : "text-walnut/40"}`}>Không cần thanh toán trước</span>
-                  </button>
-                  <button type="button" onClick={() => setOrderPayment("online")}
-                    className={`flex flex-col gap-2 border p-5 text-left transition ${orderPayment === "online" ? "border-clay/60 bg-clay/5" : "border-walnut/15 hover:border-walnut/30"}`}>
-                    <span className={`text-[13px] font-medium ${orderPayment === "online" ? "text-clay" : "text-walnut/60"}`}>Thanh toán Online</span>
-                    <span className={`text-[12px] ${orderPayment === "online" ? "text-clay/80" : "text-walnut/40"}`}>Giảm 10% + Miễn phí giao hàng</span>
-                  </button>
-                </div>
-              </div>
             </div>
 
             {/* RIGHT — Summary + Form */}
@@ -1080,6 +1051,23 @@ function Index() {
                 </div>
               </div>
 
+              {/* 06 Hình thức thanh toán */}
+              <div>
+                <div className="mb-4 text-[11px] uppercase tracking-[0.25em] text-walnut/50">06 — Hình thức thanh toán</div>
+                <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
+                  <button type="button" onClick={() => setOrderPayment("cod")}
+                    className={`flex flex-col gap-2 border p-5 text-left transition ${orderPayment === "cod" ? "border-walnut/40 bg-sand/50" : "border-walnut/15 hover:border-walnut/30"}`}>
+                    <span className={`text-[13px] font-medium ${orderPayment === "cod" ? "text-charcoal" : "text-walnut/60"}`}>COD — Thanh toán khi nhận</span>
+                    <span className={`text-[12px] ${orderPayment === "cod" ? "text-walnut/55" : "text-walnut/40"}`}>Không cần thanh toán trước</span>
+                  </button>
+                  <button type="button" onClick={() => setOrderPayment("online")}
+                    className={`flex flex-col gap-2 border p-5 text-left transition ${orderPayment === "online" ? "border-clay/60 bg-clay/5" : "border-walnut/15 hover:border-walnut/30"}`}>
+                    <span className={`text-[13px] font-medium ${orderPayment === "online" ? "text-clay" : "text-walnut/60"}`}>Thanh toán Online</span>
+                    <span className={`text-[12px] ${orderPayment === "online" ? "text-clay/80" : "text-walnut/40"}`}>Giảm 10% + Miễn phí giao hàng</span>
+                  </button>
+                </div>
+              </div>
+
               {/* Contact form */}
               <form
                 onSubmit={(e) => {
@@ -1112,7 +1100,7 @@ function Index() {
                 <div className="pt-3">
                   <Button type="submit"
                     className="h-[54px] w-full rounded-none bg-clay text-[12px] font-medium uppercase tracking-[0.22em] text-cream transition hover:bg-clay/90 sm:text-[13px]">
-                    Đặt hàng — Lotus xác nhận trong 24h
+                    Đặt hàng
                   </Button>
                   <p className="mt-4 text-[11px] tracking-[0.15em] text-walnut/50">
                     COD toàn quốc · Đổi trả 7 ngày · Hỗ trợ kỹ thuật miễn phí
@@ -1365,7 +1353,7 @@ function DecisionCard({
         />
       </div>
       <div className="mt-7 flex items-baseline gap-4">
-        <span className="font-serif text-2xl text-clay">{index}</span>
+        <span className="font-serif text-4xl text-clay">{index}</span>
         <span className="text-[11px] uppercase tracking-[0.25em] text-walnut/70">{subtitle}</span>
       </div>
       <h3 className="mt-4 font-serif text-[28px] leading-tight text-charcoal sm:text-3xl md:text-4xl">{title}</h3>
@@ -1394,7 +1382,7 @@ function DecisionCard({
 
 function StickyCTA() {
   return (
-    <div className="fixed bottom-0 left-0 right-0 z-50 bg-charcoal/95 backdrop-blur border-t border-walnut/20 py-3 px-5 md:py-4">
+    <div className="hidden md:fixed md:bottom-0 md:left-0 md:right-0 md:z-50 bg-charcoal/95 backdrop-blur border-t border-walnut/20 py-3 px-5 md:py-4">
       <div className="mx-auto max-w-[1400px] flex flex-col sm:flex-row items-center justify-between gap-3">
         <p className="text-[11px] uppercase tracking-[0.18em] text-cream/80 sm:text-[12px]">
           Muốn chọn đúng sơn & số kg? Gửi ảnh bề mặt qua Zalo.
