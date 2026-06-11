@@ -649,116 +649,116 @@ function Index() {
         /* @__PURE__ */ jsxRuntimeExports.jsx(AccordionContent, { className: "pb-6 text-[15px] leading-relaxed text-walnut/80", children: f.a })
       ] }, i)) }) })
     ] }) }) }),
-    /* @__PURE__ */ jsxRuntimeExports.jsx("section", { id: "advise", className: "border-t border-walnut/10 bg-charcoal text-cream", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "mx-auto max-w-[1400px] px-5 py-20 md:px-12 md:py-32", children: [
-      /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "mb-14", children: [
-        /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-[11px] uppercase tracking-[0.3em] text-cream/45", children: "12 — Đặt hàng" }),
+    /* @__PURE__ */ jsxRuntimeExports.jsx("section", { id: "advise", className: "border-t border-walnut/10 bg-sand/30 text-charcoal", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "mx-auto max-w-[1400px] px-5 py-20 md:px-12 md:py-32", children: [
+      /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "mb-16", children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-[11px] uppercase tracking-[0.3em] text-walnut/50", children: "12 — Đặt hàng" }),
         /* @__PURE__ */ jsxRuntimeExports.jsxs("h2", { className: "mt-4 font-serif text-[34px] leading-tight sm:text-5xl", children: [
           "Chọn màu,",
           /* @__PURE__ */ jsxRuntimeExports.jsx("br", {}),
           "đặt hàng ngay."
         ] }),
-        /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "mt-5 max-w-xl text-[15px] leading-[1.7] text-cream/55", children: "Mua lẻ trực tiếp — không cần tư vấn. Chọn dòng sơn, môi trường sử dụng, màu và kích thước. Lotus giao toàn quốc." })
+        /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "mt-5 max-w-xl text-[15px] leading-[1.7] text-walnut/70", children: "Mua lẻ trực tiếp — không cần tư vấn. Chọn dòng sơn, môi trường sử dụng, màu và kích thước. Lotus giao toàn quốc." })
       ] }),
-      /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "grid grid-cols-12 gap-x-8 gap-y-14", children: [
-        /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "col-span-12 lg:col-span-7 space-y-10", children: [
+      /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "grid grid-cols-12 gap-x-10 gap-y-16", children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "col-span-12 lg:col-span-7 space-y-11", children: [
           /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
-            /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "mb-4 text-[11px] uppercase tracking-[0.25em] text-cream/40", children: "01 — Dòng sơn" }),
-            /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "inline-flex border border-cream/20", children: [
+            /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "mb-4 text-[11px] uppercase tracking-[0.25em] text-walnut/40", children: "01 — Dòng sơn" }),
+            /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "inline-flex border border-walnut/20", children: [
               /* @__PURE__ */ jsxRuntimeExports.jsx("button", { type: "button", onClick: () => {
                 setOrderProduct("bet");
                 setOrderColor("");
-              }, className: `px-6 py-3.5 text-[13px] transition ${orderProduct === "bet" ? "bg-cream text-charcoal font-medium" : "text-cream/60 hover:text-cream"}`, children: "Sơn màu bệt" }),
+              }, className: `px-6 py-3.5 text-[13px] transition ${orderProduct === "bet" ? "bg-clay text-cream font-medium" : "text-walnut/60 hover:text-charcoal"}`, children: "Sơn màu bệt" }),
               /* @__PURE__ */ jsxRuntimeExports.jsx("button", { type: "button", onClick: () => {
                 setOrderProduct("van-go");
                 setOrderColor("");
-              }, className: `border-l border-cream/20 px-6 py-3.5 text-[13px] transition ${orderProduct === "van-go" ? "bg-cream text-charcoal font-medium" : "text-cream/60 hover:text-cream"}`, children: "Sơn giữ vân gỗ" })
+              }, className: `border-l border-walnut/20 px-6 py-3.5 text-[13px] transition ${orderProduct === "van-go" ? "bg-clay text-cream font-medium" : "text-walnut/60 hover:text-charcoal"}`, children: "Sơn giữ vân gỗ" })
             ] })
           ] }),
           /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
-            /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "mb-4 text-[11px] uppercase tracking-[0.25em] text-cream/40", children: "02 — Môi trường sử dụng" }),
-            /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "inline-flex border border-cream/20", children: [
-              /* @__PURE__ */ jsxRuntimeExports.jsx("button", { type: "button", onClick: () => setOrderEnv("indoor"), className: `px-6 py-3.5 text-[13px] transition ${orderEnv === "indoor" ? "bg-cream text-charcoal font-medium" : "text-cream/60 hover:text-cream"}`, children: "Trong nhà" }),
-              /* @__PURE__ */ jsxRuntimeExports.jsx("button", { type: "button", onClick: () => setOrderEnv("outdoor"), className: `border-l border-cream/20 px-6 py-3.5 text-[13px] transition ${orderEnv === "outdoor" ? "bg-cream text-charcoal font-medium" : "text-cream/60 hover:text-cream"}`, children: "Ngoài trời" })
+            /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "mb-4 text-[11px] uppercase tracking-[0.25em] text-walnut/40", children: "02 — Môi trường sử dụng" }),
+            /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "inline-flex border border-walnut/20", children: [
+              /* @__PURE__ */ jsxRuntimeExports.jsx("button", { type: "button", onClick: () => setOrderEnv("indoor"), className: `px-6 py-3.5 text-[13px] transition ${orderEnv === "indoor" ? "bg-clay text-cream font-medium" : "text-walnut/60 hover:text-charcoal"}`, children: "Trong nhà" }),
+              /* @__PURE__ */ jsxRuntimeExports.jsx("button", { type: "button", onClick: () => setOrderEnv("outdoor"), className: `border-l border-walnut/20 px-6 py-3.5 text-[13px] transition ${orderEnv === "outdoor" ? "bg-clay text-cream font-medium" : "text-walnut/60 hover:text-charcoal"}`, children: "Ngoài trời" })
             ] })
           ] }),
           /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
-            /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "mb-4 text-[11px] uppercase tracking-[0.25em] text-cream/40", children: "03 — Màu sơn" }),
+            /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "mb-4 text-[11px] uppercase tracking-[0.25em] text-walnut/40", children: "03 — Màu sơn" }),
             /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "grid grid-cols-4 gap-3 sm:grid-cols-6 lg:grid-cols-4 xl:grid-cols-6", children: (orderProduct === "bet" ? interiorPalette : exteriorPalette).map((c) => /* @__PURE__ */ jsxRuntimeExports.jsxs("button", { type: "button", onClick: () => setOrderColor(c.name), className: "group flex flex-col items-center gap-2", children: [
-              /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: `h-12 w-full transition-all duration-200 ${orderColor === c.name ? "ring-2 ring-cream ring-offset-2 ring-offset-charcoal" : "opacity-60 group-hover:opacity-90"}`, style: {
+              /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: `h-12 w-full transition-all duration-200 ${orderColor === c.name ? "ring-2 ring-clay ring-offset-2" : "opacity-60 group-hover:opacity-90"}`, style: {
                 backgroundColor: c.hex
               } }),
-              /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: `text-[11px] transition ${orderColor === c.name ? "text-cream" : "text-cream/45"}`, children: c.name })
+              /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: `text-[11px] transition ${orderColor === c.name ? "text-clay font-medium" : "text-walnut/50"}`, children: c.name })
             ] }, c.name)) })
           ] }),
           /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
-            /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "mb-4 text-[11px] uppercase tracking-[0.25em] text-cream/40", children: "04 — Kích thước & số lượng" }),
+            /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "mb-4 text-[11px] uppercase tracking-[0.25em] text-walnut/40", children: "04 — Kích thước & số lượng" }),
             /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex flex-wrap items-center gap-4", children: [
-              /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "inline-flex border border-cream/20", children: [
-                /* @__PURE__ */ jsxRuntimeExports.jsxs("button", { type: "button", onClick: () => setOrderSize("1kg"), className: `px-5 py-3.5 text-[13px] transition ${orderSize === "1kg" ? "bg-cream text-charcoal font-medium" : "text-cream/60 hover:text-cream"}`, children: [
+              /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "inline-flex border border-walnut/20", children: [
+                /* @__PURE__ */ jsxRuntimeExports.jsxs("button", { type: "button", onClick: () => setOrderSize("1kg"), className: `px-5 py-3.5 text-[13px] transition ${orderSize === "1kg" ? "bg-clay text-cream font-medium" : "text-walnut/60 hover:text-charcoal"}`, children: [
                   "Hũ 1 kg",
                   /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "ml-2 text-[11px] opacity-60", children: formatVND(PRICES[orderProduct][orderEnv]["1kg"]) })
                 ] }),
-                /* @__PURE__ */ jsxRuntimeExports.jsxs("button", { type: "button", onClick: () => setOrderSize("5kg"), className: `border-l border-cream/20 px-5 py-3.5 text-[13px] transition ${orderSize === "5kg" ? "bg-cream text-charcoal font-medium" : "text-cream/60 hover:text-cream"}`, children: [
+                /* @__PURE__ */ jsxRuntimeExports.jsxs("button", { type: "button", onClick: () => setOrderSize("5kg"), className: `border-l border-walnut/20 px-5 py-3.5 text-[13px] transition ${orderSize === "5kg" ? "bg-clay text-cream font-medium" : "text-walnut/60 hover:text-charcoal"}`, children: [
                   "Hũ 5 kg",
                   /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "ml-2 text-[11px] opacity-60", children: formatVND(PRICES[orderProduct][orderEnv]["5kg"]) })
                 ] })
               ] }),
-              /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center border border-cream/20", children: [
-                /* @__PURE__ */ jsxRuntimeExports.jsx("button", { type: "button", onClick: () => setOrderQty(Math.max(1, orderQty - 1)), className: "flex h-[46px] w-11 items-center justify-center text-xl leading-none text-cream/60 transition hover:text-cream", children: "−" }),
-                /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "w-10 text-center text-[15px] text-cream", children: orderQty }),
-                /* @__PURE__ */ jsxRuntimeExports.jsx("button", { type: "button", onClick: () => setOrderQty(orderQty + 1), className: "flex h-[46px] w-11 items-center justify-center text-xl leading-none text-cream/60 transition hover:text-cream", children: "+" })
+              /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center border border-walnut/20", children: [
+                /* @__PURE__ */ jsxRuntimeExports.jsx("button", { type: "button", onClick: () => setOrderQty(Math.max(1, orderQty - 1)), className: "flex h-[46px] w-11 items-center justify-center text-xl leading-none text-walnut/50 transition hover:text-charcoal", children: "−" }),
+                /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "w-10 text-center text-[15px] text-charcoal", children: orderQty }),
+                /* @__PURE__ */ jsxRuntimeExports.jsx("button", { type: "button", onClick: () => setOrderQty(orderQty + 1), className: "flex h-[46px] w-11 items-center justify-center text-xl leading-none text-walnut/50 transition hover:text-charcoal", children: "+" })
               ] })
             ] })
           ] }),
           /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
-            /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "mb-4 text-[11px] uppercase tracking-[0.25em] text-cream/40", children: "05 — Hình thức thanh toán" }),
+            /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "mb-4 text-[11px] uppercase tracking-[0.25em] text-walnut/40", children: "05 — Hình thức thanh toán" }),
             /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "grid grid-cols-1 gap-3 sm:grid-cols-2", children: [
-              /* @__PURE__ */ jsxRuntimeExports.jsxs("button", { type: "button", onClick: () => setOrderPayment("cod"), className: `flex flex-col gap-2 border p-5 text-left transition ${orderPayment === "cod" ? "border-cream/50 bg-cream/8" : "border-cream/20 hover:border-cream/35"}`, children: [
-                /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: `text-[13px] font-medium ${orderPayment === "cod" ? "text-cream" : "text-cream/60"}`, children: "COD — Thanh toán khi nhận" }),
-                /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: `text-[12px] ${orderPayment === "cod" ? "text-cream/55" : "text-cream/35"}`, children: "Không cần thanh toán trước" })
+              /* @__PURE__ */ jsxRuntimeExports.jsxs("button", { type: "button", onClick: () => setOrderPayment("cod"), className: `flex flex-col gap-2 border p-5 text-left transition ${orderPayment === "cod" ? "border-walnut/40 bg-sand/50" : "border-walnut/15 hover:border-walnut/30"}`, children: [
+                /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: `text-[13px] font-medium ${orderPayment === "cod" ? "text-charcoal" : "text-walnut/60"}`, children: "COD — Thanh toán khi nhận" }),
+                /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: `text-[12px] ${orderPayment === "cod" ? "text-walnut/55" : "text-walnut/40"}`, children: "Không cần thanh toán trước" })
               ] }),
-              /* @__PURE__ */ jsxRuntimeExports.jsxs("button", { type: "button", onClick: () => setOrderPayment("online"), className: `flex flex-col gap-2 border p-5 text-left transition ${orderPayment === "online" ? "border-clay/60 bg-clay/8" : "border-cream/20 hover:border-cream/35"}`, children: [
-                /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: `text-[13px] font-medium ${orderPayment === "online" ? "text-cream" : "text-cream/60"}`, children: "Thanh toán Online" }),
-                /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: `text-[12px] ${orderPayment === "online" ? "text-clay" : "text-cream/35"}`, children: "Giảm 10% + Miễn phí giao hàng" })
+              /* @__PURE__ */ jsxRuntimeExports.jsxs("button", { type: "button", onClick: () => setOrderPayment("online"), className: `flex flex-col gap-2 border p-5 text-left transition ${orderPayment === "online" ? "border-clay/60 bg-clay/5" : "border-walnut/15 hover:border-walnut/30"}`, children: [
+                /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: `text-[13px] font-medium ${orderPayment === "online" ? "text-clay" : "text-walnut/60"}`, children: "Thanh toán Online" }),
+                /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: `text-[12px] ${orderPayment === "online" ? "text-clay/80" : "text-walnut/40"}`, children: "Giảm 10% + Miễn phí giao hàng" })
               ] })
             ] })
           ] })
         ] }),
-        /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "col-span-12 lg:col-span-5 lg:border-l lg:border-cream/12 lg:pl-12", children: [
-          /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "mb-9 space-y-3 border border-cream/12 p-6", children: [
-            /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "mb-4 text-[10px] uppercase tracking-[0.3em] text-cream/38", children: "Tóm tắt đơn" }),
+        /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "col-span-12 lg:col-span-5 lg:border-l lg:border-walnut/15 lg:pl-12", children: [
+          /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "mb-10 space-y-3 border border-walnut/15 p-6 bg-cream/30", children: [
+            /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "mb-4 text-[10px] uppercase tracking-[0.3em] text-walnut/40", children: "Tóm tắt đơn" }),
             /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center justify-between text-[14px]", children: [
-              /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-cream/55", children: "Sản phẩm" }),
-              /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-cream", children: orderProduct === "bet" ? "Sơn màu bệt" : "Sơn giữ vân gỗ" })
+              /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-walnut/60", children: "Sản phẩm" }),
+              /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-charcoal", children: orderProduct === "bet" ? "Sơn màu bệt" : "Sơn giữ vân gỗ" })
             ] }),
             /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center justify-between text-[14px]", children: [
-              /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-cream/55", children: "Môi trường" }),
-              /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-cream", children: orderEnv === "indoor" ? "Trong nhà" : "Ngoài trời" })
+              /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-walnut/60", children: "Môi trường" }),
+              /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-charcoal", children: orderEnv === "indoor" ? "Trong nhà" : "Ngoài trời" })
             ] }),
             /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center justify-between text-[14px]", children: [
-              /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-cream/55", children: "Màu" }),
-              /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "flex items-center gap-2 text-cream", children: orderColor ? /* @__PURE__ */ jsxRuntimeExports.jsxs(jsxRuntimeExports.Fragment, { children: [
+              /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-walnut/60", children: "Màu" }),
+              /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "flex items-center gap-2 text-charcoal", children: orderColor ? /* @__PURE__ */ jsxRuntimeExports.jsxs(jsxRuntimeExports.Fragment, { children: [
                 /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "inline-block h-3.5 w-3.5 shrink-0", style: {
                   backgroundColor: (orderProduct === "bet" ? interiorPalette : exteriorPalette).find((c) => c.name === orderColor)?.hex
                 } }),
                 orderColor
-              ] }) : /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "italic text-cream/30", children: "Chưa chọn" }) })
+              ] }) : /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "italic text-walnut/35", children: "Chưa chọn" }) })
             ] }),
-            /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center justify-between border-t border-cream/12 pt-3 text-[14px]", children: [
-              /* @__PURE__ */ jsxRuntimeExports.jsxs("span", { className: "text-cream/55", children: [
+            /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center justify-between border-t border-walnut/15 pt-3 text-[14px]", children: [
+              /* @__PURE__ */ jsxRuntimeExports.jsxs("span", { className: "text-walnut/60", children: [
                 "Hũ ",
                 orderSize,
                 " × ",
                 orderQty
               ] }),
-              /* @__PURE__ */ jsxRuntimeExports.jsxs("span", { className: "text-cream", children: [
+              /* @__PURE__ */ jsxRuntimeExports.jsxs("span", { className: "text-charcoal", children: [
                 formatVND(unitPrice),
                 " / hũ"
               ] })
             ] }),
             /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center justify-between text-[14px]", children: [
-              /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-cream/55", children: "Tạm tính" }),
-              /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-cream", children: formatVND(subtotal) })
+              /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-walnut/60", children: "Tạm tính" }),
+              /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-charcoal", children: formatVND(subtotal) })
             ] }),
             orderPayment === "online" && /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center justify-between text-[13px]", children: [
               /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-clay/80", children: "Giảm 10% (online)" }),
@@ -768,12 +768,12 @@ function Index() {
               ] })
             ] }),
             /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center justify-between text-[13px]", children: [
-              /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-cream/55", children: "Vận chuyển" }),
-              /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: orderPayment === "online" ? "text-clay" : "text-cream/55", children: orderPayment === "online" ? "Miễn phí" : "Tính theo địa chỉ" })
+              /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-walnut/60", children: "Vận chuyển" }),
+              /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: orderPayment === "online" ? "text-clay" : "text-walnut/60", children: orderPayment === "online" ? "Miễn phí" : "Tính theo địa chỉ" })
             ] }),
-            /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center justify-between border-t border-cream/20 pt-3 text-[16px] font-medium", children: [
-              /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-cream/70", children: "Tổng cộng" }),
-              /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-cream", children: formatVND(total) })
+            /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center justify-between border-t border-walnut/20 pt-3 text-[16px] font-medium", children: [
+              /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-walnut/70", children: "Tổng cộng" }),
+              /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-clay", children: formatVND(total) })
             ] })
           ] }),
           /* @__PURE__ */ jsxRuntimeExports.jsxs("form", { onSubmit: (e) => {
@@ -784,20 +784,20 @@ function Index() {
             }
             alert(`Cảm ơn ${orderName} — Lotus sẽ liên hệ ${orderPhone} để xác nhận và giao hàng.`);
           }, className: "space-y-5", children: [
-            /* @__PURE__ */ jsxRuntimeExports.jsx(Field, { label: "Họ và tên", children: /* @__PURE__ */ jsxRuntimeExports.jsx(Input, { required: true, value: orderName, onChange: (e) => setOrderName(e.target.value), className: "h-[52px] rounded-none border-0 border-b border-cream/25 bg-transparent px-0 text-[15px] text-cream placeholder:text-cream/30 focus-visible:border-clay focus-visible:ring-0" }) }),
-            /* @__PURE__ */ jsxRuntimeExports.jsx(Field, { label: "Số điện thoại / Zalo", children: /* @__PURE__ */ jsxRuntimeExports.jsx(Input, { required: true, type: "tel", value: orderPhone, onChange: (e) => setOrderPhone(e.target.value), className: "h-[52px] rounded-none border-0 border-b border-cream/25 bg-transparent px-0 text-[15px] text-cream placeholder:text-cream/30 focus-visible:border-clay focus-visible:ring-0" }) }),
-            /* @__PURE__ */ jsxRuntimeExports.jsx(Field, { label: "Địa chỉ nhận hàng", children: /* @__PURE__ */ jsxRuntimeExports.jsx(Input, { required: true, value: orderAddress, onChange: (e) => setOrderAddress(e.target.value), placeholder: "Số nhà, đường, phường / xã...", className: "h-[52px] rounded-none border-0 border-b border-cream/25 bg-transparent px-0 text-[15px] text-cream placeholder:text-cream/30 focus-visible:border-clay focus-visible:ring-0" }) }),
-            /* @__PURE__ */ jsxRuntimeExports.jsx(Field, { label: "Tỉnh / Thành phố", children: /* @__PURE__ */ jsxRuntimeExports.jsx(Input, { required: true, value: orderProvince, onChange: (e) => setOrderProvince(e.target.value), placeholder: "VD: Hà Nội, TP. Hồ Chí Minh...", className: "h-[52px] rounded-none border-0 border-b border-cream/25 bg-transparent px-0 text-[15px] text-cream placeholder:text-cream/30 focus-visible:border-clay focus-visible:ring-0" }) }),
-            /* @__PURE__ */ jsxRuntimeExports.jsx(Field, { label: "Ghi chú (tuỳ chọn)", children: /* @__PURE__ */ jsxRuntimeExports.jsx(Textarea, { value: orderNote, onChange: (e) => setOrderNote(e.target.value), placeholder: "Giờ giao hàng, yêu cầu thêm...", className: "min-h-[52px] resize-none rounded-none border-0 border-b border-cream/25 bg-transparent px-0 text-[15px] text-cream placeholder:text-cream/30 focus-visible:border-clay focus-visible:ring-0" }) }),
+            /* @__PURE__ */ jsxRuntimeExports.jsx(Field, { label: "Họ và tên", children: /* @__PURE__ */ jsxRuntimeExports.jsx(Input, { required: true, value: orderName, onChange: (e) => setOrderName(e.target.value), className: "h-[52px] rounded-none border-0 border-b border-walnut/25 bg-transparent px-0 text-[15px] text-charcoal placeholder:text-walnut/35 focus-visible:border-clay focus-visible:ring-0" }) }),
+            /* @__PURE__ */ jsxRuntimeExports.jsx(Field, { label: "Số điện thoại / Zalo", children: /* @__PURE__ */ jsxRuntimeExports.jsx(Input, { required: true, type: "tel", value: orderPhone, onChange: (e) => setOrderPhone(e.target.value), className: "h-[52px] rounded-none border-0 border-b border-walnut/25 bg-transparent px-0 text-[15px] text-charcoal placeholder:text-walnut/35 focus-visible:border-clay focus-visible:ring-0" }) }),
+            /* @__PURE__ */ jsxRuntimeExports.jsx(Field, { label: "Địa chỉ nhận hàng", children: /* @__PURE__ */ jsxRuntimeExports.jsx(Input, { required: true, value: orderAddress, onChange: (e) => setOrderAddress(e.target.value), placeholder: "Số nhà, đường, phường / xã...", className: "h-[52px] rounded-none border-0 border-b border-walnut/25 bg-transparent px-0 text-[15px] text-charcoal placeholder:text-walnut/35 focus-visible:border-clay focus-visible:ring-0" }) }),
+            /* @__PURE__ */ jsxRuntimeExports.jsx(Field, { label: "Tỉnh / Thành phố", children: /* @__PURE__ */ jsxRuntimeExports.jsx(Input, { required: true, value: orderProvince, onChange: (e) => setOrderProvince(e.target.value), placeholder: "VD: Hà Nội, TP. Hồ Chí Minh...", className: "h-[52px] rounded-none border-0 border-b border-walnut/25 bg-transparent px-0 text-[15px] text-charcoal placeholder:text-walnut/35 focus-visible:border-clay focus-visible:ring-0" }) }),
+            /* @__PURE__ */ jsxRuntimeExports.jsx(Field, { label: "Ghi chú (tuỳ chọn)", children: /* @__PURE__ */ jsxRuntimeExports.jsx(Textarea, { value: orderNote, onChange: (e) => setOrderNote(e.target.value), placeholder: "Giờ giao hàng, yêu cầu thêm...", className: "min-h-[52px] resize-none rounded-none border-0 border-b border-walnut/25 bg-transparent px-0 text-[15px] text-charcoal placeholder:text-walnut/35 focus-visible:border-clay focus-visible:ring-0" }) }),
             /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "pt-3", children: [
               /* @__PURE__ */ jsxRuntimeExports.jsx(Button, { type: "submit", className: "h-[54px] w-full rounded-none bg-clay text-[12px] font-medium uppercase tracking-[0.22em] text-cream transition hover:bg-clay/90 sm:text-[13px]", children: "Đặt hàng — Lotus xác nhận trong 24h" }),
-              /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "mt-4 text-[11px] tracking-[0.15em] text-cream/30", children: "COD toàn quốc · Đổi trả 7 ngày · Hỗ trợ kỹ thuật miễn phí" })
+              /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "mt-4 text-[11px] tracking-[0.15em] text-walnut/40", children: "COD toàn quốc · Đổi trả 7 ngày · Hỗ trợ kỹ thuật miễn phí" })
             ] })
           ] }),
-          /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "mt-8 border-t border-cream/10 pt-6", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("p", { className: "text-[13px] text-cream/40", children: [
+          /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "mt-8 border-t border-walnut/15 pt-6", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("p", { className: "text-[13px] text-walnut/50", children: [
             "Mua số lượng lớn cho xưởng hoặc công ty?",
             " ",
-            /* @__PURE__ */ jsxRuntimeExports.jsx("a", { href: "https://zalo.me/843966662", target: "_blank", rel: "noopener noreferrer", className: "text-cream/55 underline underline-offset-2 transition hover:text-cream/80", children: "Nhắn Zalo để được hỗ trợ riêng." })
+            /* @__PURE__ */ jsxRuntimeExports.jsx("a", { href: "https://zalo.me/843966662", target: "_blank", rel: "noopener noreferrer", className: "text-walnut/60 underline underline-offset-2 transition hover:text-clay", children: "Nhắn Zalo để được hỗ trợ riêng." })
           ] }) })
         ] })
       ] })

@@ -825,38 +825,38 @@ function Index() {
       </section>
 
       {/* ORDER — ĐẶT HÀNG */}
-      <section id="advise" className="border-t border-walnut/10 bg-charcoal text-cream">
+      <section id="advise" className="border-t border-walnut/10 bg-sand/30 text-charcoal">
         <div className="mx-auto max-w-[1400px] px-5 py-20 md:px-12 md:py-32">
 
           {/* Header */}
-          <div className="mb-14">
-            <span className="text-[11px] uppercase tracking-[0.3em] text-cream/45">12 — Đặt hàng</span>
+          <div className="mb-16">
+            <span className="text-[11px] uppercase tracking-[0.3em] text-walnut/50">12 — Đặt hàng</span>
             <h2 className="mt-4 font-serif text-[34px] leading-tight sm:text-5xl">
               Chọn màu,
               <br />đặt hàng ngay.
             </h2>
-            <p className="mt-5 max-w-xl text-[15px] leading-[1.7] text-cream/55">
+            <p className="mt-5 max-w-xl text-[15px] leading-[1.7] text-walnut/70">
               Mua lẻ trực tiếp — không cần tư vấn. Chọn dòng sơn, môi trường sử dụng, màu và kích thước. Lotus giao toàn quốc.
             </p>
           </div>
 
-          <div className="grid grid-cols-12 gap-x-8 gap-y-14">
+          <div className="grid grid-cols-12 gap-x-10 gap-y-16">
 
             {/* LEFT — Selectors */}
-            <div className="col-span-12 lg:col-span-7 space-y-10">
+            <div className="col-span-12 lg:col-span-7 space-y-11">
 
               {/* 01 Dòng sơn */}
               <div>
-                <div className="mb-4 text-[11px] uppercase tracking-[0.25em] text-cream/40">01 — Dòng sơn</div>
-                <div className="inline-flex border border-cream/20">
+                <div className="mb-4 text-[11px] uppercase tracking-[0.25em] text-walnut/40">01 — Dòng sơn</div>
+                <div className="inline-flex border border-walnut/20">
                   <button type="button"
                     onClick={() => { setOrderProduct("bet"); setOrderColor(""); }}
-                    className={`px-6 py-3.5 text-[13px] transition ${orderProduct === "bet" ? "bg-cream text-charcoal font-medium" : "text-cream/60 hover:text-cream"}`}>
+                    className={`px-6 py-3.5 text-[13px] transition ${orderProduct === "bet" ? "bg-clay text-cream font-medium" : "text-walnut/60 hover:text-charcoal"}`}>
                     Sơn màu bệt
                   </button>
                   <button type="button"
                     onClick={() => { setOrderProduct("van-go"); setOrderColor(""); }}
-                    className={`border-l border-cream/20 px-6 py-3.5 text-[13px] transition ${orderProduct === "van-go" ? "bg-cream text-charcoal font-medium" : "text-cream/60 hover:text-cream"}`}>
+                    className={`border-l border-walnut/20 px-6 py-3.5 text-[13px] transition ${orderProduct === "van-go" ? "bg-clay text-cream font-medium" : "text-walnut/60 hover:text-charcoal"}`}>
                     Sơn giữ vân gỗ
                   </button>
                 </div>
@@ -864,16 +864,16 @@ function Index() {
 
               {/* 02 Môi trường */}
               <div>
-                <div className="mb-4 text-[11px] uppercase tracking-[0.25em] text-cream/40">02 — Môi trường sử dụng</div>
-                <div className="inline-flex border border-cream/20">
+                <div className="mb-4 text-[11px] uppercase tracking-[0.25em] text-walnut/40">02 — Môi trường sử dụng</div>
+                <div className="inline-flex border border-walnut/20">
                   <button type="button"
                     onClick={() => setOrderEnv("indoor")}
-                    className={`px-6 py-3.5 text-[13px] transition ${orderEnv === "indoor" ? "bg-cream text-charcoal font-medium" : "text-cream/60 hover:text-cream"}`}>
+                    className={`px-6 py-3.5 text-[13px] transition ${orderEnv === "indoor" ? "bg-clay text-cream font-medium" : "text-walnut/60 hover:text-charcoal"}`}>
                     Trong nhà
                   </button>
                   <button type="button"
                     onClick={() => setOrderEnv("outdoor")}
-                    className={`border-l border-cream/20 px-6 py-3.5 text-[13px] transition ${orderEnv === "outdoor" ? "bg-cream text-charcoal font-medium" : "text-cream/60 hover:text-cream"}`}>
+                    className={`border-l border-walnut/20 px-6 py-3.5 text-[13px] transition ${orderEnv === "outdoor" ? "bg-clay text-cream font-medium" : "text-walnut/60 hover:text-charcoal"}`}>
                     Ngoài trời
                   </button>
                 </div>
@@ -881,15 +881,15 @@ function Index() {
 
               {/* 03 Màu sơn */}
               <div>
-                <div className="mb-4 text-[11px] uppercase tracking-[0.25em] text-cream/40">03 — Màu sơn</div>
+                <div className="mb-4 text-[11px] uppercase tracking-[0.25em] text-walnut/40">03 — Màu sơn</div>
                 <div className="grid grid-cols-4 gap-3 sm:grid-cols-6 lg:grid-cols-4 xl:grid-cols-6">
                   {(orderProduct === "bet" ? interiorPalette : exteriorPalette).map((c) => (
                     <button key={c.name} type="button" onClick={() => setOrderColor(c.name)} className="group flex flex-col items-center gap-2">
                       <div
-                        className={`h-12 w-full transition-all duration-200 ${orderColor === c.name ? "ring-2 ring-cream ring-offset-2 ring-offset-charcoal" : "opacity-60 group-hover:opacity-90"}`}
+                        className={`h-12 w-full transition-all duration-200 ${orderColor === c.name ? "ring-2 ring-clay ring-offset-2" : "opacity-60 group-hover:opacity-90"}`}
                         style={{ backgroundColor: c.hex }}
                       />
-                      <span className={`text-[11px] transition ${orderColor === c.name ? "text-cream" : "text-cream/45"}`}>{c.name}</span>
+                      <span className={`text-[11px] transition ${orderColor === c.name ? "text-clay font-medium" : "text-walnut/50"}`}>{c.name}</span>
                     </button>
                   ))}
                 </div>
@@ -897,81 +897,81 @@ function Index() {
 
               {/* 04 Kích thước & số lượng */}
               <div>
-                <div className="mb-4 text-[11px] uppercase tracking-[0.25em] text-cream/40">04 — Kích thước & số lượng</div>
+                <div className="mb-4 text-[11px] uppercase tracking-[0.25em] text-walnut/40">04 — Kích thước & số lượng</div>
                 <div className="flex flex-wrap items-center gap-4">
-                  <div className="inline-flex border border-cream/20">
+                  <div className="inline-flex border border-walnut/20">
                     <button type="button" onClick={() => setOrderSize("1kg")}
-                      className={`px-5 py-3.5 text-[13px] transition ${orderSize === "1kg" ? "bg-cream text-charcoal font-medium" : "text-cream/60 hover:text-cream"}`}>
+                      className={`px-5 py-3.5 text-[13px] transition ${orderSize === "1kg" ? "bg-clay text-cream font-medium" : "text-walnut/60 hover:text-charcoal"}`}>
                       Hũ 1 kg
                       <span className="ml-2 text-[11px] opacity-60">{formatVND(PRICES[orderProduct][orderEnv]["1kg"])}</span>
                     </button>
                     <button type="button" onClick={() => setOrderSize("5kg")}
-                      className={`border-l border-cream/20 px-5 py-3.5 text-[13px] transition ${orderSize === "5kg" ? "bg-cream text-charcoal font-medium" : "text-cream/60 hover:text-cream"}`}>
+                      className={`border-l border-walnut/20 px-5 py-3.5 text-[13px] transition ${orderSize === "5kg" ? "bg-clay text-cream font-medium" : "text-walnut/60 hover:text-charcoal"}`}>
                       Hũ 5 kg
                       <span className="ml-2 text-[11px] opacity-60">{formatVND(PRICES[orderProduct][orderEnv]["5kg"])}</span>
                     </button>
                   </div>
-                  <div className="flex items-center border border-cream/20">
+                  <div className="flex items-center border border-walnut/20">
                     <button type="button" onClick={() => setOrderQty(Math.max(1, orderQty - 1))}
-                      className="flex h-[46px] w-11 items-center justify-center text-xl leading-none text-cream/60 transition hover:text-cream">−</button>
-                    <span className="w-10 text-center text-[15px] text-cream">{orderQty}</span>
+                      className="flex h-[46px] w-11 items-center justify-center text-xl leading-none text-walnut/50 transition hover:text-charcoal">−</button>
+                    <span className="w-10 text-center text-[15px] text-charcoal">{orderQty}</span>
                     <button type="button" onClick={() => setOrderQty(orderQty + 1)}
-                      className="flex h-[46px] w-11 items-center justify-center text-xl leading-none text-cream/60 transition hover:text-cream">+</button>
+                      className="flex h-[46px] w-11 items-center justify-center text-xl leading-none text-walnut/50 transition hover:text-charcoal">+</button>
                   </div>
                 </div>
               </div>
 
               {/* 05 Thanh toán */}
               <div>
-                <div className="mb-4 text-[11px] uppercase tracking-[0.25em] text-cream/40">05 — Hình thức thanh toán</div>
+                <div className="mb-4 text-[11px] uppercase tracking-[0.25em] text-walnut/40">05 — Hình thức thanh toán</div>
                 <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
                   <button type="button" onClick={() => setOrderPayment("cod")}
-                    className={`flex flex-col gap-2 border p-5 text-left transition ${orderPayment === "cod" ? "border-cream/50 bg-cream/8" : "border-cream/20 hover:border-cream/35"}`}>
-                    <span className={`text-[13px] font-medium ${orderPayment === "cod" ? "text-cream" : "text-cream/60"}`}>COD — Thanh toán khi nhận</span>
-                    <span className={`text-[12px] ${orderPayment === "cod" ? "text-cream/55" : "text-cream/35"}`}>Không cần thanh toán trước</span>
+                    className={`flex flex-col gap-2 border p-5 text-left transition ${orderPayment === "cod" ? "border-walnut/40 bg-sand/50" : "border-walnut/15 hover:border-walnut/30"}`}>
+                    <span className={`text-[13px] font-medium ${orderPayment === "cod" ? "text-charcoal" : "text-walnut/60"}`}>COD — Thanh toán khi nhận</span>
+                    <span className={`text-[12px] ${orderPayment === "cod" ? "text-walnut/55" : "text-walnut/40"}`}>Không cần thanh toán trước</span>
                   </button>
                   <button type="button" onClick={() => setOrderPayment("online")}
-                    className={`flex flex-col gap-2 border p-5 text-left transition ${orderPayment === "online" ? "border-clay/60 bg-clay/8" : "border-cream/20 hover:border-cream/35"}`}>
-                    <span className={`text-[13px] font-medium ${orderPayment === "online" ? "text-cream" : "text-cream/60"}`}>Thanh toán Online</span>
-                    <span className={`text-[12px] ${orderPayment === "online" ? "text-clay" : "text-cream/35"}`}>Giảm 10% + Miễn phí giao hàng</span>
+                    className={`flex flex-col gap-2 border p-5 text-left transition ${orderPayment === "online" ? "border-clay/60 bg-clay/5" : "border-walnut/15 hover:border-walnut/30"}`}>
+                    <span className={`text-[13px] font-medium ${orderPayment === "online" ? "text-clay" : "text-walnut/60"}`}>Thanh toán Online</span>
+                    <span className={`text-[12px] ${orderPayment === "online" ? "text-clay/80" : "text-walnut/40"}`}>Giảm 10% + Miễn phí giao hàng</span>
                   </button>
                 </div>
               </div>
             </div>
 
             {/* RIGHT — Summary + Form */}
-            <div className="col-span-12 lg:col-span-5 lg:border-l lg:border-cream/12 lg:pl-12">
+            <div className="col-span-12 lg:col-span-5 lg:border-l lg:border-walnut/15 lg:pl-12">
 
               {/* Live order summary */}
-              <div className="mb-9 space-y-3 border border-cream/12 p-6">
-                <div className="mb-4 text-[10px] uppercase tracking-[0.3em] text-cream/38">Tóm tắt đơn</div>
+              <div className="mb-10 space-y-3 border border-walnut/15 p-6 bg-cream/30">
+                <div className="mb-4 text-[10px] uppercase tracking-[0.3em] text-walnut/40">Tóm tắt đơn</div>
                 <div className="flex items-center justify-between text-[14px]">
-                  <span className="text-cream/55">Sản phẩm</span>
-                  <span className="text-cream">{orderProduct === "bet" ? "Sơn màu bệt" : "Sơn giữ vân gỗ"}</span>
+                  <span className="text-walnut/60">Sản phẩm</span>
+                  <span className="text-charcoal">{orderProduct === "bet" ? "Sơn màu bệt" : "Sơn giữ vân gỗ"}</span>
                 </div>
                 <div className="flex items-center justify-between text-[14px]">
-                  <span className="text-cream/55">Môi trường</span>
-                  <span className="text-cream">{orderEnv === "indoor" ? "Trong nhà" : "Ngoài trời"}</span>
+                  <span className="text-walnut/60">Môi trường</span>
+                  <span className="text-charcoal">{orderEnv === "indoor" ? "Trong nhà" : "Ngoài trời"}</span>
                 </div>
                 <div className="flex items-center justify-between text-[14px]">
-                  <span className="text-cream/55">Màu</span>
-                  <span className="flex items-center gap-2 text-cream">
+                  <span className="text-walnut/60">Màu</span>
+                  <span className="flex items-center gap-2 text-charcoal">
                     {orderColor ? (
                       <>
                         <span className="inline-block h-3.5 w-3.5 shrink-0"
                           style={{ backgroundColor: (orderProduct === "bet" ? interiorPalette : exteriorPalette).find((c) => c.name === orderColor)?.hex }} />
                         {orderColor}
                       </>
-                    ) : <span className="italic text-cream/30">Chưa chọn</span>}
+                    ) : <span className="italic text-walnut/35">Chưa chọn</span>}
                   </span>
                 </div>
-                <div className="flex items-center justify-between border-t border-cream/12 pt-3 text-[14px]">
-                  <span className="text-cream/55">Hũ {orderSize} × {orderQty}</span>
-                  <span className="text-cream">{formatVND(unitPrice)} / hũ</span>
+                <div className="flex items-center justify-between border-t border-walnut/15 pt-3 text-[14px]">
+                  <span className="text-walnut/60">Hũ {orderSize} × {orderQty}</span>
+                  <span className="text-charcoal">{formatVND(unitPrice)} / hũ</span>
                 </div>
                 <div className="flex items-center justify-between text-[14px]">
-                  <span className="text-cream/55">Tạm tính</span>
-                  <span className="text-cream">{formatVND(subtotal)}</span>
+                  <span className="text-walnut/60">Tạm tính</span>
+                  <span className="text-charcoal">{formatVND(subtotal)}</span>
                 </div>
                 {orderPayment === "online" && (
                   <div className="flex items-center justify-between text-[13px]">
@@ -980,14 +980,14 @@ function Index() {
                   </div>
                 )}
                 <div className="flex items-center justify-between text-[13px]">
-                  <span className="text-cream/55">Vận chuyển</span>
-                  <span className={orderPayment === "online" ? "text-clay" : "text-cream/55"}>
+                  <span className="text-walnut/60">Vận chuyển</span>
+                  <span className={orderPayment === "online" ? "text-clay" : "text-walnut/60"}>
                     {orderPayment === "online" ? "Miễn phí" : "Tính theo địa chỉ"}
                   </span>
                 </div>
-                <div className="flex items-center justify-between border-t border-cream/20 pt-3 text-[16px] font-medium">
-                  <span className="text-cream/70">Tổng cộng</span>
-                  <span className="text-cream">{formatVND(total)}</span>
+                <div className="flex items-center justify-between border-t border-walnut/20 pt-3 text-[16px] font-medium">
+                  <span className="text-walnut/70">Tổng cộng</span>
+                  <span className="text-clay">{formatVND(total)}</span>
                 </div>
               </div>
 
@@ -1002,44 +1002,44 @@ function Index() {
               >
                 <Field label="Họ và tên">
                   <Input required value={orderName} onChange={(e) => setOrderName(e.target.value)}
-                    className="h-[52px] rounded-none border-0 border-b border-cream/25 bg-transparent px-0 text-[15px] text-cream placeholder:text-cream/30 focus-visible:border-clay focus-visible:ring-0" />
+                    className="h-[52px] rounded-none border-0 border-b border-walnut/25 bg-transparent px-0 text-[15px] text-charcoal placeholder:text-walnut/35 focus-visible:border-clay focus-visible:ring-0" />
                 </Field>
                 <Field label="Số điện thoại / Zalo">
                   <Input required type="tel" value={orderPhone} onChange={(e) => setOrderPhone(e.target.value)}
-                    className="h-[52px] rounded-none border-0 border-b border-cream/25 bg-transparent px-0 text-[15px] text-cream placeholder:text-cream/30 focus-visible:border-clay focus-visible:ring-0" />
+                    className="h-[52px] rounded-none border-0 border-b border-walnut/25 bg-transparent px-0 text-[15px] text-charcoal placeholder:text-walnut/35 focus-visible:border-clay focus-visible:ring-0" />
                 </Field>
                 <Field label="Địa chỉ nhận hàng">
                   <Input required value={orderAddress} onChange={(e) => setOrderAddress(e.target.value)}
                     placeholder="Số nhà, đường, phường / xã..."
-                    className="h-[52px] rounded-none border-0 border-b border-cream/25 bg-transparent px-0 text-[15px] text-cream placeholder:text-cream/30 focus-visible:border-clay focus-visible:ring-0" />
+                    className="h-[52px] rounded-none border-0 border-b border-walnut/25 bg-transparent px-0 text-[15px] text-charcoal placeholder:text-walnut/35 focus-visible:border-clay focus-visible:ring-0" />
                 </Field>
                 <Field label="Tỉnh / Thành phố">
                   <Input required value={orderProvince} onChange={(e) => setOrderProvince(e.target.value)}
                     placeholder="VD: Hà Nội, TP. Hồ Chí Minh..."
-                    className="h-[52px] rounded-none border-0 border-b border-cream/25 bg-transparent px-0 text-[15px] text-cream placeholder:text-cream/30 focus-visible:border-clay focus-visible:ring-0" />
+                    className="h-[52px] rounded-none border-0 border-b border-walnut/25 bg-transparent px-0 text-[15px] text-charcoal placeholder:text-walnut/35 focus-visible:border-clay focus-visible:ring-0" />
                 </Field>
                 <Field label="Ghi chú (tuỳ chọn)">
                   <Textarea value={orderNote} onChange={(e) => setOrderNote(e.target.value)}
                     placeholder="Giờ giao hàng, yêu cầu thêm..."
-                    className="min-h-[52px] resize-none rounded-none border-0 border-b border-cream/25 bg-transparent px-0 text-[15px] text-cream placeholder:text-cream/30 focus-visible:border-clay focus-visible:ring-0" />
+                    className="min-h-[52px] resize-none rounded-none border-0 border-b border-walnut/25 bg-transparent px-0 text-[15px] text-charcoal placeholder:text-walnut/35 focus-visible:border-clay focus-visible:ring-0" />
                 </Field>
                 <div className="pt-3">
                   <Button type="submit"
                     className="h-[54px] w-full rounded-none bg-clay text-[12px] font-medium uppercase tracking-[0.22em] text-cream transition hover:bg-clay/90 sm:text-[13px]">
                     Đặt hàng — Lotus xác nhận trong 24h
                   </Button>
-                  <p className="mt-4 text-[11px] tracking-[0.15em] text-cream/30">
+                  <p className="mt-4 text-[11px] tracking-[0.15em] text-walnut/40">
                     COD toàn quốc · Đổi trả 7 ngày · Hỗ trợ kỹ thuật miễn phí
                   </p>
                 </div>
               </form>
 
               {/* Bulk order note */}
-              <div className="mt-8 border-t border-cream/10 pt-6">
-                <p className="text-[13px] text-cream/40">
+              <div className="mt-8 border-t border-walnut/15 pt-6">
+                <p className="text-[13px] text-walnut/50">
                   Mua số lượng lớn cho xưởng hoặc công ty?{" "}
                   <a href="https://zalo.me/843966662" target="_blank" rel="noopener noreferrer"
-                    className="text-cream/55 underline underline-offset-2 transition hover:text-cream/80">
+                    className="text-walnut/60 underline underline-offset-2 transition hover:text-clay">
                     Nhắn Zalo để được hỗ trợ riêng.
                   </a>
                 </p>
