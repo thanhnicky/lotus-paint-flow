@@ -891,10 +891,10 @@ function Index() {
             </p>
           </div>
 
-          <div className="grid grid-cols-12 gap-x-10 gap-y-16 px-5 lg:px-0">
+          <div className="grid grid-cols-12 gap-x-10 gap-y-16">
 
             {/* LEFT — Selectors */}
-            <div className="col-span-12 lg:col-span-7 space-y-10">
+            <div className="col-span-12 lg:col-span-7 space-y-10 px-5 lg:px-0">
 
               {/* 01 Dòng sơn */}
               <div>
@@ -977,23 +977,23 @@ function Index() {
               {/* 05 Kích thước & số lượng */}
               <div>
                 <div className="mb-4 text-[11px] uppercase tracking-[0.25em] text-walnut/50">05 — Kích thước & số lượng</div>
-                <div className="flex flex-wrap items-center gap-4">
-                  <div className="inline-flex border border-walnut/20">
+                <div className="flex flex-col gap-4 sm:flex-row sm:items-center">
+                  <div className="inline-flex border border-walnut/20 w-full sm:w-auto">
                     <button type="button" onClick={() => setOrderSize("1kg")}
-                      className={`px-5 py-3.5 text-[13px] transition ${orderSize === "1kg" ? "bg-clay text-cream font-medium" : "text-walnut/60 hover:text-charcoal"}`}>
+                      className={`flex-1 sm:flex-none px-5 py-3.5 text-[13px] transition ${orderSize === "1kg" ? "bg-clay text-cream font-medium" : "text-walnut/60 hover:text-charcoal"}`}>
                       Hũ 1 kg
                       <span className="ml-2 text-[11px] opacity-60">{formatVND(PRICES[orderProduct][orderEnv]["1kg"])}</span>
                     </button>
                     <button type="button" onClick={() => setOrderSize("5kg")}
-                      className={`border-l border-walnut/20 px-5 py-3.5 text-[13px] transition ${orderSize === "5kg" ? "bg-clay text-cream font-medium" : "text-walnut/60 hover:text-charcoal"}`}>
+                      className={`border-l border-walnut/20 flex-1 sm:flex-none px-5 py-3.5 text-[13px] transition ${orderSize === "5kg" ? "bg-clay text-cream font-medium" : "text-walnut/60 hover:text-charcoal"}`}>
                       Hũ 5 kg
                       <span className="ml-2 text-[11px] opacity-60">{formatVND(PRICES[orderProduct][orderEnv]["5kg"])}</span>
                     </button>
                   </div>
-                  <div className="flex items-center border border-walnut/20">
+                  <div className="flex items-center border border-walnut/20 w-full sm:w-auto">
                     <button type="button" onClick={() => setOrderQty(Math.max(1, orderQty - 1))}
                       className="flex h-[46px] w-11 items-center justify-center text-xl leading-none text-walnut/50 transition hover:text-charcoal">−</button>
-                    <span className="w-10 text-center text-[15px] text-charcoal">{orderQty}</span>
+                    <span className="flex-1 text-center text-[15px] text-charcoal">{orderQty}</span>
                     <button type="button" onClick={() => setOrderQty(orderQty + 1)}
                       className="flex h-[46px] w-11 items-center justify-center text-xl leading-none text-walnut/50 transition hover:text-charcoal">+</button>
                   </div>
@@ -1043,7 +1043,7 @@ function Index() {
                 )}
                 <div className="flex justify-between items-baseline w-full min-w-0 text-[13px] gap-3">
                   <span className="text-walnut/70 shrink-0 whitespace-nowrap">Vận chuyển</span>
-                  <span className={orderPayment === "online" ? "text-clay" : "text-walnut/60"}>
+                  <span className={orderPayment === "online" ? "text-clay flex-1 min-w-0 text-right overflow-hidden text-ellipsis whitespace-nowrap" : "text-walnut/60 flex-1 min-w-0 text-right overflow-hidden text-ellipsis whitespace-nowrap"}>
                     {orderPayment === "online" ? "Miễn phí" : "Tính theo địa chỉ"}
                   </span>
                 </div>
@@ -1056,7 +1056,7 @@ function Index() {
               {/* 06 Hình thức thanh toán */}
               <div className="w-full">
                 <div className="mb-4 text-[11px] uppercase tracking-[0.25em] text-walnut/50">06 — Hình thức thanh toán</div>
-                <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 w-full">
+                <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
                   <button type="button" onClick={() => setOrderPayment("cod")}
                     className={`flex flex-col gap-2 border p-5 text-left transition ${orderPayment === "cod" ? "border-walnut/40 bg-sand/50" : "border-walnut/15 hover:border-walnut/30"}`}>
                     <span className={`text-[13px] font-medium ${orderPayment === "cod" ? "text-charcoal" : "text-walnut/60"}`}>COD — Thanh toán khi nhận</span>
