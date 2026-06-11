@@ -27,10 +27,11 @@ function ThankYouPage() {
     name: "CÔNG TY TNHH SẢN XUẤT THƯƠNG MẠI DỊCH VỤ BÍCH TRANG",
   };
 
-  // Generate QR code with transfer syntax: Lotus + phone
+  // Generate QR code with VietQR API
   const transferSyntax = `Lotus ${phone}`;
-  const qrContent = `${bankInfo.bank}|${bankInfo.account}|${bankInfo.name}|${amount}|${transferSyntax}`;
-  const qrUrl = `https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=${encodeURIComponent(qrContent)}`;
+  const accountNameEncoded = encodeURIComponent(bankInfo.name);
+  const amountClean = amount.replace(/[^\d]/g, ''); // Remove non-numeric characters
+  const qrUrl = `https://img.vietqr.io/image/EXIM-${bankInfo.account}.png?amount=${amountClean}&addInfo=${encodeURIComponent(transferSyntax)}&accountName=${accountNameEncoded}`;
 
   return (
     <div className="min-h-screen bg-sand/30 py-16 px-5">

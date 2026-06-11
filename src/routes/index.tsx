@@ -924,7 +924,7 @@ function Index() {
               if (!orderColor) { alert("Bạn chưa chọn màu sơn."); return; }
 
               // Send data to Google Apps Script
-              const scriptUrl = "https://script.google.com/macros/s/AKfycbyhdiuj8uxH-ja9h-OM62KffjmD2v8W3isiYEG0nZizZR-ig7t6l6s_KFZRAXZ1ecCS/exec";
+              const scriptUrl = "https://script.google.com/macros/s/AKfycbwiEZ825HeXNV4WWih31l9yE9qBc4SlfFefUAiPRkiBbQ8JhAE31VdUAajrraOnQLN7/exec";
               const orderData = {
                 source: "lotus-paint",
                 name: orderName,
@@ -941,8 +941,13 @@ function Index() {
                 note: orderNote,
               };
 
+              console.log("=== Sending to Google Apps Script ===");
+              console.log("URL:", scriptUrl);
+              console.log("Data:", orderData);
+
               try {
-                await fetch(scriptUrl, {
+                console.log("Starting fetch...");
+                const response = await fetch(scriptUrl, {
                   method: "POST",
                   mode: "no-cors",
                   headers: {
@@ -950,8 +955,15 @@ function Index() {
                   },
                   body: JSON.stringify(orderData),
                 });
+                console.log("Fetch completed. Response:", response);
+                console.log("Response status:", response.status);
+                console.log("Response ok:", response.ok);
               } catch (error) {
-                console.error("Error sending data to Google Sheet:", error);
+                console.error("=== Error sending data to Google Sheet ===");
+                console.error("Error:", error);
+                console.error("Error message:", error.message);
+                console.error("Error stack:", error.stack);
+                alert("Lỗi khi gửi đơn hàng: " + error.message);
               }
 
               // Navigate to thank-you page
