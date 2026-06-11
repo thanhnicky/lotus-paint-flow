@@ -12,7 +12,7 @@ dist
 dist-ssr
 .output
 output
-.vercel/project.json
+!.vercel/output
 .vercel/_deployments
 .vinxi
 .tanstack/**
