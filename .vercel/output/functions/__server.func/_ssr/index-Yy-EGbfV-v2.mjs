@@ -227,6 +227,18 @@ function Index() {
   const navigate = useNavigate();
   const [tab, setTab] = reactExports.useState("indoor");
   const [showPaletteModal, setShowPaletteModal] = reactExports.useState(false);
+  const [showZaloButton, setShowZaloButton] = reactExports.useState(false);
+  reactExports.useEffect(() => {
+    const handleScroll2 = () => {
+      const heroSection = document.querySelector("section");
+      if (heroSection) {
+        const heroBottom = heroSection.getBoundingClientRect().bottom;
+        setShowZaloButton(heroBottom < 0);
+      }
+    };
+    window.addEventListener("scroll", handleScroll2);
+    return () => window.removeEventListener("scroll", handleScroll2);
+  }, []);
   const handleDownloadPalette = async () => {
     const imageUrl = tab === "indoor" ? SOLID_PALETTE_IMAGE : WOODSTAIN_PALETTE_IMAGE;
     try {
@@ -291,6 +303,7 @@ function Index() {
           ] }),
           /* @__PURE__ */ jsxRuntimeExports.jsx("a", { href: "#palette", className: "text-[12px] font-medium uppercase tracking-[0.18em] text-walnut underline-offset-8 hover:underline sm:text-[13px]", children: "Xem bảng màu" })
         ] }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "mt-3 text-[12px] text-walnut/50", children: "Ít mùi — an toàn dùng trong phòng ngủ và phòng trẻ em" }),
         /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "mt-12 flex flex-wrap gap-x-6 gap-y-1.5 border-t border-walnut/15 pt-6", children: [
           /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-[11px] uppercase tracking-[0.22em] text-walnut/60", children: "Hệ nước ít mùi" }),
           /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-[11px] text-walnut/30", children: "/" }),
@@ -338,6 +351,28 @@ function Index() {
         /* @__PURE__ */ jsxRuntimeExports.jsx(SpecCell, { k: "Độ phủ", v: "7–9 m²", sub: "Mỗi lớp · bề mặt phẳng" }),
         /* @__PURE__ */ jsxRuntimeExports.jsx(SpecCell, { k: "Số lớp", v: "2 lớp", sub: "3 lớp cho sàn & ngoại thất" }),
         /* @__PURE__ */ jsxRuntimeExports.jsx(SpecCell, { k: "Khô bề mặt", v: "30 phút", sub: "Lớp 2 sau 2 giờ" })
+      ] }),
+      /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "mt-12 border-t border-walnut/15 pt-8", children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "mb-4 text-[11px] uppercase tracking-[0.25em] text-walnut/60", children: "Gợi ý số lượng theo hạng mục" }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "space-y-2", children: [{
+          item: "Bàn ăn 4–6 ghế",
+          qty: "1 hũ 1kg"
+        }, {
+          item: "Tủ quần áo 2 cánh",
+          qty: "2 hũ 1kg"
+        }, {
+          item: "Cửa gỗ 1 cánh",
+          qty: "1 hũ 1kg"
+        }, {
+          item: "Kệ TV / kệ sách",
+          qty: "1–2 hũ 1kg"
+        }, {
+          item: "Bộ bàn ghế phòng ngủ",
+          qty: "2–3 hũ 1kg"
+        }].map((row, i) => /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex justify-between border-b border-walnut/10 py-2 text-[13px]", children: [
+          /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-walnut/70", children: row.item }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-charcoal", children: row.qty })
+        ] }, i)) })
       ] })
     ] }) }),
     /* @__PURE__ */ jsxRuntimeExports.jsx("section", { className: "border-t border-walnut/10 bg-sand/40", children: /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "mx-auto max-w-[1400px] px-5 py-16 md:px-12 md:py-28", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "grid grid-cols-12 gap-6", children: [
@@ -412,6 +447,10 @@ function Index() {
         /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "mt-6 max-w-xs text-[14px] leading-relaxed text-walnut/70", children: "Không cần thợ. Không cần máy. Chỉ cọ, lăn — và một chút kiên nhẫn." })
       ] }),
       /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "col-span-12 md:col-span-8 md:pl-4", children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "mb-10 aspect-video overflow-hidden rounded-lg bg-charcoal/5", children: /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "flex h-full items-center justify-center", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex flex-col items-center gap-3", children: [
+          /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "flex h-12 w-12 items-center justify-center rounded-full bg-charcoal/10", children: /* @__PURE__ */ jsxRuntimeExports.jsx("svg", { className: "h-5 w-5 text-charcoal/60", fill: "currentColor", viewBox: "0 0 24 24", children: /* @__PURE__ */ jsxRuntimeExports.jsx("path", { d: "M8 5v14l11-7z" }) }) }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-[12px] text-walnut/50", children: "Xem video: sơn lại chiếc tủ cũ trong 1 buổi chiều" })
+        ] }) }) }),
         /* @__PURE__ */ jsxRuntimeExports.jsx("ol", { children: [{
           n: "1",
           t: "Làm sạch & chà nhám nhẹ",
@@ -606,7 +645,7 @@ function Index() {
           ] })
         ] })
       ] }),
-      /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "col-span-12 md:col-span-8", children: /* @__PURE__ */ jsxRuntimeExports.jsx(Accordion, { type: "single", collapsible: true, className: "border-t border-walnut/20", children: faqs.map((f, i) => /* @__PURE__ */ jsxRuntimeExports.jsxs(AccordionItem, { value: `f-${i}`, className: "border-b border-walnut/20", children: [
+      /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "col-span-12 md:col-span-8", children: /* @__PURE__ */ jsxRuntimeExports.jsx(Accordion, { type: "multiple", defaultValue: ["f-2", "f-5"], className: "border-t border-walnut/20", children: faqs.map((f, i) => /* @__PURE__ */ jsxRuntimeExports.jsxs(AccordionItem, { value: `f-${i}`, className: "border-b border-walnut/20", children: [
         /* @__PURE__ */ jsxRuntimeExports.jsx(AccordionTrigger, { className: "py-5 text-left font-serif text-lg text-charcoal hover:no-underline sm:text-xl", children: f.q }),
         /* @__PURE__ */ jsxRuntimeExports.jsx(AccordionContent, { className: "pb-6 text-[15px] leading-relaxed text-walnut/80", children: f.a })
       ] }, i)) }) })
@@ -838,6 +877,10 @@ function Index() {
           /* @__PURE__ */ jsxRuntimeExports.jsx("a", { href: "https://zalo.me/843966662", target: "_blank", rel: "noopener noreferrer", className: "underline underline-offset-2 transition hover:text-clay", children: "Nhắn Zalo để nhận giá sỉ." })
         ] })
       ] })
+    ] }) }),
+    showZaloButton && /* @__PURE__ */ jsxRuntimeExports.jsx("a", { href: "https://zalo.me/0943966662", target: "_blank", rel: "noopener noreferrer", className: "fixed bottom-6 right-6 z-50 group", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "relative flex h-14 w-14 items-center justify-center rounded-full bg-white shadow-lg transition hover:shadow-xl", children: [
+      /* @__PURE__ */ jsxRuntimeExports.jsx("svg", { className: "h-7 w-7", viewBox: "0 0 24 24", fill: "#0068FF", children: /* @__PURE__ */ jsxRuntimeExports.jsx("path", { d: "M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15h-2v-6h2v6zm-1-7c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1zm5 7h-2v-3.5c0-1.1-.9-2-2-2v-1c1.66 0 3 1.34 3 3V17z" }) }),
+      /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute right-full mr-3 w-48 rounded-lg bg-charcoal px-3 py-2 text-[11px] text-cream opacity-0 transition-opacity group-hover:opacity-100", children: "Bạn chưa chắc chọn gì? Nhắn Zalo — tư vấn miễn phí" })
     ] }) }),
     /* @__PURE__ */ jsxRuntimeExports.jsx(Footer, {})
   ] });
