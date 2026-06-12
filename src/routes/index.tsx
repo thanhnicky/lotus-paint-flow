@@ -16,10 +16,14 @@ import heroInterior from "@/assets/hero-interior.jpg";
 import woodGrain from "@/assets/wood-grain.jpg";
 import diyHands from "@/assets/diy-hands.jpg";
 import exteriorDoor from "@/assets/exterior-door.jpg";
+import woodstainFinish from "@/assets/son-giu-van-go-lotus-02.JPG";
 import beforeAfter from "@/assets/before-after.jpg";
 import project1 from "@/assets/project-1.jpg";
 import project2 from "@/assets/project-2.jpg";
-import project3 from "@/assets/project-3.jpg";
+import project3 from "@/assets/son-lai-cua-cu-khong-mui-lotus.jpeg";
+import testimonial1 from "@/assets/son-lai-ban-an-mau-xanh-son-lotus.jpeg";
+import testimonial2 from "@/assets/son-lai-tu-quan-ao-son-khong-mui-lotus.png";
+import testimonial3 from "@/assets/son-lai-giuong-ngu-son-khong-mui-lotus.png";
 import logoLotus from "@/assets/logo-lotus.jpg";
 
 export const Route = createFileRoute("/")({
@@ -119,7 +123,7 @@ const surfaces = [
 const projects = [
   { img: project1, label: "Tủ TV — sắc Rêu", place: "Căn hộ · Quận 2, TP. HCM" },
   { img: project2, label: "Bàn ăn — Walnut tự nhiên", place: "Nhà phố · Hà Nội" },
-  { img: project3, label: "Tủ áo — sắc Mộc", place: "Studio · Đà Nẵng" },
+  { img: project3, label: "Cửa gỗ - sơn bệt màu kem", place: "Studio · Đà Nẵng" },
 ];
 
 const testimonials = [
@@ -129,6 +133,7 @@ const testimonials = [
     name: "Chị Linh",
     place: "Thảo Điền, TP. HCM",
     product: "Wood Paint · sắc Khói",
+    image: testimonial1,
   },
   {
     quote:
@@ -136,6 +141,7 @@ const testimonials = [
     name: "Anh Phúc",
     place: "Quận Cầu Giấy, Hà Nội",
     product: "Wood Paint · sắc Mộc",
+    image: testimonial2,
   },
   {
     quote:
@@ -143,6 +149,7 @@ const testimonials = [
     name: "Chị Mai",
     place: "Đà Nẵng",
     product: "Woodstain · Walnut",
+    image: testimonial3,
   },
 ];
 
@@ -350,7 +357,7 @@ function Index() {
               title="Giữ vân gỗ, nhìn giống gỗ tự nhiên"
               subtitle="Woodstain Finish — Nội & Ngoại thất"
               body="Chọn loại này khi muốn giữ vẻ đẹp gỗ tự nhiên cho cửa, sàn, lan can. Thấm sâu vào gỗ, tôn trọn vân, chịu nắng mưa."
-              img={exteriorDoor}
+              img={woodstainFinish}
               bullets={[
                 "Cửa, khung cửa, sàn gỗ, lan can",
                 "Giữ vân, chống trầy, kháng ẩm",
@@ -785,6 +792,13 @@ function Index() {
                   i === 0 ? "md:pr-10" : i === 1 ? "md:px-10" : "md:pl-10"
                 }`}
               >
+                <div className="mb-6 aspect-[4/3] overflow-hidden rounded-lg bg-sand/30">
+                  <img
+                    src={t.image}
+                    alt={t.name}
+                    className="h-full w-full object-cover"
+                  />
+                </div>
                 <p className="flex-1 font-serif text-[18px] leading-[1.6] text-charcoal sm:text-[19px]">
                   “{t.quote}”
                 </p>
