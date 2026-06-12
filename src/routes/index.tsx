@@ -19,7 +19,7 @@ import exteriorDoor from "@/assets/exterior-door.jpg";
 import woodstainFinish from "@/assets/son-giu-van-go-lotus-02.JPG";
 import beforeAfter from "@/assets/before-after.jpg";
 import project1 from "@/assets/project-1.jpg";
-import project2 from "@/assets/project-2.jpg";
+import project2 from "@/assets/son-lai-hang-rao-son-go-lotus.jpeg";
 import project3 from "@/assets/son-lai-cua-cu-khong-mui-lotus.jpeg";
 import testimonial1 from "@/assets/son-lai-ban-an-mau-xanh-son-lotus.jpeg";
 import testimonial2 from "@/assets/son-lai-tu-quan-ao-son-khong-mui-lotus.png";
@@ -122,7 +122,7 @@ const surfaces = [
 
 const projects = [
   { img: project1, label: "Tủ TV — sắc Rêu", place: "Căn hộ · Quận 2, TP. HCM" },
-  { img: project2, label: "Bàn ăn — Walnut tự nhiên", place: "Nhà phố · Hà Nội" },
+  { img: project2, label: "Hàng rào — Gỗ sồi tông màu nâu đậm", place: "Nhà phố · Hà Nội" },
   { img: project3, label: "Cửa gỗ - sơn bệt màu kem", place: "Studio · Đà Nẵng" },
 ];
 
