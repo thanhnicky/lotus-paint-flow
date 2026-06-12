@@ -61,8 +61,8 @@ const AccordionContent = reactExports.forwardRef(({ className, children, ...prop
   }
 ));
 AccordionContent.displayName = Content2.displayName;
-const heroInterior = "/assets/hero-interior-DT1l1_U9-v2.jpg";
-const diyHands = "/assets/diy-hands-CCuqMEBn-v2.jpg";
+const heroInterior = "/assets/son-lotus-hero-9-7ouNb1pf-v2.jpeg";
+const diyHands = "/assets/son-lai-tu-tivi-son-lotus-EORvgkmV-v2.jpeg";
 const woodstainFinish = "/assets/son-giu-van-go-lotus-02-B4iRkWvH-v2.JPG";
 const beforeAfter = "/assets/before-after-Bz7UqToO-v2.jpg";
 const project1 = "/assets/project-1-dSmkHL4H-v2.jpg";
