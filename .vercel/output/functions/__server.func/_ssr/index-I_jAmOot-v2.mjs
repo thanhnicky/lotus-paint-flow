@@ -63,11 +63,14 @@ const AccordionContent = reactExports.forwardRef(({ className, children, ...prop
 AccordionContent.displayName = Content2.displayName;
 const heroInterior = "/assets/hero-interior-DT1l1_U9-v2.jpg";
 const diyHands = "/assets/diy-hands-CCuqMEBn-v2.jpg";
-const exteriorDoor = "/assets/exterior-door-BGKN49Z6-v2.jpg";
+const woodstainFinish = "/assets/son-giu-van-go-lotus-02-B4iRkWvH-v2.JPG";
 const beforeAfter = "/assets/before-after-Bz7UqToO-v2.jpg";
 const project1 = "/assets/project-1-dSmkHL4H-v2.jpg";
 const project2 = "/assets/project-2-JUJyhsNw-v2.jpg";
-const project3 = "/assets/project-3-BjUNJyrO-v2.jpg";
+const project3 = "/assets/son-lai-cua-cu-khong-mui-lotus-BCT4z5ZC-v2.jpeg";
+const testimonial1 = "/assets/son-lai-ban-an-mau-xanh-son-lotus-rRqi0kHj-v2.jpeg";
+const testimonial2 = "/assets/son-lai-tu-quan-ao-son-khong-mui-lotus-TbLfZdU9-v2.png";
+const testimonial3 = "/assets/son-lai-giuong-ngu-son-khong-mui-lotus-Dgrrh5kU-v2.png";
 const logoLotus = "/assets/logo-lotus-C0CbJd0t-v2.jpg";
 const woodStainColors = [{
   name: "Sơn giữ vân gỗ 005",
@@ -170,24 +173,27 @@ const projects = [{
   place: "Nhà phố · Hà Nội"
 }, {
   img: project3,
-  label: "Tủ áo — sắc Mộc",
+  label: "Cửa gỗ - sơn bệt màu kem",
   place: "Studio · Đà Nẵng"
 }];
 const testimonials = [{
   quote: "Mình sơn lại bộ bàn ăn ngay trong căn hộ chung cư. Không mùi xăng, không phải dời con sang nhà ngoại. Sáng hôm sau cả nhà đã ngồi ăn bình thường.",
   name: "Chị Linh",
   place: "Thảo Điền, TP. HCM",
-  product: "Wood Paint · sắc Khói"
+  product: "Wood Paint · sắc Khói",
+  image: testimonial1
 }, {
   quote: "Tủ áo cũ của mẹ mình được sơn lại sắc Mộc, đặt cạnh giường nhìn rất tĩnh. Sơn 2 lớp, mỗi hũ 1kg đủ cho cả tủ — mình đặt thêm 1 hũ dự phòng.",
   name: "Anh Phúc",
   place: "Quận Cầu Giấy, Hà Nội",
-  product: "Wood Paint · sắc Mộc"
+  product: "Wood Paint · sắc Mộc",
+  image: testimonial2
 }, {
   quote: "Mình tự sơn cửa gỗ ngoài ban công bằng Woodstain Walnut. Sau 4 tháng nắng mưa vẫn giữ màu, vân gỗ vẫn rõ. Đáng đồng tiền.",
   name: "Chị Mai",
   place: "Đà Nẵng",
-  product: "Woodstain · Walnut"
+  product: "Woodstain · Walnut",
+  image: testimonial3
 }];
 const faqs = [{
   q: "Sơn gỗ hệ nước là gì? Khác gì với sơn dầu?",
@@ -312,7 +318,7 @@ function Index() {
       ] }),
       /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "mt-14 grid grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-16", children: [
         /* @__PURE__ */ jsxRuntimeExports.jsx(DecisionCard, { index: "01", title: "Phủ kín màu, che vân gỗ", subtitle: "Sơn gỗ màu bệt — Nội thất", body: "Chọn loại này khi muốn đổi màu hoàn toàn cho tủ, kệ, bàn. Phủ trọn bề mặt, màng sơn mịn như sứ, che hoàn toàn vân và màu gốc.", img: diyHands, bullets: ["Tủ áo, tủ bếp, kệ TV, bàn làm việc", "Che nền cũ, đổi màu hoàn toàn", "Màu ấm: Sứ, Mộc, Khói, Rêu"], ctaText: "Chọn màu & đặt mua", ctaLink: "#advise", onCtaClick: () => setOrderProduct("bet") }),
-        /* @__PURE__ */ jsxRuntimeExports.jsx(DecisionCard, { index: "02", title: "Giữ vân gỗ, nhìn giống gỗ tự nhiên", subtitle: "Woodstain Finish — Nội & Ngoại thất", body: "Chọn loại này khi muốn giữ vẻ đẹp gỗ tự nhiên cho cửa, sàn, lan can. Thấm sâu vào gỗ, tôn trọn vân, chịu nắng mưa.", img: exteriorDoor, bullets: ["Cửa, khung cửa, sàn gỗ, lan can", "Giữ vân, chống trầy, kháng ẩm", "Màu tự nhiên: Sồi, Teak, Walnut, Mun"], ctaText: "Chọn màu & đặt mua", ctaLink: "#advise", onCtaClick: () => setOrderProduct("van-go") })
+        /* @__PURE__ */ jsxRuntimeExports.jsx(DecisionCard, { index: "02", title: "Giữ vân gỗ, nhìn giống gỗ tự nhiên", subtitle: "Woodstain Finish — Nội & Ngoại thất", body: "Chọn loại này khi muốn giữ vẻ đẹp gỗ tự nhiên cho cửa, sàn, lan can. Thấm sâu vào gỗ, tôn trọn vân, chịu nắng mưa.", img: woodstainFinish, bullets: ["Cửa, khung cửa, sàn gỗ, lan can", "Giữ vân, chống trầy, kháng ẩm", "Màu tự nhiên: Sồi, Teak, Walnut, Mun"], ctaText: "Chọn màu & đặt mua", ctaLink: "#advise", onCtaClick: () => setOrderProduct("van-go") })
       ] })
     ] }) }),
     /* @__PURE__ */ jsxRuntimeExports.jsx("section", { className: "border-t border-walnut/10", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "mx-auto max-w-[1400px] px-5 py-16 md:px-12 md:py-24", children: [
@@ -535,6 +541,7 @@ function Index() {
         ] })
       ] }) }),
       /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "mt-16 grid grid-cols-1 divide-y divide-walnut/15 md:grid-cols-3 md:divide-x md:divide-y-0", children: testimonials.map((t, i) => /* @__PURE__ */ jsxRuntimeExports.jsxs("blockquote", { className: `flex flex-col py-10 md:py-0 ${i === 0 ? "md:pr-10" : i === 1 ? "md:px-10" : "md:pl-10"}`, children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "mb-6 aspect-[4/3] overflow-hidden rounded-lg bg-sand/30", children: /* @__PURE__ */ jsxRuntimeExports.jsx("img", { src: t.image, alt: t.name, className: "h-full w-full object-cover" }) }),
         /* @__PURE__ */ jsxRuntimeExports.jsxs("p", { className: "flex-1 font-serif text-[18px] leading-[1.6] text-charcoal sm:text-[19px]", children: [
           "“",
           t.quote,
