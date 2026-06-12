@@ -1,5 +1,5 @@
 import { createFileRoute, useNavigate } from "@tanstack/react-router";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -209,6 +209,20 @@ function Index() {
   const navigate = useNavigate();
   const [tab, setTab] = useState<"indoor" | "outdoor">("indoor");
   const [showPaletteModal, setShowPaletteModal] = useState(false);
+  const [showZaloButton, setShowZaloButton] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const heroSection = document.querySelector("section");
+      if (heroSection) {
+        const heroBottom = heroSection.getBoundingClientRect().bottom;
+        setShowZaloButton(heroBottom < 0);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const handleDownloadPalette = async () => {
     const imageUrl = tab === "indoor" ? SOLID_PALETTE_IMAGE : WOODSTAIN_PALETTE_IMAGE;
@@ -297,6 +311,9 @@ function Index() {
                   Xem bảng màu
                 </a>
               </div>
+              <p className="mt-3 text-[12px] text-walnut/50">
+                Ít mùi — an toàn dùng trong phòng ngủ và phòng trẻ em
+              </p>
 
               <div className="mt-12 flex flex-wrap gap-x-6 gap-y-1.5 border-t border-walnut/15 pt-6">
                 <span className="text-[11px] uppercase tracking-[0.22em] text-walnut/60">Hệ nước ít mùi</span>
@@ -393,6 +410,25 @@ function Index() {
             <SpecCell k="Độ phủ" v="7–9 m²" sub="Mỗi lớp · bề mặt phẳng" />
             <SpecCell k="Số lớp" v="2 lớp" sub="3 lớp cho sàn & ngoại thất" />
             <SpecCell k="Khô bề mặt" v="30 phút" sub="Lớp 2 sau 2 giờ" />
+          </div>
+
+          {/* Quantity Suggestion Table */}
+          <div className="mt-12 border-t border-walnut/15 pt-8">
+            <p className="mb-4 text-[11px] uppercase tracking-[0.25em] text-walnut/60">Gợi ý số lượng theo hạng mục</p>
+            <div className="space-y-2">
+              {[
+                { item: "Bàn ăn 4–6 ghế", qty: "1 hũ 1kg" },
+                { item: "Tủ quần áo 2 cánh", qty: "2 hũ 1kg" },
+                { item: "Cửa gỗ 1 cánh", qty: "1 hũ 1kg" },
+                { item: "Kệ TV / kệ sách", qty: "1–2 hũ 1kg" },
+                { item: "Bộ bàn ghế phòng ngủ", qty: "2–3 hũ 1kg" },
+              ].map((row, i) => (
+                <div key={i} className="flex justify-between border-b border-walnut/10 py-2 text-[13px]">
+                  <span className="text-walnut/70">{row.item}</span>
+                  <span className="text-charcoal">{row.qty}</span>
+                </div>
+              ))}
+            </div>
           </div>
 
         </div>
@@ -531,6 +567,20 @@ function Index() {
             </div>
 
             <div className="col-span-12 md:col-span-8 md:pl-4">
+              {/* Video Placeholder */}
+              <div className="mb-10 aspect-video overflow-hidden rounded-lg bg-charcoal/5">
+                <div className="flex h-full items-center justify-center">
+                  <div className="flex flex-col items-center gap-3">
+                    <div className="flex h-12 w-12 items-center justify-center rounded-full bg-charcoal/10">
+                      <svg className="h-5 w-5 text-charcoal/60" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M8 5v14l11-7z"/>
+                      </svg>
+                    </div>
+                    <p className="text-[12px] text-walnut/50">Xem video: sơn lại chiếc tủ cũ trong 1 buổi chiều</p>
+                  </div>
+                </div>
+              </div>
+
               <ol>
                 {[
                   { n: "1", t: "Làm sạch & chà nhám nhẹ", d: "Lau bụi, dầu mỡ. Chà P240 để bề mặt mịn và bám sơn tốt." },
@@ -895,7 +945,7 @@ function Index() {
             </div>
 
             <div className="col-span-12 md:col-span-8">
-              <Accordion type="single" collapsible className="border-t border-walnut/20">
+              <Accordion type="multiple" defaultValue={["f-2", "f-5"]} className="border-t border-walnut/20">
                 {faqs.map((f, i) => (
                   <AccordionItem
                     key={i}
@@ -1247,6 +1297,26 @@ function Index() {
 
         </div>
       </section>
+
+      {/* Floating Zalo Button */}
+      {showZaloButton && (
+        <a
+          href="https://zalo.me/0943966662"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="fixed bottom-6 right-6 z-50 group"
+        >
+          <div className="relative flex h-14 w-14 items-center justify-center rounded-full bg-white shadow-lg transition hover:shadow-xl">
+            <svg className="h-7 w-7" viewBox="0 0 24 24" fill="#0068FF">
+              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15h-2v-6h2v6zm-1-7c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1zm5 7h-2v-3.5c0-1.1-.9-2-2-2v-1c1.66 0 3 1.34 3 3V17z"/>
+            </svg>
+            {/* Tooltip */}
+            <div className="absolute right-full mr-3 w-48 rounded-lg bg-charcoal px-3 py-2 text-[11px] text-cream opacity-0 transition-opacity group-hover:opacity-100">
+              Bạn chưa chắc chọn gì? Nhắn Zalo — tư vấn miễn phí
+            </div>
+          </div>
+        </a>
+      )}
 
       <Footer />
     </div>
