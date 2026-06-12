@@ -12,9 +12,9 @@ import {
 } from "@/components/ui/accordion";
 import { ArrowRight } from "lucide-react";
 
-import heroInterior from "@/assets/hero-interior.jpg";
+import heroInterior from "@/assets/son-lotus-hero-9.jpeg";
 import woodGrain from "@/assets/wood-grain.jpg";
-import diyHands from "@/assets/diy-hands.jpg";
+import diyHands from "@/assets/son-lai-tu-tivi-son-lotus.jpeg";
 import exteriorDoor from "@/assets/exterior-door.jpg";
 import woodstainFinish from "@/assets/son-giu-van-go-lotus-02.JPG";
 import beforeAfter from "@/assets/before-after.jpg";
