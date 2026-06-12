@@ -66,7 +66,7 @@ const diyHands = "/assets/diy-hands-CCuqMEBn-v2.jpg";
 const woodstainFinish = "/assets/son-giu-van-go-lotus-02-B4iRkWvH-v2.JPG";
 const beforeAfter = "/assets/before-after-Bz7UqToO-v2.jpg";
 const project1 = "/assets/project-1-dSmkHL4H-v2.jpg";
-const project2 = "/assets/project-2-JUJyhsNw-v2.jpg";
+const project2 = "/assets/son-lai-hang-rao-son-go-lotus-BNq_3MCU-v2.jpeg";
 const project3 = "/assets/son-lai-cua-cu-khong-mui-lotus-BCT4z5ZC-v2.jpeg";
 const testimonial1 = "/assets/son-lai-ban-an-mau-xanh-son-lotus-rRqi0kHj-v2.jpeg";
 const testimonial2 = "/assets/son-lai-tu-quan-ao-son-khong-mui-lotus-TbLfZdU9-v2.png";
@@ -169,7 +169,7 @@ const projects = [{
   place: "Căn hộ · Quận 2, TP. HCM"
 }, {
   img: project2,
-  label: "Bàn ăn — Walnut tự nhiên",
+  label: "Hàng rào — Gỗ sồi tông màu nâu đậm",
   place: "Nhà phố · Hà Nội"
 }, {
   img: project3,
