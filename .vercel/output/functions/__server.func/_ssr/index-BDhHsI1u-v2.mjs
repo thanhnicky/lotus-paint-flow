@@ -183,16 +183,16 @@ const testimonials = [{
   product: "Wood Paint · sắc Khói",
   image: testimonial1
 }, {
-  quote: "Tủ áo cũ của mẹ mình được sơn lại sắc Mộc, đặt cạnh giường nhìn rất tĩnh. Sơn 2 lớp, mỗi hũ 1kg đủ cho cả tủ — mình đặt thêm 1 hũ dự phòng.",
+  quote: "Tủ áo cũ của con gái mình được sơn lại sắc hồng, đặt cạnh giường nhìn rất cute. Sơn 2 lớp, hết 4 hũ đủ cho cả tủ — mình đặt thêm 1 hũ dự phòng.",
   name: "Anh Phúc",
   place: "Quận Cầu Giấy, Hà Nội",
-  product: "Wood Paint · sắc Mộc",
+  product: "Wood Paint · sắc Hồng",
   image: testimonial2
 }, {
-  quote: "Mình tự sơn cửa gỗ ngoài ban công bằng Woodstain Walnut. Sau 4 tháng nắng mưa vẫn giữ màu, vân gỗ vẫn rõ. Đáng đồng tiền.",
+  quote: "Mình tự sơn giường ngủ của mình, tuy lần đầu thực hiện nhưng rất dễ làm. Sơn 2 lớp là bề mặt lên đẹp. Mình sử dụng 2 hũ là đủ. Đáng đồng tiền.",
   name: "Chị Mai",
   place: "Đà Nẵng",
-  product: "Woodstain · Walnut",
+  product: "Woodpaint · Vàng Kem",
   image: testimonial3
 }];
 const faqs = [{
@@ -362,13 +362,13 @@ function Index() {
           qty: "2 hũ 1kg"
         }, {
           item: "Cửa gỗ 1 cánh",
-          qty: "1 hũ 1kg"
+          qty: "2 hũ"
         }, {
           item: "Kệ TV / kệ sách",
           qty: "1–2 hũ 1kg"
         }, {
-          item: "Bộ bàn ghế phòng ngủ",
-          qty: "2–3 hũ 1kg"
+          item: "Giường ngủ",
+          qty: "2 hũ"
         }].map((row, i) => /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex justify-between border-b border-walnut/10 py-2 text-[13px]", children: [
           /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-walnut/70", children: row.item }),
           /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-charcoal", children: row.qty })
@@ -574,9 +574,9 @@ function Index() {
       /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "flex flex-col gap-2 md:flex-row md:items-end md:justify-between", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
         /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-[11px] uppercase tracking-[0.3em] text-walnut/70", children: "10 — Cảm nhận khách hàng" }),
         /* @__PURE__ */ jsxRuntimeExports.jsxs("h2", { className: "mt-5 font-serif text-[32px] leading-tight text-charcoal sm:text-4xl md:text-5xl", children: [
-          "Vợ chồng trẻ,",
+          "Ngày cuối tuần.",
           /* @__PURE__ */ jsxRuntimeExports.jsx("br", {}),
-          "chủ nhà tự làm DIY."
+          "Một hũ sơn. Nhà khác hẳn."
         ] })
       ] }) }),
       /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "mt-16 grid grid-cols-1 divide-y divide-walnut/15 md:grid-cols-3 md:divide-x md:divide-y-0", children: testimonials.map((t, i) => /* @__PURE__ */ jsxRuntimeExports.jsxs("blockquote", { className: `flex flex-col py-10 md:py-0 ${i === 0 ? "md:pr-10" : i === 1 ? "md:px-10" : "md:pl-10"}`, children: [
@@ -596,15 +596,6 @@ function Index() {
         ] })
       ] }, t.name)) })
     ] }) }),
-    /* @__PURE__ */ jsxRuntimeExports.jsx("section", { className: "border-t border-walnut/10 bg-cream", children: /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "mx-auto max-w-[1400px] px-5 py-16 md:px-12 md:py-24", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "mx-auto max-w-2xl text-center", children: [
-      /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "font-serif text-[22px] leading-[1.65] text-charcoal md:text-[25px]", children: "Đặt hàng trực tiếp, nhận hàng tại nhà — không cần gặp mặt, không cần tư vấn." }),
-      /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "mt-6 text-[15px] leading-[1.75] text-walnut/65", children: "Thanh toán COD khi nhận hàng, hoặc thanh toán online để được giảm 10% và miễn phí giao hàng. Giao toàn quốc trong 1–5 ngày. Đổi trả trong 7 ngày nếu sản phẩm giao nhầm hoặc còn nguyên seal." }),
-      /* @__PURE__ */ jsxRuntimeExports.jsx("ul", { className: "mt-10 flex flex-wrap justify-center gap-x-8 gap-y-3", children: ["COD — nhận hàng mới trả tiền", "Thanh toán online giảm 10%", "Miễn phí ship khi thanh toán online", "Giao toàn quốc 1–5 ngày", "Đổi trả 7 ngày"].map((item) => /* @__PURE__ */ jsxRuntimeExports.jsx("li", { className: "text-[12px] uppercase tracking-[0.18em] text-walnut/60", children: item }, item)) }),
-      /* @__PURE__ */ jsxRuntimeExports.jsxs("a", { href: "#advise", className: "mt-10 inline-flex items-center gap-3 text-[12px] font-medium uppercase tracking-[0.18em] text-charcoal transition hover:text-clay sm:text-[13px]", children: [
-        "Chọn màu & đặt mua ngay",
-        /* @__PURE__ */ jsxRuntimeExports.jsx(ArrowRight, { className: "h-4 w-4" })
-      ] })
-    ] }) }) }),
     /* @__PURE__ */ jsxRuntimeExports.jsx("section", { className: "border-t border-walnut/10 bg-sand/40", children: /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "mx-auto max-w-[1400px] px-5 py-16 md:px-12 md:py-28", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "grid grid-cols-12 gap-6", children: [
       /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "col-span-12 md:col-span-4", children: [
         /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-[11px] uppercase tracking-[0.3em] text-walnut/70", children: "11 — Câu hỏi" }),
@@ -614,34 +605,21 @@ function Index() {
           "khách hay hỏi."
         ] }),
         /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "mt-6 max-w-xs text-[15px] leading-relaxed text-walnut/70", children: "Mua số lượng lớn cho xưởng hoặc dự án? Liên hệ Zalo để nhận giá sỉ." }),
-        /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "mt-8 space-y-4 border-t border-walnut/15 pt-6", children: [
-          /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-start gap-3", children: [
-            /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-clay", children: "✓" }),
-            /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
-              /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-[13px] font-medium text-charcoal", children: "Sản xuất tại Việt Nam" }),
-              /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-[12px] text-walnut/60", children: "Công ty TNHH Sản Xuất Thương Mại Dịch Vụ Bích Trang" })
-            ] })
-          ] }),
-          /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-start gap-3", children: [
-            /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-clay", children: "✓" }),
-            /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
-              /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-[13px] font-medium text-charcoal", children: "Bảo hành 7 ngày" }),
-              /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-[12px] text-walnut/60", children: "Đổi trả sản phẩm còn nguyên seal" })
-            ] })
-          ] }),
-          /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-start gap-3", children: [
-            /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-clay", children: "✓" }),
-            /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
-              /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-[13px] font-medium text-charcoal", children: "Giao hàng toàn quốc" }),
-              /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-[12px] text-walnut/60", children: "1-2 ngày nội thành, 2-5 ngày tỉnh khác" })
-            ] })
-          ] }),
-          /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-start gap-3", children: [
-            /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-clay", children: "✓" }),
-            /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
-              /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-[13px] font-medium text-charcoal", children: "Hỗ trợ kỹ thuật" }),
-              /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-[12px] text-walnut/60", children: "Tư vấn qua Zalo: 0396 666 2" })
-            ] })
+        /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "mt-8 border-t border-walnut/15 pt-8", children: [
+          /* @__PURE__ */ jsxRuntimeExports.jsx("h3", { className: "font-serif text-[20px] leading-tight text-charcoal sm:text-[22px]", children: "Đặt online nhanh, nhận hàng tại nhà." }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "mt-3 max-w-sm text-[14px] leading-relaxed text-walnut/70", children: "Chọn màu, đặt hàng trong vài phút và nhận hàng tận nơi. Bạn có thể thanh toán COD khi nhận hàng, hoặc chọn thanh toán online để được giảm 10% và miễn phí giao hàng." }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "mt-6 grid grid-cols-1 gap-3 sm:grid-cols-2", children: ["COD khi nhận hàng", "Online giảm 10%", "Miễn phí giao hàng khi thanh toán online", "Giao toàn quốc trong 1–5 ngày", "Đổi trả 7 ngày nếu giao nhầm hoặc còn nguyên seal"].map((item, i) => /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-start gap-2.5 rounded-lg bg-cream/50 px-3 py-2.5", children: [
+            /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "mt-0.5 flex-shrink-0 text-clay", children: "✓" }),
+            /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-[13px] leading-snug text-charcoal", children: item })
+          ] }, i)) }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "mt-6 rounded-lg bg-charcoal/5 px-4 py-3", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("p", { className: "text-[13px] text-walnut/80", children: [
+            "Chưa chắc chọn màu hay loại sơn?",
+            " ",
+            /* @__PURE__ */ jsxRuntimeExports.jsx("a", { href: "https://zalo.me/0943966662", target: "_blank", rel: "noopener noreferrer", className: "font-medium text-clay underline underline-offset-2 transition hover:text-clay/80", children: "Nhắn Zalo để được gợi ý nhanh." })
+          ] }) }),
+          /* @__PURE__ */ jsxRuntimeExports.jsxs("a", { href: "#palette", className: "mt-6 inline-flex items-center gap-3 bg-clay px-6 py-3.5 text-[12px] font-medium uppercase tracking-[0.18em] text-cream transition hover:bg-clay/90", children: [
+            "Chọn màu & đặt mua ngay",
+            /* @__PURE__ */ jsxRuntimeExports.jsx(ArrowRight, { className: "h-4 w-4" })
           ] })
         ] })
       ] }),
@@ -878,8 +856,10 @@ function Index() {
         ] })
       ] })
     ] }) }),
-    showZaloButton && /* @__PURE__ */ jsxRuntimeExports.jsx("a", { href: "https://zalo.me/0943966662", target: "_blank", rel: "noopener noreferrer", className: "fixed bottom-6 right-6 z-50 group", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "relative flex h-14 w-14 items-center justify-center rounded-full bg-white shadow-lg transition hover:shadow-xl", children: [
-      /* @__PURE__ */ jsxRuntimeExports.jsx("svg", { className: "h-7 w-7", viewBox: "0 0 24 24", fill: "#0068FF", children: /* @__PURE__ */ jsxRuntimeExports.jsx("path", { d: "M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15h-2v-6h2v6zm-1-7c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1zm5 7h-2v-3.5c0-1.1-.9-2-2-2v-1c1.66 0 3 1.34 3 3V17z" }) }),
+    showZaloButton && /* @__PURE__ */ jsxRuntimeExports.jsx("a", { href: "https://zalo.me/0943966662", target: "_blank", rel: "noopener noreferrer", className: "fixed bottom-6 right-6 z-50 group", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "relative flex h-14 w-14 items-center justify-center rounded-full shadow-lg transition hover:shadow-xl", style: {
+      backgroundColor: "#0068FF"
+    }, children: [
+      /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-2xl font-bold text-white", children: "Z" }),
       /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute right-full mr-3 w-48 rounded-lg bg-charcoal px-3 py-2 text-[11px] text-cream opacity-0 transition-opacity group-hover:opacity-100", children: "Bạn chưa chắc chọn gì? Nhắn Zalo — tư vấn miễn phí" })
     ] }) }),
     /* @__PURE__ */ jsxRuntimeExports.jsx(Footer, {})
