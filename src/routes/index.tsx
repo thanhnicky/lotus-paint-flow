@@ -137,18 +137,18 @@ const testimonials = [
   },
   {
     quote:
-      "Tủ áo cũ của mẹ mình được sơn lại sắc Mộc, đặt cạnh giường nhìn rất tĩnh. Sơn 2 lớp, mỗi hũ 1kg đủ cho cả tủ — mình đặt thêm 1 hũ dự phòng.",
+      "Tủ áo cũ của con gái mình được sơn lại sắc hồng, đặt cạnh giường nhìn rất cute. Sơn 2 lớp, hết 4 hũ đủ cho cả tủ — mình đặt thêm 1 hũ dự phòng.",
     name: "Anh Phúc",
     place: "Quận Cầu Giấy, Hà Nội",
-    product: "Wood Paint · sắc Mộc",
+    product: "Wood Paint · sắc Hồng",
     image: testimonial2,
   },
   {
     quote:
-      "Mình tự sơn cửa gỗ ngoài ban công bằng Woodstain Walnut. Sau 4 tháng nắng mưa vẫn giữ màu, vân gỗ vẫn rõ. Đáng đồng tiền.",
+      "Mình tự sơn giường ngủ của mình, tuy lần đầu thực hiện nhưng rất dễ làm. Sơn 2 lớp là bề mặt lên đẹp. Mình sử dụng 2 hũ là đủ. Đáng đồng tiền.",
     name: "Chị Mai",
     place: "Đà Nẵng",
-    product: "Woodstain · Walnut",
+    product: "Woodpaint · Vàng Kem",
     image: testimonial3,
   },
 ];
@@ -419,9 +419,9 @@ function Index() {
               {[
                 { item: "Bàn ăn 4–6 ghế", qty: "1 hũ 1kg" },
                 { item: "Tủ quần áo 2 cánh", qty: "2 hũ 1kg" },
-                { item: "Cửa gỗ 1 cánh", qty: "1 hũ 1kg" },
+                { item: "Cửa gỗ 1 cánh", qty: "2 hũ" },
                 { item: "Kệ TV / kệ sách", qty: "1–2 hũ 1kg" },
-                { item: "Bộ bàn ghế phòng ngủ", qty: "2–3 hũ 1kg" },
+                { item: "Giường ngủ", qty: "2 hũ" },
               ].map((row, i) => (
                 <div key={i} className="flex justify-between border-b border-walnut/10 py-2 text-[13px]">
                   <span className="text-walnut/70">{row.item}</span>
@@ -827,9 +827,9 @@ function Index() {
             <div>
               <span className="text-[11px] uppercase tracking-[0.3em] text-walnut/70">10 — Cảm nhận khách hàng</span>
               <h2 className="mt-5 font-serif text-[32px] leading-tight text-charcoal sm:text-4xl md:text-5xl">
-                Vợ chồng trẻ,
+                Ngày cuối tuần.
                 <br />
-                chủ nhà tự làm DIY.
+                Một hũ sơn. Nhà khác hẳn.
               </h2>
             </div>
           </div>
@@ -864,38 +864,6 @@ function Index() {
         </div>
       </section>
 
-      {/* TRUST / COMMITMENTS */}
-      <section className="border-t border-walnut/10 bg-cream">
-        <div className="mx-auto max-w-[1400px] px-5 py-16 md:px-12 md:py-24">
-          <div className="mx-auto max-w-2xl text-center">
-            <p className="font-serif text-[22px] leading-[1.65] text-charcoal md:text-[25px]">
-              Đặt hàng trực tiếp, nhận hàng tại nhà — không cần gặp mặt, không cần tư vấn.
-            </p>
-            <p className="mt-6 text-[15px] leading-[1.75] text-walnut/65">
-              Thanh toán COD khi nhận hàng, hoặc thanh toán online để được giảm 10% và miễn phí giao hàng. Giao toàn quốc trong 1–5 ngày. Đổi trả trong 7 ngày nếu sản phẩm giao nhầm hoặc còn nguyên seal.
-            </p>
-            <ul className="mt-10 flex flex-wrap justify-center gap-x-8 gap-y-3">
-              {[
-                "COD — nhận hàng mới trả tiền",
-                "Thanh toán online giảm 10%",
-                "Miễn phí ship khi thanh toán online",
-                "Giao toàn quốc 1–5 ngày",
-                "Đổi trả 7 ngày",
-              ].map((item) => (
-                <li key={item} className="text-[12px] uppercase tracking-[0.18em] text-walnut/60">{item}</li>
-              ))}
-            </ul>
-            <a
-              href="#advise"
-              className="mt-10 inline-flex items-center gap-3 text-[12px] font-medium uppercase tracking-[0.18em] text-charcoal transition hover:text-clay sm:text-[13px]"
-            >
-              Chọn màu & đặt mua ngay
-              <ArrowRight className="h-4 w-4" />
-            </a>
-          </div>
-        </div>
-      </section>
-
       {/* FAQ */}
       <section className="border-t border-walnut/10 bg-sand/40">
         <div className="mx-auto max-w-[1400px] px-5 py-16 md:px-12 md:py-28">
@@ -912,35 +880,45 @@ function Index() {
               </p>
 
               {/* Trust Signals */}
-              <div className="mt-8 space-y-4 border-t border-walnut/15 pt-6">
-                <div className="flex items-start gap-3">
-                  <span className="text-clay">✓</span>
-                  <div>
-                    <p className="text-[13px] font-medium text-charcoal">Sản xuất tại Việt Nam</p>
-                    <p className="text-[12px] text-walnut/60">Công ty TNHH Sản Xuất Thương Mại Dịch Vụ Bích Trang</p>
-                  </div>
+              <div className="mt-8 border-t border-walnut/15 pt-8">
+                <h3 className="font-serif text-[20px] leading-tight text-charcoal sm:text-[22px]">
+                  Đặt online nhanh, nhận hàng tại nhà.
+                </h3>
+                <p className="mt-3 max-w-sm text-[14px] leading-relaxed text-walnut/70">
+                  Chọn màu, đặt hàng trong vài phút và nhận hàng tận nơi. Bạn có thể thanh toán COD khi nhận hàng, hoặc chọn thanh toán online để được giảm 10% và miễn phí giao hàng.
+                </p>
+
+                <div className="mt-6 grid grid-cols-1 gap-3 sm:grid-cols-2">
+                  {[
+                    "COD khi nhận hàng",
+                    "Online giảm 10%",
+                    "Miễn phí giao hàng khi thanh toán online",
+                    "Giao toàn quốc trong 1–5 ngày",
+                    "Đổi trả 7 ngày nếu giao nhầm hoặc còn nguyên seal",
+                  ].map((item, i) => (
+                    <div key={i} className="flex items-start gap-2.5 rounded-lg bg-cream/50 px-3 py-2.5">
+                      <span className="mt-0.5 flex-shrink-0 text-clay">✓</span>
+                      <span className="text-[13px] leading-snug text-charcoal">{item}</span>
+                    </div>
+                  ))}
                 </div>
-                <div className="flex items-start gap-3">
-                  <span className="text-clay">✓</span>
-                  <div>
-                    <p className="text-[13px] font-medium text-charcoal">Bảo hành 7 ngày</p>
-                    <p className="text-[12px] text-walnut/60">Đổi trả sản phẩm còn nguyên seal</p>
-                  </div>
+
+                <div className="mt-6 rounded-lg bg-charcoal/5 px-4 py-3">
+                  <p className="text-[13px] text-walnut/80">
+                    Chưa chắc chọn màu hay loại sơn?{" "}
+                    <a href="https://zalo.me/0943966662" target="_blank" rel="noopener noreferrer" className="font-medium text-clay underline underline-offset-2 transition hover:text-clay/80">
+                      Nhắn Zalo để được gợi ý nhanh.
+                    </a>
+                  </p>
                 </div>
-                <div className="flex items-start gap-3">
-                  <span className="text-clay">✓</span>
-                  <div>
-                    <p className="text-[13px] font-medium text-charcoal">Giao hàng toàn quốc</p>
-                    <p className="text-[12px] text-walnut/60">1-2 ngày nội thành, 2-5 ngày tỉnh khác</p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-3">
-                  <span className="text-clay">✓</span>
-                  <div>
-                    <p className="text-[13px] font-medium text-charcoal">Hỗ trợ kỹ thuật</p>
-                    <p className="text-[12px] text-walnut/60">Tư vấn qua Zalo: 0396 666 2</p>
-                  </div>
-                </div>
+
+                <a
+                  href="#palette"
+                  className="mt-6 inline-flex items-center gap-3 bg-clay px-6 py-3.5 text-[12px] font-medium uppercase tracking-[0.18em] text-cream transition hover:bg-clay/90"
+                >
+                  Chọn màu & đặt mua ngay
+                  <ArrowRight className="h-4 w-4" />
+                </a>
               </div>
             </div>
 
@@ -1306,10 +1284,8 @@ function Index() {
           rel="noopener noreferrer"
           className="fixed bottom-6 right-6 z-50 group"
         >
-          <div className="relative flex h-14 w-14 items-center justify-center rounded-full bg-white shadow-lg transition hover:shadow-xl">
-            <svg className="h-7 w-7" viewBox="0 0 24 24" fill="#0068FF">
-              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15h-2v-6h2v6zm-1-7c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1zm5 7h-2v-3.5c0-1.1-.9-2-2-2v-1c1.66 0 3 1.34 3 3V17z"/>
-            </svg>
+          <div className="relative flex h-14 w-14 items-center justify-center rounded-full shadow-lg transition hover:shadow-xl" style={{ backgroundColor: "#0068FF" }}>
+            <span className="text-2xl font-bold text-white">Z</span>
             {/* Tooltip */}
             <div className="absolute right-full mr-3 w-48 rounded-lg bg-charcoal px-3 py-2 text-[11px] text-cream opacity-0 transition-opacity group-hover:opacity-100">
               Bạn chưa chắc chọn gì? Nhắn Zalo — tư vấn miễn phí
