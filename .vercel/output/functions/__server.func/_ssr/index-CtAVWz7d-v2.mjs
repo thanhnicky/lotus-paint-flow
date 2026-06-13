@@ -822,7 +822,7 @@ function Index() {
               ] }),
               /* @__PURE__ */ jsxRuntimeExports.jsxs("button", { type: "button", onClick: () => setOrderPayment("online"), className: `w-full border p-4 text-left transition ${orderPayment === "online" ? "border-clay/60 bg-clay/5" : "border-walnut/15 hover:border-walnut/30"}`, children: [
                 /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: `block text-[13px] font-medium ${orderPayment === "online" ? "text-clay" : "text-walnut/60"}`, children: "Thanh toán Online" }),
-                /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: `block text-[12px] ${orderPayment === "online" ? "text-clay/80" : "text-walnut/40"}`, children: "Giảm 10% + Miễn phí giao hàng" })
+                /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: `block text-[13px] font-medium ${orderPayment === "online" ? "text-clay" : "text-walnut/60"}`, children: "✨ Giảm 10% + Miễn phí giao hàng" })
               ] })
             ] })
           ] }),

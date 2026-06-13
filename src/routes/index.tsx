@@ -1199,7 +1199,7 @@ function Index() {
                 <button type="button" onClick={() => setOrderPayment("online")}
                   className={`w-full border p-4 text-left transition ${orderPayment === "online" ? "border-clay/60 bg-clay/5" : "border-walnut/15 hover:border-walnut/30"}`}>
                   <span className={`block text-[13px] font-medium ${orderPayment === "online" ? "text-clay" : "text-walnut/60"}`}>Thanh toán Online</span>
-                  <span className={`block text-[12px] ${orderPayment === "online" ? "text-clay/80" : "text-walnut/40"}`}>Giảm 10% + Miễn phí giao hàng</span>
+                  <span className={`block text-[13px] font-medium ${orderPayment === "online" ? "text-clay" : "text-walnut/60"}`}>✨ Giảm 10% + Miễn phí giao hàng</span>
                 </button>
               </div>
             </div>
