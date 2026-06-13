@@ -155,40 +155,28 @@ const testimonials = [
 
 const faqs = [
   {
-    q: "Sơn gỗ hệ nước là gì? Khác gì với sơn dầu?",
-    a: "Sơn gỗ hệ nước dùng nước làm dung môi thay vì dung môi dầu. Ít mùi, khô nhanh, dễ vệ sinh dụng cụ, an toàn hơn cho sức khỏe. Sơn dầu bền hơn nhưng mùi mạnh, lâu khô, cần dung môi xóa rửa. Lotus là sơn hệ nước cao cấp, phù hợp nội thất gia đình.",
+    q: "Người chưa từng sơn có tự làm được không?",
+    a: "Hoàn toàn được. Sơn hệ nước dễ tán đều, không kén tay nghề. Bạn chỉ cần cọ hoặc rulo, một miếng giấy nhám mịn và khoảng một buổi chiều. Không cần kỹ thuật chuyên nghiệp.",
   },
   {
     q: "Sơn gỗ hệ nước có an toàn cho nhà có trẻ nhỏ không?",
-    a: "Có. Lotus là sơn hệ nước, hàm lượng VOC thấp, không chứa dung môi nặng. Bạn có thể thi công ngay trong phòng ngủ, phòng bếp; sau 4–6 giờ là có thể sinh hoạt lại bình thường. Vẫn nên mở cửa cho thoáng trong lúc sơn và tránh tiếp xúc trực tiếp với trẻ nhỏ trong thời gian sơn.",
-  },
-  {
-    q: "Người chưa từng sơn có tự làm được không?",
-    a: "Hoàn toàn được. Sơn hệ nước dễ tán đều, không kén tay nghề. Bạn chỉ cần cọ hoặc rulo, một miếng giấy nhám P240 và khoảng một buổi chiều. Không cần kỹ thuật chuyên nghiệp, hướng dẫn thi công chi tiết có trong phần Thi công bên dưới.",
-  },
-  {
-    q: "Nên chọn sơn giữ vân gỗ hay sơn màu bệt?",
-    a: "Sơn giữ vân gỗ phù hợp đồ gỗ đẹp vân tự nhiên, muốn giữ vẻ đẹp gỗ gốc. Sơn màu bệt phù hợp muốn đổi màu hoàn toàn, tạo vẻ hiện đại, đồng nhất. Cả hai đều bền, dễ vệ sinh. Chọn theo mục đích sử dụng và sở thích thẩm mỹ.",
+    a: "Có. Lotus là sơn hệ nước, hàm lượng VOC thấp, không chứa dung môi nặng. Bạn có thể thi công ngay trong phòng ngủ, phòng bếp; sau 4–6 giờ là có thể sinh hoạt lại bình thường.",
   },
   {
     q: "Một hũ 1kg sơn được bao nhiêu m²?",
-    a: "Khoảng 7–9 m² cho mỗi lớp tuỳ bề mặt. Khuyến nghị sơn 2 lớp để màng sơn đều và bền — tương đương 4–5 m² hoàn thiện cho 1kg. Tính diện tích cần sơn để mua đủ lượng, tránh thừa hoặc thiếu.",
+    a: "Khoảng 7–9 m² cho mỗi lớp tuỳ bề mặt. Khuyến nghị sơn 2 lớp để màng sơn đều và bền — tương đương 4–5 m² hoàn thiện cho 1kg.",
   },
   {
-    q: "Sơn lên đồ gỗ cũ đã có sơn cũ thì cần xử lý thế nào?",
-    a: "Chà nhám nhẹ bằng giấy P180–P240 để lớp sơn cũ bớt bóng và bám tốt hơn. Nếu bề mặt bong tróc nhiều, cần cạo phần bong rồi chà phẳng. Lotus bám trực tiếp lên sơn cũ còn nguyên, không cần lót. Bề mặt sạch, khô là có thể sơn.",
-  },
-  {
-    q: "Bao lâu thì khô? Khi nào có thể sử dụng bình thường?",
-    a: "Khô bề mặt sau 30 phút, sơn lớp tiếp theo sau 2 giờ. Sử dụng nhẹ sau 24 giờ. Đạt độ cứng tối đa sau khoảng 7 ngày — trong tuần đầu hạn chế vật nặng kéo lê trên bề mặt để tránh hư hại.",
+    q: "Nên chọn sơn giữ vân gỗ hay sơn màu bệt?",
+    a: "Sơn giữ vân gỗ phù hợp đồ gỗ đẹp vân tự nhiên, muốn giữ vẻ đẹp gỗ gốc. Sơn màu bệt phù hợp muốn đổi màu hoàn toàn, tạo vẻ hiện đại, đồng nhất. Cả hai đều bền, dễ vệ sinh.",
   },
   {
     q: "Giao hàng toàn quốc không? Bao lâu nhận được?",
-    a: "Lotus giao toàn quốc. Nội thành Hà Nội & TP. HCM nhận trong 1–2 ngày, các tỉnh thành khác 2–5 ngày. Thanh toán online được miễn phí vận chuyển. COD tính phí theo địa chỉ. Mua từ 50kg trở lên liên hệ Zalo để nhận giá sỉ.",
+    a: "Lotus giao toàn quốc. Nội thành Hà Nội & TP. HCM nhận trong 1–2 ngày, các tỉnh thành khác 2–5 ngày. Thanh toán online được miễn phí vận chuyển.",
   },
   {
     q: "Nếu chọn sai màu hoặc không ưng thì sao?",
-    a: "Sản phẩm còn nguyên seal được đổi trả trong 7 ngày. Bạn có thể xem bảng màu đầy đủ trước khi đặt hàng. Màu hiển thị trên màn hình có thể chênh nhẹ so với thực tế, nên cân nhắc chọn màu nhỏ thử trước khi sơn toàn bộ.",
+    a: "Sản phẩm còn nguyên seal được đổi trả trong 7 ngày. Bạn có thể xem bảng màu đầy đủ trước khi đặt hàng. Màu hiển thị trên màn hình có thể chênh nhẹ so với thực tế.",
   },
 ];
 
@@ -316,11 +304,11 @@ function Index() {
               </p>
 
               <div className="mt-12 flex flex-wrap gap-x-6 gap-y-1.5 border-t border-walnut/15 pt-6">
-                <span className="text-[11px] uppercase tracking-[0.22em] text-walnut/60">Hệ nước ít mùi</span>
+                <span className="text-[11px] text-walnut/60">Hệ nước ít mùi</span>
                 <span className="text-[11px] text-walnut/30">/</span>
-                <span className="text-[11px] uppercase tracking-[0.22em] text-walnut/60">COD toàn quốc</span>
+                <span className="text-[11px] text-walnut/60">COD toàn quốc</span>
                 <span className="text-[11px] text-walnut/30">/</span>
-                <span className="text-[11px] uppercase tracking-[0.22em] text-walnut/60">Online giảm 10%</span>
+                <span className="text-[11px] text-walnut/60">Online giảm 10%</span>
               </div>
             </div>
 
@@ -405,16 +393,28 @@ function Index() {
             </p>
           </header>
 
-          <div className="mt-14 grid grid-cols-2 gap-y-12 border-t border-walnut/20 pt-2 sm:grid-cols-4 sm:divide-x sm:divide-walnut/15">
-            <SpecCell k="Quy cách" v="Hũ 1kg" sub="Đặt combo nhiều hũ" />
-            <SpecCell k="Độ phủ" v="7–9 m²" sub="Mỗi lớp · bề mặt phẳng" />
-            <SpecCell k="Số lớp" v="2 lớp" sub="3 lớp cho sàn & ngoại thất" />
-            <SpecCell k="Khô bề mặt" v="30 phút" sub="Lớp 2 sau 2 giờ" />
+          <div className="mt-14 grid grid-cols-2 gap-4 border-t border-walnut/20 pt-8 sm:grid-cols-4">
+            <div className="rounded-lg bg-cream/50 p-4 text-center">
+              <div className="text-[28px] font-serif text-clay sm:text-[32px]">1kg</div>
+              <div className="mt-1 text-[11px] text-walnut/60">Quy cách hũ</div>
+            </div>
+            <div className="rounded-lg bg-cream/50 p-4 text-center">
+              <div className="text-[28px] font-serif text-clay sm:text-[32px]">7–9 m²</div>
+              <div className="mt-1 text-[11px] text-walnut/60">Độ phủ mỗi lớp</div>
+            </div>
+            <div className="rounded-lg bg-cream/50 p-4 text-center">
+              <div className="text-[28px] font-serif text-clay sm:text-[32px]">2 lớp</div>
+              <div className="mt-1 text-[11px] text-walnut/60">Khuyến nghị</div>
+            </div>
+            <div className="rounded-lg bg-cream/50 p-4 text-center">
+              <div className="text-[28px] font-serif text-clay sm:text-[32px]">30 phút</div>
+              <div className="mt-1 text-[11px] text-walnut/60">Khô bề mặt</div>
+            </div>
           </div>
 
           {/* Quantity Suggestion Table */}
           <div className="mt-12 border-t border-walnut/15 pt-8">
-            <p className="mb-4 text-[11px] uppercase tracking-[0.25em] text-walnut/60">Gợi ý số lượng theo hạng mục</p>
+            <p className="mb-4 text-[11px] text-walnut/60">Gợi ý số lượng theo hạng mục</p>
             <div className="space-y-2">
               {[
                 { item: "Bàn ăn 4–6 ghế", qty: "1 hũ 1kg" },
@@ -583,7 +583,7 @@ function Index() {
 
               <ol>
                 {[
-                  { n: "1", t: "Làm sạch & chà nhám nhẹ", d: "Lau bụi, dầu mỡ. Chà P240 để bề mặt mịn và bám sơn tốt." },
+                  { n: "1", t: "Làm sạch & chà nhám nhẹ", d: "Lau bụi, dầu mỡ. Chà giấy nhám mịn để bề mặt mịn và bám sơn tốt." },
                   { n: "2", t: "Sơn lớp đầu, chờ khô", d: "Pha loãng 5–10% nước, sơn mỏng đều bằng cọ hoặc lăn. Để khô 2 giờ." },
                   { n: "3", t: "Phủ lớp hoàn thiện", d: "Lớp hai cho màng sơn đều màu, mịn, đạt độ bền tối ưu." },
                 ].map((s) => (
@@ -653,7 +653,7 @@ function Index() {
                     alt={c.name}
                     className={`aspect-square w-full object-cover transition-all duration-200 ${
                       orderColor === c.name
-                        ? "ring-2 ring-clay ring-offset-2"
+                        ? "ring-3 ring-clay ring-offset-2 scale-105"
                         : "group-hover:scale-[1.02]"
                     }`}
                   />
@@ -661,7 +661,7 @@ function Index() {
                   <div
                     className={`aspect-square w-full border border-walnut/15 bg-sand/30 transition-all duration-200 ${
                       orderColor === c.name
-                        ? "ring-2 ring-clay ring-offset-2"
+                        ? "ring-3 ring-clay ring-offset-2 scale-105"
                         : ""
                     }`}
                   />
@@ -671,7 +671,7 @@ function Index() {
                     {c.name}
                   </span>
                   {orderColor === c.name && (
-                    <span className="text-[10px] uppercase tracking-[0.14em] text-clay">Đã chọn</span>
+                    <span className="text-[11px] text-clay font-medium">✓</span>
                   )}
                 </div>
               </button>
@@ -793,7 +793,7 @@ function Index() {
               </div>
               <figcaption className="mt-4 border-t border-walnut/20 pt-3">
                 <div className="font-serif text-lg text-charcoal">{projects[0].label}</div>
-                <div className="mt-1 text-[11px] uppercase tracking-[0.2em] text-walnut/60">{projects[0].place}</div>
+                <div className="mt-1 text-[11px] text-walnut/60">{projects[0].place}</div>
               </figcaption>
             </figure>
             <div className="flex flex-col gap-5 lg:col-span-5">
@@ -811,7 +811,7 @@ function Index() {
                   </div>
                   <figcaption className="mt-3 border-t border-walnut/20 pt-3">
                     <div className="font-serif text-base text-charcoal">{p.label}</div>
-                    <div className="mt-0.5 text-[11px] uppercase tracking-[0.2em] text-walnut/60">{p.place}</div>
+                    <div className="mt-0.5 text-[11px] text-walnut/60">{p.place}</div>
                   </figcaption>
                 </figure>
               ))}
@@ -838,23 +838,23 @@ function Index() {
             {testimonials.map((t, i) => (
               <blockquote
                 key={t.name}
-                className={`flex flex-col py-10 md:py-0 ${
+                className={`flex flex-col py-8 md:py-0 ${
                   i === 0 ? "md:pr-10" : i === 1 ? "md:px-10" : "md:pl-10"
                 }`}
               >
-                <div className="mb-6 aspect-[4/3] overflow-hidden rounded-lg bg-sand/30">
+                <div className="mb-4 aspect-[4/3] overflow-hidden rounded-lg bg-sand/30">
                   <img
                     src={t.image}
                     alt={t.name}
                     className="h-full w-full object-cover"
                   />
                 </div>
-                <p className="flex-1 font-serif text-[18px] leading-[1.6] text-charcoal sm:text-[19px]">
+                <p className="flex-1 font-serif text-[17px] leading-[1.5] text-charcoal sm:text-[18px]">
                   “{t.quote}”
                 </p>
-                <footer className="mt-8 border-t border-walnut/15 pt-5">
+                <footer className="mt-6 border-t border-walnut/15 pt-4">
                   <div className="text-sm font-medium text-charcoal">{t.name}</div>
-                  <div className="mt-0.5 text-[11px] uppercase tracking-[0.2em] text-walnut/55">
+                  <div className="mt-0.5 text-[11px] text-walnut/55">
                     {t.place} · {t.product}
                   </div>
                 </footer>
@@ -878,52 +878,10 @@ function Index() {
               <p className="mt-6 max-w-xs text-[15px] leading-relaxed text-walnut/70">
                 Mua số lượng lớn cho xưởng hoặc dự án? Liên hệ Zalo để nhận giá sỉ.
               </p>
-
-              {/* Trust Signals */}
-              <div className="mt-8 border-t border-walnut/15 pt-8">
-                <h3 className="font-serif text-[20px] leading-tight text-charcoal sm:text-[22px]">
-                  Đặt online nhanh, nhận hàng tại nhà.
-                </h3>
-                <p className="mt-3 max-w-sm text-[14px] leading-relaxed text-walnut/70">
-                  Chọn màu, đặt hàng trong vài phút và nhận hàng tận nơi. Bạn có thể thanh toán COD khi nhận hàng, hoặc chọn thanh toán online để được giảm 10% và miễn phí giao hàng.
-                </p>
-
-                <div className="mt-6 grid grid-cols-1 gap-3 sm:grid-cols-2">
-                  {[
-                    "COD khi nhận hàng",
-                    "Online giảm 10%",
-                    "Miễn phí giao hàng khi thanh toán online",
-                    "Giao toàn quốc trong 1–5 ngày",
-                    "Đổi trả 7 ngày nếu giao nhầm hoặc còn nguyên seal",
-                  ].map((item, i) => (
-                    <div key={i} className="flex items-start gap-2.5 rounded-lg bg-cream/50 px-3 py-2.5">
-                      <span className="mt-0.5 flex-shrink-0 text-clay">✓</span>
-                      <span className="text-[13px] leading-snug text-charcoal">{item}</span>
-                    </div>
-                  ))}
-                </div>
-
-                <div className="mt-6 rounded-lg bg-charcoal/5 px-4 py-3">
-                  <p className="text-[13px] text-walnut/80">
-                    Chưa chắc chọn màu hay loại sơn?{" "}
-                    <a href="https://zalo.me/0943966662" target="_blank" rel="noopener noreferrer" className="font-medium text-clay underline underline-offset-2 transition hover:text-clay/80">
-                      Nhắn Zalo để được gợi ý nhanh.
-                    </a>
-                  </p>
-                </div>
-
-                <a
-                  href="#palette"
-                  className="mt-6 inline-flex items-center gap-3 bg-clay px-6 py-3.5 text-[12px] font-medium uppercase tracking-[0.18em] text-cream transition hover:bg-clay/90"
-                >
-                  Chọn màu & đặt mua ngay
-                  <ArrowRight className="h-4 w-4" />
-                </a>
-              </div>
             </div>
 
             <div className="col-span-12 md:col-span-8">
-              <Accordion type="multiple" defaultValue={["f-2", "f-5"]} className="border-t border-walnut/20">
+              <Accordion type="multiple" defaultValue={["f-0", "f-1"]} className="border-t border-walnut/20">
                 {faqs.map((f, i) => (
                   <AccordionItem
                     key={i}
@@ -940,6 +898,52 @@ function Index() {
                 ))}
               </Accordion>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* TRUST / PURCHASE REASSURANCE */}
+      <section className="border-t border-walnut/10 bg-cream">
+        <div className="mx-auto max-w-[1400px] px-5 py-16 md:px-12 md:py-24">
+          <div className="mx-auto max-w-2xl text-center">
+            <h2 className="font-serif text-[28px] leading-tight text-charcoal sm:text-[32px]">
+              Đặt online nhanh, nhận hàng tại nhà.
+            </h2>
+            <p className="mt-4 text-[15px] leading-relaxed text-walnut/70">
+              Chọn màu, đặt hàng trong vài phút và nhận hàng tận nơi. Bạn có thể thanh toán COD khi nhận hàng, hoặc chọn thanh toán online để được giảm 10% và miễn phí giao hàng.
+            </p>
+
+            <div className="mt-8 grid grid-cols-1 gap-3 sm:grid-cols-2">
+              {[
+                "COD khi nhận hàng",
+                "Online giảm 10%",
+                "Miễn phí giao hàng khi thanh toán online",
+                "Giao toàn quốc trong 1–5 ngày",
+                "Đổi trả 7 ngày nếu giao nhầm hoặc còn nguyên seal",
+              ].map((item, i) => (
+                <div key={i} className="flex items-start gap-2.5 rounded-lg bg-sand/30 px-4 py-3">
+                  <span className="mt-0.5 flex-shrink-0 text-clay">✓</span>
+                  <span className="text-[13px] leading-snug text-charcoal">{item}</span>
+                </div>
+              ))}
+            </div>
+
+            <div className="mt-8 rounded-lg bg-charcoal/5 px-5 py-4">
+              <p className="text-[14px] text-walnut/80">
+                Chưa chắc chọn màu hay loại sơn?{" "}
+                <a href="https://zalo.me/0943966662" target="_blank" rel="noopener noreferrer" className="font-medium text-clay underline underline-offset-2 transition hover:text-clay/80">
+                  Nhắn Zalo để được gợi ý nhanh.
+                </a>
+              </p>
+            </div>
+
+            <a
+              href="#palette"
+              className="mt-8 inline-flex items-center gap-3 bg-clay px-6 py-4 text-[12px] font-medium uppercase tracking-[0.18em] text-cream transition hover:bg-clay/90 sm:text-[13px]"
+            >
+              Chọn màu & đặt mua ngay
+              <ArrowRight className="h-4 w-4" />
+            </a>
           </div>
         </div>
       </section>
@@ -1031,7 +1035,7 @@ function Index() {
             <div className="space-y-6">
               {/* Dòng sơn */}
               <div>
-                <label className="mb-3 block text-[11px] uppercase tracking-[0.25em] text-walnut/50">Dòng sơn</label>
+                <label className="mb-3 block text-[11px] text-walnut/50">Dòng sơn</label>
                 <div className="grid grid-cols-2 gap-3">
                   <button type="button"
                     onClick={() => { setOrderProduct("bet"); setOrderColor(""); }}
@@ -1048,7 +1052,7 @@ function Index() {
 
               {/* Môi trường */}
               <div>
-                <label className="mb-3 block text-[11px] uppercase tracking-[0.25em] text-walnut/50">Môi trường sử dụng</label>
+                <label className="mb-3 block text-[11px] text-walnut/50">Môi trường sử dụng</label>
                 <div className="grid grid-cols-2 gap-3">
                   <button type="button"
                     onClick={() => setOrderEnv("indoor")}
@@ -1065,7 +1069,7 @@ function Index() {
 
               {/* Màu sơn */}
               <div>
-                <label className="mb-3 block text-[11px] uppercase tracking-[0.25em] text-walnut/50">Màu sơn</label>
+                <label className="mb-3 block text-[11px] text-walnut/50">Màu sơn</label>
                 <input
                   type="text"
                   value={orderColor}
@@ -1087,7 +1091,7 @@ function Index() {
 
               {/* Bề mặt */}
               <div>
-                <label className="mb-3 block text-[11px] uppercase tracking-[0.25em] text-walnut/50">Bề mặt</label>
+                <label className="mb-3 block text-[11px] text-walnut/50">Bề mặt</label>
                 <div className="grid grid-cols-3 gap-3">
                   <button type="button"
                     onClick={() => setOrderSurface("bong")}
@@ -1109,7 +1113,7 @@ function Index() {
 
               {/* Kích thước & số lượng */}
               <div>
-                <label className="mb-3 block text-[11px] uppercase tracking-[0.25em] text-walnut/50">Kích thước & số lượng</label>
+                <label className="mb-3 block text-[11px] text-walnut/50">Kích thước & số lượng</label>
                 <div className="space-y-3">
                   <div className="grid grid-cols-2 gap-3">
                     <button type="button" onClick={() => setOrderSize("1kg")}
@@ -1138,7 +1142,7 @@ function Index() {
             <div className="space-y-6">
               {/* Order Summary */}
             <div className="space-y-3 border border-walnut/15 p-5 bg-cream/30">
-              <div className="mb-3 text-[10px] uppercase tracking-[0.3em] text-walnut/50">Tóm tắt đơn</div>
+              <div className="mb-3 text-[10px] text-walnut/50">Tóm tắt đơn</div>
               <div className="space-y-2 text-[14px]">
                 <div className="flex justify-between">
                   <span className="text-walnut/70">Sản phẩm</span>
@@ -1150,7 +1154,7 @@ function Index() {
                 </div>
                 <div className="flex justify-between">
                   <span className="text-walnut/70">Màu</span>
-                  <span className="text-charcoal">{orderColor || <span className="italic text-walnut/35">Chưa chọn</span>}</span>
+                  <span className="text-charcoal">{orderColor || <span className="text-walnut/40">Chưa chọn màu</span>}</span>
                 </div>
                 <div className="flex justify-between">
                   <span className="text-walnut/70">Bề mặt</span>
@@ -1185,7 +1189,7 @@ function Index() {
 
             {/* Payment Method */}
             <div>
-              <label className="mb-3 block text-[11px] uppercase tracking-[0.25em] text-walnut/50">Hình thức thanh toán</label>
+              <label className="mb-3 block text-[11px] text-walnut/50">Hình thức thanh toán</label>
               <div className="space-y-3">
                 <button type="button" onClick={() => setOrderPayment("cod")}
                   className={`w-full border p-4 text-left transition ${orderPayment === "cod" ? "border-walnut/40 bg-sand/50" : "border-walnut/15 hover:border-walnut/30"}`}>
@@ -1250,7 +1254,7 @@ function Index() {
             <div className="pt-2">
               <button
                 type="submit"
-                className="h-[54px] w-full bg-clay text-[12px] font-medium uppercase tracking-[0.22em] text-cream transition hover:bg-clay/90"
+                className="h-[56px] w-full bg-clay text-[12px] font-medium uppercase tracking-[0.22em] text-cream transition hover:bg-clay/90"
               >
                 Đặt hàng
               </button>
@@ -1266,7 +1270,7 @@ function Index() {
             <p>※ Màu hiển thị trên màn hình có thể chênh nhẹ so với thực tế.</p>
             <p className="border-t border-walnut/15 pt-4">
               Mua từ 50kg trở lên?{" "}
-              <a href="https://zalo.me/843966662" target="_blank" rel="noopener noreferrer"
+              <a href="https://zalo.me/0943966662" target="_blank" rel="noopener noreferrer"
                 className="underline underline-offset-2 transition hover:text-clay">
                 Nhắn Zalo để nhận giá sỉ.
               </a>
@@ -1351,14 +1355,14 @@ function Footer() {
           <div className="col-span-6 md:col-span-4">
             <div className="text-[11px] uppercase tracking-[0.22em] text-walnut/50 mb-3">Liên hệ</div>
             <ul className="mt-4 space-y-2.5 text-sm text-charcoal">
-              <li><a href="https://zalo.me/843966662" target="_blank" rel="noopener noreferrer" className="hover:text-clay">Hotline: 0943 966 662</a></li>
-              <li><a href="mailto:sales@sonlotus.vn" className="hover:text-clay">sales@sonlotus.vn</a></li>
-              <li><a href="https://sonlotus.vn" target="_blank" rel="noopener noreferrer" className="hover:text-clay">www.sonlotus.vn</a></li>
+              <li><a href="https://zalo.me/0943966662" target="_blank" rel="noopener noreferrer" className="hover:text-clay">Hotline: 0943 966 662</a></li>
+              <li><a href="mailto:sales@sonlotus.vn" className="hover:text-clay">sales@www.sonlotus.vn</a></li>
+              <li><a href="https://www.sonlotus.vn" target="_blank" rel="noopener noreferrer" className="hover:text-clay">www.sonlotus.vn</a></li>
               <li>Giờ làm việc · 8:00 – 20:00</li>
             </ul>
           </div>
         </div>
-        <div className="mt-12 flex flex-col justify-between gap-3 border-t border-walnut/15 pt-6 text-[11px] uppercase tracking-[0.2em] text-walnut/60 md:flex-row">
+        <div className="mt-12 flex flex-col justify-between gap-3 border-t border-walnut/15 pt-6 text-[11px] text-walnut/60 md:flex-row">
           <span>© {new Date().getFullYear()} CÔNG TY TNHH SX TM DV BÍCH TRANG</span>
           <span>Made with care · Vietnam</span>
         </div>
@@ -1442,7 +1446,7 @@ function FinishCard({
       <div className="mt-8 flex flex-col gap-4 border-t border-walnut/20 pt-6 sm:flex-row sm:items-center sm:justify-between">
         <div>
           <div className="font-serif text-2xl text-charcoal">{price}</div>
-          <div className="text-[11px] uppercase tracking-[0.2em] text-walnut/60">{unit}</div>
+          <div className="text-[11px] text-walnut/60">{unit}</div>
         </div>
         <a
           href="#advise"
@@ -1468,14 +1472,16 @@ function SurfaceOption({
   detail: string;
 }) {
   return (
-    <div className="flex cursor-default items-start justify-between gap-6 border-t border-walnut/15 py-5 px-1 transition-colors hover:bg-sand/40">
-      <div className="flex-1 min-w-0">
-        <div className="font-serif text-[19px] text-charcoal">{label}</div>
-        <div className="mt-0.5 text-[13px] text-walnut/60">{desc}</div>
-      </div>
-      <div className="shrink-0 text-right max-w-[200px]">
-        <div className="text-[10px] uppercase tracking-[0.2em] text-clay">{recommendation}</div>
-        <div className="mt-1 text-[12px] text-walnut/60 leading-relaxed">{detail}</div>
+    <div className="cursor-default border-t border-walnut/15 py-5 px-1 transition-colors hover:bg-sand/40">
+      <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between sm:gap-6">
+        <div className="flex-1 min-w-0">
+          <div className="font-serif text-[18px] text-charcoal sm:text-[19px]">{label}</div>
+          <div className="mt-0.5 text-[13px] text-walnut/60">{desc}</div>
+        </div>
+        <div className="shrink-0 sm:text-right">
+          <div className="text-[11px] text-clay">{recommendation}</div>
+          <div className="mt-1 text-[12px] text-walnut/60 leading-relaxed">{detail}</div>
+        </div>
       </div>
     </div>
   );
@@ -1528,7 +1534,7 @@ function DecisionCard({
         ))}
       </ul>
 
-      <div className="mt-8 border-t border-walnut/20 pt-6">
+      <div className="mt-6 border-t border-walnut/20 pt-6">
         <a
           href={ctaLink}
           onClick={() => onCtaClick?.()}
@@ -1550,7 +1556,7 @@ function StickyCTA() {
           Muốn chọn đúng sơn & số kg? Gửi ảnh bề mặt qua Zalo.
         </p>
         <a
-          href="https://zalo.me/843966662"
+          href="https://zalo.me/0943966662"
           target="_blank"
           rel="noopener noreferrer"
           className="inline-flex items-center gap-2 bg-clay px-5 py-2.5 text-[11px] font-medium uppercase tracking-[0.18em] text-cream transition hover:bg-clay/90 sm:text-[12px]"
