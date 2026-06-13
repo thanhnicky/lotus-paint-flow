@@ -439,18 +439,18 @@ function Index() {
         /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "mt-2 text-[14px] leading-relaxed text-walnut/65", children: b.d })
       ] }, b.n)) })
     ] }) }),
-    /* @__PURE__ */ jsxRuntimeExports.jsx("section", { className: "border-t border-walnut/10 bg-sand/40", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "mx-auto max-w-[1400px] px-5 py-16 md:px-12 md:py-28", children: [
-      /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "mb-10 text-center md:text-left", children: [
+    /* @__PURE__ */ jsxRuntimeExports.jsx("section", { className: "border-t border-walnut/10 bg-sand/40", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "mx-auto max-w-[1400px] px-5 py-12 md:px-12 md:py-28", children: [
+      /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "mb-6 text-center md:mb-10 md:text-left", children: [
         /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-[11px] uppercase tracking-[0.3em] text-walnut/70", children: "07 — Thi công" }),
-        /* @__PURE__ */ jsxRuntimeExports.jsxs("h2", { className: "mt-5 font-serif text-[32px] leading-tight text-charcoal sm:text-4xl md:text-5xl", children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsxs("h2", { className: "mt-4 font-serif text-[28px] leading-tight text-charcoal sm:text-4xl md:mt-5 md:text-5xl", children: [
           "Ba bước,",
           /* @__PURE__ */ jsxRuntimeExports.jsx("br", {}),
           "một buổi chiều."
         ] }),
-        /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "mt-4 max-w-lg mx-auto text-[14px] leading-relaxed text-walnut/70 md:mx-0", children: "Không cần thợ. Không cần máy. Chỉ cọ, lăn — và một chút kiên nhẫn." })
+        /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "mt-3 max-w-lg mx-auto text-[13px] leading-relaxed text-walnut/70 md:mt-4 md:mx-0 md:text-[14px]", children: "Không cần thợ. Không cần máy. Chỉ cọ, lăn — và một chút kiên nhẫn." })
       ] }),
-      /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "mb-12 aspect-video w-full overflow-hidden rounded-xl bg-charcoal/5 shadow-sm md:max-w-4xl md:mx-auto", children: /* @__PURE__ */ jsxRuntimeExports.jsx("iframe", { className: "h-full w-full", src: "https://www.youtube.com/embed/nQ8QXB0wgcQ", title: "Sơn lại chiếc tủ cũ trong 1 buổi chiều", frameBorder: "0", allow: "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture", allowFullScreen: true }) }),
-      /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "grid grid-cols-1 gap-8 md:grid-cols-3", children: [{
+      /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "mb-8 flex justify-center md:mb-12", children: /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "w-full max-w-[420px] aspect-[9/16] overflow-hidden rounded-2xl bg-charcoal md:max-w-4xl md:aspect-video md:rounded-xl md:shadow-sm", children: /* @__PURE__ */ jsxRuntimeExports.jsx("iframe", { className: "h-full w-full", src: "https://www.youtube.com/embed/nQ8QXB0wgcQ", title: "Sơn lại chiếc tủ cũ trong 1 buổi chiều", frameBorder: "0", allow: "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture", allowFullScreen: true }) }) }),
+      /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "grid grid-cols-1 gap-6 md:gap-8 md:grid-cols-3", children: [{
         n: "1",
         t: "Làm sạch & chà nhám nhẹ",
         d: "Lau bụi, dầu mỡ. Chà giấy nhám mịn để bề mặt mịn và bám sơn tốt."
@@ -462,12 +462,12 @@ function Index() {
         n: "3",
         t: "Phủ lớp hoàn thiện",
         d: "Lớp hai cho màng sơn đều màu, mịn, đạt độ bền tối ưu."
-      }].map((s) => /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "rounded-lg bg-cream/50 p-6", children: [
-        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "mb-4 font-serif text-[3rem] leading-none text-clay/50", children: s.n }),
-        /* @__PURE__ */ jsxRuntimeExports.jsx("h3", { className: "mb-2 font-serif text-[18px] leading-tight text-charcoal", children: s.t }),
+      }].map((s) => /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "rounded-lg bg-cream/50 p-5 md:p-6", children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "mb-3 font-serif text-[2.5rem] leading-none text-clay/50 md:mb-4 md:text-[3rem]", children: s.n }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("h3", { className: "mb-2 font-serif text-[17px] leading-tight text-charcoal md:text-[18px]", children: s.t }),
         /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-[13px] leading-relaxed text-walnut/65", children: s.d })
       ] }, s.n)) }),
-      /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "mt-10 text-center font-serif text-[15px] italic text-walnut/50", children: "Hầu hết hoàn thành trong một buổi chiều — không cần nghỉ làm, không cần thợ." })
+      /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "mt-8 text-center font-serif text-[14px] italic text-walnut/50 md:mt-10 md:text-[15px]", children: "Hầu hết hoàn thành trong một buổi chiều — không cần nghỉ làm, không cần thợ." })
     ] }) }),
     /* @__PURE__ */ jsxRuntimeExports.jsx("section", { id: "palette", className: "border-t border-walnut/10 bg-cream", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "mx-auto max-w-[1400px] px-5 py-16 md:px-12 md:py-28", children: [
       /* @__PURE__ */ jsxRuntimeExports.jsxs("header", { className: "mb-12 flex flex-col items-start justify-between gap-4 md:flex-row md:items-end", children: [

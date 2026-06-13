@@ -15,7 +15,7 @@ import "crypto";
 import "async_hooks";
 import "stream";
 import "../_libs/isbot.mjs";
-const appCss = "/assets/styles-DUJWY7Rl-v2.css";
+const appCss = "/assets/styles-DdK7UYhP-v2.css";
 const favicon = "/assets/favicon-a9lNDvJV-v2.ico";
 const ogImage = "/assets/son-go-lotus-khong-mui-BsHU4fPI-v2.jpeg";
 function reportLovableError(error, context = {}) {
@@ -231,7 +231,7 @@ function RootComponent() {
   const { queryClient } = Route$2.useRouteContext();
   return /* @__PURE__ */ jsxRuntimeExports.jsx(QueryClientProvider, { client: queryClient, children: /* @__PURE__ */ jsxRuntimeExports.jsx(Outlet, {}) });
 }
-const $$splitComponentImporter$1 = () => import("./thank-you-DF3qvmg5-v2.mjs");
+const $$splitComponentImporter$1 = () => import("./thank-you-B3AUAB5E-v2.mjs");
 const Route$1 = createFileRoute("/thank-you")({
   component: lazyRouteComponent($$splitComponentImporter$1, "component"),
   validateSearch: (search) => ({
@@ -247,7 +247,7 @@ const Route$1 = createFileRoute("/thank-you")({
     qty: typeof search.qty === "string" ? search.qty : "1"
   })
 });
-const $$splitComponentImporter = () => import("./index-C7OqDgoW-v2.mjs");
+const $$splitComponentImporter = () => import("./index-D8MvaPXV-v2.mjs");
 const Route = createFileRoute("/")({
   head: () => ({
     meta: [{

@@ -552,48 +552,50 @@ function Index() {
 
       {/* PROCESS */}
       <section className="border-t border-walnut/10 bg-sand/40">
-        <div className="mx-auto max-w-[1400px] px-5 py-16 md:px-12 md:py-28">
+        <div className="mx-auto max-w-[1400px] px-5 py-12 md:px-12 md:py-28">
           {/* Header */}
-          <div className="mb-10 text-center md:text-left">
+          <div className="mb-6 text-center md:mb-10 md:text-left">
             <span className="text-[11px] uppercase tracking-[0.3em] text-walnut/70">07 — Thi công</span>
-            <h2 className="mt-5 font-serif text-[32px] leading-tight text-charcoal sm:text-4xl md:text-5xl">
+            <h2 className="mt-4 font-serif text-[28px] leading-tight text-charcoal sm:text-4xl md:mt-5 md:text-5xl">
               Ba bước,
               <br />
               một buổi chiều.
             </h2>
-            <p className="mt-4 max-w-lg mx-auto text-[14px] leading-relaxed text-walnut/70 md:mx-0">
+            <p className="mt-3 max-w-lg mx-auto text-[13px] leading-relaxed text-walnut/70 md:mt-4 md:mx-0 md:text-[14px]">
               Không cần thợ. Không cần máy. Chỉ cọ, lăn — và một chút kiên nhẫn.
             </p>
           </div>
 
-          {/* Video */}
-          <div className="mb-12 aspect-video w-full overflow-hidden rounded-xl bg-charcoal/5 shadow-sm md:max-w-4xl md:mx-auto">
-            <iframe
-              className="h-full w-full"
-              src="https://www.youtube.com/embed/nQ8QXB0wgcQ"
-              title="Sơn lại chiếc tủ cũ trong 1 buổi chiều"
-              frameBorder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-            />
+          {/* Video - Short style on mobile */}
+          <div className="mb-8 flex justify-center md:mb-12">
+            <div className="w-full max-w-[420px] aspect-[9/16] overflow-hidden rounded-2xl bg-charcoal md:max-w-4xl md:aspect-video md:rounded-xl md:shadow-sm">
+              <iframe
+                className="h-full w-full"
+                src="https://www.youtube.com/embed/nQ8QXB0wgcQ"
+                title="Sơn lại chiếc tủ cũ trong 1 buổi chiều"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              />
+            </div>
           </div>
 
           {/* Steps */}
-          <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
+          <div className="grid grid-cols-1 gap-6 md:gap-8 md:grid-cols-3">
             {[
               { n: "1", t: "Làm sạch & chà nhám nhẹ", d: "Lau bụi, dầu mỡ. Chà giấy nhám mịn để bề mặt mịn và bám sơn tốt." },
               { n: "2", t: "Sơn lớp đầu, chờ khô", d: "Pha loãng 5–10% nước, sơn mỏng đều bằng cọ hoặc lăn. Để khô 2 giờ." },
               { n: "3", t: "Phủ lớp hoàn thiện", d: "Lớp hai cho màng sơn đều màu, mịn, đạt độ bền tối ưu." },
             ].map((s) => (
-              <div key={s.n} className="rounded-lg bg-cream/50 p-6">
-                <div className="mb-4 font-serif text-[3rem] leading-none text-clay/50">{s.n}</div>
-                <h3 className="mb-2 font-serif text-[18px] leading-tight text-charcoal">{s.t}</h3>
+              <div key={s.n} className="rounded-lg bg-cream/50 p-5 md:p-6">
+                <div className="mb-3 font-serif text-[2.5rem] leading-none text-clay/50 md:mb-4 md:text-[3rem]">{s.n}</div>
+                <h3 className="mb-2 font-serif text-[17px] leading-tight text-charcoal md:text-[18px]">{s.t}</h3>
                 <p className="text-[13px] leading-relaxed text-walnut/65">{s.d}</p>
               </div>
             ))}
           </div>
 
-          <p className="mt-10 text-center font-serif text-[15px] italic text-walnut/50">
+          <p className="mt-8 text-center font-serif text-[14px] italic text-walnut/50 md:mt-10 md:text-[15px]">
             Hầu hết hoàn thành trong một buổi chiều — không cần nghỉ làm, không cần thợ.
           </p>
         </div>
