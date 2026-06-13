@@ -439,43 +439,36 @@ function Index() {
         /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "mt-2 text-[14px] leading-relaxed text-walnut/65", children: b.d })
       ] }, b.n)) })
     ] }) }),
-    /* @__PURE__ */ jsxRuntimeExports.jsx("section", { className: "border-t border-walnut/10 bg-sand/40", children: /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "mx-auto max-w-[1400px] px-5 py-16 md:px-12 md:py-28", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "grid grid-cols-12 gap-6", children: [
-      /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "col-span-12 md:col-span-4", children: [
+    /* @__PURE__ */ jsxRuntimeExports.jsx("section", { className: "border-t border-walnut/10 bg-sand/40", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "mx-auto max-w-[1400px] px-5 py-16 md:px-12 md:py-28", children: [
+      /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "mb-10 text-center md:text-left", children: [
         /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-[11px] uppercase tracking-[0.3em] text-walnut/70", children: "07 — Thi công" }),
         /* @__PURE__ */ jsxRuntimeExports.jsxs("h2", { className: "mt-5 font-serif text-[32px] leading-tight text-charcoal sm:text-4xl md:text-5xl", children: [
           "Ba bước,",
           /* @__PURE__ */ jsxRuntimeExports.jsx("br", {}),
           "một buổi chiều."
         ] }),
-        /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "mt-6 max-w-xs text-[14px] leading-relaxed text-walnut/70", children: "Không cần thợ. Không cần máy. Chỉ cọ, lăn — và một chút kiên nhẫn." })
+        /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "mt-4 max-w-lg mx-auto text-[14px] leading-relaxed text-walnut/70 md:mx-0", children: "Không cần thợ. Không cần máy. Chỉ cọ, lăn — và một chút kiên nhẫn." })
       ] }),
-      /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "col-span-12 md:col-span-8 md:pl-4", children: [
-        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "mb-10 aspect-video overflow-hidden rounded-lg bg-charcoal/5", children: /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "flex h-full items-center justify-center", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex flex-col items-center gap-3", children: [
-          /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "flex h-12 w-12 items-center justify-center rounded-full bg-charcoal/10", children: /* @__PURE__ */ jsxRuntimeExports.jsx("svg", { className: "h-5 w-5 text-charcoal/60", fill: "currentColor", viewBox: "0 0 24 24", children: /* @__PURE__ */ jsxRuntimeExports.jsx("path", { d: "M8 5v14l11-7z" }) }) }),
-          /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-[12px] text-walnut/50", children: "Xem video: sơn lại chiếc tủ cũ trong 1 buổi chiều" })
-        ] }) }) }),
-        /* @__PURE__ */ jsxRuntimeExports.jsx("ol", { children: [{
-          n: "1",
-          t: "Làm sạch & chà nhám nhẹ",
-          d: "Lau bụi, dầu mỡ. Chà giấy nhám mịn để bề mặt mịn và bám sơn tốt."
-        }, {
-          n: "2",
-          t: "Sơn lớp đầu, chờ khô",
-          d: "Pha loãng 5–10% nước, sơn mỏng đều bằng cọ hoặc lăn. Để khô 2 giờ."
-        }, {
-          n: "3",
-          t: "Phủ lớp hoàn thiện",
-          d: "Lớp hai cho màng sơn đều màu, mịn, đạt độ bền tối ưu."
-        }].map((s) => /* @__PURE__ */ jsxRuntimeExports.jsxs("li", { className: "flex gap-6 border-t border-walnut/15 py-8 md:gap-10", children: [
-          /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "mt-0.5 w-10 shrink-0 font-serif text-[2.8rem] leading-none text-clay/50 sm:text-[3.5rem]", children: s.n }),
-          /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "pt-1", children: [
-            /* @__PURE__ */ jsxRuntimeExports.jsx("h3", { className: "font-serif text-[20px] leading-tight text-charcoal sm:text-[24px]", children: s.t }),
-            /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "mt-2.5 text-[13px] leading-relaxed text-walnut/65", children: s.d })
-          ] })
-        ] }, s.n)) }),
-        /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "mt-2 border-t border-walnut/15 pt-6 font-serif text-[15px] italic text-walnut/50", children: "Hầu hết hoàn thành trong một buổi chiều — không cần nghỉ làm, không cần thợ." })
-      ] })
-    ] }) }) }),
+      /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "mb-12 aspect-video w-full overflow-hidden rounded-xl bg-charcoal/5 shadow-sm md:max-w-4xl md:mx-auto", children: /* @__PURE__ */ jsxRuntimeExports.jsx("iframe", { className: "h-full w-full", src: "https://www.youtube.com/embed/nQ8QXB0wgcQ", title: "Sơn lại chiếc tủ cũ trong 1 buổi chiều", frameBorder: "0", allow: "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture", allowFullScreen: true }) }),
+      /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "grid grid-cols-1 gap-8 md:grid-cols-3", children: [{
+        n: "1",
+        t: "Làm sạch & chà nhám nhẹ",
+        d: "Lau bụi, dầu mỡ. Chà giấy nhám mịn để bề mặt mịn và bám sơn tốt."
+      }, {
+        n: "2",
+        t: "Sơn lớp đầu, chờ khô",
+        d: "Pha loãng 5–10% nước, sơn mỏng đều bằng cọ hoặc lăn. Để khô 2 giờ."
+      }, {
+        n: "3",
+        t: "Phủ lớp hoàn thiện",
+        d: "Lớp hai cho màng sơn đều màu, mịn, đạt độ bền tối ưu."
+      }].map((s) => /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "rounded-lg bg-cream/50 p-6", children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "mb-4 font-serif text-[3rem] leading-none text-clay/50", children: s.n }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("h3", { className: "mb-2 font-serif text-[18px] leading-tight text-charcoal", children: s.t }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-[13px] leading-relaxed text-walnut/65", children: s.d })
+      ] }, s.n)) }),
+      /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "mt-10 text-center font-serif text-[15px] italic text-walnut/50", children: "Hầu hết hoàn thành trong một buổi chiều — không cần nghỉ làm, không cần thợ." })
+    ] }) }),
     /* @__PURE__ */ jsxRuntimeExports.jsx("section", { id: "palette", className: "border-t border-walnut/10 bg-cream", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "mx-auto max-w-[1400px] px-5 py-16 md:px-12 md:py-28", children: [
       /* @__PURE__ */ jsxRuntimeExports.jsxs("header", { className: "mb-12 flex flex-col items-start justify-between gap-4 md:flex-row md:items-end", children: [
         /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [

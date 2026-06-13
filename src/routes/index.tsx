@@ -553,54 +553,49 @@ function Index() {
       {/* PROCESS */}
       <section className="border-t border-walnut/10 bg-sand/40">
         <div className="mx-auto max-w-[1400px] px-5 py-16 md:px-12 md:py-28">
-          <div className="grid grid-cols-12 gap-6">
-            <div className="col-span-12 md:col-span-4">
-              <span className="text-[11px] uppercase tracking-[0.3em] text-walnut/70">07 — Thi công</span>
-              <h2 className="mt-5 font-serif text-[32px] leading-tight text-charcoal sm:text-4xl md:text-5xl">
-                Ba bước,
-                <br />
-                một buổi chiều.
-              </h2>
-              <p className="mt-6 max-w-xs text-[14px] leading-relaxed text-walnut/70">
-                Không cần thợ. Không cần máy. Chỉ cọ, lăn — và một chút kiên nhẫn.
-              </p>
-            </div>
-
-            <div className="col-span-12 md:col-span-8 md:pl-4">
-              {/* Video Placeholder */}
-              <div className="mb-10 aspect-video overflow-hidden rounded-lg bg-charcoal/5">
-                <div className="flex h-full items-center justify-center">
-                  <div className="flex flex-col items-center gap-3">
-                    <div className="flex h-12 w-12 items-center justify-center rounded-full bg-charcoal/10">
-                      <svg className="h-5 w-5 text-charcoal/60" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M8 5v14l11-7z"/>
-                      </svg>
-                    </div>
-                    <p className="text-[12px] text-walnut/50">Xem video: sơn lại chiếc tủ cũ trong 1 buổi chiều</p>
-                  </div>
-                </div>
-              </div>
-
-              <ol>
-                {[
-                  { n: "1", t: "Làm sạch & chà nhám nhẹ", d: "Lau bụi, dầu mỡ. Chà giấy nhám mịn để bề mặt mịn và bám sơn tốt." },
-                  { n: "2", t: "Sơn lớp đầu, chờ khô", d: "Pha loãng 5–10% nước, sơn mỏng đều bằng cọ hoặc lăn. Để khô 2 giờ." },
-                  { n: "3", t: "Phủ lớp hoàn thiện", d: "Lớp hai cho màng sơn đều màu, mịn, đạt độ bền tối ưu." },
-                ].map((s) => (
-                  <li key={s.n} className="flex gap-6 border-t border-walnut/15 py-8 md:gap-10">
-                    <span className="mt-0.5 w-10 shrink-0 font-serif text-[2.8rem] leading-none text-clay/50 sm:text-[3.5rem]">{s.n}</span>
-                    <div className="pt-1">
-                      <h3 className="font-serif text-[20px] leading-tight text-charcoal sm:text-[24px]">{s.t}</h3>
-                      <p className="mt-2.5 text-[13px] leading-relaxed text-walnut/65">{s.d}</p>
-                    </div>
-                  </li>
-                ))}
-              </ol>
-              <p className="mt-2 border-t border-walnut/15 pt-6 font-serif text-[15px] italic text-walnut/50">
-                Hầu hết hoàn thành trong một buổi chiều — không cần nghỉ làm, không cần thợ.
-              </p>
-            </div>
+          {/* Header */}
+          <div className="mb-10 text-center md:text-left">
+            <span className="text-[11px] uppercase tracking-[0.3em] text-walnut/70">07 — Thi công</span>
+            <h2 className="mt-5 font-serif text-[32px] leading-tight text-charcoal sm:text-4xl md:text-5xl">
+              Ba bước,
+              <br />
+              một buổi chiều.
+            </h2>
+            <p className="mt-4 max-w-lg mx-auto text-[14px] leading-relaxed text-walnut/70 md:mx-0">
+              Không cần thợ. Không cần máy. Chỉ cọ, lăn — và một chút kiên nhẫn.
+            </p>
           </div>
+
+          {/* Video */}
+          <div className="mb-12 aspect-video w-full overflow-hidden rounded-xl bg-charcoal/5 shadow-sm md:max-w-4xl md:mx-auto">
+            <iframe
+              className="h-full w-full"
+              src="https://www.youtube.com/embed/nQ8QXB0wgcQ"
+              title="Sơn lại chiếc tủ cũ trong 1 buổi chiều"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            />
+          </div>
+
+          {/* Steps */}
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
+            {[
+              { n: "1", t: "Làm sạch & chà nhám nhẹ", d: "Lau bụi, dầu mỡ. Chà giấy nhám mịn để bề mặt mịn và bám sơn tốt." },
+              { n: "2", t: "Sơn lớp đầu, chờ khô", d: "Pha loãng 5–10% nước, sơn mỏng đều bằng cọ hoặc lăn. Để khô 2 giờ." },
+              { n: "3", t: "Phủ lớp hoàn thiện", d: "Lớp hai cho màng sơn đều màu, mịn, đạt độ bền tối ưu." },
+            ].map((s) => (
+              <div key={s.n} className="rounded-lg bg-cream/50 p-6">
+                <div className="mb-4 font-serif text-[3rem] leading-none text-clay/50">{s.n}</div>
+                <h3 className="mb-2 font-serif text-[18px] leading-tight text-charcoal">{s.t}</h3>
+                <p className="text-[13px] leading-relaxed text-walnut/65">{s.d}</p>
+              </div>
+            ))}
+          </div>
+
+          <p className="mt-10 text-center font-serif text-[15px] italic text-walnut/50">
+            Hầu hết hoàn thành trong một buổi chiều — không cần nghỉ làm, không cần thợ.
+          </p>
         </div>
       </section>
 
