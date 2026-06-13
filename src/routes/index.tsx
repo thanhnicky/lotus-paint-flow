@@ -270,8 +270,8 @@ function Index() {
         <div className="mx-auto max-w-[1400px] px-5 pt-12 pb-20 md:px-12 md:pt-20 md:pb-32">
           <div className="grid grid-cols-12 gap-x-6 gap-y-10">
             <div className="col-span-12 md:col-span-6 lg:col-span-5 flex flex-col">
-              <span className="text-[11px] uppercase tracking-[0.3em] text-walnut/70">
-                Lotus · Sơn gỗ hệ nước cho gia đình
+              <span className="text-[13px] uppercase tracking-[0.3em] text-walnut/70">
+                Sơn Gỗ Hệ Nước Không Pha Dung Môi
               </span>
               <h1 className="mt-6 font-serif text-[38px] leading-[1.05] tracking-tight text-charcoal sm:text-[44px] md:text-[60px] lg:text-[72px]">
                 Sơn lại đồ gỗ tại nhà
@@ -287,28 +287,28 @@ function Index() {
               <div className="mt-9 flex flex-wrap items-center gap-4">
                 <a
                   href="#advise"
-                  className="group inline-flex items-center gap-3 bg-clay px-6 py-4 text-[12px] font-medium uppercase tracking-[0.18em] text-cream transition hover:bg-clay/90 sm:px-7 sm:text-[13px]"
+                  className="group inline-flex items-center gap-3 bg-clay px-6 py-4 text-[13px] font-medium uppercase tracking-[0.18em] text-cream transition hover:bg-clay/90 sm:px-7 sm:text-[13px]"
                 >
                   Chọn màu & đặt mua
                   <ArrowRight className="h-4 w-4 transition group-hover:translate-x-1" />
                 </a>
                 <a
                   href="#palette"
-                  className="text-[12px] font-medium uppercase tracking-[0.18em] text-walnut underline-offset-8 hover:underline sm:text-[13px]"
+                  className="text-[13px] font-medium uppercase tracking-[0.18em] text-walnut underline-offset-8 hover:underline sm:text-[13px]"
                 >
                   Xem bảng màu
                 </a>
               </div>
-              <p className="mt-3 text-[12px] text-walnut/50">
+              <p className="mt-3 text-[13px] text-walnut/50">
                 Ít mùi — an toàn dùng trong phòng ngủ và phòng trẻ em
               </p>
 
               <div className="mt-12 flex flex-wrap gap-x-6 gap-y-1.5 border-t border-walnut/15 pt-6">
-                <span className="text-[11px] text-walnut/60">Hệ nước ít mùi</span>
-                <span className="text-[11px] text-walnut/30">/</span>
-                <span className="text-[11px] text-walnut/60">COD toàn quốc</span>
-                <span className="text-[11px] text-walnut/30">/</span>
-                <span className="text-[11px] text-walnut/60">Online giảm 10%</span>
+                <span className="text-[13px] text-walnut/60">Hệ nước ít mùi</span>
+                <span className="text-[13px] text-walnut/30">/</span>
+                <span className="text-[13px] text-walnut/60">COD toàn quốc</span>
+                <span className="text-[13px] text-walnut/30">/</span>
+                <span className="text-[13px] text-walnut/60">Online giảm 10%</span>
               </div>
             </div>
 
@@ -320,7 +320,7 @@ function Index() {
                 width={1600}
                 height={1200}
               />
-              <figcaption className="absolute bottom-5 left-5 right-5 flex items-end justify-between text-[10px] uppercase tracking-[0.22em] text-cream mix-blend-difference sm:text-[11px]">
+              <figcaption className="absolute bottom-5 left-5 right-5 flex items-end justify-between text-[13px] uppercase tracking-[0.22em] text-cream mix-blend-difference sm:text-[13px]">
                 <span>Phòng khách · Lotus Wood Paint</span>
                 <span>— 001</span>
               </figcaption>
@@ -333,7 +333,7 @@ function Index() {
       <section id="choose" className="border-t border-walnut/10 bg-sand/40">
         <div className="mx-auto max-w-[1400px] px-5 py-16 md:px-12 md:py-28">
           <header>
-            <span className="text-[11px] uppercase tracking-[0.3em] text-walnut/70">02 — Chọn kiểu hoàn thiện</span>
+            <span className="text-[13px] uppercase tracking-[0.3em] text-walnut/70">02 — Chọn kiểu hoàn thiện</span>
             <h2 className="mt-5 font-serif text-[34px] leading-tight text-charcoal sm:text-4xl md:text-5xl lg:text-[56px]">
               Bạn muốn phủ kín màu
               <br />
@@ -381,7 +381,7 @@ function Index() {
         <div className="mx-auto max-w-[1400px] px-5 py-16 md:px-12 md:py-24">
           <header className="flex flex-col gap-4 md:flex-row md:items-baseline md:justify-between">
             <div>
-              <span className="text-[11px] uppercase tracking-[0.3em] text-walnut/70">03 — Quy cách</span>
+              <span className="text-[13px] uppercase tracking-[0.3em] text-walnut/70">03 — Quy cách</span>
               <h2 className="mt-5 font-serif text-[32px] leading-tight text-charcoal sm:text-4xl md:text-5xl">
                 1 hũ sơn được bao nhiêu?
                 <br />
@@ -396,25 +396,25 @@ function Index() {
           <div className="mt-14 grid grid-cols-2 gap-4 border-t border-walnut/20 pt-8 sm:grid-cols-4">
             <div className="rounded-lg bg-cream/50 p-4 text-center">
               <div className="text-[28px] font-serif text-clay sm:text-[32px]">1kg</div>
-              <div className="mt-1 text-[11px] text-walnut/60">Quy cách hũ</div>
+              <div className="mt-1 text-[13px] text-walnut/60">Quy cách hũ</div>
             </div>
             <div className="rounded-lg bg-cream/50 p-4 text-center">
               <div className="text-[28px] font-serif text-clay sm:text-[32px]">7–9 m²</div>
-              <div className="mt-1 text-[11px] text-walnut/60">Độ phủ mỗi lớp</div>
+              <div className="mt-1 text-[13px] text-walnut/60">Độ phủ mỗi lớp</div>
             </div>
             <div className="rounded-lg bg-cream/50 p-4 text-center">
               <div className="text-[28px] font-serif text-clay sm:text-[32px]">2 lớp</div>
-              <div className="mt-1 text-[11px] text-walnut/60">Khuyến nghị</div>
+              <div className="mt-1 text-[13px] text-walnut/60">Khuyến nghị</div>
             </div>
             <div className="rounded-lg bg-cream/50 p-4 text-center">
               <div className="text-[28px] font-serif text-clay sm:text-[32px]">30 phút</div>
-              <div className="mt-1 text-[11px] text-walnut/60">Khô bề mặt</div>
+              <div className="mt-1 text-[13px] text-walnut/60">Khô bề mặt</div>
             </div>
           </div>
 
           {/* Quantity Suggestion Table */}
           <div className="mt-12 border-t border-walnut/15 pt-8">
-            <p className="mb-4 text-[11px] text-walnut/60">Gợi ý số lượng theo hạng mục</p>
+            <p className="mb-4 text-[13px] text-walnut/60">Gợi ý số lượng theo hạng mục</p>
             <div className="space-y-2">
               {[
                 { item: "Bàn ăn 4–6 ghế", qty: "1 hũ 1kg" },
@@ -439,7 +439,7 @@ function Index() {
         <div className="mx-auto max-w-[1400px] px-5 py-16 md:px-12 md:py-28">
           <div className="grid grid-cols-12 gap-6">
             <div className="col-span-12 lg:col-span-4">
-              <span className="text-[11px] uppercase tracking-[0.3em] text-walnut/70">04 — Bề mặt</span>
+              <span className="text-[13px] uppercase tracking-[0.3em] text-walnut/70">04 — Bề mặt</span>
               <h2 className="mt-5 font-serif text-[32px] leading-tight text-charcoal sm:text-4xl md:text-5xl">
                 Bạn đang
                 <br />
@@ -473,7 +473,7 @@ function Index() {
         <div className="mx-auto max-w-[1400px] px-5 py-16 md:px-12 md:py-28">
           <div className="grid grid-cols-12 gap-x-6 gap-y-10">
             <div className="col-span-12 md:col-span-4 lg:col-span-4">
-              <span className="text-[11px] uppercase tracking-[0.3em] text-cream/60">05 — Trước & Sau</span>
+              <span className="text-[13px] uppercase tracking-[0.3em] text-cream/60">05 — Trước & Sau</span>
               <h2 className="mt-5 font-serif text-[32px] leading-tight sm:text-4xl md:text-5xl">
                 Đồ gỗ cũ,
                 <br />
@@ -497,10 +497,10 @@ function Index() {
                 {/* Divider line center */}
                 <div className="pointer-events-none absolute inset-y-0 left-1/2 w-px -translate-x-1/2 bg-cream/30" />
                 {/* Labels */}
-                <div className="absolute bottom-3 left-3 bg-black/40 px-2 py-1 text-[9px] uppercase tracking-[0.28em] text-cream sm:bottom-5 sm:left-[8%] sm:text-[10px]">
+                <div className="absolute bottom-3 left-3 bg-black/40 px-2 py-1 text-[9px] uppercase tracking-[0.28em] text-cream sm:bottom-5 sm:left-[8%] sm:text-[13px]">
                   Trước khi sơn
                 </div>
-                <div className="absolute bottom-3 right-3 bg-black/40 px-2 py-1 text-[9px] uppercase tracking-[0.28em] text-cream sm:bottom-5 sm:right-[8%] sm:text-[10px]">
+                <div className="absolute bottom-3 right-3 bg-black/40 px-2 py-1 text-[9px] uppercase tracking-[0.28em] text-cream sm:bottom-5 sm:right-[8%] sm:text-[13px]">
                   Sau khi sơn
                 </div>
               </div>
@@ -515,7 +515,7 @@ function Index() {
           {/* Top — headline + featured main point */}
           <div className="grid grid-cols-1 gap-8 lg:grid-cols-12 lg:gap-14">
             <div className="lg:col-span-5">
-              <span className="text-[11px] uppercase tracking-[0.3em] text-walnut/70">06 — Vì sao hệ nước</span>
+              <span className="text-[13px] uppercase tracking-[0.3em] text-walnut/70">06 — Vì sao hệ nước</span>
               <h2 className="mt-5 font-serif text-[32px] leading-tight text-charcoal sm:text-4xl md:text-5xl">
                 Ít mùi.
                 <br />
@@ -555,7 +555,7 @@ function Index() {
         <div className="mx-auto max-w-[1400px] px-5 py-12 md:px-12 md:py-28">
           {/* Header */}
           <div className="mb-6 text-center md:mb-10 md:text-left">
-            <span className="text-[11px] uppercase tracking-[0.3em] text-walnut/70">07 — Thi công</span>
+            <span className="text-[13px] uppercase tracking-[0.3em] text-walnut/70">07 — Thi công</span>
             <h2 className="mt-4 font-serif text-[28px] leading-tight text-charcoal sm:text-4xl md:mt-5 md:text-5xl">
               Ba bước,
               <br />
@@ -606,7 +606,7 @@ function Index() {
         <div className="mx-auto max-w-[1400px] px-5 py-16 md:px-12 md:py-28">
           <header className="mb-12 flex flex-col items-start justify-between gap-4 md:flex-row md:items-end">
             <div>
-              <span className="text-[11px] uppercase tracking-[0.3em] text-walnut/70">08 — Bảng màu</span>
+              <span className="text-[13px] uppercase tracking-[0.3em] text-walnut/70">08 — Bảng màu</span>
               <h2 className="mt-5 font-serif text-[32px] leading-tight text-charcoal sm:text-4xl md:text-5xl">
                 Chọn màu,
                 <br />
@@ -616,7 +616,7 @@ function Index() {
                 Bấm vào màu để chọn tự động. Sau đó cuộn xuống phần đặt hàng để hoàn tất.
               </p>
             </div>
-            <div className="inline-flex border border-walnut/25 text-[11px] uppercase tracking-[0.2em] sm:text-[12px]">
+            <div className="inline-flex border border-walnut/25 text-[13px] uppercase tracking-[0.2em] sm:text-[13px]">
               <button
                 onClick={() => { setTab("indoor"); setOrderColor(""); }}
                 className={`px-4 py-3 transition sm:px-5 ${tab === "indoor" ? "bg-charcoal text-cream" : "text-walnut hover:bg-sand/60"}`}
@@ -668,7 +668,7 @@ function Index() {
                     {c.name}
                   </span>
                   {orderColor === c.name && (
-                    <span className="text-[11px] text-clay font-medium">✓</span>
+                    <span className="text-[13px] text-clay font-medium">✓</span>
                   )}
                 </div>
               </button>
@@ -677,7 +677,7 @@ function Index() {
 
           {/* Reference link + Modal button */}
           <div className="mt-10 flex items-center justify-between border-t border-walnut/15 pt-6">
-            <div className="flex items-start gap-3 text-[12px] text-walnut/55">
+            <div className="flex items-start gap-3 text-[13px] text-walnut/55">
               <span className="mt-0.5 text-walnut/30">※</span>
               <p>
                 Màu hiển thị trên màn hình có thể chênh nhẹ so với thực tế.
@@ -686,7 +686,7 @@ function Index() {
             <button
               type="button"
               onClick={() => setShowPaletteModal(true)}
-              className="inline-flex items-center gap-2 text-[11px] uppercase tracking-[0.18em] text-walnut/60 underline underline-offset-2 transition hover:text-clay"
+              className="inline-flex items-center gap-2 text-[13px] uppercase tracking-[0.18em] text-walnut/60 underline underline-offset-2 transition hover:text-clay"
             >
               Xem bảng màu đầy đủ
               <ArrowRight className="h-3.5 w-3.5" />
@@ -700,7 +700,7 @@ function Index() {
                 Đã chọn: <strong className="text-charcoal">{orderColor}</strong>
               </span>
               <a href="#advise"
-                className="inline-flex items-center gap-2 text-[12px] font-medium uppercase tracking-[0.18em] text-clay transition hover:text-clay/75">
+                className="inline-flex items-center gap-2 text-[13px] font-medium uppercase tracking-[0.18em] text-clay transition hover:text-clay/75">
                 Đặt mua màu này
                 <ArrowRight className="h-4 w-4" />
               </a>
@@ -740,7 +740,7 @@ function Index() {
               <button
                 type="button"
                 onClick={handleDownloadPalette}
-                className="inline-flex items-center gap-2 border border-walnut/20 px-6 py-3 text-[12px] uppercase tracking-[0.18em] text-charcoal transition hover:bg-sand/60"
+                className="inline-flex items-center gap-2 border border-walnut/20 px-6 py-3 text-[13px] uppercase tracking-[0.18em] text-charcoal transition hover:bg-sand/60"
               >
                 Tải xuống
                 <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -750,7 +750,7 @@ function Index() {
               <button
                 type="button"
                 onClick={() => setShowPaletteModal(false)}
-                className="inline-flex items-center gap-2 bg-clay px-6 py-3 text-[12px] uppercase tracking-[0.18em] text-cream transition hover:bg-clay/90"
+                className="inline-flex items-center gap-2 bg-clay px-6 py-3 text-[13px] uppercase tracking-[0.18em] text-cream transition hover:bg-clay/90"
               >
                 Đóng
               </button>
@@ -764,7 +764,7 @@ function Index() {
         <div className="mx-auto max-w-[1400px] px-5 py-16 md:px-12 md:py-28">
           <header className="flex flex-col items-start justify-between gap-4 md:flex-row md:items-end">
             <div>
-              <span className="text-[11px] uppercase tracking-[0.3em] text-walnut/70">09 — Công trình thật</span>
+              <span className="text-[13px] uppercase tracking-[0.3em] text-walnut/70">09 — Công trình thật</span>
               <h2 className="mt-5 font-serif text-[32px] leading-tight text-charcoal sm:text-4xl md:text-5xl">
                 Từ đồ gỗ cũ
                 <br />
@@ -790,7 +790,7 @@ function Index() {
               </div>
               <figcaption className="mt-4 border-t border-walnut/20 pt-3">
                 <div className="font-serif text-lg text-charcoal">{projects[0].label}</div>
-                <div className="mt-1 text-[11px] text-walnut/60">{projects[0].place}</div>
+                <div className="mt-1 text-[13px] text-walnut/60">{projects[0].place}</div>
               </figcaption>
             </figure>
             <div className="flex flex-col gap-5 lg:col-span-5">
@@ -808,7 +808,7 @@ function Index() {
                   </div>
                   <figcaption className="mt-3 border-t border-walnut/20 pt-3">
                     <div className="font-serif text-base text-charcoal">{p.label}</div>
-                    <div className="mt-0.5 text-[11px] text-walnut/60">{p.place}</div>
+                    <div className="mt-0.5 text-[13px] text-walnut/60">{p.place}</div>
                   </figcaption>
                 </figure>
               ))}
@@ -822,7 +822,7 @@ function Index() {
         <div className="mx-auto max-w-[1400px] px-5 py-20 md:px-12 md:py-32">
           <div className="flex flex-col gap-2 md:flex-row md:items-end md:justify-between">
             <div>
-              <span className="text-[11px] uppercase tracking-[0.3em] text-walnut/70">10 — Cảm nhận khách hàng</span>
+              <span className="text-[13px] uppercase tracking-[0.3em] text-walnut/70">10 — Cảm nhận khách hàng</span>
               <h2 className="mt-5 font-serif text-[32px] leading-tight text-charcoal sm:text-4xl md:text-5xl">
                 Ngày cuối tuần.
                 <br />
@@ -851,7 +851,7 @@ function Index() {
                 </p>
                 <footer className="mt-6 border-t border-walnut/15 pt-4">
                   <div className="text-sm font-medium text-charcoal">{t.name}</div>
-                  <div className="mt-0.5 text-[11px] text-walnut/55">
+                  <div className="mt-0.5 text-[13px] text-walnut/55">
                     {t.place} · {t.product}
                   </div>
                 </footer>
@@ -866,7 +866,7 @@ function Index() {
         <div className="mx-auto max-w-[1400px] px-5 py-16 md:px-12 md:py-28">
           <div className="grid grid-cols-12 gap-6">
             <div className="col-span-12 md:col-span-4">
-              <span className="text-[11px] uppercase tracking-[0.3em] text-walnut/70">11 — Câu hỏi</span>
+              <span className="text-[13px] uppercase tracking-[0.3em] text-walnut/70">11 — Câu hỏi</span>
               <h2 className="mt-5 font-serif text-[32px] leading-tight text-charcoal sm:text-4xl md:text-5xl">
                 Những điều
                 <br />
@@ -936,7 +936,7 @@ function Index() {
 
             <a
               href="#palette"
-              className="mt-8 inline-flex items-center gap-3 bg-clay px-6 py-4 text-[12px] font-medium uppercase tracking-[0.18em] text-cream transition hover:bg-clay/90 sm:text-[13px]"
+              className="mt-8 inline-flex items-center gap-3 bg-clay px-6 py-4 text-[13px] font-medium uppercase tracking-[0.18em] text-cream transition hover:bg-clay/90 sm:text-[13px]"
             >
               Chọn màu & đặt mua ngay
               <ArrowRight className="h-4 w-4" />
@@ -951,7 +951,7 @@ function Index() {
 
           {/* Header */}
           <div className="mb-10 text-center md:text-left">
-            <span className="text-[11px] uppercase tracking-[0.3em] text-walnut/50">12 — Đặt hàng</span>
+            <span className="text-[13px] uppercase tracking-[0.3em] text-walnut/50">12 — Đặt hàng</span>
             <h2 className="mt-4 font-serif text-[32px] leading-tight sm:text-5xl">
               Điền thông tin,
               <br />nhận hàng tại nhà.
@@ -1032,7 +1032,7 @@ function Index() {
             <div className="space-y-6">
               {/* Dòng sơn */}
               <div>
-                <label className="mb-3 block text-[11px] text-walnut/50">Dòng sơn</label>
+                <label className="mb-3 block text-[13px] text-walnut/50">Dòng sơn</label>
                 <div className="grid grid-cols-2 gap-3">
                   <button type="button"
                     onClick={() => { setOrderProduct("bet"); setOrderColor(""); }}
@@ -1049,7 +1049,7 @@ function Index() {
 
               {/* Môi trường */}
               <div>
-                <label className="mb-3 block text-[11px] text-walnut/50">Môi trường sử dụng</label>
+                <label className="mb-3 block text-[13px] text-walnut/50">Môi trường sử dụng</label>
                 <div className="grid grid-cols-2 gap-3">
                   <button type="button"
                     onClick={() => setOrderEnv("indoor")}
@@ -1066,7 +1066,7 @@ function Index() {
 
               {/* Màu sơn */}
               <div>
-                <label className="mb-3 block text-[11px] text-walnut/50">Màu sơn</label>
+                <label className="mb-3 block text-[13px] text-walnut/50">Màu sơn</label>
                 <input
                   type="text"
                   value={orderColor}
@@ -1080,7 +1080,7 @@ function Index() {
                     setTab(orderProduct === "bet" ? "indoor" : "outdoor");
                     setShowPaletteModal(true);
                   }}
-                  className="mt-2 text-[11px] text-walnut/55 underline underline-offset-2 transition hover:text-clay"
+                  className="mt-2 text-[13px] text-walnut/55 underline underline-offset-2 transition hover:text-clay"
                 >
                   Xem bảng màu đầy đủ
                 </button>
@@ -1088,7 +1088,7 @@ function Index() {
 
               {/* Bề mặt */}
               <div>
-                <label className="mb-3 block text-[11px] text-walnut/50">Bề mặt</label>
+                <label className="mb-3 block text-[13px] text-walnut/50">Bề mặt</label>
                 <div className="grid grid-cols-3 gap-3">
                   <button type="button"
                     onClick={() => setOrderSurface("bong")}
@@ -1110,18 +1110,18 @@ function Index() {
 
               {/* Kích thước & số lượng */}
               <div>
-                <label className="mb-3 block text-[11px] text-walnut/50">Kích thước & số lượng</label>
+                <label className="mb-3 block text-[13px] text-walnut/50">Kích thước & số lượng</label>
                 <div className="space-y-3">
                   <div className="grid grid-cols-2 gap-3">
                     <button type="button" onClick={() => setOrderSize("1kg")}
                       className={`border py-3 text-[13px] transition ${orderSize === "1kg" ? "border-clay bg-clay text-cream font-medium" : "border-walnut/20 text-walnut/60 hover:border-walnut/40"}`}>
                       Hũ 1 kg
-                      <span className="ml-2 text-[11px] opacity-60">{formatVND(PRICES[orderProduct][orderEnv]["1kg"])}</span>
+                      <span className="ml-2 text-[13px] opacity-60">{formatVND(PRICES[orderProduct][orderEnv]["1kg"])}</span>
                     </button>
                     <button type="button" onClick={() => setOrderSize("5kg")}
                       className={`border py-3 text-[13px] transition ${orderSize === "5kg" ? "border-clay bg-clay text-cream font-medium" : "border-walnut/20 text-walnut/60 hover:border-walnut/40"}`}>
                       Hũ 5 kg
-                      <span className="ml-2 text-[11px] opacity-60">{formatVND(PRICES[orderProduct][orderEnv]["5kg"])}</span>
+                      <span className="ml-2 text-[13px] opacity-60">{formatVND(PRICES[orderProduct][orderEnv]["5kg"])}</span>
                     </button>
                   </div>
                   <div className="flex items-center border border-walnut/20">
@@ -1139,7 +1139,7 @@ function Index() {
             <div className="space-y-6">
               {/* Order Summary */}
             <div className="space-y-3 border border-walnut/15 p-5 bg-cream/30">
-              <div className="mb-3 text-[10px] text-walnut/50">Tóm tắt đơn</div>
+              <div className="mb-3 text-[13px] text-walnut/50">Tóm tắt đơn</div>
               <div className="space-y-2 text-[14px]">
                 <div className="flex justify-between">
                   <span className="text-walnut/70">Sản phẩm</span>
@@ -1186,12 +1186,12 @@ function Index() {
 
             {/* Payment Method */}
             <div>
-              <label className="mb-3 block text-[11px] text-walnut/50">Hình thức thanh toán</label>
+              <label className="mb-3 block text-[13px] text-walnut/50">Hình thức thanh toán</label>
               <div className="space-y-3">
                 <button type="button" onClick={() => setOrderPayment("cod")}
                   className={`w-full border p-4 text-left transition ${orderPayment === "cod" ? "border-walnut/40 bg-sand/50" : "border-walnut/15 hover:border-walnut/30"}`}>
                   <span className={`block text-[13px] font-medium ${orderPayment === "cod" ? "text-charcoal" : "text-walnut/60"}`}>COD — Thanh toán khi nhận</span>
-                  <span className={`block text-[12px] ${orderPayment === "cod" ? "text-walnut/55" : "text-walnut/40"}`}>Không cần thanh toán trước</span>
+                  <span className={`block text-[13px] ${orderPayment === "cod" ? "text-walnut/55" : "text-walnut/40"}`}>Không cần thanh toán trước</span>
                 </button>
                 <button type="button" onClick={() => setOrderPayment("online")}
                   className={`w-full border p-4 text-left transition ${orderPayment === "online" ? "border-clay/60 bg-clay/5" : "border-walnut/15 hover:border-walnut/30"}`}>
@@ -1251,11 +1251,11 @@ function Index() {
             <div className="pt-2">
               <button
                 type="submit"
-                className="h-[56px] w-full bg-clay text-[12px] font-medium uppercase tracking-[0.22em] text-cream transition hover:bg-clay/90"
+                className="h-[56px] w-full bg-clay text-[13px] font-medium uppercase tracking-[0.22em] text-cream transition hover:bg-clay/90"
               >
                 Đặt hàng
               </button>
-              <p className="mt-4 text-center text-[11px] text-walnut/50">
+              <p className="mt-4 text-center text-[13px] text-walnut/50">
                 COD toàn quốc · Đổi trả 7 ngày
               </p>
             </div>
@@ -1263,7 +1263,7 @@ function Index() {
           </form>
 
           {/* Notes */}
-          <div className="mt-8 space-y-4 text-[11px] text-walnut/50">
+          <div className="mt-8 space-y-4 text-[13px] text-walnut/50">
             <p>※ Màu hiển thị trên màn hình có thể chênh nhẹ so với thực tế.</p>
             <p className="border-t border-walnut/15 pt-4">
               Mua từ 50kg trở lên?{" "}
@@ -1288,7 +1288,7 @@ function Index() {
           <div className="relative flex h-14 w-14 items-center justify-center rounded-full shadow-lg transition hover:shadow-xl" style={{ backgroundColor: "#0068FF" }}>
             <span className="text-2xl font-bold text-white">Z</span>
             {/* Tooltip */}
-            <div className="absolute right-full mr-3 w-48 rounded-lg bg-charcoal px-3 py-2 text-[11px] text-cream opacity-0 transition-opacity group-hover:opacity-100">
+            <div className="absolute right-full mr-3 w-48 rounded-lg bg-charcoal px-3 py-2 text-[13px] text-cream opacity-0 transition-opacity group-hover:opacity-100">
               Bạn chưa chắc chọn gì? Nhắn Zalo — tư vấn miễn phí
             </div>
           </div>
@@ -1307,14 +1307,14 @@ function Header() {
         <a href="#" className="flex items-center">
           <img src={logoLotus} alt="Lotus Logo" className="h-10 w-auto" />
         </a>
-        <nav className="hidden gap-10 text-[12px] uppercase tracking-[0.22em] text-walnut md:flex">
+        <nav className="hidden gap-10 text-[13px] uppercase tracking-[0.22em] text-walnut md:flex">
           <a href="#choose" className="hover:text-clay">Sản phẩm</a>
           <a href="#palette" className="hover:text-clay">Bảng màu</a>
           <a href="#advise" className="hover:text-clay">Đặt hàng</a>
         </nav>
         <a
           href="#advise"
-          className="inline-flex items-center gap-2 border border-charcoal px-4 py-2.5 text-[10px] uppercase tracking-[0.2em] text-charcoal transition hover:bg-charcoal hover:text-cream sm:px-5 sm:text-[11px]"
+          className="inline-flex items-center gap-2 border border-charcoal px-4 py-2.5 text-[13px] uppercase tracking-[0.2em] text-charcoal transition hover:bg-charcoal hover:text-cream sm:px-5 sm:text-[13px]"
         >
           Chọn màu & mua
           <ArrowRight className="h-3.5 w-3.5" />
@@ -1342,7 +1342,7 @@ function Footer() {
             </p>
           </div>
           <div className="col-span-6 md:col-span-3">
-            <div className="text-[11px] uppercase tracking-[0.22em] text-walnut/50 mb-3">Sản phẩm</div>
+            <div className="text-[13px] uppercase tracking-[0.22em] text-walnut/50 mb-3">Sản phẩm</div>
             <ul className="mt-4 space-y-2.5 text-sm text-charcoal">
               <li><a href="#choose" className="hover:text-clay">Wood Paint — Indoor</a></li>
               <li><a href="#choose" className="hover:text-clay">Woodstain Finish — Outdoor</a></li>
@@ -1350,7 +1350,7 @@ function Footer() {
             </ul>
           </div>
           <div className="col-span-6 md:col-span-4">
-            <div className="text-[11px] uppercase tracking-[0.22em] text-walnut/50 mb-3">Liên hệ</div>
+            <div className="text-[13px] uppercase tracking-[0.22em] text-walnut/50 mb-3">Liên hệ</div>
             <ul className="mt-4 space-y-2.5 text-sm text-charcoal">
               <li><a href="https://zalo.me/0943966662" target="_blank" rel="noopener noreferrer" className="hover:text-clay">Hotline: 0943 966 662</a></li>
               <li><a href="mailto:sales@sonlotus.vn" className="hover:text-clay">sales@www.sonlotus.vn</a></li>
@@ -1359,7 +1359,7 @@ function Footer() {
             </ul>
           </div>
         </div>
-        <div className="mt-12 flex flex-col justify-between gap-3 border-t border-walnut/15 pt-6 text-[11px] text-walnut/60 md:flex-row">
+        <div className="mt-12 flex flex-col justify-between gap-3 border-t border-walnut/15 pt-6 text-[13px] text-walnut/60 md:flex-row">
           <span>© {new Date().getFullYear()} CÔNG TY TNHH SX TM DV BÍCH TRANG</span>
           <span>Made with care · Vietnam</span>
         </div>
@@ -1371,8 +1371,8 @@ function Footer() {
 function Stat({ k, v }: { k: string; v: string }) {
   return (
     <div>
-      <dt className="text-[11px] uppercase tracking-[0.25em] text-clay">{k}</dt>
-      <dd className="mt-2 text-[12px] leading-snug text-walnut/85 sm:text-[13px]">{v}</dd>
+      <dt className="text-[13px] uppercase tracking-[0.25em] text-clay">{k}</dt>
+      <dd className="mt-2 text-[13px] leading-snug text-walnut/85 sm:text-[13px]">{v}</dd>
     </div>
   );
 }
@@ -1380,9 +1380,9 @@ function Stat({ k, v }: { k: string; v: string }) {
 function SpecCell({ k, v, sub }: { k: string; v: string; sub: string }) {
   return (
     <div className="pt-8 sm:px-8 sm:pt-10 sm:first:pl-0 sm:last:pr-0">
-      <div className="text-[10px] uppercase tracking-[0.28em] text-clay">{k}</div>
+      <div className="text-[13px] uppercase tracking-[0.28em] text-clay">{k}</div>
       <div className="mt-4 font-serif text-[2.8rem] leading-none text-charcoal sm:text-[3.2rem] md:text-[3.8rem]">{v}</div>
-      <div className="mt-2 text-[12px] text-walnut/55">{sub}</div>
+      <div className="mt-2 text-[13px] text-walnut/55">{sub}</div>
     </div>
   );
 }
@@ -1430,11 +1430,11 @@ function FinishCard({
       </div>
       <div className="mt-7 flex items-baseline gap-4">
         <span className="font-serif text-2xl text-clay">{index}</span>
-        <span className="text-[11px] uppercase tracking-[0.25em] text-walnut/70">{eyebrow}</span>
+        <span className="text-[13px] uppercase tracking-[0.25em] text-walnut/70">{eyebrow}</span>
       </div>
       <h3 className="mt-4 font-serif text-[28px] leading-tight text-charcoal sm:text-3xl md:text-4xl">{title}</h3>
       <p className="mt-4 max-w-lg text-[15px] leading-relaxed text-walnut/80">{body}</p>
-      <ul className="mt-6 flex flex-wrap gap-2 text-[10px] uppercase tracking-[0.18em] text-walnut sm:text-[11px]">
+      <ul className="mt-6 flex flex-wrap gap-2 text-[13px] uppercase tracking-[0.18em] text-walnut sm:text-[13px]">
         {tags.map((t) => (
           <li key={t} className="border border-walnut/30 px-3 py-1.5">{t}</li>
         ))}
@@ -1443,11 +1443,11 @@ function FinishCard({
       <div className="mt-8 flex flex-col gap-4 border-t border-walnut/20 pt-6 sm:flex-row sm:items-center sm:justify-between">
         <div>
           <div className="font-serif text-2xl text-charcoal">{price}</div>
-          <div className="text-[11px] text-walnut/60">{unit}</div>
+          <div className="text-[13px] text-walnut/60">{unit}</div>
         </div>
         <a
           href="#advise"
-          className="group/btn inline-flex items-center justify-center gap-3 bg-charcoal px-6 py-3.5 text-[12px] font-medium uppercase tracking-[0.18em] text-cream transition hover:bg-clay sm:px-7"
+          className="group/btn inline-flex items-center justify-center gap-3 bg-charcoal px-6 py-3.5 text-[13px] font-medium uppercase tracking-[0.18em] text-cream transition hover:bg-clay sm:px-7"
         >
           Đặt mua ngay
           <ArrowRight className="h-4 w-4 transition group-hover/btn:translate-x-1" />
@@ -1476,8 +1476,8 @@ function SurfaceOption({
           <div className="mt-0.5 text-[13px] text-walnut/60">{desc}</div>
         </div>
         <div className="shrink-0 sm:text-right">
-          <div className="text-[11px] text-clay">{recommendation}</div>
-          <div className="mt-1 text-[12px] text-walnut/60 leading-relaxed">{detail}</div>
+          <div className="text-[13px] text-clay">{recommendation}</div>
+          <div className="mt-1 text-[13px] text-walnut/60 leading-relaxed">{detail}</div>
         </div>
       </div>
     </div>
@@ -1519,7 +1519,7 @@ function DecisionCard({
       </div>
       <div className="mt-7 flex items-baseline gap-4">
         <span className="font-serif text-4xl text-clay">{index}</span>
-        <span className="text-[11px] uppercase tracking-[0.25em] text-walnut/70">{subtitle}</span>
+        <span className="text-[13px] uppercase tracking-[0.25em] text-walnut/70">{subtitle}</span>
       </div>
       <h3 className="mt-4 font-serif text-[28px] leading-tight text-charcoal sm:text-3xl md:text-4xl">{title}</h3>
       <p className="mt-4 max-w-lg text-[15px] leading-relaxed text-walnut/80">{body}</p>
@@ -1535,7 +1535,7 @@ function DecisionCard({
         <a
           href={ctaLink}
           onClick={() => onCtaClick?.()}
-          className="group/btn inline-flex items-center gap-3 text-[12px] font-medium uppercase tracking-[0.18em] text-charcoal transition hover:text-clay sm:text-[13px]"
+          className="group/btn inline-flex items-center gap-3 text-[13px] font-medium uppercase tracking-[0.18em] text-charcoal transition hover:text-clay sm:text-[13px]"
         >
           {ctaText}
           <ArrowRight className="h-4 w-4 transition group-hover/btn:translate-x-1" />
@@ -1549,14 +1549,14 @@ function StickyCTA() {
   return (
     <div className="hidden md:fixed md:bottom-0 md:left-0 md:right-0 md:z-50 bg-charcoal/95 backdrop-blur border-t border-walnut/20 py-3 px-5 md:py-4">
       <div className="mx-auto max-w-[1400px] flex flex-col sm:flex-row items-center justify-between gap-3">
-        <p className="text-[11px] uppercase tracking-[0.18em] text-cream/80 sm:text-[12px]">
+        <p className="text-[13px] uppercase tracking-[0.18em] text-cream/80 sm:text-[13px]">
           Muốn chọn đúng sơn & số kg? Gửi ảnh bề mặt qua Zalo.
         </p>
         <a
           href="https://zalo.me/0943966662"
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center gap-2 bg-clay px-5 py-2.5 text-[11px] font-medium uppercase tracking-[0.18em] text-cream transition hover:bg-clay/90 sm:text-[12px]"
+          className="inline-flex items-center gap-2 bg-clay px-5 py-2.5 text-[13px] font-medium uppercase tracking-[0.18em] text-cream transition hover:bg-clay/90 sm:text-[13px]"
         >
           Gửi ảnh qua Zalo
           <ArrowRight className="h-3.5 w-3.5" />
@@ -1569,7 +1569,7 @@ function StickyCTA() {
 function Field({ label, children }: { label: string; children: React.ReactNode }) {
   return (
     <label className="block">
-      <span className="text-[11px] uppercase tracking-[0.22em] text-cream/60">{label}</span>
+      <span className="text-[13px] uppercase tracking-[0.22em] text-cream/60">{label}</span>
       <div className="mt-2">{children}</div>
     </label>
   );

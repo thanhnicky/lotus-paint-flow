@@ -277,7 +277,7 @@ function Index() {
     showSticky && /* @__PURE__ */ jsxRuntimeExports.jsx(StickyCTA, {}),
     /* @__PURE__ */ jsxRuntimeExports.jsx("section", { id: "hero", className: "relative", children: /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "mx-auto max-w-[1400px] px-5 pt-12 pb-20 md:px-12 md:pt-20 md:pb-32", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "grid grid-cols-12 gap-x-6 gap-y-10", children: [
       /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "col-span-12 md:col-span-6 lg:col-span-5 flex flex-col", children: [
-        /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-[11px] uppercase tracking-[0.3em] text-walnut/70", children: "Lotus · Sơn gỗ hệ nước cho gia đình" }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-[13px] uppercase tracking-[0.3em] text-walnut/70", children: "Sơn Gỗ Hệ Nước Không Pha Dung Môi" }),
         /* @__PURE__ */ jsxRuntimeExports.jsxs("h1", { className: "mt-6 font-serif text-[38px] leading-[1.05] tracking-tight text-charcoal sm:text-[44px] md:text-[60px] lg:text-[72px]", children: [
           "Sơn lại đồ gỗ tại nhà",
           /* @__PURE__ */ jsxRuntimeExports.jsx("br", {}),
@@ -288,24 +288,24 @@ function Index() {
         ] }),
         /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "mt-7 max-w-md text-[15px] leading-relaxed text-walnut/80", children: "Sơn gỗ hệ nước Lotus: ít mùi, an toàn cho nhà có trẻ nhỏ, dễ tự thi công. Chọn màu, đặt online, nhận hàng tại nhà. 1 hũ sơn khoảng 7–9 m² mỗi lớp." }),
         /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "mt-9 flex flex-wrap items-center gap-4", children: [
-          /* @__PURE__ */ jsxRuntimeExports.jsxs("a", { href: "#advise", className: "group inline-flex items-center gap-3 bg-clay px-6 py-4 text-[12px] font-medium uppercase tracking-[0.18em] text-cream transition hover:bg-clay/90 sm:px-7 sm:text-[13px]", children: [
+          /* @__PURE__ */ jsxRuntimeExports.jsxs("a", { href: "#advise", className: "group inline-flex items-center gap-3 bg-clay px-6 py-4 text-[13px] font-medium uppercase tracking-[0.18em] text-cream transition hover:bg-clay/90 sm:px-7 sm:text-[13px]", children: [
             "Chọn màu & đặt mua",
             /* @__PURE__ */ jsxRuntimeExports.jsx(ArrowRight, { className: "h-4 w-4 transition group-hover:translate-x-1" })
           ] }),
-          /* @__PURE__ */ jsxRuntimeExports.jsx("a", { href: "#palette", className: "text-[12px] font-medium uppercase tracking-[0.18em] text-walnut underline-offset-8 hover:underline sm:text-[13px]", children: "Xem bảng màu" })
+          /* @__PURE__ */ jsxRuntimeExports.jsx("a", { href: "#palette", className: "text-[13px] font-medium uppercase tracking-[0.18em] text-walnut underline-offset-8 hover:underline sm:text-[13px]", children: "Xem bảng màu" })
         ] }),
-        /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "mt-3 text-[12px] text-walnut/50", children: "Ít mùi — an toàn dùng trong phòng ngủ và phòng trẻ em" }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "mt-3 text-[13px] text-walnut/50", children: "Ít mùi — an toàn dùng trong phòng ngủ và phòng trẻ em" }),
         /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "mt-12 flex flex-wrap gap-x-6 gap-y-1.5 border-t border-walnut/15 pt-6", children: [
-          /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-[11px] text-walnut/60", children: "Hệ nước ít mùi" }),
-          /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-[11px] text-walnut/30", children: "/" }),
-          /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-[11px] text-walnut/60", children: "COD toàn quốc" }),
-          /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-[11px] text-walnut/30", children: "/" }),
-          /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-[11px] text-walnut/60", children: "Online giảm 10%" })
+          /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-[13px] text-walnut/60", children: "Hệ nước ít mùi" }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-[13px] text-walnut/30", children: "/" }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-[13px] text-walnut/60", children: "COD toàn quốc" }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-[13px] text-walnut/30", children: "/" }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-[13px] text-walnut/60", children: "Online giảm 10%" })
         ] })
       ] }),
       /* @__PURE__ */ jsxRuntimeExports.jsxs("figure", { className: "col-span-12 md:col-span-6 lg:col-span-7 relative", children: [
         /* @__PURE__ */ jsxRuntimeExports.jsx("img", { src: heroInterior, alt: "Phòng khách với tủ gỗ hoàn thiện màu ấm, không gian sống gia đình", className: "aspect-[4/5] md:aspect-[5/6] w-full object-cover", width: 1600, height: 1200 }),
-        /* @__PURE__ */ jsxRuntimeExports.jsxs("figcaption", { className: "absolute bottom-5 left-5 right-5 flex items-end justify-between text-[10px] uppercase tracking-[0.22em] text-cream mix-blend-difference sm:text-[11px]", children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsxs("figcaption", { className: "absolute bottom-5 left-5 right-5 flex items-end justify-between text-[13px] uppercase tracking-[0.22em] text-cream mix-blend-difference sm:text-[13px]", children: [
           /* @__PURE__ */ jsxRuntimeExports.jsx("span", { children: "Phòng khách · Lotus Wood Paint" }),
           /* @__PURE__ */ jsxRuntimeExports.jsx("span", { children: "— 001" })
         ] })
@@ -313,7 +313,7 @@ function Index() {
     ] }) }) }),
     /* @__PURE__ */ jsxRuntimeExports.jsx("section", { id: "choose", className: "border-t border-walnut/10 bg-sand/40", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "mx-auto max-w-[1400px] px-5 py-16 md:px-12 md:py-28", children: [
       /* @__PURE__ */ jsxRuntimeExports.jsxs("header", { children: [
-        /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-[11px] uppercase tracking-[0.3em] text-walnut/70", children: "02 — Chọn kiểu hoàn thiện" }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-[13px] uppercase tracking-[0.3em] text-walnut/70", children: "02 — Chọn kiểu hoàn thiện" }),
         /* @__PURE__ */ jsxRuntimeExports.jsxs("h2", { className: "mt-5 font-serif text-[34px] leading-tight text-charcoal sm:text-4xl md:text-5xl lg:text-[56px]", children: [
           "Bạn muốn phủ kín màu",
           /* @__PURE__ */ jsxRuntimeExports.jsx("br", {}),
@@ -328,7 +328,7 @@ function Index() {
     /* @__PURE__ */ jsxRuntimeExports.jsx("section", { className: "border-t border-walnut/10", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "mx-auto max-w-[1400px] px-5 py-16 md:px-12 md:py-24", children: [
       /* @__PURE__ */ jsxRuntimeExports.jsxs("header", { className: "flex flex-col gap-4 md:flex-row md:items-baseline md:justify-between", children: [
         /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
-          /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-[11px] uppercase tracking-[0.3em] text-walnut/70", children: "03 — Quy cách" }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-[13px] uppercase tracking-[0.3em] text-walnut/70", children: "03 — Quy cách" }),
           /* @__PURE__ */ jsxRuntimeExports.jsxs("h2", { className: "mt-5 font-serif text-[32px] leading-tight text-charcoal sm:text-4xl md:text-5xl", children: [
             "1 hũ sơn được bao nhiêu?",
             /* @__PURE__ */ jsxRuntimeExports.jsx("br", {}),
@@ -340,23 +340,23 @@ function Index() {
       /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "mt-14 grid grid-cols-2 gap-4 border-t border-walnut/20 pt-8 sm:grid-cols-4", children: [
         /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "rounded-lg bg-cream/50 p-4 text-center", children: [
           /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "text-[28px] font-serif text-clay sm:text-[32px]", children: "1kg" }),
-          /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "mt-1 text-[11px] text-walnut/60", children: "Quy cách hũ" })
+          /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "mt-1 text-[13px] text-walnut/60", children: "Quy cách hũ" })
         ] }),
         /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "rounded-lg bg-cream/50 p-4 text-center", children: [
           /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "text-[28px] font-serif text-clay sm:text-[32px]", children: "7–9 m²" }),
-          /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "mt-1 text-[11px] text-walnut/60", children: "Độ phủ mỗi lớp" })
+          /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "mt-1 text-[13px] text-walnut/60", children: "Độ phủ mỗi lớp" })
         ] }),
         /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "rounded-lg bg-cream/50 p-4 text-center", children: [
           /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "text-[28px] font-serif text-clay sm:text-[32px]", children: "2 lớp" }),
-          /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "mt-1 text-[11px] text-walnut/60", children: "Khuyến nghị" })
+          /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "mt-1 text-[13px] text-walnut/60", children: "Khuyến nghị" })
         ] }),
         /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "rounded-lg bg-cream/50 p-4 text-center", children: [
           /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "text-[28px] font-serif text-clay sm:text-[32px]", children: "30 phút" }),
-          /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "mt-1 text-[11px] text-walnut/60", children: "Khô bề mặt" })
+          /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "mt-1 text-[13px] text-walnut/60", children: "Khô bề mặt" })
         ] })
       ] }),
       /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "mt-12 border-t border-walnut/15 pt-8", children: [
-        /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "mb-4 text-[11px] text-walnut/60", children: "Gợi ý số lượng theo hạng mục" }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "mb-4 text-[13px] text-walnut/60", children: "Gợi ý số lượng theo hạng mục" }),
         /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "space-y-2", children: [{
           item: "Bàn ăn 4–6 ghế",
           qty: "1 hũ 1kg"
@@ -380,7 +380,7 @@ function Index() {
     ] }) }),
     /* @__PURE__ */ jsxRuntimeExports.jsx("section", { className: "border-t border-walnut/10 bg-sand/40", children: /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "mx-auto max-w-[1400px] px-5 py-16 md:px-12 md:py-28", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "grid grid-cols-12 gap-6", children: [
       /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "col-span-12 lg:col-span-4", children: [
-        /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-[11px] uppercase tracking-[0.3em] text-walnut/70", children: "04 — Bề mặt" }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-[13px] uppercase tracking-[0.3em] text-walnut/70", children: "04 — Bề mặt" }),
         /* @__PURE__ */ jsxRuntimeExports.jsxs("h2", { className: "mt-5 font-serif text-[32px] leading-tight text-charcoal sm:text-4xl md:text-5xl", children: [
           "Bạn đang",
           /* @__PURE__ */ jsxRuntimeExports.jsx("br", {}),
@@ -392,7 +392,7 @@ function Index() {
     ] }) }) }),
     /* @__PURE__ */ jsxRuntimeExports.jsx("section", { className: "border-t border-walnut/10 bg-walnut text-cream", children: /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "mx-auto max-w-[1400px] px-5 py-16 md:px-12 md:py-28", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "grid grid-cols-12 gap-x-6 gap-y-10", children: [
       /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "col-span-12 md:col-span-4 lg:col-span-4", children: [
-        /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-[11px] uppercase tracking-[0.3em] text-cream/60", children: "05 — Trước & Sau" }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-[13px] uppercase tracking-[0.3em] text-cream/60", children: "05 — Trước & Sau" }),
         /* @__PURE__ */ jsxRuntimeExports.jsxs("h2", { className: "mt-5 font-serif text-[32px] leading-tight sm:text-4xl md:text-5xl", children: [
           "Đồ gỗ cũ,",
           /* @__PURE__ */ jsxRuntimeExports.jsx("br", {}),
@@ -403,14 +403,14 @@ function Index() {
       /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "col-span-12 md:col-span-8 lg:col-span-8", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "relative overflow-hidden", children: [
         /* @__PURE__ */ jsxRuntimeExports.jsx("img", { src: beforeAfter, alt: "Ghế gỗ trước và sau khi sơn lại bằng Lotus Wood Paint màu rêu", loading: "lazy", className: "w-full h-auto block", width: 1600, height: 900 }),
         /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "pointer-events-none absolute inset-y-0 left-1/2 w-px -translate-x-1/2 bg-cream/30" }),
-        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute bottom-3 left-3 bg-black/40 px-2 py-1 text-[9px] uppercase tracking-[0.28em] text-cream sm:bottom-5 sm:left-[8%] sm:text-[10px]", children: "Trước khi sơn" }),
-        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute bottom-3 right-3 bg-black/40 px-2 py-1 text-[9px] uppercase tracking-[0.28em] text-cream sm:bottom-5 sm:right-[8%] sm:text-[10px]", children: "Sau khi sơn" })
+        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute bottom-3 left-3 bg-black/40 px-2 py-1 text-[9px] uppercase tracking-[0.28em] text-cream sm:bottom-5 sm:left-[8%] sm:text-[13px]", children: "Trước khi sơn" }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute bottom-3 right-3 bg-black/40 px-2 py-1 text-[9px] uppercase tracking-[0.28em] text-cream sm:bottom-5 sm:right-[8%] sm:text-[13px]", children: "Sau khi sơn" })
       ] }) })
     ] }) }) }),
     /* @__PURE__ */ jsxRuntimeExports.jsx("section", { className: "border-t border-walnut/10", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "mx-auto max-w-[1400px] px-5 py-20 md:px-12 md:py-32", children: [
       /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "grid grid-cols-1 gap-8 lg:grid-cols-12 lg:gap-14", children: [
         /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "lg:col-span-5", children: [
-          /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-[11px] uppercase tracking-[0.3em] text-walnut/70", children: "06 — Vì sao hệ nước" }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-[13px] uppercase tracking-[0.3em] text-walnut/70", children: "06 — Vì sao hệ nước" }),
           /* @__PURE__ */ jsxRuntimeExports.jsxs("h2", { className: "mt-5 font-serif text-[32px] leading-tight text-charcoal sm:text-4xl md:text-5xl", children: [
             "Ít mùi.",
             /* @__PURE__ */ jsxRuntimeExports.jsx("br", {}),
@@ -441,7 +441,7 @@ function Index() {
     ] }) }),
     /* @__PURE__ */ jsxRuntimeExports.jsx("section", { className: "border-t border-walnut/10 bg-sand/40", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "mx-auto max-w-[1400px] px-5 py-12 md:px-12 md:py-28", children: [
       /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "mb-6 text-center md:mb-10 md:text-left", children: [
-        /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-[11px] uppercase tracking-[0.3em] text-walnut/70", children: "07 — Thi công" }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-[13px] uppercase tracking-[0.3em] text-walnut/70", children: "07 — Thi công" }),
         /* @__PURE__ */ jsxRuntimeExports.jsxs("h2", { className: "mt-4 font-serif text-[28px] leading-tight text-charcoal sm:text-4xl md:mt-5 md:text-5xl", children: [
           "Ba bước,",
           /* @__PURE__ */ jsxRuntimeExports.jsx("br", {}),
@@ -472,7 +472,7 @@ function Index() {
     /* @__PURE__ */ jsxRuntimeExports.jsx("section", { id: "palette", className: "border-t border-walnut/10 bg-cream", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "mx-auto max-w-[1400px] px-5 py-16 md:px-12 md:py-28", children: [
       /* @__PURE__ */ jsxRuntimeExports.jsxs("header", { className: "mb-12 flex flex-col items-start justify-between gap-4 md:flex-row md:items-end", children: [
         /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
-          /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-[11px] uppercase tracking-[0.3em] text-walnut/70", children: "08 — Bảng màu" }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-[13px] uppercase tracking-[0.3em] text-walnut/70", children: "08 — Bảng màu" }),
           /* @__PURE__ */ jsxRuntimeExports.jsxs("h2", { className: "mt-5 font-serif text-[32px] leading-tight text-charcoal sm:text-4xl md:text-5xl", children: [
             "Chọn màu,",
             /* @__PURE__ */ jsxRuntimeExports.jsx("br", {}),
@@ -480,7 +480,7 @@ function Index() {
           ] }),
           /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "mt-4 max-w-lg text-[15px] leading-relaxed text-walnut/70", children: "Bấm vào màu để chọn tự động. Sau đó cuộn xuống phần đặt hàng để hoàn tất." })
         ] }),
-        /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "inline-flex border border-walnut/25 text-[11px] uppercase tracking-[0.2em] sm:text-[12px]", children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "inline-flex border border-walnut/25 text-[13px] uppercase tracking-[0.2em] sm:text-[13px]", children: [
           /* @__PURE__ */ jsxRuntimeExports.jsx("button", { onClick: () => {
             setTab("indoor");
             setOrderColor("");
@@ -498,15 +498,15 @@ function Index() {
         c.image ? /* @__PURE__ */ jsxRuntimeExports.jsx("img", { src: c.image, alt: c.name, className: `aspect-square w-full object-cover transition-all duration-200 ${orderColor === c.name ? "ring-3 ring-clay ring-offset-2 scale-105" : "group-hover:scale-[1.02]"}` }) : /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: `aspect-square w-full border border-walnut/15 bg-sand/30 transition-all duration-200 ${orderColor === c.name ? "ring-3 ring-clay ring-offset-2 scale-105" : ""}` }),
         /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center justify-between", children: [
           /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: `font-serif text-[14px] ${orderColor === c.name ? "text-clay font-medium" : "text-charcoal"}`, children: c.name }),
-          orderColor === c.name && /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-[11px] text-clay font-medium", children: "✓" })
+          orderColor === c.name && /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-[13px] text-clay font-medium", children: "✓" })
         ] })
       ] }, c.name)) }),
       /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "mt-10 flex items-center justify-between border-t border-walnut/15 pt-6", children: [
-        /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-start gap-3 text-[12px] text-walnut/55", children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-start gap-3 text-[13px] text-walnut/55", children: [
           /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "mt-0.5 text-walnut/30", children: "※" }),
           /* @__PURE__ */ jsxRuntimeExports.jsx("p", { children: "Màu hiển thị trên màn hình có thể chênh nhẹ so với thực tế." })
         ] }),
-        /* @__PURE__ */ jsxRuntimeExports.jsxs("button", { type: "button", onClick: () => setShowPaletteModal(true), className: "inline-flex items-center gap-2 text-[11px] uppercase tracking-[0.18em] text-walnut/60 underline underline-offset-2 transition hover:text-clay", children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsxs("button", { type: "button", onClick: () => setShowPaletteModal(true), className: "inline-flex items-center gap-2 text-[13px] uppercase tracking-[0.18em] text-walnut/60 underline underline-offset-2 transition hover:text-clay", children: [
           "Xem bảng màu đầy đủ",
           /* @__PURE__ */ jsxRuntimeExports.jsx(ArrowRight, { className: "h-3.5 w-3.5" })
         ] })
@@ -516,7 +516,7 @@ function Index() {
           "Đã chọn: ",
           /* @__PURE__ */ jsxRuntimeExports.jsx("strong", { className: "text-charcoal", children: orderColor })
         ] }),
-        /* @__PURE__ */ jsxRuntimeExports.jsxs("a", { href: "#advise", className: "inline-flex items-center gap-2 text-[12px] font-medium uppercase tracking-[0.18em] text-clay transition hover:text-clay/75", children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsxs("a", { href: "#advise", className: "inline-flex items-center gap-2 text-[13px] font-medium uppercase tracking-[0.18em] text-clay transition hover:text-clay/75", children: [
           "Đặt mua màu này",
           /* @__PURE__ */ jsxRuntimeExports.jsx(ArrowRight, { className: "h-4 w-4" })
         ] })
@@ -530,17 +530,17 @@ function Index() {
       ] }),
       /* @__PURE__ */ jsxRuntimeExports.jsx("img", { src: tab === "indoor" ? SOLID_PALETTE_IMAGE : WOODSTAIN_PALETTE_IMAGE, alt: tab === "indoor" ? "Bảng màu sơn màu bệt Lotus cho nội thất trong nhà" : "Bảng màu sơn giữ vân gỗ Lotus cho nội thất trong và ngoài trời", className: "w-full border border-walnut/10 max-h-[60vh] object-contain" }),
       /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "mt-6 flex justify-end gap-3", children: [
-        /* @__PURE__ */ jsxRuntimeExports.jsxs("button", { type: "button", onClick: handleDownloadPalette, className: "inline-flex items-center gap-2 border border-walnut/20 px-6 py-3 text-[12px] uppercase tracking-[0.18em] text-charcoal transition hover:bg-sand/60", children: [
+        /* @__PURE__ */ jsxRuntimeExports.jsxs("button", { type: "button", onClick: handleDownloadPalette, className: "inline-flex items-center gap-2 border border-walnut/20 px-6 py-3 text-[13px] uppercase tracking-[0.18em] text-charcoal transition hover:bg-sand/60", children: [
           "Tải xuống",
           /* @__PURE__ */ jsxRuntimeExports.jsx("svg", { className: "h-4 w-4", fill: "none", viewBox: "0 0 24 24", stroke: "currentColor", children: /* @__PURE__ */ jsxRuntimeExports.jsx("path", { strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: 2, d: "M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" }) })
         ] }),
-        /* @__PURE__ */ jsxRuntimeExports.jsx("button", { type: "button", onClick: () => setShowPaletteModal(false), className: "inline-flex items-center gap-2 bg-clay px-6 py-3 text-[12px] uppercase tracking-[0.18em] text-cream transition hover:bg-clay/90", children: "Đóng" })
+        /* @__PURE__ */ jsxRuntimeExports.jsx("button", { type: "button", onClick: () => setShowPaletteModal(false), className: "inline-flex items-center gap-2 bg-clay px-6 py-3 text-[13px] uppercase tracking-[0.18em] text-cream transition hover:bg-clay/90", children: "Đóng" })
       ] })
     ] }) }),
     /* @__PURE__ */ jsxRuntimeExports.jsx("section", { className: "border-t border-walnut/10 bg-sand/40", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "mx-auto max-w-[1400px] px-5 py-16 md:px-12 md:py-28", children: [
       /* @__PURE__ */ jsxRuntimeExports.jsxs("header", { className: "flex flex-col items-start justify-between gap-4 md:flex-row md:items-end", children: [
         /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
-          /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-[11px] uppercase tracking-[0.3em] text-walnut/70", children: "09 — Công trình thật" }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-[13px] uppercase tracking-[0.3em] text-walnut/70", children: "09 — Công trình thật" }),
           /* @__PURE__ */ jsxRuntimeExports.jsxs("h2", { className: "mt-5 font-serif text-[32px] leading-tight text-charcoal sm:text-4xl md:text-5xl", children: [
             "Từ đồ gỗ cũ",
             /* @__PURE__ */ jsxRuntimeExports.jsx("br", {}),
@@ -554,21 +554,21 @@ function Index() {
           /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "overflow-hidden", children: /* @__PURE__ */ jsxRuntimeExports.jsx("img", { src: projects[0].img, alt: projects[0].label, loading: "lazy", className: "aspect-[4/5] w-full object-cover transition duration-700 group-hover:scale-[1.03]", width: 1e3, height: 1250 }) }),
           /* @__PURE__ */ jsxRuntimeExports.jsxs("figcaption", { className: "mt-4 border-t border-walnut/20 pt-3", children: [
             /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "font-serif text-lg text-charcoal", children: projects[0].label }),
-            /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "mt-1 text-[11px] text-walnut/60", children: projects[0].place })
+            /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "mt-1 text-[13px] text-walnut/60", children: projects[0].place })
           ] })
         ] }),
         /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "flex flex-col gap-5 lg:col-span-5", children: projects.slice(1).map((p) => /* @__PURE__ */ jsxRuntimeExports.jsxs("figure", { className: "group flex-1", children: [
           /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "overflow-hidden", children: /* @__PURE__ */ jsxRuntimeExports.jsx("img", { src: p.img, alt: p.label, loading: "lazy", className: "aspect-[4/3] w-full object-cover transition duration-700 group-hover:scale-[1.03]", width: 900, height: 675 }) }),
           /* @__PURE__ */ jsxRuntimeExports.jsxs("figcaption", { className: "mt-3 border-t border-walnut/20 pt-3", children: [
             /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "font-serif text-base text-charcoal", children: p.label }),
-            /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "mt-0.5 text-[11px] text-walnut/60", children: p.place })
+            /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "mt-0.5 text-[13px] text-walnut/60", children: p.place })
           ] })
         ] }, p.label)) })
       ] })
     ] }) }),
     /* @__PURE__ */ jsxRuntimeExports.jsx("section", { className: "border-t border-walnut/10", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "mx-auto max-w-[1400px] px-5 py-20 md:px-12 md:py-32", children: [
       /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "flex flex-col gap-2 md:flex-row md:items-end md:justify-between", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
-        /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-[11px] uppercase tracking-[0.3em] text-walnut/70", children: "10 — Cảm nhận khách hàng" }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-[13px] uppercase tracking-[0.3em] text-walnut/70", children: "10 — Cảm nhận khách hàng" }),
         /* @__PURE__ */ jsxRuntimeExports.jsxs("h2", { className: "mt-5 font-serif text-[32px] leading-tight text-charcoal sm:text-4xl md:text-5xl", children: [
           "Ngày cuối tuần.",
           /* @__PURE__ */ jsxRuntimeExports.jsx("br", {}),
@@ -584,7 +584,7 @@ function Index() {
         ] }),
         /* @__PURE__ */ jsxRuntimeExports.jsxs("footer", { className: "mt-6 border-t border-walnut/15 pt-4", children: [
           /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "text-sm font-medium text-charcoal", children: t.name }),
-          /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "mt-0.5 text-[11px] text-walnut/55", children: [
+          /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "mt-0.5 text-[13px] text-walnut/55", children: [
             t.place,
             " · ",
             t.product
@@ -594,7 +594,7 @@ function Index() {
     ] }) }),
     /* @__PURE__ */ jsxRuntimeExports.jsx("section", { className: "border-t border-walnut/10 bg-sand/40", children: /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "mx-auto max-w-[1400px] px-5 py-16 md:px-12 md:py-28", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "grid grid-cols-12 gap-6", children: [
       /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "col-span-12 md:col-span-4", children: [
-        /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-[11px] uppercase tracking-[0.3em] text-walnut/70", children: "11 — Câu hỏi" }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-[13px] uppercase tracking-[0.3em] text-walnut/70", children: "11 — Câu hỏi" }),
         /* @__PURE__ */ jsxRuntimeExports.jsxs("h2", { className: "mt-5 font-serif text-[32px] leading-tight text-charcoal sm:text-4xl md:text-5xl", children: [
           "Những điều",
           /* @__PURE__ */ jsxRuntimeExports.jsx("br", {}),
@@ -619,14 +619,14 @@ function Index() {
         " ",
         /* @__PURE__ */ jsxRuntimeExports.jsx("a", { href: "https://zalo.me/0943966662", target: "_blank", rel: "noopener noreferrer", className: "font-medium text-clay underline underline-offset-2 transition hover:text-clay/80", children: "Nhắn Zalo để được gợi ý nhanh." })
       ] }) }),
-      /* @__PURE__ */ jsxRuntimeExports.jsxs("a", { href: "#palette", className: "mt-8 inline-flex items-center gap-3 bg-clay px-6 py-4 text-[12px] font-medium uppercase tracking-[0.18em] text-cream transition hover:bg-clay/90 sm:text-[13px]", children: [
+      /* @__PURE__ */ jsxRuntimeExports.jsxs("a", { href: "#palette", className: "mt-8 inline-flex items-center gap-3 bg-clay px-6 py-4 text-[13px] font-medium uppercase tracking-[0.18em] text-cream transition hover:bg-clay/90 sm:text-[13px]", children: [
         "Chọn màu & đặt mua ngay",
         /* @__PURE__ */ jsxRuntimeExports.jsx(ArrowRight, { className: "h-4 w-4" })
       ] })
     ] }) }) }),
     /* @__PURE__ */ jsxRuntimeExports.jsx("section", { id: "advise", className: "border-t border-walnut/10 bg-sand/30 text-charcoal", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "mx-auto max-w-[1400px] px-5 py-16 md:px-12 md:py-28", children: [
       /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "mb-10 text-center md:text-left", children: [
-        /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-[11px] uppercase tracking-[0.3em] text-walnut/50", children: "12 — Đặt hàng" }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-[13px] uppercase tracking-[0.3em] text-walnut/50", children: "12 — Đặt hàng" }),
         /* @__PURE__ */ jsxRuntimeExports.jsxs("h2", { className: "mt-4 font-serif text-[32px] leading-tight sm:text-5xl", children: [
           "Điền thông tin,",
           /* @__PURE__ */ jsxRuntimeExports.jsx("br", {}),
@@ -697,7 +697,7 @@ function Index() {
       }, className: "grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-12", children: [
         /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "space-y-6", children: [
           /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
-            /* @__PURE__ */ jsxRuntimeExports.jsx("label", { className: "mb-3 block text-[11px] text-walnut/50", children: "Dòng sơn" }),
+            /* @__PURE__ */ jsxRuntimeExports.jsx("label", { className: "mb-3 block text-[13px] text-walnut/50", children: "Dòng sơn" }),
             /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "grid grid-cols-2 gap-3", children: [
               /* @__PURE__ */ jsxRuntimeExports.jsx("button", { type: "button", onClick: () => {
                 setOrderProduct("bet");
@@ -710,22 +710,22 @@ function Index() {
             ] })
           ] }),
           /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
-            /* @__PURE__ */ jsxRuntimeExports.jsx("label", { className: "mb-3 block text-[11px] text-walnut/50", children: "Môi trường sử dụng" }),
+            /* @__PURE__ */ jsxRuntimeExports.jsx("label", { className: "mb-3 block text-[13px] text-walnut/50", children: "Môi trường sử dụng" }),
             /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "grid grid-cols-2 gap-3", children: [
               /* @__PURE__ */ jsxRuntimeExports.jsx("button", { type: "button", onClick: () => setOrderEnv("indoor"), className: `border py-3 text-[13px] transition ${orderEnv === "indoor" ? "border-clay bg-clay text-cream font-medium" : "border-walnut/20 text-walnut/60 hover:border-walnut/40"}`, children: "Trong nhà" }),
               /* @__PURE__ */ jsxRuntimeExports.jsx("button", { type: "button", onClick: () => setOrderEnv("outdoor"), className: `border py-3 text-[13px] transition ${orderEnv === "outdoor" ? "border-clay bg-clay text-cream font-medium" : "border-walnut/20 text-walnut/60 hover:border-walnut/40"}`, children: "Ngoài trời" })
             ] })
           ] }),
           /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
-            /* @__PURE__ */ jsxRuntimeExports.jsx("label", { className: "mb-3 block text-[11px] text-walnut/50", children: "Màu sơn" }),
+            /* @__PURE__ */ jsxRuntimeExports.jsx("label", { className: "mb-3 block text-[13px] text-walnut/50", children: "Màu sơn" }),
             /* @__PURE__ */ jsxRuntimeExports.jsx("input", { type: "text", value: orderColor, onChange: (e) => setOrderColor(e.target.value), placeholder: "Nhập mã màu (ví dụ: 008, 019...)", className: "w-full border border-walnut/20 bg-cream px-4 py-3 text-[13px] text-charcoal placeholder:text-walnut/40 focus:border-clay focus:outline-none" }),
             /* @__PURE__ */ jsxRuntimeExports.jsx("button", { type: "button", onClick: () => {
               setTab(orderProduct === "bet" ? "indoor" : "outdoor");
               setShowPaletteModal(true);
-            }, className: "mt-2 text-[11px] text-walnut/55 underline underline-offset-2 transition hover:text-clay", children: "Xem bảng màu đầy đủ" })
+            }, className: "mt-2 text-[13px] text-walnut/55 underline underline-offset-2 transition hover:text-clay", children: "Xem bảng màu đầy đủ" })
           ] }),
           /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
-            /* @__PURE__ */ jsxRuntimeExports.jsx("label", { className: "mb-3 block text-[11px] text-walnut/50", children: "Bề mặt" }),
+            /* @__PURE__ */ jsxRuntimeExports.jsx("label", { className: "mb-3 block text-[13px] text-walnut/50", children: "Bề mặt" }),
             /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "grid grid-cols-3 gap-3", children: [
               /* @__PURE__ */ jsxRuntimeExports.jsx("button", { type: "button", onClick: () => setOrderSurface("bong"), className: `border py-3 text-[13px] transition ${orderSurface === "bong" ? "border-clay bg-clay text-cream font-medium" : "border-walnut/20 text-walnut/60 hover:border-walnut/40"}`, children: "Bóng" }),
               /* @__PURE__ */ jsxRuntimeExports.jsx("button", { type: "button", onClick: () => setOrderSurface("bong-50"), className: `border py-3 text-[13px] transition ${orderSurface === "bong-50" ? "border-clay bg-clay text-cream font-medium" : "border-walnut/20 text-walnut/60 hover:border-walnut/40"}`, children: "Bóng 50%" }),
@@ -733,16 +733,16 @@ function Index() {
             ] })
           ] }),
           /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
-            /* @__PURE__ */ jsxRuntimeExports.jsx("label", { className: "mb-3 block text-[11px] text-walnut/50", children: "Kích thước & số lượng" }),
+            /* @__PURE__ */ jsxRuntimeExports.jsx("label", { className: "mb-3 block text-[13px] text-walnut/50", children: "Kích thước & số lượng" }),
             /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "space-y-3", children: [
               /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "grid grid-cols-2 gap-3", children: [
                 /* @__PURE__ */ jsxRuntimeExports.jsxs("button", { type: "button", onClick: () => setOrderSize("1kg"), className: `border py-3 text-[13px] transition ${orderSize === "1kg" ? "border-clay bg-clay text-cream font-medium" : "border-walnut/20 text-walnut/60 hover:border-walnut/40"}`, children: [
                   "Hũ 1 kg",
-                  /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "ml-2 text-[11px] opacity-60", children: formatVND(PRICES[orderProduct][orderEnv]["1kg"]) })
+                  /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "ml-2 text-[13px] opacity-60", children: formatVND(PRICES[orderProduct][orderEnv]["1kg"]) })
                 ] }),
                 /* @__PURE__ */ jsxRuntimeExports.jsxs("button", { type: "button", onClick: () => setOrderSize("5kg"), className: `border py-3 text-[13px] transition ${orderSize === "5kg" ? "border-clay bg-clay text-cream font-medium" : "border-walnut/20 text-walnut/60 hover:border-walnut/40"}`, children: [
                   "Hũ 5 kg",
-                  /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "ml-2 text-[11px] opacity-60", children: formatVND(PRICES[orderProduct][orderEnv]["5kg"]) })
+                  /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "ml-2 text-[13px] opacity-60", children: formatVND(PRICES[orderProduct][orderEnv]["5kg"]) })
                 ] })
               ] }),
               /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex items-center border border-walnut/20", children: [
@@ -755,7 +755,7 @@ function Index() {
         ] }),
         /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "space-y-6", children: [
           /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "space-y-3 border border-walnut/15 p-5 bg-cream/30", children: [
-            /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "mb-3 text-[10px] text-walnut/50", children: "Tóm tắt đơn" }),
+            /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "mb-3 text-[13px] text-walnut/50", children: "Tóm tắt đơn" }),
             /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "space-y-2 text-[14px]", children: [
               /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex justify-between", children: [
                 /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-walnut/70", children: "Sản phẩm" }),
@@ -807,11 +807,11 @@ function Index() {
             ] })
           ] }),
           /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { children: [
-            /* @__PURE__ */ jsxRuntimeExports.jsx("label", { className: "mb-3 block text-[11px] text-walnut/50", children: "Hình thức thanh toán" }),
+            /* @__PURE__ */ jsxRuntimeExports.jsx("label", { className: "mb-3 block text-[13px] text-walnut/50", children: "Hình thức thanh toán" }),
             /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "space-y-3", children: [
               /* @__PURE__ */ jsxRuntimeExports.jsxs("button", { type: "button", onClick: () => setOrderPayment("cod"), className: `w-full border p-4 text-left transition ${orderPayment === "cod" ? "border-walnut/40 bg-sand/50" : "border-walnut/15 hover:border-walnut/30"}`, children: [
                 /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: `block text-[13px] font-medium ${orderPayment === "cod" ? "text-charcoal" : "text-walnut/60"}`, children: "COD — Thanh toán khi nhận" }),
-                /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: `block text-[12px] ${orderPayment === "cod" ? "text-walnut/55" : "text-walnut/40"}`, children: "Không cần thanh toán trước" })
+                /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: `block text-[13px] ${orderPayment === "cod" ? "text-walnut/55" : "text-walnut/40"}`, children: "Không cần thanh toán trước" })
               ] }),
               /* @__PURE__ */ jsxRuntimeExports.jsxs("button", { type: "button", onClick: () => setOrderPayment("online"), className: `w-full border p-4 text-left transition ${orderPayment === "online" ? "border-clay/60 bg-clay/5" : "border-walnut/15 hover:border-walnut/30"}`, children: [
                 /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: `block text-[13px] font-medium ${orderPayment === "online" ? "text-clay" : "text-walnut/60"}`, children: "Thanh toán Online" }),
@@ -838,12 +838,12 @@ function Index() {
             ] })
           ] }),
           /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "pt-2", children: [
-            /* @__PURE__ */ jsxRuntimeExports.jsx("button", { type: "submit", className: "h-[56px] w-full bg-clay text-[12px] font-medium uppercase tracking-[0.22em] text-cream transition hover:bg-clay/90", children: "Đặt hàng" }),
-            /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "mt-4 text-center text-[11px] text-walnut/50", children: "COD toàn quốc · Đổi trả 7 ngày" })
+            /* @__PURE__ */ jsxRuntimeExports.jsx("button", { type: "submit", className: "h-[56px] w-full bg-clay text-[13px] font-medium uppercase tracking-[0.22em] text-cream transition hover:bg-clay/90", children: "Đặt hàng" }),
+            /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "mt-4 text-center text-[13px] text-walnut/50", children: "COD toàn quốc · Đổi trả 7 ngày" })
           ] })
         ] })
       ] }),
-      /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "mt-8 space-y-4 text-[11px] text-walnut/50", children: [
+      /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "mt-8 space-y-4 text-[13px] text-walnut/50", children: [
         /* @__PURE__ */ jsxRuntimeExports.jsx("p", { children: "※ Màu hiển thị trên màn hình có thể chênh nhẹ so với thực tế." }),
         /* @__PURE__ */ jsxRuntimeExports.jsxs("p", { className: "border-t border-walnut/15 pt-4", children: [
           "Mua từ 50kg trở lên?",
@@ -856,7 +856,7 @@ function Index() {
       backgroundColor: "#0068FF"
     }, children: [
       /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-2xl font-bold text-white", children: "Z" }),
-      /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute right-full mr-3 w-48 rounded-lg bg-charcoal px-3 py-2 text-[11px] text-cream opacity-0 transition-opacity group-hover:opacity-100", children: "Bạn chưa chắc chọn gì? Nhắn Zalo — tư vấn miễn phí" })
+      /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "absolute right-full mr-3 w-48 rounded-lg bg-charcoal px-3 py-2 text-[13px] text-cream opacity-0 transition-opacity group-hover:opacity-100", children: "Bạn chưa chắc chọn gì? Nhắn Zalo — tư vấn miễn phí" })
     ] }) }),
     /* @__PURE__ */ jsxRuntimeExports.jsx(Footer, {})
   ] });
@@ -864,12 +864,12 @@ function Index() {
 function Header() {
   return /* @__PURE__ */ jsxRuntimeExports.jsx("header", { className: "sticky top-0 z-40 border-b border-walnut/10 bg-cream/85 backdrop-blur", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "mx-auto flex max-w-[1400px] items-center justify-between px-5 py-4 md:px-12 md:py-5", children: [
     /* @__PURE__ */ jsxRuntimeExports.jsx("a", { href: "#", className: "flex items-center", children: /* @__PURE__ */ jsxRuntimeExports.jsx("img", { src: logoLotus, alt: "Lotus Logo", className: "h-10 w-auto" }) }),
-    /* @__PURE__ */ jsxRuntimeExports.jsxs("nav", { className: "hidden gap-10 text-[12px] uppercase tracking-[0.22em] text-walnut md:flex", children: [
+    /* @__PURE__ */ jsxRuntimeExports.jsxs("nav", { className: "hidden gap-10 text-[13px] uppercase tracking-[0.22em] text-walnut md:flex", children: [
       /* @__PURE__ */ jsxRuntimeExports.jsx("a", { href: "#choose", className: "hover:text-clay", children: "Sản phẩm" }),
       /* @__PURE__ */ jsxRuntimeExports.jsx("a", { href: "#palette", className: "hover:text-clay", children: "Bảng màu" }),
       /* @__PURE__ */ jsxRuntimeExports.jsx("a", { href: "#advise", className: "hover:text-clay", children: "Đặt hàng" })
     ] }),
-    /* @__PURE__ */ jsxRuntimeExports.jsxs("a", { href: "#advise", className: "inline-flex items-center gap-2 border border-charcoal px-4 py-2.5 text-[10px] uppercase tracking-[0.2em] text-charcoal transition hover:bg-charcoal hover:text-cream sm:px-5 sm:text-[11px]", children: [
+    /* @__PURE__ */ jsxRuntimeExports.jsxs("a", { href: "#advise", className: "inline-flex items-center gap-2 border border-charcoal px-4 py-2.5 text-[13px] uppercase tracking-[0.2em] text-charcoal transition hover:bg-charcoal hover:text-cream sm:px-5 sm:text-[13px]", children: [
       "Chọn màu & mua",
       /* @__PURE__ */ jsxRuntimeExports.jsx(ArrowRight, { className: "h-3.5 w-3.5" })
     ] })
@@ -885,7 +885,7 @@ function Footer() {
         /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "mt-2 text-xs text-walnut/55", children: "99/5 Đường XTT26-1, Ấp 2, Xã Bà Điểm, TP.HCM" })
       ] }),
       /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "col-span-6 md:col-span-3", children: [
-        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "text-[11px] uppercase tracking-[0.22em] text-walnut/50 mb-3", children: "Sản phẩm" }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "text-[13px] uppercase tracking-[0.22em] text-walnut/50 mb-3", children: "Sản phẩm" }),
         /* @__PURE__ */ jsxRuntimeExports.jsxs("ul", { className: "mt-4 space-y-2.5 text-sm text-charcoal", children: [
           /* @__PURE__ */ jsxRuntimeExports.jsx("li", { children: /* @__PURE__ */ jsxRuntimeExports.jsx("a", { href: "#choose", className: "hover:text-clay", children: "Wood Paint — Indoor" }) }),
           /* @__PURE__ */ jsxRuntimeExports.jsx("li", { children: /* @__PURE__ */ jsxRuntimeExports.jsx("a", { href: "#choose", className: "hover:text-clay", children: "Woodstain Finish — Outdoor" }) }),
@@ -893,7 +893,7 @@ function Footer() {
         ] })
       ] }),
       /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "col-span-6 md:col-span-4", children: [
-        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "text-[11px] uppercase tracking-[0.22em] text-walnut/50 mb-3", children: "Liên hệ" }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "text-[13px] uppercase tracking-[0.22em] text-walnut/50 mb-3", children: "Liên hệ" }),
         /* @__PURE__ */ jsxRuntimeExports.jsxs("ul", { className: "mt-4 space-y-2.5 text-sm text-charcoal", children: [
           /* @__PURE__ */ jsxRuntimeExports.jsx("li", { children: /* @__PURE__ */ jsxRuntimeExports.jsx("a", { href: "https://zalo.me/0943966662", target: "_blank", rel: "noopener noreferrer", className: "hover:text-clay", children: "Hotline: 0943 966 662" }) }),
           /* @__PURE__ */ jsxRuntimeExports.jsx("li", { children: /* @__PURE__ */ jsxRuntimeExports.jsx("a", { href: "mailto:sales@sonlotus.vn", className: "hover:text-clay", children: "sales@www.sonlotus.vn" }) }),
@@ -902,7 +902,7 @@ function Footer() {
         ] })
       ] })
     ] }),
-    /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "mt-12 flex flex-col justify-between gap-3 border-t border-walnut/15 pt-6 text-[11px] text-walnut/60 md:flex-row", children: [
+    /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "mt-12 flex flex-col justify-between gap-3 border-t border-walnut/15 pt-6 text-[13px] text-walnut/60 md:flex-row", children: [
       /* @__PURE__ */ jsxRuntimeExports.jsxs("span", { children: [
         "© ",
         (/* @__PURE__ */ new Date()).getFullYear(),
@@ -924,8 +924,8 @@ function SurfaceOption({
       /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "mt-0.5 text-[13px] text-walnut/60", children: desc })
     ] }),
     /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "shrink-0 sm:text-right", children: [
-      /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "text-[11px] text-clay", children: recommendation }),
-      /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "mt-1 text-[12px] text-walnut/60 leading-relaxed", children: detail })
+      /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "text-[13px] text-clay", children: recommendation }),
+      /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "mt-1 text-[13px] text-walnut/60 leading-relaxed", children: detail })
     ] })
   ] }) });
 }
@@ -944,12 +944,12 @@ function DecisionCard({
     /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "overflow-hidden", children: /* @__PURE__ */ jsxRuntimeExports.jsx("img", { src: img, alt: title, loading: "lazy", className: "aspect-[5/6] w-full object-cover transition duration-700 group-hover:scale-[1.03]", width: 1200, height: 1500 }) }),
     /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "mt-7 flex items-baseline gap-4", children: [
       /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "font-serif text-4xl text-clay", children: index }),
-      /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-[11px] uppercase tracking-[0.25em] text-walnut/70", children: subtitle })
+      /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-[13px] uppercase tracking-[0.25em] text-walnut/70", children: subtitle })
     ] }),
     /* @__PURE__ */ jsxRuntimeExports.jsx("h3", { className: "mt-4 font-serif text-[28px] leading-tight text-charcoal sm:text-3xl md:text-4xl", children: title }),
     /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "mt-4 max-w-lg text-[15px] leading-relaxed text-walnut/80", children: body }),
     /* @__PURE__ */ jsxRuntimeExports.jsx("ul", { className: "mt-6 space-y-2 text-[13px] leading-relaxed text-walnut/75", children: bullets.map((b) => /* @__PURE__ */ jsxRuntimeExports.jsx("li", { className: "pl-4 border-l border-walnut/20", children: b }, b)) }),
-    /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "mt-6 border-t border-walnut/20 pt-6", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("a", { href: ctaLink, onClick: () => onCtaClick?.(), className: "group/btn inline-flex items-center gap-3 text-[12px] font-medium uppercase tracking-[0.18em] text-charcoal transition hover:text-clay sm:text-[13px]", children: [
+    /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "mt-6 border-t border-walnut/20 pt-6", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("a", { href: ctaLink, onClick: () => onCtaClick?.(), className: "group/btn inline-flex items-center gap-3 text-[13px] font-medium uppercase tracking-[0.18em] text-charcoal transition hover:text-clay sm:text-[13px]", children: [
       ctaText,
       /* @__PURE__ */ jsxRuntimeExports.jsx(ArrowRight, { className: "h-4 w-4 transition group-hover/btn:translate-x-1" })
     ] }) })
@@ -957,8 +957,8 @@ function DecisionCard({
 }
 function StickyCTA() {
   return /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "hidden md:fixed md:bottom-0 md:left-0 md:right-0 md:z-50 bg-charcoal/95 backdrop-blur border-t border-walnut/20 py-3 px-5 md:py-4", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "mx-auto max-w-[1400px] flex flex-col sm:flex-row items-center justify-between gap-3", children: [
-    /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-[11px] uppercase tracking-[0.18em] text-cream/80 sm:text-[12px]", children: "Muốn chọn đúng sơn & số kg? Gửi ảnh bề mặt qua Zalo." }),
-    /* @__PURE__ */ jsxRuntimeExports.jsxs("a", { href: "https://zalo.me/0943966662", target: "_blank", rel: "noopener noreferrer", className: "inline-flex items-center gap-2 bg-clay px-5 py-2.5 text-[11px] font-medium uppercase tracking-[0.18em] text-cream transition hover:bg-clay/90 sm:text-[12px]", children: [
+    /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "text-[13px] uppercase tracking-[0.18em] text-cream/80 sm:text-[13px]", children: "Muốn chọn đúng sơn & số kg? Gửi ảnh bề mặt qua Zalo." }),
+    /* @__PURE__ */ jsxRuntimeExports.jsxs("a", { href: "https://zalo.me/0943966662", target: "_blank", rel: "noopener noreferrer", className: "inline-flex items-center gap-2 bg-clay px-5 py-2.5 text-[13px] font-medium uppercase tracking-[0.18em] text-cream transition hover:bg-clay/90 sm:text-[13px]", children: [
       "Gửi ảnh qua Zalo",
       /* @__PURE__ */ jsxRuntimeExports.jsx(ArrowRight, { className: "h-3.5 w-3.5" })
     ] })
