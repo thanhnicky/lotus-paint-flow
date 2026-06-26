@@ -305,6 +305,7 @@ function Index() {
       <Header />
       {showSticky && <StickyCTA />}
 
+      <main>
       {/* HERO — B2C OPTIMIZED */}
       <section id="hero" className="relative">
         <div className="mx-auto max-w-[1400px] px-5 pt-12 pb-20 md:px-12 md:pt-20 md:pb-32">
@@ -696,6 +697,8 @@ function Index() {
                         ? "ring-3 ring-clay ring-offset-2 scale-105"
                         : "group-hover:scale-[1.02]"
                     }`}
+                    width={200}
+                    height={200}
                   />
                 ) : (
                   <div
@@ -778,6 +781,8 @@ function Index() {
               src={tab === "indoor" ? SOLID_PALETTE_IMAGE : WOODSTAIN_PALETTE_IMAGE}
               alt={tab === "indoor" ? "Bảng màu sơn màu bệt Lotus cho nội thất trong nhà" : "Bảng màu sơn giữ vân gỗ Lotus cho nội thất trong và ngoài trời"}
               className="w-full border border-walnut/10 max-h-[60vh] object-contain"
+              width={1200}
+              height={800}
             />
             <div className="mt-6 flex justify-end gap-3">
               <button
@@ -887,6 +892,8 @@ function Index() {
                     src={t.image}
                     alt={t.name}
                     className="h-full w-full object-cover"
+                    width={400}
+                    height={300}
                   />
                 </div>
                 <p className="flex-1 font-serif text-[17px] leading-[1.5] text-charcoal sm:text-[18px]">
@@ -1338,6 +1345,7 @@ function Index() {
         </a>
       )}
 
+      </main>
       <Footer />
     </div>
   );
@@ -1348,7 +1356,7 @@ function Header() {
     <header className="sticky top-0 z-40 border-b border-walnut/10 bg-cream/85 backdrop-blur">
       <div className="mx-auto flex max-w-[1400px] items-center justify-between px-5 py-4 md:px-12 md:py-5">
         <a href="#" className="flex items-center">
-          <img src={logoLotus} alt="Lotus Logo" className="h-10 w-auto" />
+          <img src={logoLotus} alt="Lotus Paint" className="h-10 w-auto" width={120} height={40} />
         </a>
         <nav className="hidden gap-10 text-[13px] uppercase tracking-[0.22em] text-walnut md:flex">
           <a href="#choose" className="hover:text-clay">Sản phẩm</a>
@@ -1373,7 +1381,7 @@ function Footer() {
       <div className="mx-auto max-w-[1400px] px-5 py-14 md:px-12">
         <div className="grid grid-cols-12 gap-6">
           <div className="col-span-12 md:col-span-5">
-            <img src={logoLotus} alt="Lotus Logo" className="h-12 w-auto mb-4" />
+            <img src={logoLotus} alt="Lotus Paint" className="h-12 w-auto mb-4" width={144} height={48} />
             <p className="max-w-sm text-sm leading-relaxed text-walnut/65">
               CÔNG TY TNHH SẢN XUẤT THƯƠNG MẠI DỊCH VỤ BÍCH TRANG
             </p>

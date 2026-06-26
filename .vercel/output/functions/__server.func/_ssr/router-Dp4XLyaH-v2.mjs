@@ -228,7 +228,7 @@ function RootShell({ children }) {
 function RootComponent() {
   return /* @__PURE__ */ jsxRuntimeExports.jsx(jsxRuntimeExports.Fragment, { children: /* @__PURE__ */ jsxRuntimeExports.jsx(Outlet, {}) });
 }
-const $$splitComponentImporter$1 = () => import("./thank-you-DOAfVZik-v2.mjs");
+const $$splitComponentImporter$1 = () => import("./thank-you-BU333F-2-v2.mjs");
 const Route$1 = createFileRoute("/thank-you")({
   component: lazyRouteComponent($$splitComponentImporter$1, "component"),
   validateSearch: (search) => ({
@@ -244,7 +244,7 @@ const Route$1 = createFileRoute("/thank-you")({
     qty: typeof search.qty === "string" ? search.qty : "1"
   })
 });
-const $$splitComponentImporter = () => import("./index-rnTdEaEj-v2.mjs");
+const $$splitComponentImporter = () => import("./index-CP0AEW6W-v2.mjs");
 const Route = createFileRoute("/")({
   head: () => ({
     meta: [{

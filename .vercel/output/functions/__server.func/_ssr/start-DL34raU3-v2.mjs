@@ -1,5 +1,5 @@
-import { c as createMiddleware } from "./server-BveXiMd4-v2.mjs";
-import { r as renderErrorPage } from "./index-DeSx6ofV-v2.mjs";
+import { c as createMiddleware } from "./server-Bp5mC17p-v2.mjs";
+import { r as renderErrorPage } from "./index-DBw6MXEI-v2.mjs";
 import "../_libs/seroval.mjs";
 import "../_libs/react.mjs";
 import "node:async_hooks";

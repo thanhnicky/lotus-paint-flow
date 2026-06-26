@@ -18,7 +18,7 @@ function lazyService(loader) {
   };
 }
 const services = {
-  ["ssr"]: lazyService(() => import("./_ssr/index-DeSx6ofV-v2.mjs"))
+  ["ssr"]: lazyService(() => import("./_ssr/index-DBw6MXEI-v2.mjs"))
 };
 globalThis.__nitro_vite_envs__ = services;
 const errorHandler$1 = (error, event) => {
