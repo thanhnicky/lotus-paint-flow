@@ -41,6 +41,22 @@ export const Route = createFileRoute("/")({
         content: "Hoàn thiện gỗ hệ nước cho gia đình hiện đại. Nhẹ mùi, khô nhanh, dễ tự thi công.",
       },
     ],
+    links: [
+      {
+        rel: "preconnect",
+        href: "https://fonts.googleapis.com",
+      },
+      {
+        rel: "preconnect",
+        href: "https://fonts.gstatic.com",
+        crossOrigin: "anonymous",
+      },
+      {
+        rel: "preload",
+        href: "https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap",
+        as: "style",
+      },
+    ],
   }),
   component: Index,
 });
@@ -200,15 +216,23 @@ function Index() {
   const [showZaloButton, setShowZaloButton] = useState(false);
 
   useEffect(() => {
+    let ticking = false;
+    
     const handleScroll = () => {
-      const heroSection = document.querySelector("section");
-      if (heroSection) {
-        const heroBottom = heroSection.getBoundingClientRect().bottom;
-        setShowZaloButton(heroBottom < 0);
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          const heroSection = document.querySelector("section");
+          if (heroSection) {
+            const heroBottom = heroSection.getBoundingClientRect().bottom;
+            setShowZaloButton(heroBottom < 0);
+          }
+          ticking = false;
+        });
+        ticking = true;
       }
     };
 
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
@@ -248,17 +272,33 @@ function Index() {
   const [showSticky, setShowSticky] = useState(false);
 
   // Sticky CTA bar trigger on scroll
-  const handleScroll = () => {
-    const heroSection = document.getElementById('hero');
-    if (heroSection) {
-      const rect = heroSection.getBoundingClientRect();
-      setShowSticky(rect.bottom < 0);
-    }
-  };
+  useEffect(() => {
+    let ticking = false;
+    
+    const handleScroll = () => {
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          const heroSection = document.getElementById('hero');
+          if (heroSection) {
+            const rect = heroSection.getBoundingClientRect();
+            setShowSticky(rect.bottom < 0);
+          }
+          ticking = false;
+        });
+        ticking = true;
+      }
+    };
 
-  if (typeof window !== 'undefined') {
-    window.addEventListener('scroll', handleScroll);
-  }
+    if (typeof window !== 'undefined') {
+      window.addEventListener('scroll', handleScroll, { passive: true });
+    }
+    
+    return () => {
+      if (typeof window !== 'undefined') {
+        window.removeEventListener('scroll', handleScroll);
+      }
+    };
+  }, []);
 
   return (
     <div className="min-h-screen bg-cream text-charcoal font-sans antialiased overscroll-behavior-none">
@@ -319,6 +359,8 @@ function Index() {
                 className="aspect-[4/5] md:aspect-[5/6] w-full object-cover"
                 width={1600}
                 height={1200}
+                fetchPriority="high"
+                decoding="async"
               />
               <figcaption className="absolute bottom-5 left-5 right-5 flex items-end justify-between text-[13px] uppercase tracking-[0.22em] text-cream mix-blend-difference sm:text-[13px]">
                 <span>Phòng khách · Lotus Wood Paint</span>
@@ -571,10 +613,11 @@ function Index() {
             <div className="w-full max-w-[420px] aspect-[9/16] overflow-hidden rounded-2xl bg-charcoal md:max-w-4xl md:aspect-video md:rounded-xl md:shadow-sm">
               <iframe
                 className="h-full w-full"
-                src="https://www.youtube.com/embed/nQ8QXB0wgcQ"
+                src="https://www.youtube.com/embed/nQ8QXB0wgcQ?rel=0"
                 title="Sơn lại chiếc tủ cũ trong 1 buổi chiều"
                 frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                loading="lazy"
+                allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
               />
             </div>
@@ -783,7 +826,7 @@ function Index() {
                   src={projects[0].img}
                   alt={projects[0].label}
                   loading="lazy"
-                  className="aspect-[4/5] w-full object-cover transition duration-700 group-hover:scale-[1.03]"
+                  className="aspect-[4/5] w-full object-cover transition duration-700 will-change-transform group-hover:transform group-hover:scale-[1.03]"
                   width={1000}
                   height={1250}
                 />
@@ -801,7 +844,7 @@ function Index() {
                       src={p.img}
                       alt={p.label}
                       loading="lazy"
-                      className="aspect-[4/3] w-full object-cover transition duration-700 group-hover:scale-[1.03]"
+                      className="aspect-[4/3] w-full object-cover transition duration-700 will-change-transform group-hover:transform group-hover:scale-[1.03]"
                       width={900}
                       height={675}
                     />
@@ -1423,7 +1466,7 @@ function FinishCard({
           src={img}
           alt={title}
           loading="lazy"
-          className="aspect-[5/6] w-full object-cover transition duration-700 group-hover:scale-[1.03]"
+          className="aspect-[5/6] w-full object-cover transition duration-700 will-change-transform group-hover:transform group-hover:scale-[1.03]"
           width={1200}
           height={1500}
         />
@@ -1512,7 +1555,7 @@ function DecisionCard({
           src={img}
           alt={title}
           loading="lazy"
-          className="aspect-[5/6] w-full object-cover transition duration-700 group-hover:scale-[1.03]"
+          className="aspect-[5/6] w-full object-cover transition duration-700 will-change-transform group-hover:transform group-hover:scale-[1.03]"
           width={1200}
           height={1500}
         />

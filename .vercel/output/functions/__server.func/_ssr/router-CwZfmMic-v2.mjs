@@ -1,7 +1,5 @@
-import { Q as QueryClient } from "../_libs/tanstack__query-core.mjs";
-import { Q as QueryClientProvider } from "../_libs/tanstack__react-query.mjs";
-import { c as createRouter, a as createRootRouteWithContext, u as useRouter, L as Link, O as Outlet, H as HeadContent, S as Scripts, b as createFileRoute, l as lazyRouteComponent } from "../_libs/tanstack__react-router.mjs";
-import { r as reactExports, j as jsxRuntimeExports } from "../_libs/react.mjs";
+import { c as createRouter, a as createRootRoute, b as createFileRoute, l as lazyRouteComponent, H as HeadContent, S as Scripts, O as Outlet, u as useRouter, L as Link } from "../_libs/tanstack__react-router.mjs";
+import { j as jsxRuntimeExports, r as reactExports } from "../_libs/react.mjs";
 import "../_libs/tanstack__router-core.mjs";
 import "../_libs/tanstack__history.mjs";
 import "../_libs/cookie-es.mjs";
@@ -15,7 +13,7 @@ import "crypto";
 import "async_hooks";
 import "stream";
 import "../_libs/isbot.mjs";
-const appCss = "/assets/styles-COr1NXO_-v2.css";
+const appCss = "/assets/styles-DIH7O4L8-v2.css";
 const favicon = "/assets/favicon-a9lNDvJV-v2.ico";
 const ogImage = "/assets/son-go-lotus-khong-mui-BsHU4fPI-v2.jpeg";
 function reportLovableError(error, context = {}) {
@@ -81,7 +79,7 @@ function ErrorComponent({ error, reset }) {
     ] })
   ] }) });
 }
-const Route$2 = createRootRouteWithContext()({
+const Route$2 = createRootRoute({
   head: () => ({
     meta: [
       { charSet: "utf-8" },
@@ -228,10 +226,9 @@ function RootShell({ children }) {
   ] });
 }
 function RootComponent() {
-  const { queryClient } = Route$2.useRouteContext();
-  return /* @__PURE__ */ jsxRuntimeExports.jsx(QueryClientProvider, { client: queryClient, children: /* @__PURE__ */ jsxRuntimeExports.jsx(Outlet, {}) });
+  return /* @__PURE__ */ jsxRuntimeExports.jsx(jsxRuntimeExports.Fragment, { children: /* @__PURE__ */ jsxRuntimeExports.jsx(Outlet, {}) });
 }
-const $$splitComponentImporter$1 = () => import("./thank-you-C6FlW_UZ-v2.mjs");
+const $$splitComponentImporter$1 = () => import("./thank-you-DOAfVZik-v2.mjs");
 const Route$1 = createFileRoute("/thank-you")({
   component: lazyRouteComponent($$splitComponentImporter$1, "component"),
   validateSearch: (search) => ({
@@ -247,7 +244,7 @@ const Route$1 = createFileRoute("/thank-you")({
     qty: typeof search.qty === "string" ? search.qty : "1"
   })
 });
-const $$splitComponentImporter = () => import("./index-BgMGhGPf-v2.mjs");
+const $$splitComponentImporter = () => import("./index-rnTdEaEj-v2.mjs");
 const Route = createFileRoute("/")({
   head: () => ({
     meta: [{
@@ -261,6 +258,18 @@ const Route = createFileRoute("/")({
     }, {
       property: "og:description",
       content: "Hoàn thiện gỗ hệ nước cho gia đình hiện đại. Nhẹ mùi, khô nhanh, dễ tự thi công."
+    }],
+    links: [{
+      rel: "preconnect",
+      href: "https://fonts.googleapis.com"
+    }, {
+      rel: "preconnect",
+      href: "https://fonts.gstatic.com",
+      crossOrigin: "anonymous"
+    }, {
+      rel: "preload",
+      href: "https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap",
+      as: "style"
     }]
   }),
   component: lazyRouteComponent($$splitComponentImporter, "component")
@@ -281,10 +290,8 @@ const rootRouteChildren = {
 };
 const routeTree = Route$2._addFileChildren(rootRouteChildren)._addFileTypes();
 const getRouter = () => {
-  const queryClient = new QueryClient();
   const router2 = createRouter({
     routeTree,
-    context: { queryClient },
     scrollRestoration: true,
     defaultPreloadStaleTime: 0
   });

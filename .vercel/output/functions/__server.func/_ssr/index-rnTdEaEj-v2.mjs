@@ -220,15 +220,24 @@ function Index() {
   const [showPaletteModal, setShowPaletteModal] = reactExports.useState(false);
   const [showZaloButton, setShowZaloButton] = reactExports.useState(false);
   reactExports.useEffect(() => {
-    const handleScroll2 = () => {
-      const heroSection = document.querySelector("section");
-      if (heroSection) {
-        const heroBottom = heroSection.getBoundingClientRect().bottom;
-        setShowZaloButton(heroBottom < 0);
+    let ticking = false;
+    const handleScroll = () => {
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          const heroSection = document.querySelector("section");
+          if (heroSection) {
+            const heroBottom = heroSection.getBoundingClientRect().bottom;
+            setShowZaloButton(heroBottom < 0);
+          }
+          ticking = false;
+        });
+        ticking = true;
       }
     };
-    window.addEventListener("scroll", handleScroll2);
-    return () => window.removeEventListener("scroll", handleScroll2);
+    window.addEventListener("scroll", handleScroll, {
+      passive: true
+    });
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
   const handleDownloadPalette = async () => {
     const imageUrl = tab === "indoor" ? SOLID_PALETTE_IMAGE : WOODSTAIN_PALETTE_IMAGE;
@@ -262,16 +271,32 @@ function Index() {
   const subtotal = unitPrice * orderQty;
   const total = orderPayment === "online" ? Math.round(subtotal * 0.9) : subtotal;
   const [showSticky, setShowSticky] = reactExports.useState(false);
-  const handleScroll = () => {
-    const heroSection = document.getElementById("hero");
-    if (heroSection) {
-      const rect = heroSection.getBoundingClientRect();
-      setShowSticky(rect.bottom < 0);
+  reactExports.useEffect(() => {
+    let ticking = false;
+    const handleScroll = () => {
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          const heroSection = document.getElementById("hero");
+          if (heroSection) {
+            const rect = heroSection.getBoundingClientRect();
+            setShowSticky(rect.bottom < 0);
+          }
+          ticking = false;
+        });
+        ticking = true;
+      }
+    };
+    if (typeof window !== "undefined") {
+      window.addEventListener("scroll", handleScroll, {
+        passive: true
+      });
     }
-  };
-  if (typeof window !== "undefined") {
-    window.addEventListener("scroll", handleScroll);
-  }
+    return () => {
+      if (typeof window !== "undefined") {
+        window.removeEventListener("scroll", handleScroll);
+      }
+    };
+  }, []);
   return /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "min-h-screen bg-cream text-charcoal font-sans antialiased overscroll-behavior-none", children: [
     /* @__PURE__ */ jsxRuntimeExports.jsx(Header, {}),
     showSticky && /* @__PURE__ */ jsxRuntimeExports.jsx(StickyCTA, {}),
@@ -304,7 +329,7 @@ function Index() {
         ] })
       ] }),
       /* @__PURE__ */ jsxRuntimeExports.jsxs("figure", { className: "col-span-12 md:col-span-6 lg:col-span-7 relative", children: [
-        /* @__PURE__ */ jsxRuntimeExports.jsx("img", { src: heroInterior, alt: "Phòng khách với tủ gỗ hoàn thiện màu ấm, không gian sống gia đình", className: "aspect-[4/5] md:aspect-[5/6] w-full object-cover", width: 1600, height: 1200 }),
+        /* @__PURE__ */ jsxRuntimeExports.jsx("img", { src: heroInterior, alt: "Phòng khách với tủ gỗ hoàn thiện màu ấm, không gian sống gia đình", className: "aspect-[4/5] md:aspect-[5/6] w-full object-cover", width: 1600, height: 1200, fetchPriority: "high", decoding: "async" }),
         /* @__PURE__ */ jsxRuntimeExports.jsxs("figcaption", { className: "absolute bottom-5 left-5 right-5 flex items-end justify-between text-[13px] uppercase tracking-[0.22em] text-cream mix-blend-difference sm:text-[13px]", children: [
           /* @__PURE__ */ jsxRuntimeExports.jsx("span", { children: "Phòng khách · Lotus Wood Paint" }),
           /* @__PURE__ */ jsxRuntimeExports.jsx("span", { children: "— 001" })
@@ -449,7 +474,7 @@ function Index() {
         ] }),
         /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "mt-3 max-w-lg mx-auto text-[13px] leading-relaxed text-walnut/70 md:mt-4 md:mx-0 md:text-[14px]", children: "Không cần thợ. Không cần máy. Chỉ cọ, lăn — và một chút kiên nhẫn." })
       ] }),
-      /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "mb-8 flex justify-center md:mb-12", children: /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "w-full max-w-[420px] aspect-[9/16] overflow-hidden rounded-2xl bg-charcoal md:max-w-4xl md:aspect-video md:rounded-xl md:shadow-sm", children: /* @__PURE__ */ jsxRuntimeExports.jsx("iframe", { className: "h-full w-full", src: "https://www.youtube.com/embed/nQ8QXB0wgcQ", title: "Sơn lại chiếc tủ cũ trong 1 buổi chiều", frameBorder: "0", allow: "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture", allowFullScreen: true }) }) }),
+      /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "mb-8 flex justify-center md:mb-12", children: /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "w-full max-w-[420px] aspect-[9/16] overflow-hidden rounded-2xl bg-charcoal md:max-w-4xl md:aspect-video md:rounded-xl md:shadow-sm", children: /* @__PURE__ */ jsxRuntimeExports.jsx("iframe", { className: "h-full w-full", src: "https://www.youtube.com/embed/nQ8QXB0wgcQ?rel=0", title: "Sơn lại chiếc tủ cũ trong 1 buổi chiều", frameBorder: "0", loading: "lazy", allow: "accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture", allowFullScreen: true }) }) }),
       /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "grid grid-cols-1 gap-6 md:gap-8 md:grid-cols-3", children: [{
         n: "1",
         t: "Làm sạch & chà nhám nhẹ",
@@ -551,14 +576,14 @@ function Index() {
       ] }),
       /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "mt-12 grid grid-cols-1 gap-5 lg:grid-cols-12", children: [
         /* @__PURE__ */ jsxRuntimeExports.jsxs("figure", { className: "group lg:col-span-7", children: [
-          /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "overflow-hidden", children: /* @__PURE__ */ jsxRuntimeExports.jsx("img", { src: projects[0].img, alt: projects[0].label, loading: "lazy", className: "aspect-[4/5] w-full object-cover transition duration-700 group-hover:scale-[1.03]", width: 1e3, height: 1250 }) }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "overflow-hidden", children: /* @__PURE__ */ jsxRuntimeExports.jsx("img", { src: projects[0].img, alt: projects[0].label, loading: "lazy", className: "aspect-[4/5] w-full object-cover transition duration-700 will-change-transform group-hover:transform group-hover:scale-[1.03]", width: 1e3, height: 1250 }) }),
           /* @__PURE__ */ jsxRuntimeExports.jsxs("figcaption", { className: "mt-4 border-t border-walnut/20 pt-3", children: [
             /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "font-serif text-lg text-charcoal", children: projects[0].label }),
             /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "mt-1 text-[13px] text-walnut/60", children: projects[0].place })
           ] })
         ] }),
         /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "flex flex-col gap-5 lg:col-span-5", children: projects.slice(1).map((p) => /* @__PURE__ */ jsxRuntimeExports.jsxs("figure", { className: "group flex-1", children: [
-          /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "overflow-hidden", children: /* @__PURE__ */ jsxRuntimeExports.jsx("img", { src: p.img, alt: p.label, loading: "lazy", className: "aspect-[4/3] w-full object-cover transition duration-700 group-hover:scale-[1.03]", width: 900, height: 675 }) }),
+          /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "overflow-hidden", children: /* @__PURE__ */ jsxRuntimeExports.jsx("img", { src: p.img, alt: p.label, loading: "lazy", className: "aspect-[4/3] w-full object-cover transition duration-700 will-change-transform group-hover:transform group-hover:scale-[1.03]", width: 900, height: 675 }) }),
           /* @__PURE__ */ jsxRuntimeExports.jsxs("figcaption", { className: "mt-3 border-t border-walnut/20 pt-3", children: [
             /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "font-serif text-base text-charcoal", children: p.label }),
             /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "mt-0.5 text-[13px] text-walnut/60", children: p.place })
@@ -941,7 +966,7 @@ function DecisionCard({
   onCtaClick
 }) {
   return /* @__PURE__ */ jsxRuntimeExports.jsxs("article", { className: "group flex flex-col", children: [
-    /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "overflow-hidden", children: /* @__PURE__ */ jsxRuntimeExports.jsx("img", { src: img, alt: title, loading: "lazy", className: "aspect-[5/6] w-full object-cover transition duration-700 group-hover:scale-[1.03]", width: 1200, height: 1500 }) }),
+    /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: "overflow-hidden", children: /* @__PURE__ */ jsxRuntimeExports.jsx("img", { src: img, alt: title, loading: "lazy", className: "aspect-[5/6] w-full object-cover transition duration-700 will-change-transform group-hover:transform group-hover:scale-[1.03]", width: 1200, height: 1500 }) }),
     /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "mt-7 flex items-baseline gap-4", children: [
       /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "font-serif text-4xl text-clay", children: index }),
       /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-[13px] uppercase tracking-[0.25em] text-walnut/70", children: subtitle })
