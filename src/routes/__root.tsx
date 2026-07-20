@@ -211,24 +211,35 @@ export const Route = createRootRoute({
   errorComponent: ErrorComponent,
 });
 
+function GoogleAnalytics() {
+  useEffect(() => {
+    const script1 = document.createElement('script');
+    script1.async = true;
+    script1.src = 'https://www.googletagmanager.com/gtag/js?id=G-13XJT8M29C';
+    document.head.appendChild(script1);
+
+    const script2 = document.createElement('script');
+    script2.innerHTML = `
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-13XJT8M29C');
+    `;
+    document.head.appendChild(script2);
+  }, []);
+  return null;
+}
+
 function RootShell({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
       <head>
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-13XJT8M29C"></script>
-        <script dangerouslySetInnerHTML={{
-          __html: `
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-13XJT8M29C');
-          `
-        }} />
         <HeadContent />
       </head>
       <body>
         {children}
         <Scripts />
+        <GoogleAnalytics />
       </body>
     </html>
   );
