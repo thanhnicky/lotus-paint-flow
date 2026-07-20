@@ -7,6 +7,7 @@ import {
   Scripts,
 } from "@tanstack/react-router";
 import { useEffect, type ReactNode } from "react";
+import { GoogleAnalytics } from "tanstack-router-ga4";
 
 import appCss from "../styles.css?url";
 import favicon from "../assets/favicon.ico?url";
@@ -211,25 +212,6 @@ export const Route = createRootRoute({
   errorComponent: ErrorComponent,
 });
 
-function GoogleAnalytics() {
-  useEffect(() => {
-    const script1 = document.createElement('script');
-    script1.async = true;
-    script1.src = 'https://www.googletagmanager.com/gtag/js?id=G-13XJT8M29C';
-    document.head.appendChild(script1);
-
-    const script2 = document.createElement('script');
-    script2.innerHTML = `
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-13XJT8M29C');
-    `;
-    document.head.appendChild(script2);
-  }, []);
-  return null;
-}
-
 function RootShell({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
@@ -237,9 +219,9 @@ function RootShell({ children }: { children: ReactNode }) {
         <HeadContent />
       </head>
       <body>
+        <GoogleAnalytics measurementId="G-13XJT8M29C" deferred={false} />
         {children}
         <Scripts />
-        <GoogleAnalytics />
       </body>
     </html>
   );
