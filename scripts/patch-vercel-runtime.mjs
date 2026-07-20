@@ -34,10 +34,10 @@ if (existsSync(configPath)) {
   config.routes = [
     { src: "/assets/(.*)", headers: { "cache-control": "public, max-age=31536000, immutable" }, continue: true },
     { handle: "filesystem" },
-    { src: "/(.*)", dest: "/__server" },
+    { src: "/(.*)", dest: "/__server", headers: { "cache-control": "public, max-age=0, must-revalidate" } },
   ];
   writeFileSync(configPath, JSON.stringify(config, null, 2));
-  console.log("[patch] Patched config.json routes");
+  console.log("[patch] Patched config.json routes with no-cache for HTML");
 }
 
 // Rename JS/CSS assets with -v2 suffix to bust CDN immutable cache,
