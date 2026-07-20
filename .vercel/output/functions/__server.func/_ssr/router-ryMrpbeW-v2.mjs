@@ -1,5 +1,6 @@
-import { c as createRouter, a as createRootRoute, b as createFileRoute, l as lazyRouteComponent, H as HeadContent, S as Scripts, O as Outlet, u as useRouter, L as Link } from "../_libs/tanstack__react-router.mjs";
+import { c as createRouter, a as createRootRoute, b as createFileRoute, l as lazyRouteComponent, H as HeadContent, S as Scripts, O as Outlet, d as useRouter, L as Link } from "../_libs/tanstack__react-router.mjs";
 import { j as jsxRuntimeExports, r as reactExports } from "../_libs/react.mjs";
+import { G as GoogleAnalytics } from "../_libs/tanstack-router-ga4.mjs";
 import "../_libs/tanstack__router-core.mjs";
 import "../_libs/tanstack__history.mjs";
 import "../_libs/cookie-es.mjs";
@@ -220,6 +221,7 @@ function RootShell({ children }) {
   return /* @__PURE__ */ jsxRuntimeExports.jsxs("html", { lang: "en", children: [
     /* @__PURE__ */ jsxRuntimeExports.jsx("head", { children: /* @__PURE__ */ jsxRuntimeExports.jsx(HeadContent, {}) }),
     /* @__PURE__ */ jsxRuntimeExports.jsxs("body", { children: [
+      /* @__PURE__ */ jsxRuntimeExports.jsx(GoogleAnalytics, { measurementId: "G-13XJT8M29C", deferred: false }),
       children,
       /* @__PURE__ */ jsxRuntimeExports.jsx(Scripts, {})
     ] })
@@ -228,7 +230,7 @@ function RootShell({ children }) {
 function RootComponent() {
   return /* @__PURE__ */ jsxRuntimeExports.jsx(jsxRuntimeExports.Fragment, { children: /* @__PURE__ */ jsxRuntimeExports.jsx(Outlet, {}) });
 }
-const $$splitComponentImporter$1 = () => import("./thank-you-BU333F-2-v2.mjs");
+const $$splitComponentImporter$1 = () => import("./thank-you-Be6C8x0m-v2.mjs");
 const Route$1 = createFileRoute("/thank-you")({
   component: lazyRouteComponent($$splitComponentImporter$1, "component"),
   validateSearch: (search) => ({

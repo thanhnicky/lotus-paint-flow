@@ -775,6 +775,13 @@ function RouterProvider({ router, ...rest }) {
     children: /* @__PURE__ */ jsxRuntimeExports.jsx(Matches, {})
   });
 }
+function useLocation(opts) {
+  const router = useRouter();
+  {
+    const location = router.stores.location.get();
+    return location;
+  }
+}
 var noopScriptHandler = () => {
 };
 function setScriptAttrs(script, attrs) {
@@ -1159,6 +1166,7 @@ var renderRouterToStream = async ({ request, router, responseHeaders, children }
   throw new Error("No renderToReadableStream or renderToPipeableStream found in react-dom/server. Ensure you are using a version of react-dom that supports streaming.");
 };
 export {
+  ClientOnly as C,
   HeadContent as H,
   Link as L,
   Outlet as O,
@@ -1167,8 +1175,9 @@ export {
   createRootRoute as a,
   createFileRoute as b,
   createRouter as c,
-  useNavigate as d,
+  useRouter as d,
+  useNavigate as e,
   lazyRouteComponent as l,
   renderRouterToStream as r,
-  useRouter as u
+  useLocation as u
 };
