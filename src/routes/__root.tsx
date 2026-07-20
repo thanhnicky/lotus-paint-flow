@@ -13,6 +13,13 @@ import favicon from "../assets/favicon.ico?url";
 import ogImage from "../assets/son-go-lotus-khong-mui.jpeg?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
 
+declare global {
+  interface Window {
+    dataLayer: any[];
+    gtag: (...args: any[]) => void;
+  }
+}
+
 function NotFoundComponent() {
   return (
     <div className="flex min-h-screen items-center justify-center bg-background px-4">
@@ -213,20 +220,23 @@ export const Route = createRootRoute({
 
 function RootShell({ children }: { children: ReactNode }) {
   useEffect(() => {
-    // Inject GA4 script directly
-    const script1 = document.createElement('script');
-    script1.async = true;
-    script1.src = 'https://www.googletagmanager.com/gtag/js?id=G-13XJT8M29C';
-    document.head.appendChild(script1);
+    // Initialize dataLayer first
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = window.gtag || function() {
+      window.dataLayer.push(arguments);
+    };
 
-    const script2 = document.createElement('script');
-    script2.innerHTML = `
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-13XJT8M29C');
-    `;
-    document.head.appendChild(script2);
+    // Load gtag.js
+    const script = document.createElement('script');
+    script.async = true;
+    script.src = 'https://www.googletagmanager.com/gtag/js?id=G-13XJT8M29C';
+    script.onload = () => {
+      // Configure after gtag.js loads
+      window.gtag('js', new Date());
+      window.gtag('config', 'G-13XJT8M29C');
+      console.log('GA4 configured');
+    };
+    document.head.appendChild(script);
   }, []);
 
   return (
