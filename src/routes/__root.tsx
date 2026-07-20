@@ -219,30 +219,19 @@ export const Route = createRootRoute({
 });
 
 function RootShell({ children }: { children: ReactNode }) {
-  useEffect(() => {
-    // Initialize dataLayer first
-    window.dataLayer = window.dataLayer || [];
-    window.gtag = window.gtag || function() {
-      window.dataLayer.push(arguments);
-    };
-
-    // Load gtag.js
-    const script = document.createElement('script');
-    script.async = true;
-    script.src = 'https://www.googletagmanager.com/gtag/js?id=G-13XJT8M29C';
-    script.onload = () => {
-      // Configure after gtag.js loads
-      window.gtag('js', new Date());
-      window.gtag('config', 'G-13XJT8M29C');
-      console.log('GA4 configured');
-    };
-    document.head.appendChild(script);
-  }, []);
-
   return (
     <html lang="en">
       <head>
         <HeadContent />
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-13XJT8M29C"></script>
+        <script dangerouslySetInnerHTML={{
+          __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-13XJT8M29C');
+          `
+        }} />
       </head>
       <body>
         {children}
