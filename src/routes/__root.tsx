@@ -218,6 +218,31 @@ export const Route = createRootRoute({
   errorComponent: ErrorComponent,
 });
 
+function GA4Script() {
+  useEffect(() => {
+    // Initialize dataLayer
+    (window as any).dataLayer = (window as any).dataLayer || [];
+    
+    // Inject gtag.js
+    const script = document.createElement('script');
+    script.async = true;
+    script.src = 'https://www.googletagmanager.com/gtag/js?id=G-13XJT8M29C';
+    document.head.appendChild(script);
+    
+    // Configure after script loads
+    script.onload = () => {
+      (window as any).gtag = (window as any).gtag || function() {
+        (window as any).dataLayer.push(arguments);
+      };
+      (window as any).gtag('js', new Date());
+      (window as any).gtag('config', 'G-13XJT8M29C');
+      console.log('GA4 loaded and configured');
+    };
+  }, []);
+  
+  return null;
+}
+
 function RootShell({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
@@ -227,6 +252,7 @@ function RootShell({ children }: { children: ReactNode }) {
       <body>
         {children}
         <Scripts />
+        <GA4Script />
       </body>
     </html>
   );
