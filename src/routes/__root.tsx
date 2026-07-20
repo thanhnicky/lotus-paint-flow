@@ -215,7 +215,6 @@ function RootShell({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
       <head>
-        <HeadContent />
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-13XJT8M29C"></script>
         <script dangerouslySetInnerHTML={{
           __html: `
@@ -225,6 +224,7 @@ function RootShell({ children }: { children: ReactNode }) {
             gtag('config', 'G-13XJT8M29C');
           `
         }} />
+        <HeadContent />
       </head>
       <body>
         {children}
