@@ -1,7 +1,7 @@
 import { createFileRoute, useSearch } from "@tanstack/react-router";
 import { Link } from "@tanstack/react-router";
 
-export const Route = createFileRoute("/thank-you")({
+export const Route = createFileRoute("/thank-you-son-go")({
   component: ThankYouPage,
   validateSearch: (search: Record<string, unknown>) => ({
     name: typeof search.name === "string" ? search.name : "",

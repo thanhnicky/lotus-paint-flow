@@ -11,6 +11,14 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { ArrowRight } from "lucide-react";
+import {
+  trackClickCTA,
+  trackAddToCart,
+  trackBeginCheckout,
+  trackGenerateLead,
+  trackPurchase,
+  trackLeadConversion,
+} from "@/lib/analytics";
 
 import heroInterior from "@/assets/son-lotus-hero-9.jpeg";
 import woodGrain from "@/assets/wood-grain.jpg";
@@ -328,6 +336,7 @@ function Index() {
               <div className="mt-9 flex flex-wrap items-center gap-4">
                 <a
                   href="#advise"
+                  onClick={() => trackClickCTA('Chọn màu & đặt mua', 'hero')}
                   className="group inline-flex items-center gap-3 bg-clay px-6 py-4 text-[13px] font-medium uppercase tracking-[0.18em] text-cream transition hover:bg-clay/90 sm:px-7 sm:text-[13px]"
                 >
                   Chọn màu & đặt mua
@@ -335,6 +344,7 @@ function Index() {
                 </a>
                 <a
                   href="#palette"
+                  onClick={() => trackClickCTA('Xem bảng màu', 'hero')}
                   className="text-[13px] font-medium uppercase tracking-[0.18em] text-walnut underline-offset-8 hover:underline sm:text-[13px]"
                 >
                   Xem bảng màu
@@ -398,7 +408,10 @@ function Index() {
               ]}
               ctaText="Chọn màu & đặt mua"
               ctaLink="#advise"
-              onCtaClick={() => setOrderProduct("bet")}
+              onCtaClick={() => {
+                setOrderProduct("bet");
+                trackClickCTA('Chọn màu & đặt mua - Sơn màu bệt', 'decision_card');
+              }}
             />
             <DecisionCard
               index="02"
@@ -413,7 +426,10 @@ function Index() {
               ]}
               ctaText="Chọn màu & đặt mua"
               ctaLink="#advise"
-              onCtaClick={() => setOrderProduct("van-go")}
+              onCtaClick={() => {
+                setOrderProduct("van-go");
+                trackClickCTA('Chọn màu & đặt mua - Sơn giữ vân gỗ', 'decision_card');
+              }}
             />
           </div>
         </div>
@@ -685,6 +701,14 @@ function Index() {
                 onClick={() => {
                   setOrderColor(c.name);
                   setOrderProduct(tab === "indoor" ? "bet" : "van-go");
+                  // Track add_to_cart event
+                  const price = PRICES[tab === "indoor" ? "bet" : "van-go"][orderEnv][orderSize];
+                  trackAddToCart(
+                    c.name,
+                    tab === "indoor" ? "Sơn màu bệt" : "Sơn giữ vân gỗ",
+                    price,
+                    1
+                  );
                 }}
                 className="group flex flex-col gap-3"
               >
@@ -745,8 +769,11 @@ function Index() {
               <span className="text-[13px] text-walnut/70">
                 Đã chọn: <strong className="text-charcoal">{orderColor}</strong>
               </span>
-              <a href="#advise"
-                className="inline-flex items-center gap-2 text-[13px] font-medium uppercase tracking-[0.18em] text-clay transition hover:text-clay/75">
+              <a
+                href="#advise"
+                onClick={() => trackClickCTA('Đặt mua màu này', 'palette_section')}
+                className="inline-flex items-center gap-2 text-[13px] font-medium uppercase tracking-[0.18em] text-clay transition hover:text-clay/75"
+              >
                 Đặt mua màu này
                 <ArrowRight className="h-4 w-4" />
               </a>
@@ -978,7 +1005,16 @@ function Index() {
             <div className="mt-8 rounded-lg bg-charcoal/5 px-5 py-4">
               <p className="text-[14px] text-walnut/80">
                 Chưa chắc chọn màu hay loại sơn?{" "}
-                <a href="https://zalo.me/0943966662" target="_blank" rel="noopener noreferrer" className="font-medium text-clay underline underline-offset-2 transition hover:text-clay/80">
+                <a
+                  href="https://zalo.me/0943966662"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={() => {
+                    trackGenerateLead('zalo', 'contact');
+                    trackLeadConversion();
+                  }}
+                  className="font-medium text-clay underline underline-offset-2 transition hover:text-clay/80"
+                >
                   Nhắn Zalo để được gợi ý nhanh.
                 </a>
               </p>
@@ -986,6 +1022,7 @@ function Index() {
 
             <a
               href="#palette"
+              onClick={() => trackClickCTA('Chọn màu & đặt mua ngay', 'trust_section')}
               className="mt-8 inline-flex items-center gap-3 bg-clay px-6 py-4 text-[13px] font-medium uppercase tracking-[0.18em] text-cream transition hover:bg-clay/90 sm:text-[13px]"
             >
               Chọn màu & đặt mua ngay
@@ -1051,6 +1088,22 @@ function Index() {
                 console.log("Fetch completed. Response:", response);
                 console.log("Response status:", response.status);
                 console.log("Response ok:", response.ok);
+
+                // Track purchase event after successful order submission
+                const transactionId = `LOTUS-${Date.now()}-${orderPhone.slice(-4)}`;
+                trackPurchase(
+                  transactionId,
+                  total,
+                  [
+                    {
+                      name: orderColor,
+                      category: orderProduct === "bet" ? "Sơn màu bệt" : "Sơn giữ vân gỗ",
+                      price: unitPrice,
+                      quantity: orderQty,
+                    },
+                  ],
+                  orderPayment
+                );
               } catch (error) {
                 console.error("=== Error sending data to Google Sheet ===");
                 console.error("Error:", error);
@@ -1061,7 +1114,7 @@ function Index() {
 
               // Navigate to thank-you page
               navigate({
-                to: "/thank-you",
+                to: "/thank-you-son-go",
                 search: {
                   name: orderName,
                   phone: orderPhone,
@@ -1317,8 +1370,16 @@ function Index() {
             <p>※ Màu hiển thị trên màn hình có thể chênh nhẹ so với thực tế.</p>
             <p className="border-t border-walnut/15 pt-4">
               Mua từ 50kg trở lên?{" "}
-              <a href="https://zalo.me/0943966662" target="_blank" rel="noopener noreferrer"
-                className="underline underline-offset-2 transition hover:text-clay">
+              <a
+                href="https://zalo.me/0943966662"
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => {
+                  trackGenerateLead('zalo', 'wholesale');
+                  trackLeadConversion();
+                }}
+                className="underline underline-offset-2 transition hover:text-clay"
+              >
                 Nhắn Zalo để nhận giá sỉ.
               </a>
             </p>
@@ -1333,6 +1394,10 @@ function Index() {
           href="https://zalo.me/0943966662"
           target="_blank"
           rel="noopener noreferrer"
+          onClick={() => {
+            trackGenerateLead('zalo', 'floating_button');
+            trackLeadConversion();
+          }}
           className="fixed bottom-6 right-6 z-50 group"
         >
           <div className="relative flex h-14 w-14 items-center justify-center rounded-full shadow-lg transition hover:shadow-xl" style={{ backgroundColor: "#0068FF" }}>
@@ -1395,16 +1460,19 @@ function Footer() {
           <div className="col-span-6 md:col-span-3">
             <div className="text-[13px] uppercase tracking-[0.22em] text-walnut/50 mb-3">Sản phẩm</div>
             <ul className="mt-4 space-y-2.5 text-sm text-charcoal">
-              <li><a href="#choose" className="hover:text-clay">Wood Paint — Indoor</a></li>
-              <li><a href="#choose" className="hover:text-clay">Woodstain Finish — Outdoor</a></li>
-              <li><a href="#palette" className="hover:text-clay">Bảng màu</a></li>
+              <li><a href="#choose" onClick={() => trackClickCTA('Wood Paint - Indoor', 'footer')} className="hover:text-clay">Wood Paint — Indoor</a></li>
+              <li><a href="#choose" onClick={() => trackClickCTA('Woodstain Finish - Outdoor', 'footer')} className="hover:text-clay">Woodstain Finish — Outdoor</a></li>
+              <li><a href="#palette" onClick={() => trackClickCTA('Bảng màu', 'footer')} className="hover:text-clay">Bảng màu</a></li>
             </ul>
           </div>
           <div className="col-span-6 md:col-span-4">
             <div className="text-[13px] uppercase tracking-[0.22em] text-walnut/50 mb-3">Liên hệ</div>
             <ul className="mt-4 space-y-2.5 text-sm text-charcoal">
-              <li><a href="https://zalo.me/0943966662" target="_blank" rel="noopener noreferrer" className="hover:text-clay">Hotline: 0943 966 662</a></li>
-              <li><a href="mailto:sales@sonlotus.vn" className="hover:text-clay">sales@www.sonlotus.vn</a></li>
+              <li><a href="https://zalo.me/0943966662" target="_blank" rel="noopener noreferrer" onClick={() => {
+                trackGenerateLead('zalo', 'footer');
+                trackLeadConversion();
+              }} className="hover:text-clay">Hotline: 0943 966 662</a></li>
+              <li><a href="mailto:sales@sonlotus.vn" onClick={() => trackGenerateLead('email', 'footer')} className="hover:text-clay">sales@www.sonlotus.vn</a></li>
               <li><a href="https://www.sonlotus.vn" target="_blank" rel="noopener noreferrer" className="hover:text-clay">www.sonlotus.vn</a></li>
               <li>Giờ làm việc · 8:00 – 20:00</li>
             </ul>

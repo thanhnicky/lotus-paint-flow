@@ -9,12 +9,12 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
-import { Route as ThankYouRouteImport } from './routes/thank-you'
+import { Route as ThankYouSonGoRouteImport } from './routes/thank-you-son-go'
 import { Route as IndexRouteImport } from './routes/index'
 
-const ThankYouRoute = ThankYouRouteImport.update({
-  id: '/thank-you',
-  path: '/thank-you',
+const ThankYouSonGoRoute = ThankYouSonGoRouteImport.update({
+  id: '/thank-you-son-go',
+  path: '/thank-you-son-go',
   getParentRoute: () => rootRouteImport,
 } as any)
 const IndexRoute = IndexRouteImport.update({
@@ -25,37 +25,37 @@ const IndexRoute = IndexRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
-  '/thank-you': typeof ThankYouRoute
+  '/thank-you-son-go': typeof ThankYouSonGoRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
-  '/thank-you': typeof ThankYouRoute
+  '/thank-you-son-go': typeof ThankYouSonGoRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
-  '/thank-you': typeof ThankYouRoute
+  '/thank-you-son-go': typeof ThankYouSonGoRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/thank-you'
+  fullPaths: '/' | '/thank-you-son-go'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/thank-you'
-  id: '__root__' | '/' | '/thank-you'
+  to: '/' | '/thank-you-son-go'
+  id: '__root__' | '/' | '/thank-you-son-go'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
-  ThankYouRoute: typeof ThankYouRoute
+  ThankYouSonGoRoute: typeof ThankYouSonGoRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
-    '/thank-you': {
-      id: '/thank-you'
-      path: '/thank-you'
-      fullPath: '/thank-you'
-      preLoaderRoute: typeof ThankYouRouteImport
+    '/thank-you-son-go': {
+      id: '/thank-you-son-go'
+      path: '/thank-you-son-go'
+      fullPath: '/thank-you-son-go'
+      preLoaderRoute: typeof ThankYouSonGoRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/': {
@@ -70,7 +70,7 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
-  ThankYouRoute: ThankYouRoute,
+  ThankYouSonGoRoute: ThankYouSonGoRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
