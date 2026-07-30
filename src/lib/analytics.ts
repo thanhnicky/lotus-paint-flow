@@ -1,73 +1,45 @@
-// Google Analytics 4 & Google Ads Event Tracking Helper
+// Google Tag Manager (GTM-T5PGMZ8D) Event Tracking Helper
+// All events push to dataLayer; GA4/Google Ads tags are configured inside the GTM container.
 
 declare global {
   interface Window {
     dataLayer: any[];
-    gtag: (...args: any[]) => void;
   }
 }
 
-// GA4 Measurement ID
-const GA4_MEASUREMENT_ID = 'G-13XJT8M29C';
-
-// Google Ads Conversion ID
-const ADS_CONVERSION_ID = 'AW-16701011893';
-
-// Google Ads Conversion Labels (sẽ được cập nhật sau khi user tạo conversion actions)
-const ADS_PURCHASE_LABEL = process.env.NEXT_PUBLIC_GADS_PURCHASE_LABEL || '';
-const ADS_LEAD_LABEL = process.env.NEXT_PUBLIC_GADS_LEAD_LABEL || '';
-
 /**
- * Track GA4 event
+ * Track GA4 event via GTM dataLayer
  */
 export function trackEvent(eventName: string, parameters?: Record<string, any>) {
-  if (typeof window !== 'undefined' && window.gtag) {
-    window.gtag('event', eventName, parameters);
-    console.log('[GA4] Event tracked:', eventName, parameters);
+  if (typeof window !== 'undefined') {
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({ event: eventName, ...parameters });
+    console.log('[GTM] Event tracked:', eventName, parameters);
   }
 }
 
 /**
- * Track Google Ads conversion
+ * Track Google Ads conversion via GTM dataLayer
  */
 export function trackConversion(conversionLabel?: string, value?: number) {
-  if (typeof window !== 'undefined' && window.gtag && ADS_CONVERSION_ID) {
-    const label = conversionLabel || ADS_PURCHASE_LABEL;
-    if (label) {
-      window.gtag('event', 'conversion', {
-        send_to: `${ADS_CONVERSION_ID}/${label}`,
-        value: value,
-        currency: 'VND',
-      });
-      console.log('[GAds] Conversion tracked:', label, value);
-    }
-  }
+  trackEvent('conversion', { conversion_label: conversionLabel, value, currency: 'VND' });
 }
 
 /**
- * Track Google Ads lead conversion
+ * Track Google Ads lead conversion via GTM dataLayer
  */
 export function trackLeadConversion(value?: number) {
-  if (typeof window !== 'undefined' && window.gtag && ADS_CONVERSION_ID && ADS_LEAD_LABEL) {
-    window.gtag('event', 'conversion', {
-      send_to: `${ADS_CONVERSION_ID}/${ADS_LEAD_LABEL}`,
-      value: value,
-      currency: 'VND',
-    });
-    console.log('[GAds] Lead conversion tracked:', ADS_LEAD_LABEL, value);
-  }
+  trackEvent('lead_conversion', { value, currency: 'VND' });
 }
 
 /**
- * Track page view (GA4 tự động track, nhưng có thể dùng cho custom page views)
+ * Track page view via GTM dataLayer
  */
 export function trackPageView(pagePath: string, pageTitle: string) {
-  if (typeof window !== 'undefined' && window.gtag) {
-    window.gtag('event', 'page_view', {
-      page_path: pagePath,
-      page_title: pageTitle,
-    });
-  }
+  trackEvent('page_view', {
+    page_path: pagePath,
+    page_title: pageTitle,
+  });
 }
 
 /**
