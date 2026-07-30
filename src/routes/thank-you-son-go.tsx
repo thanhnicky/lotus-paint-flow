@@ -1,5 +1,6 @@
 import { createFileRoute, useSearch } from "@tanstack/react-router";
 import { Link } from "@tanstack/react-router";
+import { useEffect } from "react";
 
 export const Route = createFileRoute("/thank-you-son-go")({
   component: ThankYouPage,
@@ -33,6 +34,21 @@ function ThankYouPage() {
   const accountNameEncoded = encodeURIComponent(bankInfo.name);
   const amountClean = amount.replace(/[^\d]/g, ''); // Remove non-numeric characters
   const qrUrl = `https://img.vietqr.io/image/${bankInfo.bankId}-${bankInfo.account}-compact2.png?amount=${amountClean}&addInfo=${encodeURIComponent(transferSyntax)}&accountName=${accountNameEncoded}`;
+
+  useEffect(() => {
+    // Push conversion event to GTM dataLayer
+    if (typeof window !== "undefined") {
+      (window as any).dataLayer = (window as any).dataLayer || [];
+      (window as any).dataLayer.push({
+        event: "purchase",
+        transaction_id: phone || "",
+        value: amountClean ? parseInt(amountClean) : 0,
+        currency: "VND",
+        payment_method: payment || "cod",
+      });
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   return (
     <div className="min-h-screen bg-sand/30 py-16 px-5">
