@@ -42,7 +42,31 @@ export default {
     try {
       const handler = await getServerEntry();
       const response = await handler.fetch(request, env, ctx);
-      return await normalizeCatastrophicSsrResponse(response);
+      const normalizedResponse = await normalizeCatastrophicSsrResponse(response);
+
+      // Inject GTM script into HTML response
+      const contentType = normalizedResponse.headers.get("content-type") ?? "";
+      if (contentType.includes("text/html")) {
+        const html = await normalizedResponse.text();
+        const gtmScript = `<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-T5PGMZ8D');</script>`;
+        const gtmNoscript = `<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T5PGMZ8D"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>`;
+
+        const modifiedHtml = html
+          .replace('<head>', `<head>${gtmScript}`)
+          .replace('<body>', `<body>${gtmNoscript}`);
+
+        return new Response(modifiedHtml, {
+          status: normalizedResponse.status,
+          headers: normalizedResponse.headers,
+        });
+      }
+
+      return normalizedResponse;
     } catch (error) {
       console.error(error);
       return new Response(renderErrorPage(), {
