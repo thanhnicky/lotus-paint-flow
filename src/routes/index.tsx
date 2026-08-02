@@ -1388,7 +1388,7 @@ function Index() {
         </div>
       </section>
 
-      {/* Floating Zalo Button */}
+      {/* Floating Zalo Button (desktop only — on mobile it's pinned in the header) */}
       {showZaloButton && (
         <a
           href="https://zalo.me/0943966662"
@@ -1398,7 +1398,7 @@ function Index() {
             trackGenerateLead('zalo', 'floating_button');
             trackLeadConversion();
           }}
-          className="fixed bottom-6 right-6 z-50 group"
+          className="hidden md:flex fixed bottom-6 right-6 z-50 group"
         >
           <div className="relative flex h-14 w-14 items-center justify-center rounded-full shadow-lg transition hover:shadow-xl" style={{ backgroundColor: "#0068FF" }}>
             <span className="text-2xl font-bold text-white">Z</span>
@@ -1407,6 +1407,18 @@ function Index() {
               Bạn chưa chắc chọn gì? Nhắn Zalo — tư vấn miễn phí
             </div>
           </div>
+        </a>
+      )}
+
+      {/* Mobile pinned bottom bar — Chọn màu & mua */}
+      {showZaloButton && (
+        <a
+          href="#advise"
+          onClick={() => trackClickCTA('Chọn màu & mua', 'mobile_sticky_bar')}
+          className="md:hidden fixed bottom-0 left-0 right-0 z-50 flex items-center justify-center gap-2 bg-clay py-4 text-[13px] font-medium uppercase tracking-[0.18em] text-cream shadow-[0_-2px_10px_rgba(0,0,0,0.1)] transition hover:bg-clay/90"
+        >
+          Chọn màu & mua
+          <ArrowRight className="h-4 w-4" />
         </a>
       )}
 
@@ -1430,10 +1442,23 @@ function Header() {
         </nav>
         <a
           href="#advise"
-          className="inline-flex items-center gap-2 border border-charcoal px-4 py-2.5 text-[13px] uppercase tracking-[0.2em] text-charcoal transition hover:bg-charcoal hover:text-cream sm:px-5 sm:text-[13px]"
+          className="hidden md:inline-flex items-center gap-2 border border-charcoal px-4 py-2.5 text-[13px] uppercase tracking-[0.2em] text-charcoal transition hover:bg-charcoal hover:text-cream sm:px-5 sm:text-[13px]"
         >
           Chọn màu & mua
           <ArrowRight className="h-3.5 w-3.5" />
+        </a>
+        <a
+          href="https://zalo.me/0943966662"
+          target="_blank"
+          rel="noopener noreferrer"
+          onClick={() => {
+            trackGenerateLead('zalo', 'header_mobile');
+            trackLeadConversion();
+          }}
+          className="md:hidden inline-flex items-center gap-2 px-4 py-2 text-[13px] font-semibold uppercase tracking-[0.1em] text-white transition hover:opacity-90"
+          style={{ backgroundColor: "#0068FF" }}
+        >
+          Zalo
         </a>
       </div>
     </header>
