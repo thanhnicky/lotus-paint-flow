@@ -415,7 +415,7 @@ function Index() {
             />
             <DecisionCard
               index="02"
-              title="Giữ vân gỗ, nhìn giống gỗ tự nhiên"
+              title="Thấy vân gỗ tự nhiên, nhiều màu lựa chọn"
               subtitle="Woodstain Finish — Nội & Ngoại thất"
               body="Chọn loại này khi muốn giữ vẻ đẹp gỗ tự nhiên cho cửa, sàn, lan can. Thấm sâu vào gỗ, tôn trọn vân, chịu nắng mưa."
               img={woodstainFinish}
@@ -750,7 +750,9 @@ function Index() {
             <div className="flex items-start gap-3 text-[13px] text-walnut/55">
               <span className="mt-0.5 text-walnut/30">※</span>
               <p>
-                Màu hiển thị trên màn hình có thể chênh nhẹ so với thực tế.
+                {tab === "outdoor"
+                  ? "Lưu ý: Bảng màu hiển thị khi bạn sơn lên gỗ mới hoặc gỗ cũ đã được xả sạch lớp sơn cũ. Sơn đè lên lớp sơn cũ sẽ không ra đúng màu."
+                  : "Màu hiển thị trên màn hình có thể chênh nhẹ so với thực tế."}
               </p>
             </div>
             <button
