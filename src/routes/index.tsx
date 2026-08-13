@@ -319,9 +319,6 @@ function Index() {
         <div className="mx-auto max-w-[1400px] px-5 pt-12 pb-20 md:px-12 md:pt-20 md:pb-32">
           <div className="grid grid-cols-12 gap-x-6 gap-y-10">
             <div className="col-span-12 md:col-span-6 lg:col-span-5 flex flex-col">
-              <span className="text-[13px] uppercase tracking-[0.3em] text-walnut/70">
-                Sơn Gỗ Hệ Nước Không Pha Dung Môi
-              </span>
               <h1 className="mt-6 font-serif text-[38px] leading-[1.05] tracking-tight text-charcoal sm:text-[44px] md:text-[60px] lg:text-[72px]">
                 Sơn lại đồ gỗ tại nhà
                 <br />
@@ -556,10 +553,10 @@ function Index() {
                 {/* Divider line center */}
                 <div className="pointer-events-none absolute inset-y-0 left-1/2 w-px -translate-x-1/2 bg-cream/30" />
                 {/* Labels */}
-                <div className="absolute bottom-3 left-3 bg-black/40 px-2 py-1 text-[9px] uppercase tracking-[0.28em] text-cream sm:bottom-5 sm:left-[8%] sm:text-[13px]">
+                <div className="absolute bottom-3 left-3 bg-black/40 px-2 py-1 text-[11px] uppercase tracking-[0.2em] text-cream sm:bottom-5 sm:left-[8%] sm:text-[13px] sm:tracking-[0.28em]">
                   Trước khi sơn
                 </div>
-                <div className="absolute bottom-3 right-3 bg-black/40 px-2 py-1 text-[9px] uppercase tracking-[0.28em] text-cream sm:bottom-5 sm:right-[8%] sm:text-[13px]">
+                <div className="absolute bottom-3 right-3 bg-black/40 px-2 py-1 text-[11px] uppercase tracking-[0.2em] text-cream sm:bottom-5 sm:right-[8%] sm:text-[13px] sm:tracking-[0.28em]">
                   Sau khi sơn
                 </div>
               </div>
