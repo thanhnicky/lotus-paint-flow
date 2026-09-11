@@ -11,6 +11,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { ArrowRight } from "lucide-react";
+import { LazyImage } from "@/components/LazyImage";
 import {
   trackClickCTA,
   trackAddToCart,
@@ -49,22 +50,7 @@ export const Route = createFileRoute("/")({
         content: "Hoàn thiện gỗ hệ nước cho gia đình hiện đại. Nhẹ mùi, khô nhanh, dễ tự thi công.",
       },
     ],
-    links: [
-      {
-        rel: "preconnect",
-        href: "https://fonts.googleapis.com",
-      },
-      {
-        rel: "preconnect",
-        href: "https://fonts.gstatic.com",
-        crossOrigin: "anonymous",
-      },
-      {
-        rel: "preload",
-        href: "https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap",
-        as: "style",
-      },
-    ],
+    links: [],
   }),
   component: Index,
 });
@@ -542,10 +528,9 @@ function Index() {
             </div>
             <div className="col-span-12 md:col-span-8 lg:col-span-8">
               <div className="relative overflow-hidden">
-                <img
+                <LazyImage
                   src={beforeAfter}
                   alt="Ghế gỗ trước và sau khi sơn lại bằng Lotus Wood Paint màu rêu"
-                  loading="lazy"
                   className="w-full h-auto block"
                   width={1600}
                   height={900}
@@ -710,7 +695,7 @@ function Index() {
                 className="group flex flex-col gap-3"
               >
                 {c.image ? (
-                  <img
+                  <LazyImage
                     src={c.image}
                     alt={c.name}
                     className={`aspect-square w-full object-cover transition-all duration-200 ${
@@ -853,10 +838,9 @@ function Index() {
           <div className="mt-12 grid grid-cols-1 gap-5 lg:grid-cols-12">
             <figure className="group lg:col-span-7">
               <div className="overflow-hidden">
-                <img
+                <LazyImage
                   src={projects[0].img}
                   alt={projects[0].label}
-                  loading="lazy"
                   className="aspect-[4/5] w-full object-cover transition duration-700 will-change-transform group-hover:transform group-hover:scale-[1.03]"
                   width={1000}
                   height={1250}
@@ -871,10 +855,9 @@ function Index() {
               {projects.slice(1).map((p) => (
                 <figure key={p.label} className="group flex-1">
                   <div className="overflow-hidden">
-                    <img
+                    <LazyImage
                       src={p.img}
                       alt={p.label}
-                      loading="lazy"
                       className="aspect-[4/3] w-full object-cover transition duration-700 will-change-transform group-hover:transform group-hover:scale-[1.03]"
                       width={900}
                       height={675}
@@ -914,7 +897,7 @@ function Index() {
                 }`}
               >
                 <div className="mb-4 aspect-[4/3] overflow-hidden rounded-lg bg-sand/30">
-                  <img
+                  <LazyImage
                     src={t.image}
                     alt={t.name}
                     className="h-full w-full object-cover"
@@ -1470,7 +1453,7 @@ function Footer() {
       <div className="mx-auto max-w-[1400px] px-5 py-14 md:px-12">
         <div className="grid grid-cols-12 gap-6">
           <div className="col-span-12 md:col-span-5">
-            <img src={logoLotus} alt="Lotus Paint" className="h-12 w-auto mb-4" width={144} height={48} />
+            <LazyImage src={logoLotus} alt="Lotus Paint" className="h-12 w-auto mb-4" width={144} height={48} />
             <p className="max-w-sm text-sm leading-relaxed text-walnut/65">
               CÔNG TY TNHH SẢN XUẤT THƯƠNG MẠI DỊCH VỤ BÍCH TRANG
             </p>
@@ -1562,10 +1545,9 @@ function FinishCard({
   return (
     <article className="group flex flex-col">
       <div className="overflow-hidden">
-        <img
+        <LazyImage
           src={img}
           alt={title}
-          loading="lazy"
           className="aspect-[5/6] w-full object-cover transition duration-700 will-change-transform group-hover:transform group-hover:scale-[1.03]"
           width={1200}
           height={1500}
@@ -1651,10 +1633,9 @@ function DecisionCard({
   return (
     <article className="group flex flex-col">
       <div className="overflow-hidden">
-        <img
+        <LazyImage
           src={img}
           alt={title}
-          loading="lazy"
           className="aspect-[5/6] w-full object-cover transition duration-700 will-change-transform group-hover:transform group-hover:scale-[1.03]"
           width={1200}
           height={1500}

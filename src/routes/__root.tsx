@@ -206,10 +206,6 @@ export const Route = createRootRoute({
       },
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
-      {
-        rel: "stylesheet",
-        href: "https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Inter:wght@300;400;500;600&display=swap",
-      },
     ],
   }),
   shellComponent: RootShell,
@@ -231,6 +227,19 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 })(window,document,'script','dataLayer','GTM-T5PGMZ8D');`,
           }}
         />
+        {/* Non-render-blocking Google Fonts: loads async, swaps in when ready */}
+        <link
+          rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Inter:wght@300;400;500;600&display=swap"
+          media="print"
+          onLoad={(e) => { (e.currentTarget as HTMLLinkElement).media = 'all'; }}
+        />
+        <noscript>
+          <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Inter:wght@300;400;500;600&display=swap"
+          />
+        </noscript>
         <HeadContent />
       </head>
       <body>
